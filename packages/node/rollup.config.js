@@ -46,7 +46,7 @@ const bundleConfig = {
     ...plugins,
     license({
       sourcemap: true,
-      banner: `/*! @vektor-finance/browser <%= pkg.version %> (${commitHash}) | https://github.com/vektor-finance/vektor */`,
+      banner: `/*! @vektor-finance/browser <%= pkg.version %> (${commitHash}) | https://github.com/vektor-finance/vektor-js*/`,
     }),
   ],
 }
