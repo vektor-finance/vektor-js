@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 0.0.12 (2022-03-01)
 
-**Note:** Version bump only for package @vektor-finance/vektor-js
+**Note:** Version bump only for package @vektor-finance/gateway
