@@ -1,0 +1,13 @@
+# Package manager artifacts
+node_modules
+package-lock.json
+
+# Build artifacts
+tsconfig.tsbuildinfo
+packages/**/dist/**/*.d.ts
+packages/**/dist/**/*.js
+
+# Config files
+.eslintrc.js
+commitlint.config.js
+babel.config.js
