@@ -2,8 +2,8 @@
   "name": "@vektor-finance/gateway",
   "version": "0.0.11",
   "description": "Vektor gateway service client",
-  "repository": "git://github.com/vektor-finance/vektor.git",
-  "homepage": "https://github.com/vektor-finance/vektor/tree/master/vektor-js/packages/gateway",
+  "repository": "git://github.com/vektor-finance/vektor-js.git",
+  "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/gateway",
   "author": "Vektor, Inc.",
   "license": "UNLICENSED",
   "engines": {
