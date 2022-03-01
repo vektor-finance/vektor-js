@@ -38,7 +38,7 @@ jobs:
         with:
           node-version: 14.x
           always-auth: true
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: https://npm.pkg.github.com
           scope: '@vektor-finance'
 
       # we use a hash of yarn.lock as our cache key, because if it hasn't changed, our dependencies haven't changed,
@@ -75,7 +75,7 @@ jobs:
         with:
           node-version: 14.x
           always-auth: true
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: https://npm.pkg.github.com
           scope: '@vektor-finance'
 
       - name: Check dependency cache
@@ -175,7 +175,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           always-auth: true
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: https://npm.pkg.github.com
           scope: '@vektor-finance'
 
       - name: Check dependency cache
