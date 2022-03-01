@@ -2,14 +2,17 @@
   "name": "@vektor-finance/vxl",
   "version": "0.0.11",
   "description": "Vektor VXL utilities",
-  "homepage": "https://github.com/vektor-finance/vektor/tree/master/vektor-js/packages/signer",
-  "repository": "git://github.com/vektor-finance/vektor.git",
+  "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/signer",
+  "repository": "git://github.com/vektor-finance/vektor-js.git",
   "license": "UNLICENSED",
   "author": "Vektor, Inc.",
   "sideEffects": false,
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "run-p build:es5 build:esm",
     "build:es5": "tsc -p tsconfig.build.json",
