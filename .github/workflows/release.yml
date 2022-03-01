@@ -1,0 +1,69 @@
+name: Release packages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+          always-auth: true
+          registry-url: https://npm.pkg.github.com
+          scope: '@vektor-finance'
+          cache: 'yarn'
+
+      # we use a hash of yarn.lock as our cache key, because if it hasn't changed, our dependencies haven't changed,
+      # so no need to reinstall them
+      - name: Compute dependency cache key
+        id: compute_lockfile_hash
+        run: echo "::set-output name=hash::${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}"
+
+      - name: Check dependency cache
+        uses: actions/cache@v2
+        id: cache_dependencies
+        with:
+          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
+          key: ${{ steps.compute_lockfile_hash.outputs.hash }}
+
+      - name: Install dependencies
+        if: steps.cache_dependencies.outputs.cache-hit == ''
+        run: yarn install --frozen-lockfile
+
+      - name: Build packages
+        run: yarn build --no-private
+
+      - name: Configure git credentials
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Publish
+        if: success() && github.ref == 'refs/heads/main'
+        run: yarn lerna publish --yes --conventional-commits --create-release github --force-publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      # - name: Canary release
+      #   if: success() && github.ref == 'refs/heads/next'
+      #   run: yarn lerna publish --yes --conventional-commits --create-release github --force-publish --canary
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
