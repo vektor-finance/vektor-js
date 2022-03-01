@@ -17,6 +17,9 @@ env:
 
   BUILD_CACHE_KEY: ${{ github.sha }}
 
+  # Read only token for fetching packages in other repos
+  NODE_AUTH_TOKEN: ${{ secrets.GH_PKG_AUTH_TOKEN }}
+
 jobs:
   install_deps:
     name: Install Dependencies
@@ -37,8 +40,6 @@ jobs:
           always-auth: true
           registry-url: 'https://npm.pkg.github.com'
           scope: '@vektor-finance'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # we use a hash of yarn.lock as our cache key, because if it hasn't changed, our dependencies haven't changed,
       # so no need to reinstall them
@@ -76,8 +77,6 @@ jobs:
           always-auth: true
           registry-url: 'https://npm.pkg.github.com'
           scope: '@vektor-finance'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check dependency cache
         uses: actions/cache@v2
@@ -178,8 +177,6 @@ jobs:
           always-auth: true
           registry-url: 'https://npm.pkg.github.com'
           scope: '@vektor-finance'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check dependency cache
         uses: actions/cache@v2
