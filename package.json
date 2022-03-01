@@ -1,16 +1,12 @@
 {
+  "name": "@vektor-finance/vektor-js",
   "private": true,
   "workspaces": [
-    "packages/api",
-    "packages/browser",
-    "packages/eslint-config-sdk",
-    "packages/gateway",
-    "packages/node",
-    "packages/types",
-    "packages/typescript",
-    "packages/utils",
-    "packages/vxl"
+    "packages/*"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "lerna run --stream --concurrency 1 --sort build",
     "build:es5": "lerna run --stream --concurrency 1 --sort build:es5",
@@ -27,9 +23,12 @@
     "prepublishOnly": "lerna run --stream --concurrency 1 prepublishOnly",
     "postpublish": "lerna run --stream --concurrency 1 postpublish",
     "circularDepCheck": "lerna run --parallel circularDepCheck",
-    "pre-commit": "lerna run --concurrency 1 --stream pre-commit --since HEAD --exclude-dependents"
+    "pre-commit": "lerna run --concurrency 1 --stream pre-commit --since HEAD --exclude-dependents",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@strictsoftware/typedoc-plugin-monorepo": "^0.3.1",
     "@types/jest": "26.0.23",
     "@types/node": "10.17.0",
