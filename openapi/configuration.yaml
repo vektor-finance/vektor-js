@@ -1,0 +1,14 @@
+# https://openapi-generator.tech/docs/generators/typescript-fetch/
+generatorName: typescript-axios
+outputDir: packages/api/src
+inputSpec: openapi.json
+enablePostProcessFile: true
+additionalProperties:
+  npmVersion: 0.0.1
+  npmName: '@vektor-finance/api'
+  useSingleRequestParameter: false
+  supportsES6: true
+  withSeparateModelsAndApi: true
+  apiPackage: api
+  modelPackage: models
+  removeOperationIdPrefix: true

@@ -1,0 +1,12 @@
+{
+  "extends": "./packages/typescript/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "packages",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"],
+    "paths": {
+      "@vektor-finance/*": ["*/src"]
+    },
+    "noErrorTruncation": true
+  }
+}
