@@ -1,7 +1,7 @@
 {
   "name": "@vektor-finance/eslint-config-sdk",
   "version": "0.0.11",
-  "description": "Official Vektor SDK eslint config",
+  "description": "Official Vektor SDK ESLint config",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/eslint-config-sdk",
   "license": "UNLICENSED",

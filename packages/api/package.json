@@ -10,6 +10,9 @@
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "run-s build:dist build:esm",
     "build:bundle": "rollup --config",
