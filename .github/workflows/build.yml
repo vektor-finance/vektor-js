@@ -32,6 +32,8 @@ jobs:
     steps:
       - name: Checkout current commit (${{ github.sha }})
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v2
@@ -70,6 +72,8 @@ jobs:
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v2
@@ -113,6 +117,8 @@ jobs:
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v2
@@ -146,6 +152,9 @@ jobs:
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
@@ -154,16 +163,19 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: '@vektor-finance'
           cache: 'yarn'
+
       - name: Check dependency cache
         uses: actions/cache@v2
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.build.outputs.dependency_cache_key }}
+
       - name: Check build cache
         uses: actions/cache@v2
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
+
       - name: Run madge
         run: yarn circularDepCheck
 
@@ -179,6 +191,8 @@ jobs:
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v2

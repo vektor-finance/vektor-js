@@ -5,6 +5,20 @@ on:
     branches:
       - main
 
+env:
+  CACHED_DEPENDENCY_PATHS: |
+    ${{ github.workspace }}/node_modules
+    ${{ github.workspace }}/packages/**/node_modules
+
+  # DEPENDENCY_CACHE_KEY: can't be set here because we don't have access to yarn.lock
+
+  CACHED_BUILD_PATHS: |
+    ${{ github.workspace }}/packages/**/build
+    ${{ github.workspace }}/packages/**/dist
+    ${{ github.workspace }}/packages/**/esm
+
+  BUILD_CACHE_KEY: ${{ github.sha }}
+
 jobs:
   publish:
     runs-on: ubuntu-latest
