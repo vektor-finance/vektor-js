@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### 0.0.13 (2022-03-03)
+
+**Note:** Version bump only for package @vektor-finance/api
+
+
+
+
+
 ### 0.0.12 (2022-03-01)
 
 **Note:** Version bump only for package @vektor-finance/api
