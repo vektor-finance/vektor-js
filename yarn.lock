@@ -2622,11 +2622,6 @@
     "@typescript-eslint/types" "5.10.1"
     eslint-visitor-keys "^3.0.0"
 
-"@vektor-finance/vxl-parser@^0.0.2":
-  version "0.0.2"
-  resolved "https://npm.pkg.github.com/download/@vektor-finance/vxl-parser/0.0.2/1cefc4fed69badf0db5223a409bd74ecb9946cfd7fdbfea209cb805653c2bc17#ad05367ea4dab36a8da30b6136a4aec49eaec1d1"
-  integrity sha512-P9UdQfSKkgBArxfnXZx6qWWkopZ+hrojOzuJkBVsroFzxaGvk4GGKmNDsEryWNZ4CAFo2ZEOgz6XGEyYygdO/Q==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
