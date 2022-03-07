@@ -20,10 +20,8 @@
     "build:watch": "run-p build:watch:es5 build:watch:esm",
     "build:watch:es5": "tsc -p tsconfig.build.json -w --preserveWatchOutput",
     "build:watch:esm": "tsc -p tsconfig.esm.json -w --preserveWatchOutput",
-    "build:vxl-parser": "./scripts/build_vxl_parser.sh --dev",
     "clean": "rimraf dist coverage",
     "link:yarn": "yarn link",
-    "link:packages": "./scripts/link_packages.sh",
     "lint": "run-s lint:prettier lint:eslint",
     "lint:prettier": "prettier --check \"{src,test}/**/*.ts\"",
     "lint:eslint": "eslint . --cache --cache-location '../../eslintcache/' --format stylish",
@@ -42,7 +40,6 @@
     "@vektor-finance/eslint-config-sdk": "^0.0.13",
     "@vektor-finance/types": "^0.0.13",
     "@vektor-finance/utils": "^0.0.13",
-    "@vektor-finance/vxl-parser": "^0.0.2",
     "traverse": "0.6.6"
   },
   "devDependencies": {
