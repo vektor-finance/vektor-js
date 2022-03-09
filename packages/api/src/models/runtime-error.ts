@@ -23,11 +23,19 @@ export interface RuntimeError {
    * @type {object}
    * @memberof RuntimeError
    */
-  data: Record<string, unknown>
+  data: object
   /**
    *
    * @type {string}
    * @memberof RuntimeError
    */
-  type: 'runtime_error'
+  type: RuntimeErrorTypeEnum
+}
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RuntimeErrorTypeEnum {
+  RuntimeError = 'runtime_error',
 }

@@ -12,18 +12,16 @@
  * Do not edit the class manually.
  */
 
-import { VXLEvalResult } from './vxleval-result'
-
 /**
- * Response for a VXL submission
+ * Request to submit VXL to be typechecked
  * @export
- * @interface VXLSubmitResponse
+ * @interface VXLTypeCheckRequest
  */
-export interface VXLSubmitResponse {
+export interface VXLTypeCheckRequest {
   /**
-   * Array with all responses for a VXL submission
-   * @type {Array<VXLEvalResult>}
-   * @memberof VXLSubmitResponse
+   * VXL command
+   * @type {string}
+   * @memberof VXLTypeCheckRequest
    */
-  results: Array<VXLEvalResult>
+  vxl: string
 }
