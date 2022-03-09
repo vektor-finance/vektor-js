@@ -1,4 +1,4 @@
-import { Asset, Blockchain, Network, NetworkID } from '@vektor-finance/api'
+import { Asset, NetworkID } from '@vektor-finance/api'
 
 import { TransactionPayload } from './transaction_payload'
 
@@ -36,13 +36,13 @@ export interface NetworkIdentifier {
    * Blockchain identifier
    * e.g. `bitcoin`, `ethereum` etc
    */
-  blockchain: Blockchain
+  blockchain: string
 
   /**
    * Network identifier
    * e.g. `mainnet`, `ropsten`, `florencenet` etc
    */
-  network: Network
+  network: string
 
   /**
    * Sub Network identifier
