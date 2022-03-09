@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { Blockchain } from './blockchain'
 import { NetworkMode } from './network-mode'
 
 /**
@@ -22,11 +21,11 @@ import { NetworkMode } from './network-mode'
  */
 export interface LabelCommonRequired {
   /**
-   *
-   * @type {Blockchain}
+   * Blockchain
+   * @type {string}
    * @memberof LabelCommonRequired
    */
-  blockchain: Blockchain
+  blockchain: string
   /**
    * Unique name to identify the Label
    * @type {string}
