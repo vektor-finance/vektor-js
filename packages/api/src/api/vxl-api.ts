@@ -31,12 +31,55 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 import { VXLSubmitRequest } from '../models'
 // @ts-ignore
 import { VXLSubmitResponse } from '../models'
+// @ts-ignore
+import { VXLTypeCheckRequest } from '../models'
 /**
  * VxlApi - axios parameter creator
  * @export
  */
 export const VxlApiAxiosParamCreator = function (configuration?: Configuration) {
   return {
+    /**
+     * Submit a VXL command and returns ok or a list of compilation errors
+     * @summary Typecheck VXL command
+     * @param {VXLTypeCheckRequest} vXLTypeCheckRequest VXL
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    checkTypes: async (
+      vXLTypeCheckRequest: VXLTypeCheckRequest,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      // verify required parameter 'vXLTypeCheckRequest' is not null or undefined
+      assertParamExists('checkTypes', 'vXLTypeCheckRequest', vXLTypeCheckRequest)
+      const localVarPath = `/vxl/check/types`
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      localVarHeaderParameter['Content-Type'] = 'application/json'
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+      localVarRequestOptions.data = serializeDataIfNeeded(vXLTypeCheckRequest, localVarRequestOptions, configuration)
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
     /**
      * Submit a VXL command and receive immediate response or task_id to asynchronous task
      * @summary Submit VXL command
@@ -86,6 +129,20 @@ export const VxlApiFp = function (configuration?: Configuration) {
   const localVarAxiosParamCreator = VxlApiAxiosParamCreator(configuration)
   return {
     /**
+     * Submit a VXL command and returns ok or a list of compilation errors
+     * @summary Typecheck VXL command
+     * @param {VXLTypeCheckRequest} vXLTypeCheckRequest VXL
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async checkTypes(
+      vXLTypeCheckRequest: VXLTypeCheckRequest,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.checkTypes(vXLTypeCheckRequest, options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
+    /**
      * Submit a VXL command and receive immediate response or task_id to asynchronous task
      * @summary Submit VXL command
      * @param {VXLSubmitRequest} vXLSubmitRequest VXL
@@ -110,6 +167,16 @@ export const VxlApiFactory = function (configuration?: Configuration, basePath?:
   const localVarFp = VxlApiFp(configuration)
   return {
     /**
+     * Submit a VXL command and returns ok or a list of compilation errors
+     * @summary Typecheck VXL command
+     * @param {VXLTypeCheckRequest} vXLTypeCheckRequest VXL
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    checkTypes(vXLTypeCheckRequest: VXLTypeCheckRequest, options?: any): AxiosPromise<void> {
+      return localVarFp.checkTypes(vXLTypeCheckRequest, options).then((request) => request(axios, basePath))
+    },
+    /**
      * Submit a VXL command and receive immediate response or task_id to asynchronous task
      * @summary Submit VXL command
      * @param {VXLSubmitRequest} vXLSubmitRequest VXL
@@ -129,6 +196,20 @@ export const VxlApiFactory = function (configuration?: Configuration, basePath?:
  * @extends {BaseAPI}
  */
 export class VxlApi extends BaseAPI {
+  /**
+   * Submit a VXL command and returns ok or a list of compilation errors
+   * @summary Typecheck VXL command
+   * @param {VXLTypeCheckRequest} vXLTypeCheckRequest VXL
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VxlApi
+   */
+  public checkTypes(vXLTypeCheckRequest: VXLTypeCheckRequest, options?: AxiosRequestConfig) {
+    return VxlApiFp(this.configuration)
+      .checkTypes(vXLTypeCheckRequest, options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
   /**
    * Submit a VXL command and receive immediate response or task_id to asynchronous task
    * @summary Submit VXL command

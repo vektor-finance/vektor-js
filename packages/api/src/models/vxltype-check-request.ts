@@ -13,8 +13,15 @@
  */
 
 /**
- * Blockchain\'s network
+ * Request to submit VXL to be typechecked
  * @export
- * @enum {string}
+ * @interface VXLTypeCheckRequest
  */
-export type Network = 'mainnet' | 'rinkeby' | 'mainnet_hardhat_fork'
+export interface VXLTypeCheckRequest {
+  /**
+   * VXL command
+   * @type {string}
+   * @memberof VXLTypeCheckRequest
+   */
+  vxl: string
+}

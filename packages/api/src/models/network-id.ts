@@ -12,9 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { Blockchain } from './blockchain'
-import { Network } from './network'
-
 /**
  * Tuple to identify a blockchain:network pair
  * @export
@@ -22,15 +19,15 @@ import { Network } from './network'
  */
 export interface NetworkID {
   /**
-   *
-   * @type {Blockchain}
+   * Blockchain
+   * @type {string}
    * @memberof NetworkID
    */
-  blockchain: Blockchain
+  blockchain: string
   /**
-   *
-   * @type {Network}
+   * Blockchain\'s network
+   * @type {string}
    * @memberof NetworkID
    */
-  network: Network
+  network: string
 }

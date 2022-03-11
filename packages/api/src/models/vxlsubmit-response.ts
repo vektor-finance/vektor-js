@@ -21,7 +21,7 @@ import { VXLEvalResult } from './vxleval-result'
  */
 export interface VXLSubmitResponse {
   /**
-   * Array with all responses for a VXL submission.
+   * Array with all responses for a VXL submission
    * @type {Array<VXLEvalResult>}
    * @memberof VXLSubmitResponse
    */
