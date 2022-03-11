@@ -23,7 +23,7 @@ export interface RuntimeError {
    * @type {object}
    * @memberof RuntimeError
    */
-  data: object
+  data: Record<string, unknown>
   /**
    *
    * @type {string}
