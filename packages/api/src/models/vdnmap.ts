@@ -29,5 +29,5 @@ export interface VDNMap {
    * @type {object}
    * @memberof VDNMap
    */
-  value: object
+  value: Record<string, unknown>
 }

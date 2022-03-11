@@ -23,11 +23,6 @@ export interface BinaryOp {
   right: Node
 }
 
-export interface Attribute {
-  ident: Node
-  expr: Node
-}
-
 export interface Option {
   key: Node
   value: Node
@@ -39,6 +34,7 @@ export enum Operator {
   multiply = '*',
   divide = '/',
   modulus = '%',
+  exponent = "^",
 
   // logical
   and = '&&',
@@ -86,11 +82,6 @@ interface Token {
 
   // Containers
   list?: Node[]
-
-  // Body elements
-  line_comment?: string
-  block_comment?: string
-  attribute?: Attribute
 }
 
 export interface Node {
@@ -120,7 +111,3 @@ export interface VXLFunction {
   args?: VXLArguments
   options?: VXLOptions
 }
-
-// Typeguard for VXLFunction (legacy)
-export const isVXLFunction = (vxlFunction: any): vxlFunction is VXLFunction =>
-  (vxlFunction as VXLFunction).name !== undefined
