@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.1.1](https://github.com/vektor-finance/vektor-js/compare/v0.1.0...v0.1.1) (2022-03-11)
+
+
+### Bug Fixes
+
+* **types:** cleanups ([926392e](https://github.com/vektor-finance/vektor-js/commit/926392e5bcf21c1af0ee2b04b03b8f68de690cc7))
+
+
+
 ## [0.1.0](https://github.com/vektor-finance/vektor-js/compare/v0.0.14...v0.1.0) (2022-03-11)
 
 
