@@ -25,19 +25,11 @@ export interface VDNURL {
    * @type {string}
    * @memberof VDNURL
    */
-  type: VDNURLTypeEnum
+  type: 'url'
   /**
    *
    * @type {VDNString}
    * @memberof VDNURL
    */
   value: VDNString
-}
-
-/**
- * @export
- * @enum {string}
- */
-export enum VDNURLTypeEnum {
-  Url = 'url',
 }

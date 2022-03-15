@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VDNBlockchainValue } from './vdnblockchain-value'
+import { VDNString } from './vdnstring';
 
 /**
  * VXL blockchain representation
@@ -25,19 +25,25 @@ export interface VDNBlockchain {
    * @type {string}
    * @memberof VDNBlockchain
    */
-  type: VDNBlockchainTypeEnum
+  type: 'blockchain'
+
   /**
    *
-   * @type {VDNBlockchainValue}
+   * @type {object}
    * @memberof VDNBlockchain
    */
-  value: VDNBlockchainValue
-}
-
-/**
- * @export
- * @enum {string}
- */
-export enum VDNBlockchainTypeEnum {
-  Blockchain = 'blockchain',
+  value: {
+    /**
+     *
+     * @type {VDNString}
+     * @memberof VDNBlockchain
+     */
+    blockchain?: VDNString
+    /**
+     *
+     * @type {VDNString}
+     * @memberof VDNBlockchain
+     */
+    network?: VDNString
+  }
 }

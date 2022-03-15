@@ -23,19 +23,11 @@ export interface VDNDateTime {
    * @type {string}
    * @memberof VDNDateTime
    */
-  type: VDNDateTimeTypeEnum
+  type: 'date_time'
   /**
    *
    * @type {string}
    * @memberof VDNDateTime
    */
   value: string
-}
-
-/**
- * @export
- * @enum {string}
- */
-export enum VDNDateTimeTypeEnum {
-  DateTime = 'date_time',
 }

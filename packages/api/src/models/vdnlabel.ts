@@ -12,7 +12,10 @@
  * Do not edit the class manually.
  */
 
-import { VDNLabelValue } from './vdnlabel-value'
+import { VDNAddress } from './vdnaddress';
+import { VDNBlockchain } from './vdnblockchain';
+import { VDNDateTime } from './vdndate-time';
+import { VDNString } from './vdnstring';
 
 /**
  * VXL label representation
@@ -25,19 +28,48 @@ export interface VDNLabel {
    * @type {string}
    * @memberof VDNLabel
    */
-  type: VDNLabelTypeEnum
+  type: 'label'
   /**
    *
-   * @type {VDNLabelValue}
+   * @type {object}
    * @memberof VDNLabel
    */
-  value: VDNLabelValue
-}
-
-/**
- * @export
- * @enum {string}
- */
-export enum VDNLabelTypeEnum {
-  Label = 'label',
+  value: {
+    /**
+     *
+     * @type {VDNAddress}
+     * @memberof VDNLabelValue
+     */
+    address?: VDNAddress
+    /**
+     *
+     * @type {VDNBlockchain}
+     * @memberof VDNLabelValue
+     */
+    blockchain?: VDNBlockchain
+    /**
+     *
+     * @type {VDNDateTime}
+     * @memberof VDNLabelValue
+     */
+    created_at?: VDNDateTime
+    /**
+     *
+     * @type {VDNString}
+     * @memberof VDNLabelValue
+     */
+    id?: VDNString
+    /**
+     *
+     * @type {VDNString}
+     * @memberof VDNLabelValue
+     */
+    name?: VDNString
+    /**
+     *
+     * @type {VDNDateTime}
+     * @memberof VDNLabelValue
+     */
+    updated_at?: VDNDateTime
+  }
 }
