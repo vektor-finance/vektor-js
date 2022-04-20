@@ -39,9 +39,9 @@ export interface LabelCommonRequired {
    */
   network_mode: NetworkMode
   /**
-   * Label\'s value
+   * Label\'s address
    * @type {string}
    * @memberof LabelCommonRequired
    */
-  value: string
+  address: string
 }

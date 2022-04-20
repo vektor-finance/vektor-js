@@ -37,9 +37,9 @@ export interface LabelCommon {
    */
   network: string
   /**
-   * Label\'s value
+   * Label\'s address
    * @type {string}
    * @memberof LabelCommon
    */
-  value?: string
+  address?: string
 }
