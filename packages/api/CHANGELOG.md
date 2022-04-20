@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.2.1](https://github.com/vektor-finance/vektor-js/compare/v0.2.0...v0.2.1) (2022-04-20)
+
+
+### Bug Fixes
+
+* **types:** update Label.value -> .address ([#8](https://github.com/vektor-finance/vektor-js/issues/8)) ([bf52fdf](https://github.com/vektor-finance/vektor-js/commit/bf52fdf85d32781907fc8c471304c61951a24415))
+
+
+
 ## [0.2.0](https://github.com/vektor-finance/vektor-js/compare/v0.1.2...v0.2.0) (2022-04-20)
 
 **Note:** Version bump only for package @vektor-finance/api
