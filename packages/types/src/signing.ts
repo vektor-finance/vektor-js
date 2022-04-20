@@ -169,8 +169,10 @@ export interface UniswapV2TradeInfo  {
 export interface UniswapV3TradeInfo {
   venue: string
   venue_type: 'uniswap_v3'
-  path: Asset[]
-  fees: UniswapV3Fees[]
+  path: {
+    assets: Asset[]
+    fees: UniswapV3Fees[]
+  }
 }
 
 export interface CurveTradeInfo {
