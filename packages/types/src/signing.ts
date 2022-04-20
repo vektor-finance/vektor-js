@@ -165,7 +165,8 @@ export interface TradeInfoBase {
   venue: string
   venue_type: VenueType
 }
-export interface UniswapV2TradeInfo extends TradeInfoBase{
+
+export interface UniswapV2TradeInfo extends TradeInfoBase {
   venue_type: 'uniswap_v2'
   path: Asset[]
 }
