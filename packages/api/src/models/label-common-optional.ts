@@ -43,5 +43,5 @@ export interface LabelCommonOptional {
    * @type {string}
    * @memberof LabelCommonOptional
    */
-  value?: string
+  address?: string
 }
