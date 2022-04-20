@@ -158,32 +158,30 @@ export interface WrapRequestMeta extends MetaBase {
   action: 'wrap' | 'unwrap'
 }
 
-export type VenueType = 'uniswap_v2' | 'uniswap_v3' | 'curve'
 export type UniswapV3Fees = 'very_low' | 'low' | 'medium' | 'high'
 
-export interface TradeInfoBase {
+export interface UniswapV2TradeInfo  {
   venue: string
-  venue_type: VenueType
-}
-
-export interface UniswapV2TradeInfo extends TradeInfoBase {
   venue_type: 'uniswap_v2'
   path: Asset[]
 }
 
 export interface UniswapV3TradeInfo {
+  venue: string
   venue_type: 'uniswap_v3'
   path: Asset[]
   fees: UniswapV3Fees[]
 }
 
 export interface CurveTradeInfo {
+  venue: string
   venue_type: 'curve'
   pool_name: string
   pool_address: string
 }
 
 export type TradeInfo = UniswapV2TradeInfo | UniswapV3TradeInfo | CurveTradeInfo
+export type VenueType = TradeInfo['venue_type']
 
 export interface BuyRequestMeta extends MetaBase {
   request_type: 'buy_request'
