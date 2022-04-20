@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.2.3](https://github.com/vektor-finance/vektor-js/compare/v0.2.2...v0.2.3) (2022-04-20)
+
+
+### Bug Fixes
+
+* **types:** fix TradeInfo types ([#10](https://github.com/vektor-finance/vektor-js/issues/10)) ([59d7053](https://github.com/vektor-finance/vektor-js/commit/59d7053d48aa0d23a4c596aac3a0ea1958c2385c))
+
+
+
 ### [0.2.2](https://github.com/vektor-finance/vektor-js/compare/v0.2.1...v0.2.2) (2022-04-20)
 
 
