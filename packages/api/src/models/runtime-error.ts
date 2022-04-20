@@ -29,13 +29,5 @@ export interface RuntimeError {
    * @type {string}
    * @memberof RuntimeError
    */
-  type: RuntimeErrorTypeEnum
-}
-
-/**
- * @export
- * @enum {string}
- */
-export enum RuntimeErrorTypeEnum {
-  RuntimeError = 'runtime_error',
+  type: 'runtime_error'
 }
