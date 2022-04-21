@@ -12,28 +12,18 @@
  * Do not edit the class manually.
  */
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios'
-import { Configuration } from '../configuration'
-// Some imports not used depending on template conditions
-// @ts-ignore
+import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
+
+import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
 import {
-  DUMMY_BASE_URL,
-  assertParamExists,
-  setApiKeyToObject,
-  setBasicAuthToObject,
-  setBearerAuthToObject,
-  setOAuthToObject,
-  setSearchParams,
-  serializeDataIfNeeded,
-  toPathString,
   createRequestFunction,
+  DUMMY_BASE_URL,
+  setBearerAuthToObject,
+  setSearchParams,
+  toPathString,
 } from '../common'
-// @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base'
-// @ts-ignore
-import { NetworkID } from '../models'
-// @ts-ignore
-import { NetworkMode } from '../models'
+import { Configuration } from '../configuration'
+import { NetworkID, NetworkMode } from '../models'
 /**
  * BlockchainsApi - axios parameter creator
  * @export

@@ -21,6 +21,7 @@ import {
   SessionsApi,
   SignaturesApi,
   UsersApi,
+  VenuesApi,
   VxlApi,
 } from './api/index'
 import { Configuration } from './configuration'
@@ -52,6 +53,7 @@ export class API {
   public readonly signatures: SignaturesApi
   public readonly sessions: SessionsApi
   public readonly users: UsersApi
+  public readonly venues: VenuesApi
   public readonly vxl: VxlApi
 
   constructor(protected readonly _options: APIOptions = options.default) {
@@ -63,6 +65,7 @@ export class API {
     this.sessions = new SessionsApi(_options?.configuration, _options?.baseURL)
     this.signatures = new SignaturesApi(_options?.configuration, _options?.baseURL)
     this.users = new UsersApi(_options?.configuration, _options?.baseURL)
+    this.venues = new VenuesApi(_options?.configuration, _options?.baseURL)
     this.vxl = new VxlApi(_options?.configuration, _options?.baseURL)
   }
 }
