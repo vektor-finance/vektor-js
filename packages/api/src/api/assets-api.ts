@@ -16,7 +16,18 @@ import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'ax
 import { Configuration } from '../configuration'
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, setBearerAuthToObject, setSearchParams, toPathString, createRequestFunction } from '../common'
+import {
+  DUMMY_BASE_URL,
+  assertParamExists,
+  setApiKeyToObject,
+  setBasicAuthToObject,
+  setBearerAuthToObject,
+  setOAuthToObject,
+  setSearchParams,
+  serializeDataIfNeeded,
+  toPathString,
+  createRequestFunction,
+} from '../common'
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base'
 // @ts-ignore
@@ -38,6 +49,43 @@ export const AssetsApiAxiosParamCreator = function (configuration?: Configuratio
      */
     list: async (networkMode?: NetworkMode, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/assets`
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      if (networkMode !== undefined) {
+        localVarQueryParameter['network_mode'] = networkMode
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
+    /**
+     * List all supported asset symbols for an authenticated user
+     * @summary List supported assets
+     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    symbol: async (networkMode?: NetworkMode, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/assets/symbols`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
       let baseOptions
@@ -90,6 +138,20 @@ export const AssetsApiFp = function (configuration?: Configuration) {
       const localVarAxiosArgs = await localVarAxiosParamCreator.list(networkMode, options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
+    /**
+     * List all supported asset symbols for an authenticated user
+     * @summary List supported assets
+     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async symbol(
+      networkMode?: NetworkMode,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.symbol(networkMode, options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
   }
 }
 
@@ -109,6 +171,16 @@ export const AssetsApiFactory = function (configuration?: Configuration, basePat
      */
     list(networkMode?: NetworkMode, options?: any): AxiosPromise<Array<Asset>> {
       return localVarFp.list(networkMode, options).then((request) => request(axios, basePath))
+    },
+    /**
+     * List all supported asset symbols for an authenticated user
+     * @summary List supported assets
+     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    symbol(networkMode?: NetworkMode, options?: any): AxiosPromise<Array<string>> {
+      return localVarFp.symbol(networkMode, options).then((request) => request(axios, basePath))
     },
   }
 }
@@ -131,6 +203,20 @@ export class AssetsApi extends BaseAPI {
   public list(networkMode?: NetworkMode, options?: AxiosRequestConfig) {
     return AssetsApiFp(this.configuration)
       .list(networkMode, options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
+  /**
+   * List all supported asset symbols for an authenticated user
+   * @summary List supported assets
+   * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AssetsApi
+   */
+  public symbol(networkMode?: NetworkMode, options?: AxiosRequestConfig) {
+    return AssetsApiFp(this.configuration)
+      .symbol(networkMode, options)
       .then((request) => request(this.axios, this.basePath))
   }
 }
