@@ -21,6 +21,12 @@ import { NetworkMode } from './network-mode'
  */
 export interface LabelCommonOptional {
   /**
+   * Label\'s address
+   * @type {string}
+   * @memberof LabelCommonOptional
+   */
+  address?: string
+  /**
    * Blockchain
    * @type {string}
    * @memberof LabelCommonOptional
@@ -38,10 +44,4 @@ export interface LabelCommonOptional {
    * @memberof LabelCommonOptional
    */
   network_mode?: NetworkMode
-  /**
-   * Label\'s value
-   * @type {string}
-   * @memberof LabelCommonOptional
-   */
-  address?: string
 }
