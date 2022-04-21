@@ -28,6 +28,12 @@ export interface SubfunctionSpec {
    */
   description: string
   /**
+   * Usage example
+   * @type {string}
+   * @memberof SubfunctionSpec
+   */
+  example?: string
+  /**
    * Subfunction name
    * @type {string}
    * @memberof SubfunctionSpec
