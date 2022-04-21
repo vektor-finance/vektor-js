@@ -23,23 +23,21 @@ import {
   toPathString,
 } from '../common'
 import { Configuration } from '../configuration'
-import { Asset } from '../models'
-import { NetworkMode } from '../models'
+import { Venue } from '../models'
 /**
- * AssetsApi - axios parameter creator
+ * VenuesApi - axios parameter creator
  * @export
  */
-export const AssetsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const VenuesApiAxiosParamCreator = function (configuration?: Configuration) {
   return {
     /**
-     * List all supported assets for an authenticated user
-     * @summary List supported assets
-     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * List all supported venues for an authenticated user
+     * @summary List supported venues
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    list: async (networkMode?: NetworkMode, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      const localVarPath = `/assets`
+    list: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/venues`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
       let baseOptions
@@ -54,10 +52,6 @@ export const AssetsApiAxiosParamCreator = function (configuration?: Configuratio
       // authentication authorization required
       // http bearer authentication required
       await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-      if (networkMode !== undefined) {
-        localVarQueryParameter['network_mode'] = networkMode
-      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter)
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
@@ -69,14 +63,13 @@ export const AssetsApiAxiosParamCreator = function (configuration?: Configuratio
       }
     },
     /**
-     * List all supported asset symbols for an authenticated user
-     * @summary List supported assets
-     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * List all supported venue symbols for an authenticated user
+     * @summary List supported venue symbols
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    symbol: async (networkMode?: NetworkMode, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      const localVarPath = `/assets/symbols`
+    symbols: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/venues/symbols`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
       let baseOptions
@@ -91,10 +84,6 @@ export const AssetsApiAxiosParamCreator = function (configuration?: Configuratio
       // authentication authorization required
       // http bearer authentication required
       await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-      if (networkMode !== undefined) {
-        localVarQueryParameter['network_mode'] = networkMode
-      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter)
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
@@ -109,105 +98,97 @@ export const AssetsApiAxiosParamCreator = function (configuration?: Configuratio
 }
 
 /**
- * AssetsApi - functional programming interface
+ * VenuesApi - functional programming interface
  * @export
  */
-export const AssetsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = AssetsApiAxiosParamCreator(configuration)
+export const VenuesApiFp = function (configuration?: Configuration) {
+  const localVarAxiosParamCreator = VenuesApiAxiosParamCreator(configuration)
   return {
     /**
-     * List all supported assets for an authenticated user
-     * @summary List supported assets
-     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * List all supported venues for an authenticated user
+     * @summary List supported venues
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async list(
-      networkMode?: NetworkMode,
       options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Asset>>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.list(networkMode, options)
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Venue>>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.list(options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
     /**
-     * List all supported asset symbols for an authenticated user
-     * @summary List supported assets
-     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * List all supported venue symbols for an authenticated user
+     * @summary List supported venue symbols
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async symbol(
-      networkMode?: NetworkMode,
+    async symbols(
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.symbol(networkMode, options)
+      const localVarAxiosArgs = await localVarAxiosParamCreator.symbols(options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
   }
 }
 
 /**
- * AssetsApi - factory interface
+ * VenuesApi - factory interface
  * @export
  */
-export const AssetsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-  const localVarFp = AssetsApiFp(configuration)
+export const VenuesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+  const localVarFp = VenuesApiFp(configuration)
   return {
     /**
-     * List all supported assets for an authenticated user
-     * @summary List supported assets
-     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * List all supported venues for an authenticated user
+     * @summary List supported venues
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    list(networkMode?: NetworkMode, options?: any): AxiosPromise<Array<Asset>> {
-      return localVarFp.list(networkMode, options).then((request) => request(axios, basePath))
+    list(options?: any): AxiosPromise<Array<Venue>> {
+      return localVarFp.list(options).then((request) => request(axios, basePath))
     },
     /**
-     * List all supported asset symbols for an authenticated user
-     * @summary List supported assets
-     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * List all supported venue symbols for an authenticated user
+     * @summary List supported venue symbols
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    symbol(networkMode?: NetworkMode, options?: any): AxiosPromise<Array<string>> {
-      return localVarFp.symbol(networkMode, options).then((request) => request(axios, basePath))
+    symbols(options?: any): AxiosPromise<Array<string>> {
+      return localVarFp.symbols(options).then((request) => request(axios, basePath))
     },
   }
 }
 
 /**
- * AssetsApi - object-oriented interface
+ * VenuesApi - object-oriented interface
  * @export
- * @class AssetsApi
+ * @class VenuesApi
  * @extends {BaseAPI}
  */
-export class AssetsApi extends BaseAPI {
+export class VenuesApi extends BaseAPI {
   /**
-   * List all supported assets for an authenticated user
-   * @summary List supported assets
-   * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+   * List all supported venues for an authenticated user
+   * @summary List supported venues
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
-   * @memberof AssetsApi
+   * @memberof VenuesApi
    */
-  public list(networkMode?: NetworkMode, options?: AxiosRequestConfig) {
-    return AssetsApiFp(this.configuration)
-      .list(networkMode, options)
+  public list(options?: AxiosRequestConfig) {
+    return VenuesApiFp(this.configuration)
+      .list(options)
       .then((request) => request(this.axios, this.basePath))
   }
 
   /**
-   * List all supported asset symbols for an authenticated user
-   * @summary List supported assets
-   * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+   * List all supported venue symbols for an authenticated user
+   * @summary List supported venue symbols
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
-   * @memberof AssetsApi
+   * @memberof VenuesApi
    */
-  public symbol(networkMode?: NetworkMode, options?: AxiosRequestConfig) {
-    return AssetsApiFp(this.configuration)
-      .symbol(networkMode, options)
+  public symbols(options?: AxiosRequestConfig) {
+    return VenuesApiFp(this.configuration)
+      .symbols(options)
       .then((request) => request(this.axios, this.basePath))
   }
 }

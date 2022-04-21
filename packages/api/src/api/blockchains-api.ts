@@ -12,11 +12,18 @@
  * Do not edit the class manually.
  */
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios'
+import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
+
+import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
+import {
+  createRequestFunction,
+  DUMMY_BASE_URL,
+  setBearerAuthToObject,
+  setSearchParams,
+  toPathString,
+} from '../common'
 import { Configuration } from '../configuration'
-import { createRequestFunction, DUMMY_BASE_URL, setBearerAuthToObject, setSearchParams, toPathString } from '../common'
 import { NetworkID, NetworkMode } from '../models'
-import { BaseAPI, BASE_PATH, RequestArgs } from '../base'
 /**
  * BlockchainsApi - axios parameter creator
  * @export
@@ -32,6 +39,43 @@ export const BlockchainsApiAxiosParamCreator = function (configuration?: Configu
      */
     list: async (networkMode?: NetworkMode, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/blockchains`
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      if (networkMode !== undefined) {
+        localVarQueryParameter['network_mode'] = networkMode
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
+    /**
+     * List all supported blockchain symbols for an authenticated user
+     * @summary List supported blockchain symbols
+     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    symbols: async (networkMode?: NetworkMode, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/blockchains/symbols`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
       let baseOptions
@@ -84,6 +128,20 @@ export const BlockchainsApiFp = function (configuration?: Configuration) {
       const localVarAxiosArgs = await localVarAxiosParamCreator.list(networkMode, options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
+    /**
+     * List all supported blockchain symbols for an authenticated user
+     * @summary List supported blockchain symbols
+     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async symbols(
+      networkMode?: NetworkMode,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.symbols(networkMode, options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
   }
 }
 
@@ -108,6 +166,16 @@ export const BlockchainsApiFactory = function (
     list(networkMode?: NetworkMode, options?: any): AxiosPromise<Array<NetworkID>> {
       return localVarFp.list(networkMode, options).then((request) => request(axios, basePath))
     },
+    /**
+     * List all supported blockchain symbols for an authenticated user
+     * @summary List supported blockchain symbols
+     * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    symbols(networkMode?: NetworkMode, options?: any): AxiosPromise<Array<string>> {
+      return localVarFp.symbols(networkMode, options).then((request) => request(axios, basePath))
+    },
   }
 }
 
@@ -129,6 +197,20 @@ export class BlockchainsApi extends BaseAPI {
   public list(networkMode?: NetworkMode, options?: AxiosRequestConfig) {
     return BlockchainsApiFp(this.configuration)
       .list(networkMode, options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
+  /**
+   * List all supported blockchain symbols for an authenticated user
+   * @summary List supported blockchain symbols
+   * @param {NetworkMode} [networkMode] Network mode. Default value is mainnet.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BlockchainsApi
+   */
+  public symbols(networkMode?: NetworkMode, options?: AxiosRequestConfig) {
+    return BlockchainsApiFp(this.configuration)
+      .symbols(networkMode, options)
       .then((request) => request(this.axios, this.basePath))
   }
 }
