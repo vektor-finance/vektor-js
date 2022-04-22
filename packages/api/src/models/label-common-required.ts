@@ -25,7 +25,7 @@ export interface LabelCommonRequired {
    * @type {string}
    * @memberof LabelCommonRequired
    */
-  address?: string
+  address: string
   /**
    * Blockchain
    * @type {string}
