@@ -34,7 +34,7 @@ export enum Operator {
   multiply = '*',
   divide = '/',
   modulus = '%',
-  exponent = "^",
+  exponent = '^',
 
   // logical
   and = '&&',
