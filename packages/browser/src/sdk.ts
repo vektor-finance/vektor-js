@@ -16,6 +16,9 @@ export interface VektorOptions {
 
 export type VektorOptionsType = 'default' | 'local'
 
+/**
+ * Default options for Vektor class
+ */
 export const options: Record<VektorOptionsType, VektorOptions> = {
   default: {
     api: apiOptions.default,
