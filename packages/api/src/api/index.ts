@@ -1,5 +1,4 @@
 export * from './assets-api'
-export * from './auth-api'
 export * from './blockchains-api'
 export * from './functions-api'
 export * from './labels-api'
