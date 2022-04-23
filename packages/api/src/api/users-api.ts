@@ -12,23 +12,17 @@
  * Do not edit the class manually.
  */
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios'
-import { Configuration } from '../configuration'
+import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
+// @ts-ignore
+import { BaseAPI, BASE_PATH, RequestArgs } from '../base'
 // Some imports not used depending on template conditions
 // @ts-ignore
 import {
-  DUMMY_BASE_URL,
-  assertParamExists,
-  setBearerAuthToObject,
-  setSearchParams,
-  serializeDataIfNeeded,
-  toPathString,
-  createRequestFunction,
+  assertParamExists, createRequestFunction, DUMMY_BASE_URL, serializeDataIfNeeded, setBearerAuthToObject, setSearchParams, toPathString
 } from '../common'
+import { Configuration } from '../configuration'
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base'
-// @ts-ignore
-import { ResetPasswordRequest } from '../models'
+import { LoginRequest, LoginResponse, ResetPasswordRequest } from '../models'
 /**
  * UsersApi - axios parameter creator
  * @export
@@ -36,13 +30,83 @@ import { ResetPasswordRequest } from '../models'
 export const UsersApiAxiosParamCreator = function (configuration?: Configuration) {
   return {
     /**
+     * Login user
+     * @summary Login
+     * @param {LoginRequest} loginRequest Login parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    login: async (loginRequest: LoginRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'loginRequest' is not null or undefined
+      assertParamExists('login', 'loginRequest', loginRequest)
+      const localVarPath = `/users/auth/log_in`
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      localVarHeaderParameter['Content-Type'] = 'application/json'
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+      localVarRequestOptions.data = serializeDataIfNeeded(loginRequest, localVarRequestOptions, configuration)
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
+    /**
+     * Logout authenticated user - deactivates auth token
+     * @summary Logout
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    logout: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/users/auth/log_out`
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
+    /**
      * Reset users password
      * @summary Reset user password
      * @param {ResetPasswordRequest} resetPasswordRequest Reset password request
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    password: async (
+    resetPassword: async (
       resetPasswordRequest: ResetPasswordRequest,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
@@ -87,6 +151,32 @@ export const UsersApiFp = function (configuration?: Configuration) {
   const localVarAxiosParamCreator = UsersApiAxiosParamCreator(configuration)
   return {
     /**
+     * Login user
+     * @summary Login
+     * @param {LoginRequest} loginRequest Login parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async login(
+      loginRequest: LoginRequest,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginResponse>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.login(loginRequest, options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
+    /**
+     * Logout authenticated user - deactivates auth token
+     * @summary Logout
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async logout(
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.logout(options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
+    /**
      * Reset users password
      * @summary Reset user password
      * @param {ResetPasswordRequest} resetPasswordRequest Reset password request
@@ -97,7 +187,7 @@ export const UsersApiFp = function (configuration?: Configuration) {
       resetPasswordRequest: ResetPasswordRequest,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.password(resetPasswordRequest, options)
+      const localVarAxiosArgs = await localVarAxiosParamCreator.resetPassword(resetPasswordRequest, options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
   }
@@ -110,6 +200,25 @@ export const UsersApiFp = function (configuration?: Configuration) {
 export const UsersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
   const localVarFp = UsersApiFp(configuration)
   return {
+    /**
+     * Login user
+     * @summary Login
+     * @param {LoginRequest} loginRequest Login parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    login(loginRequest: LoginRequest, options?: any): AxiosPromise<LoginResponse> {
+      return localVarFp.login(loginRequest, options).then((request) => request(axios, basePath))
+    },
+    /**
+     * Logout authenticated user - deactivates auth token
+     * @summary Logout
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    logout(options?: any): AxiosPromise<void> {
+      return localVarFp.logout(options).then((request) => request(axios, basePath))
+    },
     /**
      * Reset users password
      * @summary Reset user password
@@ -130,6 +239,33 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
  * @extends {BaseAPI}
  */
 export class UsersApi extends BaseAPI {
+  /**
+   * Login user
+   * @summary Login
+   * @param {LoginRequest} loginRequest Login parameters
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApi
+   */
+  public login(loginRequest: LoginRequest, options?: AxiosRequestConfig) {
+    return UsersApiFp(this.configuration)
+      .login(loginRequest, options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
+  /**
+   * Logout authenticated user - deactivates auth token
+   * @summary Logout
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApi
+   */
+  public logout(options?: AxiosRequestConfig) {
+    return UsersApiFp(this.configuration)
+      .logout(options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
   /**
    * Reset users password
    * @summary Reset user password
