@@ -12,20 +12,27 @@
  * Do not edit the class manually.
  */
 
-import { VDNErrorTypeEnum } from '.'
+import { ALL_VDN_ERRORS } from '.'
 import { VDNAddress } from './vdnaddress'
+import { VDNAsset } from './vdnasset'
+import { VDNAssetSymbol } from './vdnasset-symbol'
+import { VDNBlockchain } from './vdnblockchain'
+import { VDNBoolean } from './vdnboolean'
+import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
 import { VDNEither } from './vdneither'
 import { VDNError } from './vdnerror'
 import { VDNInteger } from './vdninteger'
+import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
-import { VDNBoolean } from './vdnboolean'
 import { VDNMap } from './vdnmap'
+import { VDNString } from './vdnstring'
 import { VDNSymbol } from './vdnsymbol'
 import { VDNTask } from './vdntask'
-import { VDNString } from './vdnstring'
-
-export type VDNSuccess = { type: 'success'; value: VDN }
+import { VDNTransactionHash } from './vdntransaction-hash'
+import { VDNURL } from './vdnurl'
+import { VDNVenue } from './vdnvenue'
+import { VDNVenueType } from './vdnvenue-type'
 
 /**
  * @type VDN
@@ -34,21 +41,33 @@ export type VDNSuccess = { type: 'success'; value: VDN }
  */
 export type VDN =
   | VDNAddress
+  | VDNAsset
+  | VDNAssetSymbol
+  | VDNBlockchain
+  | VDNBoolean
+  | VDNDateTime
   | VDNDecimal
   | VDNEither
-  // | VDNError
+  | VDNError
   | VDNInteger
+  | VDNLabel
   | VDNList
-  | VDNBoolean
   | VDNMap
+  | VDNString
   | VDNSymbol
   | VDNTask
-  | VDNString
-  | VDNSuccess // TODO: Remove this type
+  | VDNTransactionHash
+  | VDNURL
+  | VDNVenue
+  | VDNVenueType
+  | VDNTransactionHash
+  | VDNURL
+  | VDNVenue
+  | VDNVenueType
 
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
 
-export const isVDN = (vdn: any): vdn is VDN => (vdn as VDN).type !== undefined && (vdn as VDN).value !== undefined
-
-export const isVDNError = (vdn: any): vdn is VDNError => Object.values(VDNErrorTypeEnum).includes(vdn.type)
+export const isVDN = (vdn: VDN): vdn is VDN => vdn.value !== undefined && vdn.type !== undefined
+export const isVDNError = (vdn: VDNError): vdn is VDNError =>
+  isVDN(vdn) && ALL_VDN_ERRORS.indexOf(vdn.value) !== -1

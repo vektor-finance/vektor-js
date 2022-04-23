@@ -12,12 +12,18 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
+import { VDNString } from './vdnstring'
 
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ *
  * @export
+ * @interface VDNURLValue
  */
-export type VDNOrRuntimeError = VDN | RuntimeError
+export interface VDNURLValue {
+  /**
+   *
+   * @type {VDNString}
+   * @memberof VDNURLValue
+   */
+  address: VDNString
+}

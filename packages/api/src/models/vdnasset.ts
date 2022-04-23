@@ -12,12 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
+import { VDNAssetValue } from './vdnasset-value'
 
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ * VXL asset representation
  * @export
+ * @interface VDNAsset
  */
-export type VDNOrRuntimeError = VDN | RuntimeError
+export interface VDNAsset {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNAsset
+   */
+  type: 'asset'
+  /**
+   *
+   * @type {VDNAssetValue}
+   * @memberof VDNAsset
+   */
+  value: VDNAssetValue
+}

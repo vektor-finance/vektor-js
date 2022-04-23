@@ -12,12 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
+import { VDNString } from './vdnstring'
 
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ *
  * @export
+ * @interface VDNBlockchainValue
  */
-export type VDNOrRuntimeError = VDN | RuntimeError
+export interface VDNBlockchainValue {
+  /**
+   *
+   * @type {VDNString}
+   * @memberof VDNBlockchainValue
+   */
+  blockchain: VDNString
+  /**
+   *
+   * @type {VDNString}
+   * @memberof VDNBlockchainValue
+   */
+  network: VDNString
+}

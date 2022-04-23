@@ -12,12 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
+import { VDNLabelValue } from './vdnlabel-value'
 
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ * VXL label representation
  * @export
+ * @interface VDNLabel
  */
-export type VDNOrRuntimeError = VDN | RuntimeError
+export interface VDNLabel {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNLabel
+   */
+  type: 'label'
+  /**
+   *
+   * @type {VDNLabelValue}
+   * @memberof VDNLabel
+   */
+  value: VDNLabelValue
+}

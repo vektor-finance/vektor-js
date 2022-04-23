@@ -12,12 +12,22 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
-
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ * VXL datetime representation
  * @export
+ * @interface VDNDateTime
  */
-export type VDNOrRuntimeError = VDN | RuntimeError
+export interface VDNDateTime {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNDateTime
+   */
+  type: 'date_time'
+  /**
+   *
+   * @type {string}
+   * @memberof VDNDateTime
+   */
+  value: string
+}
