@@ -12,23 +12,6 @@
  * Do not edit the class manually.
  */
 
-export const ALL_FUNCTION_PARAMETER_TYPES = [
-  'address',
-  'asset',
-  'blockchain',
-  'currency',
-  'decimal',
-  'function',
-  'integer',
-  'label',
-  'boolean',
-  'portfolio',
-  'string',
-  'workspace',
-]
-
-export type FunctionParameterType = typeof ALL_FUNCTION_PARAMETER_TYPES[number]
-
 /**
  * A subfunction\'s parameter
  * @export
@@ -49,8 +32,8 @@ export interface SubfunctionParameter {
   name: string
   /**
    * Parameter type
-   * @type {FunctionParameterType}
+   * @type {string}
    * @memberof SubfunctionParameter
    */
-  type: FunctionParameterType
+  type: string
 }

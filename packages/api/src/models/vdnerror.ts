@@ -12,6 +12,28 @@
  * Do not edit the class manually.
  */
 
+export const ALL_VDN_ERRORS = [
+  'gas_limit_reached_error',
+  'gas_uint64_overflow_error',
+  'insufficient_funds_error',
+  'insufficient_funds_for_transfer_error',
+  'intrinsic_gas_too_low_error',
+  'fee_cap_very_high_error',
+  'fee_cap_too_low_error',
+  'tip_very_high_error',
+  'tip_above_fee_cap_error',
+  'nonce_too_high_error',
+  'nonce_too_low_error',
+  'sender_not_eoa_error',
+  'runtime_error',
+  'build_error',
+  'broadcast_error',
+  'invalid_asset_error',
+  'non_positive_amount_error',
+] as const
+
+export type VDNErrorType = typeof ALL_VDN_ERRORS[number]
+
 /**
  * VXL error representation
  * @export
@@ -23,29 +45,10 @@ export interface VDNError {
    * @type {string}
    * @memberof VDNError
    */
-  type: VDNErrorTypeEnum
-}
+  type: VDNErrorType
 
-/**
- * @export
- * @enum {string}
- */
-export enum VDNErrorTypeEnum {
-  GasLimitReachedError = 'gas_limit_reached_error',
-  GasUint64OverflowError = 'gas_uint64_overflow_error',
-  InsufficientFundsError = 'insufficient_funds_error',
-  InsufficientFundsForTransferError = 'insufficient_funds_for_transfer_error',
-  IntrinsicGasTooLowError = 'intrinsic_gas_too_low_error',
-  FeeCapVeryHighError = 'fee_cap_very_high_error',
-  FeeCapTooLowError = 'fee_cap_too_low_error',
-  TipVeryHighError = 'tip_very_high_error',
-  TipAboveFeeCapError = 'tip_above_fee_cap_error',
-  NonceTooHighError = 'nonce_too_high_error',
-  NonceTooLowError = 'nonce_too_low_error',
-  SenderNotEoaError = 'sender_not_eoa_error',
-  RuntimeError = 'runtime_error',
-  BuildError = 'build_error',
-  BroadcastError = 'broadcast_error',
-  InvalidAssetError = 'invalid_asset_error',
-  NonPositiveAmountError = 'non_positive_amount_error',
+  /**
+   * Dummy value for Typescript inference
+   */
+  value?: undefined
 }

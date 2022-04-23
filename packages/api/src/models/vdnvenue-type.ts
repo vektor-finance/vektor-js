@@ -12,12 +12,22 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
-
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ * VXL venue_type representation
  * @export
+ * @interface VDNVenueType
  */
-export type VDNOrRuntimeError = VDN | RuntimeError
+export interface VDNVenueType {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNVenueType
+   */
+  type: 'venue_type'
+  /**
+   *
+   * @type {string}
+   * @memberof VDNVenueType
+   */
+  value: string
+}

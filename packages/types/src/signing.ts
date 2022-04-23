@@ -160,7 +160,7 @@ export interface WrapRequestMeta extends MetaBase {
 
 export type UniswapV3Fees = 'very_low' | 'low' | 'medium' | 'high'
 
-export interface UniswapV2TradeInfo  {
+export interface UniswapV2TradeInfo {
   venue: string
   venue_type: 'uniswap_v2'
   path: Asset[]
