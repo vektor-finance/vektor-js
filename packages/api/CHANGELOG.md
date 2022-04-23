@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/vektor-finance/vektor-js/compare/v0.2.7...v0.3.0) (2022-04-23)
+
+
+### Features
+
+* add new VDN types and update users api ([#15](https://github.com/vektor-finance/vektor-js/issues/15)) ([72fa196](https://github.com/vektor-finance/vektor-js/commit/72fa196f462a6a850bff7c328d708f207dedac2a))
+
+
+
 ### [0.2.7](https://github.com/vektor-finance/vektor-js/compare/v0.2.6...v0.2.7) (2022-04-22)
 
 
