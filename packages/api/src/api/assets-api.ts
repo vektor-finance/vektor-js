@@ -15,13 +15,7 @@
 import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
 
 import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
-import {
-  createRequestFunction,
-  DUMMY_BASE_URL,
-  setBearerAuthToObject,
-  setSearchParams,
-  toPathString,
-} from '../common'
+import { createRequestFunction, DUMMY_BASE_URL, setBearerAuthToObject, setSearchParams, toPathString } from '../common'
 import { Configuration } from '../configuration'
 import { Asset } from '../models'
 import { NetworkMode } from '../models'

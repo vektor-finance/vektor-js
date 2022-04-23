@@ -18,7 +18,13 @@ import { BaseAPI, BASE_PATH, RequestArgs } from '../base'
 // Some imports not used depending on template conditions
 // @ts-ignore
 import {
-  assertParamExists, createRequestFunction, DUMMY_BASE_URL, serializeDataIfNeeded, setBearerAuthToObject, setSearchParams, toPathString
+  assertParamExists,
+  createRequestFunction,
+  DUMMY_BASE_URL,
+  serializeDataIfNeeded,
+  setBearerAuthToObject,
+  setSearchParams,
+  toPathString,
 } from '../common'
 import { Configuration } from '../configuration'
 // @ts-ignore
