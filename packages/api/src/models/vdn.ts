@@ -18,6 +18,7 @@ import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
+import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
 import { VDNEither } from './vdneither'
@@ -26,6 +27,7 @@ import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
+import { VDNSellQuote } from './vdnsell-quote'
 import { VDNString } from './vdnstring'
 import { VDNSymbol } from './vdnsymbol'
 import { VDNTask } from './vdntask'
@@ -60,10 +62,8 @@ export type VDN =
   | VDNURL
   | VDNVenue
   | VDNVenueType
-  | VDNTransactionHash
-  | VDNURL
-  | VDNVenue
-  | VDNVenueType
+  | VDNBuyQuote
+  | VDNSellQuote
 
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
