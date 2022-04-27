@@ -30,6 +30,7 @@ export const ALL_VDN_ERRORS = [
   'broadcast_error',
   'invalid_asset_error',
   'non_positive_amount_error',
+  'stale_quote_error',
 ] as const
 
 export type VDNErrorType = typeof ALL_VDN_ERRORS[number]
