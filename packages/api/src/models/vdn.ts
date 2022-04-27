@@ -69,5 +69,4 @@ export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
 
 export const isVDN = (vdn: VDN): vdn is VDN => vdn.type !== undefined && vdn.value !== undefined
-export const isVDNError = (vdn: unknown): vdn is VDNError =>
-  isVDN(vdn as VDNError) && ALL_VDN_ERRORS.indexOf((vdn as VDNError).type) !== -1
+export const isVDNError = (vdn: VDN): vdn is VDNError => vdn.type !== undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
