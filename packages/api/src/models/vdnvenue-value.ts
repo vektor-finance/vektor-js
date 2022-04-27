@@ -45,5 +45,5 @@ export interface VDNVenueValue {
    * @type {VDNURL}
    * @memberof VDNVenueValue
    */
-  url: VDNURL
+  website: VDNURL
 }
