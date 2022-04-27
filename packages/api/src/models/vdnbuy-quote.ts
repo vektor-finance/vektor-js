@@ -15,7 +15,7 @@
 import { VDNQuoteValue } from './vdn-quote-value'
 
 /**
- * VXL Buy Quote representation
+ * VXL buy_quote representation
  * @export
  * @interface VDNBuyQuote
  */
