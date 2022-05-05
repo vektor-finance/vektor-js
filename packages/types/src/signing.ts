@@ -1,6 +1,38 @@
-import { Asset, NetworkID } from '@vektor-finance/api'
+import type { Asset, NetworkID } from '@vektor-finance/api'
 
-import { TransactionPayload } from './transaction_payload'
+// Copied from '@vektor-finance/signing-common' but had build issues
+export interface EthereumTransaction {
+  to: string
+  value: string
+  gasPrice: string
+  gasLimit: string
+  maxFeePerGas?: typeof undefined
+  maxPriorityFeePerGas?: typeof undefined
+  nonce: string
+  data?: string
+  chainId: number
+  txType?: number
+}
+
+export type EthereumAccessList = {
+  address: string
+  storageKeys: string[]
+}
+
+export type EthereumTransactionEIP1559 = {
+  to: string
+  value: string
+  gasLimit: string
+  gasPrice?: typeof undefined
+  nonce: string
+  data?: string
+  chainId: number
+  maxFeePerGas: string
+  maxPriorityFeePerGas: string
+  accessList?: EthereumAccessList[]
+}
+
+export type EVMTransactionSigningRequestPayload = EthereumTransaction | EthereumTransactionEIP1559
 
 /** Message format version */
 export type MessageVersion = number
@@ -85,7 +117,7 @@ export interface SigningRequest {
   network_identifier: NetworkIdentifier
 
   /** Unsigned transaction payload to be passed to signer */
-  unsigned_transaction: TransactionPayload
+  unsigned_transaction: EVMTransactionSigningRequestPayload
 
   /** Meta data regarding the signing request */
   meta: SigningRequestMeta
