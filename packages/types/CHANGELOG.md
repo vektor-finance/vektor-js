@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.4.4](https://github.com/vektor-finance/vektor-js/compare/v0.4.3...v0.4.4) (2022-05-05)
+
+
+### Bug Fixes
+
+* replace the signing tx payload types with the ones defined in the signing common lib ([#18](https://github.com/vektor-finance/vektor-js/issues/18)) ([211fd4e](https://github.com/vektor-finance/vektor-js/commit/211fd4ef7e49a1d2dfbe53ec4a8728177c3855b7))
+
+
+
 ### [0.4.3](https://github.com/vektor-finance/vektor-js/compare/v0.4.2...v0.4.3) (2022-04-27)
 
 **Note:** Version bump only for package @vektor-finance/types
