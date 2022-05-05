@@ -1,7 +1,5 @@
 import { Asset, NetworkID } from '@vektor-finance/api'
 
-import { TransactionPayload } from './transaction_payload'
-
 /** Message format version */
 export type MessageVersion = number
 
@@ -85,7 +83,7 @@ export interface SigningRequest {
   network_identifier: NetworkIdentifier
 
   /** Unsigned transaction payload to be passed to signer */
-  unsigned_transaction: TransactionPayload
+  unsigned_transaction: EVMTransactionSigningRequestPayload
 
   /** Meta data regarding the signing request */
   meta: SigningRequestMeta
