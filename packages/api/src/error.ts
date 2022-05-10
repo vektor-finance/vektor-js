@@ -33,6 +33,8 @@ export type VXLSubmitAPIError =
       type: 'compiler_undefined_function_error'
       data: {
         token_info: TokenInfo
+        name: string
+        argument_count: number
       }
     }
   | {
@@ -51,6 +53,22 @@ export type VXLSubmitAPIError =
       type: 'compiler_undefined_symbol_error'
       data: {
         token_info: TokenInfo
+      }
+    }
+  | {
+      type: 'compiler_ambiguous_call_error'
+      data: {
+        token_info: TokenInfo
+        function: string
+        subfunction: string
+      }
+    }
+  | {
+      type: 'compiler_arg_types_dont_match_signatures_error'
+      data: {
+        token_info: TokenInfo
+        function: string
+        subfunction: string
       }
     }
   | {
