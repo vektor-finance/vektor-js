@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/vektor-finance/vektor-js/compare/v0.4.5...v0.5.0) (2022-05-10)
+
+
+### Features
+
+* **types:** update VXL API submit errrors ([d2a055c](https://github.com/vektor-finance/vektor-js/commit/d2a055c7d64a6b9d6e841344032dcc7b8ab755ba))
+
+
+
 ### [0.4.5](https://github.com/vektor-finance/vektor-js/compare/v0.4.4...v0.4.5) (2022-05-06)
 
 
