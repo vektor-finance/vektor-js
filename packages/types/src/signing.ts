@@ -149,27 +149,27 @@ export interface AccountID {
 
 // Signing Request Meta Data
 
-export interface EthereumLegacyGasFeeBase {
+export interface EVMLegacyGasFeeBase {
   gas_limit: string
   total_fee: string
   total_fee_usd: string
 }
-export interface EthereumLegacyGasFee {
+export interface EVMLegacyGasFee extends EVMLegacyGasFeeBase {
   type: 'evm_legacy'
   gas_price: string
 }
 
-export interface EthereumEIP1559GasFee {
+export interface EVMEIP1559GasFee extends EVMLegacyGasFeeBase  {
   type: 'evm_eip1559'
   max_fee_per_gas: string
   max_priority_fee_per_gas: string
 }
 
-export type EthereumNetworkFee = EthereumLegacyGasFee | EthereumEIP1559GasFee
+export type EVMNetworkFeeView = EVMLegacyGasFee | EVMEIP1559GasFee
 
 export interface NetworkFee {
   asset: Asset
-  fee: EthereumNetworkFee
+  fee: EVMNetworkFeeView
 }
 
 export interface MetaBase {
