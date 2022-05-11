@@ -165,11 +165,11 @@ export interface EVMEIP1559GasFee extends EVMLegacyGasFeeBase  {
   max_priority_fee_per_gas: string
 }
 
-export type EVMNetworkFeeView = EVMLegacyGasFee | EVMEIP1559GasFee
+export type EVMNetworkFee = EVMLegacyGasFee | EVMEIP1559GasFee
 
 export interface NetworkFee {
   asset: Asset
-  fee: EVMNetworkFeeView
+  fee: EVMNetworkFee
 }
 
 export interface MetaBase {
