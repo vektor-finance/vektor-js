@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.6.2](https://github.com/vektor-finance/vektor-js/compare/v0.6.1...v0.6.2) (2022-05-11)
+
+
+### Bug Fixes
+
+* network fee type name ([2879ca9](https://github.com/vektor-finance/vektor-js/commit/2879ca9cf41ab7f21935683923a42aaf5725d866))
+
+
+
 ### [0.6.1](https://github.com/vektor-finance/vektor-js/compare/v0.6.0...v0.6.1) (2022-05-11)
 
 
