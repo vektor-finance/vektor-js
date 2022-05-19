@@ -1,10 +1,8 @@
-import { Node, NodeContext, NodeTokenType, VXL, VXLFunction } from '@vektor-finance/types'
+import { Node, NodeContext, NodeTokenType, VXLFunction } from '@vektor-finance/types'
 import { notEmpty } from '@vektor-finance/utils'
 import traverse from 'traverse'
 
-export const vxlToFunction = (vxl: VXL): VXLFunction | null => {
-  const node = vxl[0]
-
+export const vxlNodeToFunction = (node: Node): VXLFunction | null => {
   if (!node || !node.token.function) return null
 
   const func = node.token.function

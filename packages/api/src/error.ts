@@ -59,7 +59,7 @@ export interface CompilerAmbiguousCallError extends CompilerBaseError {
 
 export type VXLSubmitAPIError =
   | {
-      type: 'runtime_error' | 'parser_error' | 'unknown_error'
+      type: 'runtime_error' | 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
       data: Record<string, unknown>
     }
   | {
