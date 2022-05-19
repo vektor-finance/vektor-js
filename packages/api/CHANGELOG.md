@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/vektor-finance/vektor-js/compare/v0.6.3...v0.7.0) (2022-05-19)
+
+
+### Features
+
+* change vxlToFunction to handle single node not list. add local compiler error ([78fbf0b](https://github.com/vektor-finance/vektor-js/commit/78fbf0b920cb51d17e10f748dcff59354a8974ba))
+
+
+
 ### [0.6.3](https://github.com/vektor-finance/vektor-js/compare/v0.6.2...v0.6.3) (2022-05-13)
 
 
