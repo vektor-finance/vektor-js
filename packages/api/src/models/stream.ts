@@ -37,13 +37,13 @@ export interface Stream {
    * @type {VDN}
    * @memberof Stream
    */
-  last_value?: VDN
+  last_value: VDN
   /**
    * ISO8601 Timestamp
    * @type {string}
    * @memberof Stream
    */
-  last_value_updated_at?: string
+  last_value_updated_at: string
   /**
    * How many times the stream has been updated
    * @type {number}

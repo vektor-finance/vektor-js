@@ -1,8 +1,7 @@
 // FIXME: We don't want to import any other packages here - creates circular dep
-import { Label, NetworkID, Session } from '@vektor-finance/api'
+import { Label, NetworkID, Session, Stream } from '@vektor-finance/api'
 
 import { SigningRequestCompleted, SigningRequests } from './signing'
-import { Stream } from './stream'
 import { TaskState } from './task'
 
 // Label
@@ -88,7 +87,6 @@ export interface StreamDeletedEvent {
   event_name: 'stream_deleted'
   payload: Pick<Stream, 'id'>
 }
-
 
 export type GatewayEvent =
   | LabelCreatedEvent
