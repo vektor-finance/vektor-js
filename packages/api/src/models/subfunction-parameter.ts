@@ -25,6 +25,12 @@ export interface SubfunctionParameter {
    */
   description: string
   /**
+   * Parameter index
+   * @type {number}
+   * @memberof SubfunctionParameter
+   */
+  index?: number
+  /**
    * Parameter name
    * @type {string}
    * @memberof SubfunctionParameter
