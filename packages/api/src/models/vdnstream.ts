@@ -23,7 +23,7 @@ export interface VDNStream {
    * @type {string}
    * @memberof VDNStream
    */
-  type: VDNStreamTypeEnum
+  type: 'stream'
   /**
    *
    * @type {string}
@@ -31,9 +31,3 @@ export interface VDNStream {
    */
   value: string
 }
-
-export const VDNStreamTypeEnum = {
-  Stream: 'stream',
-} as const
-
-export type VDNStreamTypeEnum = typeof VDNStreamTypeEnum[keyof typeof VDNStreamTypeEnum]

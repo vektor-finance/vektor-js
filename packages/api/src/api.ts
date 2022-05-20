@@ -19,6 +19,7 @@ import {
   LabelsApi,
   SessionsApi,
   SignaturesApi,
+  StreamsApi,
   UsersApi,
   VenuesApi,
   VxlApi,
@@ -50,6 +51,7 @@ export class API {
   public readonly labels: LabelsApi
   public readonly signatures: SignaturesApi
   public readonly sessions: SessionsApi
+  public readonly streams: StreamsApi
   public readonly users: UsersApi
   public readonly venues: VenuesApi
   public readonly vxl: VxlApi
@@ -61,6 +63,7 @@ export class API {
     this.labels = new LabelsApi(_options?.configuration, _options?.baseURL)
     this.sessions = new SessionsApi(_options?.configuration, _options?.baseURL)
     this.signatures = new SignaturesApi(_options?.configuration, _options?.baseURL)
+    this.streams = new StreamsApi(_options?.configuration, _options?.baseURL)
     this.users = new UsersApi(_options?.configuration, _options?.baseURL)
     this.venues = new VenuesApi(_options?.configuration, _options?.baseURL)
     this.vxl = new VxlApi(_options?.configuration, _options?.baseURL)

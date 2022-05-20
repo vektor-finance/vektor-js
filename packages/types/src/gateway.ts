@@ -2,6 +2,7 @@
 import { Label, NetworkID, Session } from '@vektor-finance/api'
 
 import { SigningRequestCompleted, SigningRequests } from './signing'
+import { Stream } from './stream'
 import { TaskState } from './task'
 
 // Label
@@ -22,6 +23,7 @@ export interface LabelDeletedEvent {
 }
 
 // Sessions
+
 export interface SessionCreatedEvent {
   event_name: 'session_created'
   payload: Session
@@ -50,6 +52,7 @@ export interface SigningRequestCompletedEvent {
 }
 
 // Transaction
+
 export interface BroadcastedTransaction {
   id: string
   transaction_hash: string
@@ -69,6 +72,24 @@ export interface TaskCompletedEvent {
   payload: TaskState
 }
 
+// Streams
+
+export interface StreamCreatedEvent {
+  event_name: 'stream_created'
+  payload: Pick<Stream, 'id' | 'created_at'>
+}
+
+export interface StreamUpdatedEvent {
+  event_name: 'stream_updated'
+  payload: Stream
+}
+
+export interface StreamDeletedEvent {
+  event_name: 'stream_deleted'
+  payload: Pick<Stream, 'id'>
+}
+
+
 export type GatewayEvent =
   | LabelCreatedEvent
   | LabelUpdatedEvent
@@ -80,5 +101,8 @@ export type GatewayEvent =
   | SessionCreatedEvent
   | SessionUpdatedEvent
   | SessionDeletedEvent
+  | StreamCreatedEvent
+  | StreamUpdatedEvent
+  | StreamDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
