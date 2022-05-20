@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/vektor-finance/vektor-js/compare/v0.7.1...v0.8.0) (2022-05-20)
+
+
+### Features
+
+* **api:** add streams api ([8871809](https://github.com/vektor-finance/vektor-js/commit/8871809f284dff772ec8ca08326fe28f67a28051))
+
+
+### Bug Fixes
+
+* build errors ([6c622b5](https://github.com/vektor-finance/vektor-js/commit/6c622b5b343f35db5c781521eded995c584ceeab))
+
+
+
 ### [0.7.1](https://github.com/vektor-finance/vektor-js/compare/v0.7.0...v0.7.1) (2022-05-20)
 
 **Note:** Version bump only for package @vektor-finance/types
