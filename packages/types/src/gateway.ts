@@ -75,12 +75,12 @@ export interface TaskCompletedEvent {
 
 export interface StreamCreatedEvent {
   event_name: 'stream_created'
-  payload: Pick<Stream, 'id' | 'created_at'>
+  payload: Stream
 }
 
 export interface StreamUpdatedEvent {
   event_name: 'stream_updated'
-  payload: Stream
+  payload: Required<Stream>
 }
 
 export interface StreamDeletedEvent {
