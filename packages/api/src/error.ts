@@ -57,11 +57,7 @@ export interface CompilerAmbiguousCallError extends CompilerBaseError {
   subfunction: string
 }
 
-export type VXLSubmitAPIError =
-  | {
-      type: 'runtime_error' | 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
-      data: Record<string, unknown>
-    }
+export type CompilerError =
   | {
       type: 'compiler_options_before_parameters_error' | 'compiler_undefined_symbol_error'
       data: CompilerBaseError
@@ -82,5 +78,12 @@ export type VXLSubmitAPIError =
       type: 'compiler_signature_mismatch_error'
       data: CompilerSignatureMismatchError
     }
+
+export type VXLSubmitAPIError =
+  | {
+      type: 'runtime_error' | 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
+      data: Record<string, unknown>
+    }
+  | CompilerError
 
 export type VXLSubmitAPIErrorType = VXLSubmitAPIError['type']
