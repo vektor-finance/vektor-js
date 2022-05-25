@@ -13,15 +13,15 @@
  */
 
 /**
- * Request to submit VXL to be typechecked
+ * Request to submit VXL to be validated
  * @export
- * @interface VXLTypeCheckRequest
+ * @interface VXLValidateRequest
  */
-export interface VXLTypeCheckRequest {
+export interface VXLValidateRequest {
   /**
    * VXL command
    * @type {string}
-   * @memberof VXLTypeCheckRequest
+   * @memberof VXLValidateRequest
    */
   vxl: string
 }
