@@ -52,7 +52,7 @@ export interface SigningRequestCompletedEvent {
 
 // Transaction
 
-export interface BroadcastedTransaction {
+export interface TransactionBroadcasted {
   id: string
   transaction_hash: string
   explorer_url: string
@@ -60,8 +60,8 @@ export interface BroadcastedTransaction {
 }
 
 export interface TransactionBroadcastedEvent {
-  event_name: 'signing_request_completed'
-  payload: BroadcastedTransaction
+  event_name: 'transaction_broadcasted'
+  payload: TransactionBroadcasted
 }
 
 // Tasks
