@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.0](https://github.com/vektor-finance/vektor-js/compare/v0.8.1...v0.9.0) (2022-05-27)
+
+
+### Features
+
+* update streams endpoint, add streams flag to vxl submit ([9a7ae7f](https://github.com/vektor-finance/vektor-js/commit/9a7ae7f96756c02a095288a0afdd73e6535dc97d))
+
+
+### Bug Fixes
+
+* transaction_broadcasted event ([ad6bd96](https://github.com/vektor-finance/vektor-js/commit/ad6bd96dfebf7e4755b444b736977121a9b3c2b4))
+
+
+
 ### [0.8.1](https://github.com/vektor-finance/vektor-js/compare/v0.8.0...v0.8.1) (2022-05-21)
 
 
