@@ -25,6 +25,12 @@ export interface VXLSubmitRequest {
    */
   local?: boolean
   /**
+   * Should results be streams when it makes sense?
+   * @type {boolean}
+   * @memberof VXLSubmitRequest
+   */
+  stream?: boolean
+  /**
    * VXL command
    * @type {string}
    * @memberof VXLSubmitRequest
