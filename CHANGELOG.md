@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.9.1](https://github.com/vektor-finance/vektor-js/compare/v0.9.0...v0.9.1) (2022-05-30)
+
+
+### Bug Fixes
+
+* update stream_created event ([befedb9](https://github.com/vektor-finance/vektor-js/commit/befedb98fc87388a72cb2d6eb87adb5629c8a261))
+
+
+
 ## [0.9.0](https://github.com/vektor-finance/vektor-js/compare/v0.8.1...v0.9.0) (2022-05-27)
 
 
