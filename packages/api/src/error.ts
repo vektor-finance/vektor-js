@@ -17,18 +17,25 @@ export interface CompilerBaseError {
   token_info: TokenInfo
 }
 
+export interface CompilerOptionsBeforeParametersError extends CompilerBaseError {
+  option_name: string
+}
+
+export interface CompilerUndefinedSymbolError extends CompilerBaseError {
+  symbol: string
+}
+
+export interface CompilerUndefinedFunctionError extends CompilerBaseError {
+  name: string
+  argument_count: number
+}
+
 export interface CompilerIncorrectArgumentCountError extends CompilerBaseError {
   function: string
   subfunction: string
   argument_counts: number[]
   args: (VDN | null)[]
   options: Record<string, VDN | null>
-}
-
-export interface CompilerUndefinedFunctionError {
-  token_info: TokenInfo
-  name: string
-  argument_count: number
 }
 
 export interface IncorrectlyTyped {
@@ -59,8 +66,12 @@ export interface CompilerAmbiguousCallError extends CompilerBaseError {
 
 export type CompilerError =
   | {
-      type: 'compiler_options_before_parameters_error' | 'compiler_undefined_symbol_error'
-      data: CompilerBaseError
+      type: 'compiler_options_before_parameters_error'
+      data: CompilerOptionsBeforeParametersError[]
+    }
+  | {
+      type: 'compiler_undefined_symbol_error'
+      data: CompilerUndefinedSymbolError
     }
   | {
       type: 'compiler_undefined_function_error'
