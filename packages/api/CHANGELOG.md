@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.0](https://github.com/vektor-finance/vektor-js/compare/v0.9.1...v0.10.0) (2022-06-01)
+
+
+### Features
+
+* update compiler errors ([#21](https://github.com/vektor-finance/vektor-js/issues/21)) ([bc4977e](https://github.com/vektor-finance/vektor-js/commit/bc4977e38b7a2f946f0f2dcf1e8bc0fa96647322))
+
+
+
 ### [0.9.1](https://github.com/vektor-finance/vektor-js/compare/v0.9.0...v0.9.1) (2022-05-30)
 
 **Note:** Version bump only for package @vektor-finance/api
