@@ -17,17 +17,17 @@ export interface CompilerBaseError {
   token_info: TokenInfo
 }
 
-export interface CompilerOptionsBeforeParametersError extends CompilerBaseError {
-  option_name: string
+export interface CompilerUndefinedFunctionError extends CompilerBaseError {
+  name: string
+  argument_count: number
 }
 
 export interface CompilerUndefinedSymbolError extends CompilerBaseError {
   symbol: string
 }
 
-export interface CompilerUndefinedFunctionError extends CompilerBaseError {
-  name: string
-  argument_count: number
+export interface CompilerOptionsBeforeParametersError extends CompilerBaseError {
+  option_name: string
 }
 
 export interface CompilerIncorrectArgumentCountError extends CompilerBaseError {
@@ -66,28 +66,28 @@ export interface CompilerAmbiguousCallError extends CompilerBaseError {
 
 export type CompilerError =
   | {
-      type: 'compiler_options_before_parameters_error'
-      data: CompilerOptionsBeforeParametersError[]
+      type: 'compiler_undefined_function_error'
+      data: CompilerUndefinedFunctionError
     }
   | {
       type: 'compiler_undefined_symbol_error'
       data: CompilerUndefinedSymbolError
     }
   | {
-      type: 'compiler_undefined_function_error'
-      data: CompilerUndefinedFunctionError
+      type: 'compiler_options_before_parameters_error'
+      data: CompilerOptionsBeforeParametersError[]
     }
   | {
       type: 'compiler_incorrect_argument_count_error'
       data: CompilerIncorrectArgumentCountError
     }
   | {
-      type: 'compiler_ambiguous_call_error'
-      data: CompilerAmbiguousCallError
-    }
-  | {
       type: 'compiler_signature_mismatch_error'
       data: CompilerSignatureMismatchError
+    }
+  | {
+      type: 'compiler_ambiguous_call_error'
+      data: CompilerAmbiguousCallError
     }
 
 export type VXLSubmitAPIError =
