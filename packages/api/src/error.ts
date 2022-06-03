@@ -58,7 +58,7 @@ export interface SignatureMismatch {
 
 export interface SpecAndMismatches {
   spec: SubfunctionSpec
-  mismatches: SignatureMismatch[]
+  mismatches: SignatureMismatch
 }
 
 export interface CompilerSignatureMismatchError extends CompilerBaseError {
