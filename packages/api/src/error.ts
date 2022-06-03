@@ -64,6 +64,8 @@ export interface SpecAndMismatches {
 export interface CompilerSignatureMismatchError extends CompilerBaseError {
   function: string
   subfunction: string
+  args: (VDN | null)[]
+  options: Record<string, VDN | null>
   specs_and_mismatches: SpecAndMismatches[]
 }
 
