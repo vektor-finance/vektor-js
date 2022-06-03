@@ -56,13 +56,15 @@ export interface SignatureMismatch {
   unspecified_options: UnspecifiedOption[]
 }
 
+export interface SpecAndMismatches {
+  spec: SubfunctionSpec
+  mismatches: SignatureMismatch[]
+}
+
 export interface CompilerSignatureMismatchError extends CompilerBaseError {
   function: string
   subfunction: string
-  specs_and_mismatches: {
-    mismatches: SignatureMismatch[]
-    spec: SubfunctionSpec
-  }[]
+  specs_and_mismatches: SpecAndMismatches[]
 }
 
 export interface CompilerAmbiguousCallError extends CompilerBaseError {
