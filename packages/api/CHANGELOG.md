@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.11.2](https://github.com/vektor-finance/vektor-js/compare/v0.11.1...v0.11.2) (2022-06-03)
+
+
+### Bug Fixes
+
+* missing type info for signature_mismatch_error ([f12beee](https://github.com/vektor-finance/vektor-js/commit/f12beeeecfa474fb642b278849c3df408fd08bd9))
+* types ([64c4761](https://github.com/vektor-finance/vektor-js/commit/64c47615a2b9463e3d4ba524d489599088d8ff8e))
+
+
+
 ### [0.11.1](https://github.com/vektor-finance/vektor-js/compare/v0.11.0...v0.11.1) (2022-06-03)
 
 
