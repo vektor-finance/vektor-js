@@ -60,7 +60,7 @@ export interface CompilerSignatureMismatchError extends CompilerBaseError {
   function: string
   subfunction: string
   specs_and_mismatches: {
-    mismatch: SignatureMismatch[]
+    mismatches: SignatureMismatch[]
     spec: SubfunctionSpec
   }[]
 }
