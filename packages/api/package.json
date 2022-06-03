@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/api",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "description": "Vektor API client",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/api",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/eslint": "7.28.0",
     "@types/node": "^12.11.5",
-    "@vektor-finance/eslint-config-sdk": "^0.10.1",
+    "@vektor-finance/eslint-config-sdk": "^0.11.0",
     "jest": "27.5.1",
     "jsdom": "15.0.0",
     "karma": "^6.3.20",

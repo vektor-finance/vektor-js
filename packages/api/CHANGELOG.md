@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/vektor-finance/vektor-js/compare/v0.10.1...v0.11.0) (2022-06-03)
+
+
+### Features
+
+* add fields to SignatureMismatch subtypes ([#22](https://github.com/vektor-finance/vektor-js/issues/22)) ([03f2930](https://github.com/vektor-finance/vektor-js/commit/03f293061e4a4c79592a82bb11730c2d52f618bd))
+
+
+
 ### [0.10.1](https://github.com/vektor-finance/vektor-js/compare/v0.10.0...v0.10.1) (2022-06-02)
 
 **Note:** Version bump only for package @vektor-finance/api
