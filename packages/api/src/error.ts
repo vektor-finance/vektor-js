@@ -42,12 +42,18 @@ export interface IncorrectlyTyped {
   name: string
   expected_type: VDNType
   provided_type: VDNType
+  token_info: TokenInfo
+}
+
+export interface UnspecifiedOption {
+  name: string
+  token_info: TokenInfo
 }
 
 export interface SignatureMismatch {
   incorrectly_typed_args: IncorrectlyTyped[]
   incorrectly_typed_options: IncorrectlyTyped[]
-  unspecified_options: string[]
+  unspecified_options: UnspecifiedOption[]
 }
 
 export interface CompilerSignatureMismatchError extends CompilerBaseError {
