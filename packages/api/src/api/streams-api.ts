@@ -136,10 +136,10 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
       }
     },
     /**
-     * Patch a single stream
-     * @summary Patch a stream
+     * Update a single stream
+     * @summary Update a stream
      * @param {string} id Stream ID
-     * @param {StreamPatchParams} [streamPatchParams] Stream patch params
+     * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -229,10 +229,10 @@ export const StreamsApiFp = function (configuration?: Configuration) {
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
     /**
-     * Patch a single stream
-     * @summary Patch a stream
+     * Update a single stream
+     * @summary Update a stream
      * @param {string} id Stream ID
-     * @param {StreamPatchParams} [streamPatchParams] Stream patch params
+     * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -284,10 +284,10 @@ export const StreamsApiFactory = function (configuration?: Configuration, basePa
       return localVarFp.list(options).then((request) => request(axios, basePath))
     },
     /**
-     * Patch a single stream
-     * @summary Patch a stream
+     * Update a single stream
+     * @summary Update a stream
      * @param {string} id Stream ID
-     * @param {StreamPatchParams} [streamPatchParams] Stream patch params
+     * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -346,10 +346,10 @@ export class StreamsApi extends BaseAPI {
   }
 
   /**
-   * Patch a single stream
-   * @summary Patch a stream
+   * Update a single stream
+   * @summary Update a stream
    * @param {string} id Stream ID
-   * @param {StreamPatchParams} [streamPatchParams] Stream patch params
+   * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof StreamsApi
