@@ -83,6 +83,16 @@ export interface StreamUpdatedEvent {
   payload: Required<Stream>
 }
 
+export interface StreamPausedEvent {
+  event_name: 'stream_paused'
+  payload: Pick<Stream, 'id'>
+}
+
+export interface StreamResumedEvent {
+  event_name: 'stream_resumed'
+  payload: Pick<Stream, 'id'>
+}
+
 export interface StreamDeletedEvent {
   event_name: 'stream_deleted'
   payload: Pick<Stream, 'id'>
@@ -101,6 +111,8 @@ export type GatewayEvent =
   | SessionDeletedEvent
   | StreamCreatedEvent
   | StreamUpdatedEvent
+  | StreamPausedEvent
+  | StreamResumedEvent
   | StreamDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']

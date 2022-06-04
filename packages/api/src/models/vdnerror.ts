@@ -13,24 +13,27 @@
  */
 
 export const ALL_VDN_ERRORS = [
+  'broadcast_error',
+  'build_error',
   'gas_limit_reached_error',
   'gas_uint64_overflow_error',
+  'high_price_impact_error',
   'insufficient_funds_error',
   'insufficient_funds_for_transfer_error',
   'intrinsic_gas_too_low_error',
-  'max_fee_per_gas_overflow_error',
+  'invalid_asset_error',
+  'labels_from_different_chains_error',
   'max_fee_per_gas_less_than_block_base_fee_error',
-  'max_priority_fee_per_gas_overflow_error',
+  'max_fee_per_gas_overflow_error',
   'max_priority_fee_per_gas_higher_than_max_fee_per_gas_error',
+  'max_priority_fee_per_gas_overflow_error',
+  'no_route_error',
+  'non_positive_amount_error',
   'nonce_too_high_error',
   'nonce_too_low_error',
-  'sender_not_eoa_error',
   'runtime_error',
-  'build_error',
-  'broadcast_error',
-  'invalid_asset_error',
-  'non_positive_amount_error',
-  'stale_quote_error',
+  'sender_not_eoa_error',
+  'transfer_amount_exceeds_allowance_error'
 ] as const
 
 export type VDNErrorType = typeof ALL_VDN_ERRORS[number]

@@ -12,7 +12,9 @@
  * Do not edit the class manually.
  */
 
+import { VDNInteger } from './vdninteger'
 import { VDNString } from './vdnstring'
+import { VDNURL } from './vdnurl'
 
 /**
  *
@@ -26,6 +28,18 @@ export interface VDNBlockchainValue {
    * @memberof VDNBlockchainValue
    */
   blockchain: VDNString
+  /**
+   *
+   * @type {VDNInteger}
+   * @memberof VDNBlockchainValue
+   */
+  chain_id: VDNInteger
+  /**
+   *
+   * @type {VDNURL}
+   * @memberof VDNBlockchainValue
+   */
+  explorer: VDNURL
   /**
    *
    * @type {VDNString}

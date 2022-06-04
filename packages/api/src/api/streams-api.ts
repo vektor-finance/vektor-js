@@ -12,22 +12,21 @@
  * Do not edit the class manually.
  */
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios'
-import { Configuration } from '../configuration'
-// Some imports not used depending on template conditions
-// @ts-ignore
+import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
+
+import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
 import {
-  DUMMY_BASE_URL,
   assertParamExists,
+  createRequestFunction,
+  DUMMY_BASE_URL,
+  serializeDataIfNeeded,
   setBearerAuthToObject,
   setSearchParams,
   toPathString,
-  createRequestFunction,
 } from '../common'
-// @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base'
-// @ts-ignore
-import { Stream } from '../models'
+import { Configuration } from '../configuration'
+import { Stream, StreamPatchParams } from '../models'
+
 /**
  * StreamsApi - axios parameter creator
  * @export
@@ -136,6 +135,49 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
         options: localVarRequestOptions,
       }
     },
+    /**
+     * Update a single stream
+     * @summary Update a stream
+     * @param {string} id Stream ID
+     * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    update: async (
+      id: string,
+      streamPatchParams?: StreamPatchParams,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      // verify required parameter 'id' is not null or undefined
+      assertParamExists('update', 'id', id)
+      const localVarPath = `/streams/{id}`.replace(`{${'id'}}`, encodeURIComponent(String(id)))
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      localVarHeaderParameter['Content-Type'] = 'application/json'
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+      localVarRequestOptions.data = serializeDataIfNeeded(streamPatchParams, localVarRequestOptions, configuration)
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
   }
 }
 
@@ -186,6 +228,22 @@ export const StreamsApiFp = function (configuration?: Configuration) {
       const localVarAxiosArgs = await localVarAxiosParamCreator.list(options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
+    /**
+     * Update a single stream
+     * @summary Update a stream
+     * @param {string} id Stream ID
+     * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async update(
+      id: string,
+      streamPatchParams?: StreamPatchParams,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.update(id, streamPatchParams, options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
   }
 }
 
@@ -224,6 +282,17 @@ export const StreamsApiFactory = function (configuration?: Configuration, basePa
      */
     list(options?: any): AxiosPromise<Array<Stream>> {
       return localVarFp.list(options).then((request) => request(axios, basePath))
+    },
+    /**
+     * Update a single stream
+     * @summary Update a stream
+     * @param {string} id Stream ID
+     * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    update(id: string, streamPatchParams?: StreamPatchParams, options?: any): AxiosPromise<void> {
+      return localVarFp.update(id, streamPatchParams, options).then((request) => request(axios, basePath))
     },
   }
 }
@@ -273,6 +342,21 @@ export class StreamsApi extends BaseAPI {
   public list(options?: AxiosRequestConfig) {
     return StreamsApiFp(this.configuration)
       .list(options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
+  /**
+   * Update a single stream
+   * @summary Update a stream
+   * @param {string} id Stream ID
+   * @param {StreamPatchParams} [streamPatchParams] Stream update patch params
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof StreamsApi
+   */
+  public update(id: string, streamPatchParams?: StreamPatchParams, options?: AxiosRequestConfig) {
+    return StreamsApiFp(this.configuration)
+      .update(id, streamPatchParams, options)
       .then((request) => request(this.axios, this.basePath))
   }
 }

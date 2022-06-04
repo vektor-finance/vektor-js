@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { StreamState } from './stream-state'
 import { VDN } from './vdn'
 
 /**
@@ -44,6 +45,12 @@ export interface Stream {
    * @memberof Stream
    */
   last_value_updated_at: string | null
+  /**
+   *
+   * @type {StreamState}
+   * @memberof Stream
+   */
+  state: StreamState
   /**
    * How many times the stream has been updated
    * @type {number}
