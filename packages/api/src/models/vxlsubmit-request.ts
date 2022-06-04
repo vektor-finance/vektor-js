@@ -25,7 +25,7 @@ export interface VXLSubmitRequest {
    */
   local?: boolean
   /**
-   * Should results be streams when it makes sense?
+   * Should results be returned as streams (when possible)
    * @type {boolean}
    * @memberof VXLSubmitRequest
    */

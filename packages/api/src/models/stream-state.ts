@@ -12,12 +12,9 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
-
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ * Stream state
  * @export
+ * @enum {string}
  */
-export type VDNOrRuntimeError = RuntimeError | VDN
+export type StreamState = 'running' | 'paused'

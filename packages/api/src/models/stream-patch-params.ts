@@ -12,12 +12,18 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { VDN } from './vdn'
+import { StreamState } from './stream-state'
 
 /**
- * @type VDNOrRuntimeError
- * VDN or RuntimeError
+ * Properties for patching a stream
  * @export
+ * @interface StreamPatchParams
  */
-export type VDNOrRuntimeError = RuntimeError | VDN
+export interface StreamPatchParams {
+  /**
+   *
+   * @type {StreamState}
+   * @memberof StreamPatchParams
+   */
+  state: StreamState
+}
