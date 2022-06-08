@@ -19,13 +19,13 @@ When working in this project, please assume it will be open-sourced. For now a `
 For each major JavaScript platform, there is a specific high-level SDK that provides all the tools you need in a single package. Please refer to the README and instructions of those SDKs for more detailed information:
 
 - [`@vektor-finance/browser`](vektor-js/packages/browser): SDK for browsers
+- [`@vektor-finance/node`](vektor-js/packages/node): SDK for Node
 
 ### Future Supported Platforms
 
-- @vektor-finance/node: SDK for Node, including integrations for Express, Koa, Loopback, Sails and Connect _for integrating Vektor from a backend_
 - @vektor-finance/react: browser SDK with React integration enabled - _for web app_
-- @vektor-finance/react-native: SDK for React Native with support for native crashes _for mobile apps_
-- @vektor-finance/electron: SDK for Electron with support for native crashes _for desktop app_
+- @vektor-finance/react-native: SDK for React Native _for mobile apps_
+- @vektor-finance/electron: SDK for Electron _for desktop app_
 
 ## Installation and Usage
 
@@ -56,10 +56,9 @@ Besides the high-level SDKs, this repository contains shared packages, helpers a
 development. If you're thinking about contributing to or creating a JavaScript-based SDK, have a look at the resources
 below:
 
-- [`@vektor-finance/utils`](vektor-js/packages/utils): A set of helpers and
-  utility functions useful for various SDKs.
-- [`@vektor-finance/types`](vektor-js/packages/types): Types used in all
-  packages.
+- [`@vektor-finance/utils`](vektor-js/packages/utils): A set of helpers and utility functions useful for various SDKs.
+- [`@vektor-finance/types`](vektor-js/packages/types): Types used in all packages.
+- [`@vektor-finance/vxl`](vektor-js/packages/vxl): Types used for VXL
 
 ## Publishing NPM Packages
 
