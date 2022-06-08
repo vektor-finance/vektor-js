@@ -48,13 +48,6 @@ export enum Operator {
   less = '<',
   greater_equal = '>=',
   less_equal = '<=',
-
-  // postfix
-  elipsis = '...',
-  attr_access = '.',
-  attr_splat = '.*',
-  index_access = '[',
-  full_splat = '[*]',
 }
 
 type VNumber = {

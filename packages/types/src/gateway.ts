@@ -1,8 +1,7 @@
-// FIXME: We don't want to import any other packages here - creates circular dep
-import { Label, NetworkID, Session, Stream } from '@vektor-finance/api'
+import type { Label, NetworkID, Session, Stream } from '@vektor-finance/api'
 
-import { SigningRequestCompleted, SigningRequests } from './signing'
-import { TaskState } from './task'
+import type { SigningRequestCompleted, SigningRequests } from './signing'
+import type { TaskState } from './task'
 
 // Label
 
