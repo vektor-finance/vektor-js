@@ -17,9 +17,6 @@ env:
 
   BUILD_CACHE_KEY: ${{ github.sha }}
 
-  # Read only token for fetching packages in other repos
-  NODE_AUTH_TOKEN: ${{ secrets.GH_PKG_AUTH_TOKEN }}
-
 jobs:
   install_deps:
     name: Install Dependencies
