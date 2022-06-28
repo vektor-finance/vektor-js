@@ -59,7 +59,7 @@
     "@vektor-finance/eslint-config-sdk": "^0.13.0",
     "chai": "4.3.6",
     "jest": "27.5.1",
-    "jsdom": "15.0.0",
+    "jsdom": "16.5.0",
     "karma": "6.3.20",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "2.2.0",
