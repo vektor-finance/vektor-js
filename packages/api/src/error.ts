@@ -11,6 +11,7 @@ export interface TokenInfo {
   column: number
   line: number
   offset: number
+  length: number | null
 }
 
 export interface CompilerBaseError {
