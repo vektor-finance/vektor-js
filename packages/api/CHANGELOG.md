@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.0](https://github.com/vektor-finance/vektor-js/compare/v0.13.0...v0.14.0) (2022-06-29)
+
+
+### Features
+
+* **types:** add vdnblock ([#26](https://github.com/vektor-finance/vektor-js/issues/26)) ([f2a9890](https://github.com/vektor-finance/vektor-js/commit/f2a9890e41f0a0537eb229ed6ed542f2c7b44ebb))
+
+
+
 ## [0.13.0](https://github.com/vektor-finance/vektor-js/compare/v0.12.1...v0.13.0) (2022-06-28)
 
 
