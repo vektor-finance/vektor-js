@@ -16,6 +16,7 @@ import { ALL_VDN_ERRORS } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
+import { VDNBlock } from './vdnblock'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
 import { VDNBuyQuote } from './vdnbuy-quote'
@@ -46,6 +47,7 @@ export type VDN =
   | VDNAddress
   | VDNAsset
   | VDNAssetSymbol
+  | VDNBlock
   | VDNBlockchain
   | VDNBoolean
   | VDNBuyQuote
