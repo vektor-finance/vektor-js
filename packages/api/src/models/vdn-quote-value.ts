@@ -13,6 +13,7 @@
  */
 
 import { VDNAsset } from './vdnasset'
+import { VDNBlockchain } from './vdnblockchain'
 import { VDNDecimal } from './vdndecimal'
 import { VDNVenue } from './vdnvenue'
 
@@ -22,6 +23,13 @@ import { VDNVenue } from './vdnvenue'
  * @interface VDNQuoteValue
  */
 export interface VDNQuoteValue {
+  /**
+   *
+   * @type {VDNBlockchain}
+   * @memberof VDNBuyQuoteValue
+   */
+  blockchain: VDNBlockchain
+  /**
   /**
    *
    * @type {VDNDecimal}
