@@ -27,14 +27,29 @@ For each major JavaScript platform, there is a specific high-level SDK that prov
 - @vektor-finance/react-native: SDK for React Native _for mobile apps_
 - @vektor-finance/electron: SDK for Electron _for desktop app_
 
-## Installation and Usage
+## Installation
 
-To install a SDK, simply add the high-level package, for example:
+`@vektor-finanance/*` packages are currently private and hosted on GitHub.
 
-```sh
-npm install --save @vektor-finance/browser
-yarn add @vektor-finance/browser
+This means you will need to instruct `npm` or `yarn` to look for packages scoped under `@vektor-finance` to be fetched from GitHub Packages and to use an authentication token:
+
+1. Generate a [Github Personal Access Token](https://github.com/settings/tokens) with `read:packages` permission
+
+2. Create a file in your home directory `~/.npmrc`
+
+3. Add the following contents to it:
+
+```bash
+  @vektor-finance:registry="https://npm.pkg.github.com"
+  //npm.pkg.github.com/:_authToken="${GITHUB_PKG_AUTH_TOKEN}"
+  always-auth=true
 ```
+
+4. Use thw PAT you created for the `${GITHUB_PKG_AUTH_TOKEN}` value directly or set it in your shell environment to be replaced automatically
+
+5. Install a SDK (or other packages) `npm install --save @vektor-finance/browser` or `yarn add @vektor-finance/browser`
+
+## Usage
 
 Setup and usage of these SDKs always follows the same principle.
 
