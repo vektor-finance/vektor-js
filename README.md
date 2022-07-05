@@ -18,8 +18,8 @@ When working in this project, please assume it will be open-sourced. For now a `
 
 For each major JavaScript platform, there is a specific high-level SDK that provides all the tools you need in a single package. Please refer to the README and instructions of those SDKs for more detailed information:
 
-- [`@vektor-finance/browser`](vektor-js/packages/browser): SDK for browsers
-- [`@vektor-finance/node`](vektor-js/packages/node): SDK for Node
+- [`@vektor-finance/browser`](packages/browser): SDK for browsers
+- [`@vektor-finance/node`](packages/node): SDK for Node
 
 ### Future Supported Platforms
 
@@ -27,14 +27,29 @@ For each major JavaScript platform, there is a specific high-level SDK that prov
 - @vektor-finance/react-native: SDK for React Native _for mobile apps_
 - @vektor-finance/electron: SDK for Electron _for desktop app_
 
-## Installation and Usage
+## Installation
 
-To install a SDK, simply add the high-level package, for example:
+`@vektor-finanance/*` packages are currently private and hosted on GitHub.
 
-```sh
-npm install --save @vektor-finance/browser
-yarn add @vektor-finance/browser
+This means you will need to instruct `npm` or `yarn` to look for packages scoped under `@vektor-finance` to be fetched from GitHub Packages and to use an authentication token:
+
+1. Generate a [Github Personal Access Token](https://github.com/settings/tokens) with `read:packages` permission
+
+2. Create a file in your home directory `~/.npmrc`
+
+3. Add the following contents to it:
+
+```bash
+  @vektor-finance:registry="https://npm.pkg.github.com"
+  //npm.pkg.github.com/:_authToken="${GITHUB_PKG_AUTH_TOKEN}"
+  always-auth=true
 ```
+
+4. Use thw PAT you created for the `${GITHUB_PKG_AUTH_TOKEN}` value directly or set it in your shell environment to be replaced automatically
+
+5. Install a SDK (or other packages) `npm install --save @vektor-finance/browser` or `yarn add @vektor-finance/browser`
+
+## Usage
 
 Setup and usage of these SDKs always follows the same principle.
 
@@ -56,9 +71,9 @@ Besides the high-level SDKs, this repository contains shared packages, helpers a
 development. If you're thinking about contributing to or creating a JavaScript-based SDK, have a look at the resources
 below:
 
-- [`@vektor-finance/utils`](vektor-js/packages/utils): A set of helpers and utility functions useful for various SDKs.
-- [`@vektor-finance/types`](vektor-js/packages/types): Types used in all packages.
-- [`@vektor-finance/vxl`](vektor-js/packages/vxl): Types used for VXL
+- [`@vektor-finance/utils`](packages/utils): A set of helpers and utility functions useful for various SDKs.
+- [`@vektor-finance/types`](packages/types): Types used in all packages.
+- [`@vektor-finance/vxl`](packages/vxl): Types used for VXL
 
 ## Publishing NPM Packages
 
