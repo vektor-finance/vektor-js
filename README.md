@@ -56,13 +56,25 @@ Setup and usage of these SDKs always follows the same principle.
 ```javascript
 import Vektor from '@vektor-finance/browser'
 
-const vektor = Vektor('<authToken>')
+const authToken = '<authToken>'
+const userId = '<userId>'
 
+// Setup Vektor SDK
+const vektor = new Vektor(authToken)
+
+// Connect to Gateway
+vektor.gateway.connect(userId)
+
+// Subscribe to Gateway events
 vektor.gateway.subscribe((event) => {
   console.log(JSON.stringify(event, null, 2))
 })
 
-vektor.gateway.connect(userId)
+// Submit a VXL Command
+const vxl = "price(eth)"
+const body = { vxl, stream: true }
+const response = await vektor.api.vxl.submit(body, { headers: { Authorization: `Bearer ${authToken}` } })
+console.log(JSON.stringify(response, null, 2))
 ```
 
 ## Other Packages
