@@ -256,11 +256,25 @@ export interface SellRequestMeta extends MetaBase {
   trade_info: TradeInfo
 }
 
+export interface Split {
+  asset: Asset
+  to_amount: string
+  to_label: AccountID
+}
+
+export interface SplitRequestMeta extends MetaBase {
+  request_type: 'split_request'
+  from_amount: string
+  from_label: AccountID
+  splits: Split[]
+}
+
 export type SigningRequestMeta =
   | MoveRequestMeta
   | ApproveRequestMeta
   | WrapRequestMeta
   | BuyRequestMeta
   | SellRequestMeta
+  | SplitRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']
