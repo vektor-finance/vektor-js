@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.0](https://github.com/vektor-finance/vektor-js/compare/v0.14.2...v0.15.0) (2022-07-07)
+
+
+### Features
+
+* **api/streams:** add delete all function ([#29](https://github.com/vektor-finance/vektor-js/issues/29)) ([5c71b95](https://github.com/vektor-finance/vektor-js/commit/5c71b9529a45225f12e268a3873a020917378886))
+
+
+
 ### [0.14.2](https://github.com/vektor-finance/vektor-js/compare/v0.14.1...v0.14.2) (2022-06-30)
 
 **Note:** Version bump only for package @vektor-finance/api
