@@ -14,7 +14,7 @@
 
 import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
 
-import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
+import { BASE_PATH, BaseAPI,RequestArgs } from '../base'
 import {
   assertParamExists,
   createRequestFunction,
@@ -26,7 +26,6 @@ import {
 } from '../common'
 import { Configuration } from '../configuration'
 import { Stream, StreamPatchParams } from '../models'
-
 /**
  * StreamsApi - axios parameter creator
  * @export
@@ -44,6 +43,38 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
       // verify required parameter 'id' is not null or undefined
       assertParamExists('_delete', 'id', id)
       const localVarPath = `/streams/{id}`.replace(`{${'id'}}`, encodeURIComponent(String(id)))
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
+      let baseOptions
+      if (configuration) {
+        baseOptions = configuration.baseOptions
+      }
+
+      const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options }
+      const localVarHeaderParameter = {} as any
+      const localVarQueryParameter = {} as any
+
+      // authentication authorization required
+      // http bearer authentication required
+      await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter)
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      }
+    },
+    /**
+     * Delete all streams
+     * @summary Delete all streams
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    deleteAll: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/streams`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
       let baseOptions
@@ -203,6 +234,18 @@ export const StreamsApiFp = function (configuration?: Configuration) {
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
     /**
+     * Delete all streams
+     * @summary Delete all streams
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async deleteAll(
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteAll(options)
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
+    },
+    /**
      * Show details for a single stream
      * @summary Show a stream\'s properties
      * @param {string} id Stream ID
@@ -265,6 +308,15 @@ export const StreamsApiFactory = function (configuration?: Configuration, basePa
       return localVarFp._delete(id, options).then((request) => request(axios, basePath))
     },
     /**
+     * Delete all streams
+     * @summary Delete all streams
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    deleteAll(options?: any): AxiosPromise<void> {
+      return localVarFp.deleteAll(options).then((request) => request(axios, basePath))
+    },
+    /**
      * Show details for a single stream
      * @summary Show a stream\'s properties
      * @param {string} id Stream ID
@@ -315,6 +367,19 @@ export class StreamsApi extends BaseAPI {
   public _delete(id: string, options?: AxiosRequestConfig) {
     return StreamsApiFp(this.configuration)
       ._delete(id, options)
+      .then((request) => request(this.axios, this.basePath))
+  }
+
+  /**
+   * Delete all streams
+   * @summary Delete all streams
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof StreamsApi
+   */
+  public deleteAll(options?: AxiosRequestConfig) {
+    return StreamsApiFp(this.configuration)
+      .deleteAll(options)
       .then((request) => request(this.axios, this.basePath))
   }
 
