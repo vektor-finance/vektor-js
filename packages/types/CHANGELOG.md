@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.0](https://github.com/vektor-finance/vektor-js/compare/v0.15.0...v0.16.0) (2022-07-07)
+
+
+### Features
+
+* **types:** add SplitRequestMeta ([#30](https://github.com/vektor-finance/vektor-js/issues/30)) ([67d90c4](https://github.com/vektor-finance/vektor-js/commit/67d90c43f10850a2b472fd685dcaeb975727c148))
+
+
+
 ## [0.15.0](https://github.com/vektor-finance/vektor-js/compare/v0.14.2...v0.15.0) (2022-07-07)
 
 **Note:** Version bump only for package @vektor-finance/types
