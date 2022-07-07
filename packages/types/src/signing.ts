@@ -256,6 +256,8 @@ export interface SellRequestMeta extends MetaBase {
   trade_info: TradeInfo
 }
 
+export type SplitType = "equal" | "exact"
+
 export interface Split {
   asset: Asset
   to_amount: string
@@ -266,6 +268,7 @@ export interface SplitRequestMeta extends MetaBase {
   request_type: 'split_request'
   from_amount: string
   from_label: AccountID
+  split_type: SplitType
   splits: Split[]
 }
 
