@@ -16,6 +16,7 @@ import { ALL_VDN_ERRORS } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
+import { VDNBalance } from './vdnbalance'
 import { VDNBlock } from './vdnblock'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
@@ -28,6 +29,7 @@ import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
+import { VDNNone } from './vdnnone'
 import { VDNSellQuote } from './vdnsell-quote'
 import { VDNStream } from './vdnstream'
 import { VDNString } from './vdnstring'
@@ -47,6 +49,7 @@ export type VDN =
   | VDNAddress
   | VDNAsset
   | VDNAssetSymbol
+  | VDNBalance
   | VDNBlock
   | VDNBlockchain
   | VDNBoolean
@@ -59,6 +62,7 @@ export type VDN =
   | VDNLabel
   | VDNList
   | VDNMap
+  | VDNNone
   | VDNSellQuote
   | VDNStream
   | VDNString
