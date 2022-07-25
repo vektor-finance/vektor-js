@@ -25,7 +25,7 @@ export interface VDNBalance {
    * @type {string}
    * @memberof VDNBalance
    */
-  type: VDNBalanceTypeEnum
+  type: 'balance'
   /**
    *
    * @type {VDNBalanceValue}
@@ -33,9 +33,3 @@ export interface VDNBalance {
    */
   value: VDNBalanceValue
 }
-
-export const VDNBalanceTypeEnum = {
-  Balance: 'balance',
-} as const
-
-export type VDNBalanceTypeEnum = typeof VDNBalanceTypeEnum[keyof typeof VDNBalanceTypeEnum]
