@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.16.2](https://github.com/vektor-finance/vektor-js/compare/v0.16.1...v0.16.2) (2022-07-25)
+
+
+### Bug Fixes
+
+* vdnnone should be value?: undefined ([ce88508](https://github.com/vektor-finance/vektor-js/commit/ce88508759a6bd159076c162fd5d550bd17917e4))
+
+
+
 ### [0.16.1](https://github.com/vektor-finance/vektor-js/compare/v0.16.0...v0.16.1) (2022-07-25)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
