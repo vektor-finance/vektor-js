@@ -23,7 +23,7 @@ export interface UnionType {
    * @type {string}
    * @memberof UnionType
    */
-  type: UnionTypeTypeEnum
+  type: 'union'
   /**
    * array of concrete types
    * @type {Array<string>}
@@ -31,9 +31,3 @@ export interface UnionType {
    */
   types: Array<string>
 }
-
-export const UnionTypeTypeEnum = {
-  Union: 'union',
-} as const
-
-export type UnionTypeTypeEnum = typeof UnionTypeTypeEnum[keyof typeof UnionTypeTypeEnum]
