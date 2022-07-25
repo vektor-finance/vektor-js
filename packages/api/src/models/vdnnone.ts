@@ -29,5 +29,5 @@ export interface VDNNone {
    * @type {any}
    * @memberof VDNNone
    */
-  value: unknown
+  value?: undefined
 }
