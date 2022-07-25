@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { VXLType } from './vxltype'
+
 /**
  * A subfunction\'s option
  * @export
@@ -37,9 +39,9 @@ export interface SubfunctionOption {
    */
   name: string
   /**
-   * Option type
-   * @type {string}
+   *
+   * @type {VXLType}
    * @memberof SubfunctionOption
    */
-  type: string
+  type: VXLType
 }

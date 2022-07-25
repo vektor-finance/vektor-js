@@ -14,6 +14,7 @@
 
 import { SubfunctionOption } from './subfunction-option'
 import { SubfunctionParameter } from './subfunction-parameter'
+import { VXLType } from './vxltype'
 
 /**
  * A subfunction specification
@@ -52,9 +53,9 @@ export interface SubfunctionSpec {
    */
   parameters: Array<SubfunctionParameter>
   /**
-   * Subfunction return type
-   * @type {string}
+   *
+   * @type {VXLType}
    * @memberof SubfunctionSpec
    */
-  returns: string
+  returns: VXLType
 }

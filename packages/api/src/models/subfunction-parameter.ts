@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { VXLType } from './vxltype'
+
 /**
  * A subfunction\'s parameter
  * @export
@@ -37,9 +39,9 @@ export interface SubfunctionParameter {
    */
   name: string
   /**
-   * Parameter type
-   * @type {string}
+   *
+   * @type {VXLType}
    * @memberof SubfunctionParameter
    */
-  type: string
+  type: VXLType
 }
