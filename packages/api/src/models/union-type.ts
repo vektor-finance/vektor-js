@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { VDNType } from "./vdn"
+
 /**
  * A subfunction\'s option
  * @export
@@ -29,5 +31,5 @@ export interface UnionType {
    * @type {Array<string>}
    * @memberof UnionType
    */
-  types: Array<string>
+  types: VDNType[]
 }

@@ -13,10 +13,11 @@
  */
 
 import { UnionType } from './union-type'
+import { VDNType } from './vdn'
 
 /**
  * @type VXLType
  * VXL Type
  * @export
  */
-export type VXLType = UnionType | string
+export type VXLType = VDNType | UnionType
