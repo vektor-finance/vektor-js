@@ -22,6 +22,7 @@ export const ALL_VDN_ERRORS = [
   'insufficient_funds_for_transfer_error',
   'intrinsic_gas_too_low_error',
   'invalid_asset_error',
+  'invalid_asset_set_error',
   'labels_from_different_chains_error',
   'max_fee_per_gas_less_than_block_base_fee_error',
   'max_fee_per_gas_overflow_error',
@@ -33,7 +34,8 @@ export const ALL_VDN_ERRORS = [
   'nonce_too_low_error',
   'runtime_error',
   'sender_not_eoa_error',
-  'transfer_amount_exceeds_allowance_error'
+  'transfer_amount_exceeds_allowance_error',
+  'venue_liquidity_insufficient_error'
 ] as const
 
 export type VDNErrorType = typeof ALL_VDN_ERRORS[number]
