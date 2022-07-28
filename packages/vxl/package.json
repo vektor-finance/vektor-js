@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/vxl",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "description": "Vektor VXL utilities",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/signer",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -37,9 +37,9 @@
   },
   "dependencies": {
     "@types/traverse": "0.6.32",
-    "@vektor-finance/eslint-config-sdk": "^0.16.2",
-    "@vektor-finance/types": "^0.16.2",
-    "@vektor-finance/utils": "^0.16.2",
+    "@vektor-finance/eslint-config-sdk": "^0.17.0",
+    "@vektor-finance/types": "^0.17.0",
+    "@vektor-finance/utils": "^0.17.0",
     "traverse": "0.6.6"
   },
   "devDependencies": {
