@@ -12,9 +12,9 @@
  * Do not edit the class manually.
  */
 
+
 export const ALL_VDN_ERRORS = [
-  'broadcast_error',
-  'build_error',
+  'division_by_zero_error',
   'gas_limit_reached_error',
   'gas_uint64_overflow_error',
   'high_price_impact_error',
@@ -23,11 +23,13 @@ export const ALL_VDN_ERRORS = [
   'intrinsic_gas_too_low_error',
   'invalid_asset_error',
   'invalid_asset_set_error',
+  'invalid_list_length_error',
   'labels_from_different_chains_error',
   'max_fee_per_gas_less_than_block_base_fee_error',
   'max_fee_per_gas_overflow_error',
   'max_priority_fee_per_gas_higher_than_max_fee_per_gas_error',
   'max_priority_fee_per_gas_overflow_error',
+  'negative_amount_error',
   'no_route_error',
   'non_positive_amount_error',
   'nonce_too_high_error',
@@ -35,6 +37,7 @@ export const ALL_VDN_ERRORS = [
   'runtime_error',
   'sender_not_eoa_error',
   'transfer_amount_exceeds_allowance_error',
+  'unexpected_error',
   'venue_liquidity_insufficient_error'
 ] as const
 
