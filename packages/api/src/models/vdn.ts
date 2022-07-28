@@ -27,6 +27,8 @@ import { VDNEither } from './vdneither'
 import { VDNError } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
+import { VDNLendQuote } from './vdnlend-quote'
+import { VDNLendSupplied } from './vdnlend-supplied'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
@@ -60,6 +62,8 @@ export type VDN =
   | VDNError
   | VDNInteger
   | VDNLabel
+  | VDNLendQuote
+  | VDNLendSupplied
   | VDNList
   | VDNMap
   | VDNNone
