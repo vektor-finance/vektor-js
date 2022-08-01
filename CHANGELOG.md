@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.17.2](https://github.com/vektor-finance/vektor-js/compare/v0.17.1...v0.17.2) (2022-08-01)
+
+
+### Bug Fixes
+
+* **types:** remove VDNEither and update errors ([#32](https://github.com/vektor-finance/vektor-js/issues/32)) ([fe38205](https://github.com/vektor-finance/vektor-js/commit/fe3820528591c022b4370725a5a2f31e599e6937))
+
+
+
 ### [0.17.1](https://github.com/vektor-finance/vektor-js/compare/v0.17.0...v0.17.1) (2022-07-28)
 
 
