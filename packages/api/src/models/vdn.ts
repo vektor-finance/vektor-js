@@ -23,7 +23,6 @@ import { VDNBoolean } from './vdnboolean'
 import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
-import { VDNEither } from './vdneither'
 import { VDNError } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
@@ -58,7 +57,6 @@ export type VDN =
   | VDNBuyQuote
   | VDNDateTime
   | VDNDecimal
-  | VDNEither
   | VDNError
   | VDNInteger
   | VDNLabel
