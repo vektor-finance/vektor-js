@@ -21,16 +21,19 @@ import { VDNBlock } from './vdnblock'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
 import { VDNBuyQuote } from './vdnbuy-quote'
+import { VDNChangesetError } from './vdnchangeset-error'
 import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
 import { VDNError } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
+import { VDNLendBorrowed } from './vdnlend-borrowed'
 import { VDNLendQuote } from './vdnlend-quote'
 import { VDNLendSupplied } from './vdnlend-supplied'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
+import { VDNPrice } from './vdnprice'
 import { VDNSellQuote } from './vdnsell-quote'
 import { VDNStream } from './vdnstream'
 import { VDNString } from './vdnstring'
@@ -55,16 +58,19 @@ export type VDN =
   | VDNBlockchain
   | VDNBoolean
   | VDNBuyQuote
+  | VDNChangesetError
   | VDNDateTime
   | VDNDecimal
   | VDNError
   | VDNInteger
   | VDNLabel
+  | VDNLendBorrowed
   | VDNLendQuote
   | VDNLendSupplied
   | VDNList
   | VDNMap
   | VDNNone
+  | VDNPrice
   | VDNSellQuote
   | VDNStream
   | VDNString

@@ -12,24 +12,25 @@
  * Do not edit the class manually.
  */
 
-import { VDNLendQuoteValue } from './vdnlend-quote-value'
+
+import { VDNChangesetErrorValue } from './vdnchangeset-error-value';
 
 /**
- * VXL lend_quote representation
+ * VXL changeset_error representation
  * @export
- * @interface VDNLendQuote
+ * @interface VDNChangesetError
  */
-export interface VDNLendQuote {
+export interface VDNChangesetError {
   /**
    *
    * @type {string}
-   * @memberof VDNLendQuote
+   * @memberof VDNChangesetError
    */
-  type: 'lend_quote'
+  type: 'changeset_error'
   /**
    *
-   * @type {VDNLendQuoteValue}
-   * @memberof VDNLendQuote
+   * @type {VDNChangesetErrorValue}
+   * @memberof VDNChangesetError
    */
-  value: VDNLendQuoteValue
+  value: VDNChangesetErrorValue
 }
