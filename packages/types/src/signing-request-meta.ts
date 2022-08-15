@@ -143,9 +143,19 @@ export interface LendWithdrawRequestMeta extends MetaBase {
   underlying_asset: Asset
 }
 
+export interface BorrowRequestMeta extends MetaBase {
+  request_type: 'borrow_request'
+  from: AccountID
+  venue: Venue
+  amount: string
+  asset: Asset
+  borrow_apy: string
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BuyRequestMeta
+  | BorrowRequestMeta
   | LendSupplyRequestMeta
   | LendWithdrawRequestMeta
   | MoveRequestMeta

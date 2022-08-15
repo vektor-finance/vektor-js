@@ -1,6 +1,6 @@
 import type { NetworkID } from '@vektor-finance/api'
 
-import type { SigningRequestMeta } from './signing-request'
+import type { SigningRequestMeta } from './signing-request-meta'
 
 // Copied from '@vektor-finance/signing-common' but had build issues
 export interface EthereumTransaction {
