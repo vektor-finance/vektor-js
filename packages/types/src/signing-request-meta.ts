@@ -125,8 +125,8 @@ export interface SplitRequestMeta extends MetaBase {
   splits: Split[]
 }
 
-export interface LendSupplyRequestMeta extends MetaBase {
-  request_type: 'lend_supply_request'
+export interface LendRequestMeta extends MetaBase {
+  request_type: 'lend_request'
   from: AccountID
   venue: Venue
   amount: string
@@ -156,7 +156,7 @@ export type SigningRequestMeta =
   | ApproveRequestMeta
   | BuyRequestMeta
   | BorrowRequestMeta
-  | LendSupplyRequestMeta
+  | LendRequestMeta
   | LendWithdrawRequestMeta
   | MoveRequestMeta
   | SellRequestMeta
