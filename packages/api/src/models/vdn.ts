@@ -28,9 +28,9 @@ import { VDNError } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
 import { VDNLendBorrowed } from './vdnlend-borrowed'
-import { VDNLendQuote } from './vdnlend-quote'
 import { VDNLendSupplied } from './vdnlend-supplied'
 import { VDNLendBorrowQuote } from './vdnlendborrow-quote'
+import { VDNLendSupplyQuote } from './vdnlendsupply-quote'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
@@ -67,7 +67,7 @@ export type VDN =
   | VDNLabel
   | VDNLendBorrowed
   | VDNLendBorrowQuote
-  | VDNLendQuote
+  | VDNLendSupplyQuote
   | VDNLendSupplied
   | VDNList
   | VDNMap

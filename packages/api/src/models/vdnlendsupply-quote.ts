@@ -12,24 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { VDNLendQuoteValue } from './vdnlend-quote-value'
+import { VDNLendSupplyQuoteValue } from './vdnlendsupply-quote-value'
 
 /**
  * VXL lend_quote representation
  * @export
- * @interface VDNLendQuote
+ * @interface VDNLendSupplyQuote
  */
-export interface VDNLendQuote {
+export interface VDNLendSupplyQuote {
   /**
    *
    * @type {string}
-   * @memberof VDNLendQuote
+   * @memberof VDNLendSupplyQuote
    */
-  type: 'lend_quote'
+  type: 'lend_supply_quote'
   /**
    *
-   * @type {VDNLendQuoteValue}
-   * @memberof VDNLendQuote
+   * @type {VDNLendSupplyQuoteValue}
+   * @memberof VDNLendSupplyQuote
    */
-  value: VDNLendQuoteValue
+  value: VDNLendSupplyQuoteValue
 }
