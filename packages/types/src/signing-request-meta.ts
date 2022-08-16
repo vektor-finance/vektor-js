@@ -45,6 +45,7 @@ export interface ApproveRequestMeta extends MetaBase {
   asset: Asset
   grantor: AccountID
   spender: AccountID
+  type: 'spend_erc20' | 'borrow_erc20'
 }
 
 export interface WrapRequestMeta extends MetaBase {
