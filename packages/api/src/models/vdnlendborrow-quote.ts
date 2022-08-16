@@ -12,24 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { VDNBorrowQuoteValue } from './vdnborrow-quote-value'
+import { VDNLendBorrowQuoteValue } from './vdnlendborrow-quote-value'
 
 /**
  * VXL borrow_quote representation
  * @export
- * @interface VDNBorrowQuote
+ * @interface VDNLendBorrowQuote
  */
-export interface VDNBorrowQuote {
+export interface VDNLendBorrowQuote {
   /**
    *
    * @type {string}
-   * @memberof VDNBorrowQuote
+   * @memberof VDNLendBorrowQuote
    */
-  type: 'borrow_quote'
+  type: 'lend_borrow_quote'
   /**
    *
-   * @type {VDNBorrowQuoteValue}
-   * @memberof VDNBorrowQuote
+   * @type {VDNLendBorrowQuoteValue}
+   * @memberof VDNLendBorrowQuote
    */
-  value: VDNBorrowQuoteValue
+  value: VDNLendBorrowQuoteValue
 }
