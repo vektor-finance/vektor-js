@@ -20,6 +20,7 @@ import { VDNBalance } from './vdnbalance'
 import { VDNBlock } from './vdnblock'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
+import { VDNBorrowQuote } from './vdnborrow-quote'
 import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNChangesetError } from './vdnchangeset-error'
 import { VDNDateTime } from './vdndate-time'
@@ -65,6 +66,7 @@ export type VDN =
   | VDNInteger
   | VDNLabel
   | VDNLendBorrowed
+  | VDNBorrowQuote
   | VDNLendQuote
   | VDNLendSupplied
   | VDNList
