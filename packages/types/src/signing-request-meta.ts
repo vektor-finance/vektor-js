@@ -1,6 +1,6 @@
 import type { Asset, Venue } from '@vektor-finance/api'
-
 import { AccountID } from './signing'
+
 
 export interface EVMLegacyGasFeeBase {
   gas_limit: string
@@ -152,11 +152,19 @@ export interface BorrowRequestMeta extends MetaBase {
   asset: Asset
   borrow_apy: string
 }
+export interface BorrowRepayRequestMeta extends MetaBase {
+  request_type: 'borrow_repay_request'
+  from: AccountID
+  venue: Venue
+  amount: string
+  asset: Asset
+}
 
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BuyRequestMeta
   | BorrowRequestMeta
+  | BorrowRepayRequestMeta
   | LendRequestMeta
   | LendWithdrawRequestMeta
   | MoveRequestMeta
