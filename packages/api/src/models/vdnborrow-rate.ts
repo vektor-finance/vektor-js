@@ -12,24 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { VDNLendSuppliedValue } from './vdnlend-supplied-value'
+import { VDNBorrowRateValue } from './vdnborrow-rate-value'
 
 /**
- * VXL lend_supplied representation
+ * VXL borrow_quote representation
  * @export
- * @interface VDNLendSupplied
+ * @interface VDNBorrowRate
  */
-export interface VDNLendSupplied {
+export interface VDNBorrowRate {
   /**
    *
    * @type {string}
-   * @memberof VDNLendSupplied
+   * @memberof VDNBorrowRate
    */
-  type: 'lend_supplied'
+  type: 'borrow_rate'
   /**
    *
-   * @type {VDNLendSuppliedValue}
-   * @memberof VDNLendSupplied
+   * @type {VDNBorrowRateValue}
+   * @memberof VDNBorrowRate
    */
-  value: VDNLendSuppliedValue
+  value: VDNBorrowRateValue
 }

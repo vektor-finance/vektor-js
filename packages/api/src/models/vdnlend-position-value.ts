@@ -15,36 +15,49 @@
 import { VDNAsset } from './vdnasset'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNDecimal } from './vdndecimal'
+import { VDNLabel } from './vdnlabel'
 import { VDNVenue } from './vdnvenue'
 
 /**
  *
  * @export
- * @interface VDNLendBorrowQuoteValue
+ * @interface VDNLendPositionValue
  */
-export interface VDNLendBorrowQuoteValue {
+export interface VDNLendPositionValue {
   /**
    *
    * @type {VDNAsset}
-   * @memberof VDNLendBorrowQuoteValue
+   * @memberof VDNLendPositionValue
    */
   asset: VDNAsset
   /**
    *
    * @type {VDNBlockchain}
-   * @memberof VDNLendBorrowQuoteValue
+   * @memberof VDNLendPositionValue
    */
   blockchain: VDNBlockchain
   /**
    *
-   * @type {VDNDecimal}
-   * @memberof VDNLendBorrowQuoteValue
+   * @type {VDNLabel}
+   * @memberof VDNLendPositionValue
    */
-  borrow_apy: VDNDecimal
+  label: VDNLabel
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNLendPositionValue
+   */
+  supplied_amount: VDNDecimal
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNLendPositionValue
+   */
+  supply_apy: VDNDecimal
   /**
    *
    * @type {VDNVenue}
-   * @memberof VDNLendBorrowQuoteValue
+   * @memberof VDNLendPositionValue
    */
   venue: VDNVenue
 }

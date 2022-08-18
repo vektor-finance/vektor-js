@@ -12,24 +12,25 @@
  * Do not edit the class manually.
  */
 
-import { VDNLendSupplyQuoteValue } from './vdnlendsupply-quote-value'
+
+import { VDNBorrowPositionValue } from './vdnborrow-position-value';
 
 /**
- * VXL lend_quote representation
+ * VXL lend_borrowed representation
  * @export
- * @interface VDNLendSupplyQuote
+ * @interface VDNBorrowPosition
  */
-export interface VDNLendSupplyQuote {
+export interface VDNBorrowPosition {
   /**
    *
    * @type {string}
-   * @memberof VDNLendSupplyQuote
+   * @memberof VDNBorrowPosition
    */
-  type: 'lend_supply_quote'
+  type: 'borrow_position'
   /**
    *
-   * @type {VDNLendSupplyQuoteValue}
-   * @memberof VDNLendSupplyQuote
+   * @type {VDNBorrowPositionValue}
+   * @memberof VDNBorrowPosition
    */
-  value: VDNLendSupplyQuoteValue
+  value: VDNBorrowPositionValue
 }

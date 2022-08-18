@@ -12,25 +12,24 @@
  * Do not edit the class manually.
  */
 
-
-import { VDNLendBorrowedValue } from './vdnlend-borrowed-value';
+import { VDNLendPositionValue } from './vdnlend-position-value'
 
 /**
- * VXL lend_borrowed representation
+ * VXL lend_supplied representation
  * @export
- * @interface VDNLendBorrowed
+ * @interface VDNLendPosition
  */
-export interface VDNLendBorrowed {
+export interface VDNLendPosition {
   /**
    *
    * @type {string}
-   * @memberof VDNLendBorrowed
+   * @memberof VDNLendPosition
    */
-  type: 'lend_borrowed'
+  type: 'lend_position'
   /**
    *
-   * @type {VDNLendBorrowedValue}
-   * @memberof VDNLendBorrowed
+   * @type {VDNLendPositionValue}
+   * @memberof VDNLendPosition
    */
-  value: VDNLendBorrowedValue
+  value: VDNLendPositionValue
 }
