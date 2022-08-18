@@ -17,19 +17,19 @@ import { VDNBorrowRateValue } from './vdnborrow-rate-value'
 /**
  * VXL borrow_quote representation
  * @export
- * @interface VDNLendBorrowRate
+ * @interface VDNBorrowRate
  */
-export interface VDNLendBorrowRate {
+export interface VDNBorrowRate {
   /**
    *
    * @type {string}
-   * @memberof VDNLendBorrowRate
+   * @memberof VDNBorrowRate
    */
   type: 'borrow_rate'
   /**
    *
    * @type {VDNBorrowRateValue}
-   * @memberof VDNLendBorrowRate
+   * @memberof VDNBorrowRate
    */
   value: VDNBorrowRateValue
 }

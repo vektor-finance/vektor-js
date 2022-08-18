@@ -21,43 +21,43 @@ import { VDNVenue } from './vdnvenue'
 /**
  *
  * @export
- * @interface VDNLendSuppliedValue
+ * @interface VDNLendPositionValue
  */
-export interface VDNLendSuppliedValue {
+export interface VDNLendPositionValue {
   /**
    *
    * @type {VDNAsset}
-   * @memberof VDNLendSuppliedValue
+   * @memberof VDNLendPositionValue
    */
   asset: VDNAsset
   /**
    *
    * @type {VDNBlockchain}
-   * @memberof VDNLendSuppliedValue
+   * @memberof VDNLendPositionValue
    */
   blockchain: VDNBlockchain
   /**
    *
    * @type {VDNLabel}
-   * @memberof VDNLendSuppliedValue
+   * @memberof VDNLendPositionValue
    */
   label: VDNLabel
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNLendSuppliedValue
+   * @memberof VDNLendPositionValue
    */
   supplied_amount: VDNDecimal
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNLendSuppliedValue
+   * @memberof VDNLendPositionValue
    */
   supply_apy: VDNDecimal
   /**
    *
    * @type {VDNVenue}
-   * @memberof VDNLendSuppliedValue
+   * @memberof VDNLendPositionValue
    */
   venue: VDNVenue
 }
