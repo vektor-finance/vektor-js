@@ -12,25 +12,18 @@
  * Do not edit the class manually.
  */
 
-import { VXLTaskType } from './vxltask-type'
-import { VXLType } from './vxltype'
+import { VXLGenericParameters } from "./vxlgeneric-parameters"
 
 /**
- * VXL symbol representation
+ * Describes the type of a list
  * @export
- * @interface VDNTask
+ * @interface VXLListType
  */
-export interface VDNTask {
+export interface VXLListType extends VXLGenericParameters {
   /**
    *
-   * @type {VXLTaskType}
-   * @memberof VDNTask
+   * @type {string}
+   * @memberof VXLListType
    */
-  type: VXLTaskType
-  /**
-   *
-   * @type {VXLType}
-   * @memberof VDNTask
-   */
-  value: VXLType
+  type: 'list'
 }

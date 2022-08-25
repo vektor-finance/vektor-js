@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VDNType } from "./vdn"
+import { VXLType } from "./vxltype"
 
 /**
  * A subfunction\'s option
@@ -31,5 +31,5 @@ export interface UnionType {
    * @type {Array<string>}
    * @memberof UnionType
    */
-  types: VDNType[]
+  types: VXLType[]
 }
