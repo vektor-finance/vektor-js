@@ -13,19 +13,20 @@
  */
 
 import { VDN } from './vdn'
+import { VXLListType } from './vxllist-type'
 
 /**
- * VXL list representation
+ * VDN list representation
  * @export
  * @interface VDNList
  */
 export interface VDNList {
   /**
    *
-   * @type {string}
+   * @type {VXLListType}
    * @memberof VDNList
    */
-  type: 'list'
+  type: VXLListType
   /**
    *
    * @type {Array<VDN>}

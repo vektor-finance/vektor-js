@@ -58,6 +58,8 @@ export type VDN =
   | VDNBlock
   | VDNBlockchain
   | VDNBoolean
+  | VDNBorrowPosition
+  | VDNBorrowRate
   | VDNBuyQuote
   | VDNChangesetError
   | VDNDateTime
@@ -65,10 +67,9 @@ export type VDN =
   | VDNError
   | VDNInteger
   | VDNLabel
-  | VDNBorrowPosition
-  | VDNBorrowRate
-  | VDNLendRate
   | VDNLendPosition
+  | VDNLendRate
+  | VDNList
   | VDNList
   | VDNMap
   | VDNNone
