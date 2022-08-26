@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.18.10](https://github.com/vektor-finance/vektor-js/compare/v0.18.9...v0.18.10) (2022-08-26)
+
+
+### Bug Fixes
+
+* update generic type handling ([fd541e7](https://github.com/vektor-finance/vektor-js/commit/fd541e70dfc06246ad54c920f0acc8dee74af490))
+
+
+
 ### [0.18.9](https://github.com/vektor-finance/vektor-js/compare/v0.18.8...v0.18.9) (2022-08-26)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
