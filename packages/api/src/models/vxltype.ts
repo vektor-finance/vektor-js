@@ -13,11 +13,11 @@
  */
 
 import { UnionType } from './union-type'
-import { VDNType } from './vdn'
+import { VDNGenericType, VDNType } from './vdn'
 
 /**
  * @type VXLType
  * VXL Type
  * @export
  */
-export type VXLType = VDNType | UnionType
+export type VXLType = VDNType | VDNGenericType | UnionType

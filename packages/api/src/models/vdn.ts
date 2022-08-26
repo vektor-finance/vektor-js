@@ -45,9 +45,11 @@ import { VDNURL } from './vdnurl'
 import { VDNVenue } from './vdnvenue'
 import { VDNVenueType } from './vdnvenue-type'
 
+// Concrete Types
+
 /**
  * @type VDN
- * VXL data notation
+ * VXL data notation for concrete types
  * @export
  */
 export type VDN =
@@ -69,8 +71,6 @@ export type VDN =
   | VDNLabel
   | VDNLendPosition
   | VDNLendRate
-  | VDNList
-  | VDNList
   | VDNMap
   | VDNNone
   | VDNPrice
@@ -78,7 +78,6 @@ export type VDN =
   | VDNStream
   | VDNString
   | VDNSymbol
-  | VDNTask
   | VDNTransactionHash
   | VDNURL
   | VDNVenue
@@ -87,5 +86,28 @@ export type VDN =
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
 
-export const isVDN = (vdn: VDN): vdn is VDN => vdn.type !== undefined && vdn.value !== undefined
-export const isVDNError = (vdn: VDN): vdn is VDNError => vdn.type !== undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
+// Generics
+
+/**
+ * @type VDN
+ * VXL data notation for generic types
+ * @export
+ */
+export type VDNGeneric = VDNTask | VDNList
+export type VDNGenericType = VDNGeneric['type']['type']
+export type VDNGenericValue = VDNGeneric['value']
+
+export type VDNOrVDNGeneric = VDN | VDNGeneric
+
+// Type guards
+
+export const isVDN = (vdn: VDNOrVDNGeneric): vdn is VDN => typeof vdn.type === 'string' && vdn.value !== undefined
+
+export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
+  typeof vdn.type === 'string' && vdn.value === undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
+
+export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
+  typeof vdn.type === 'object' &&
+  'parameters' in vdn.type &&
+  typeof vdn.type.type === 'string' &&
+  vdn.value !== undefined

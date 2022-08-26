@@ -11,9 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-
 import { VXLTaskType } from './vxltask-type'
-import { VXLType } from './vxltype'
 
 /**
  * VXL symbol representation
@@ -29,8 +27,8 @@ export interface VDNTask {
   type: VXLTaskType
   /**
    *
-   * @type {VXLType}
+   * @type {string}
    * @memberof VDNTask
    */
-  value: VXLType
+  value: string
 }
