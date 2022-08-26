@@ -20,4 +20,5 @@ import { VDNGenericType, VDNType } from './vdn'
  * VXL Type
  * @export
  */
-export type VXLType = VDNType | VDNGenericType | UnionType
+// HACK: add them on for local app support
+export type VXLType = VDNType | VDNGenericType | UnionType | 'workspace' | 'function'
