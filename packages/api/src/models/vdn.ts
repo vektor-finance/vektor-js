@@ -119,3 +119,7 @@ export const isVDNGenericType = (type: VXLType): type is VDNGenericType =>
 
 export const isVDNTask = (vdn: VDNOrVDNGeneric): vdn is VDNTask =>
   isVDNGeneric(vdn) && vdn.type.type === 'task' && typeof vdn.value === 'string'
+
+  export const isVDNList = (vdn: VDNOrVDNGeneric): vdn is VDNList =>
+  isVDNGeneric(vdn) && vdn.type.type === 'list' && 'items' in vdn.type.parameters
+
