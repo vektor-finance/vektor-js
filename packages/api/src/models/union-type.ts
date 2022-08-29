@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VXLType } from "./vxltype"
+import { VXLType } from './vxltype'
 
 /**
  * A subfunction\'s option
@@ -33,3 +33,6 @@ export interface UnionType {
    */
   types: VXLType[]
 }
+
+export const isUnionType = (type: VXLType): type is UnionType =>
+  typeof type === 'object' && type.type === 'union' && typeof type.types === 'object'
