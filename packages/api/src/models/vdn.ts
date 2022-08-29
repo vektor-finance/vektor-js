@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ALL_VDN_ERRORS } from '.'
+import { ALL_VDN_ERRORS, VXLType } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
@@ -94,7 +94,7 @@ export type VDNValue = VDN['value']
  * @export
  */
 export type VDNGeneric = VDNTask | VDNList
-export type VDNGenericType = VDNGeneric['type']['type']
+export type VDNGenericType = VDNGeneric['type']
 export type VDNGenericValue = VDNGeneric['value']
 
 export type VDNOrVDNGeneric = VDN | VDNGeneric
@@ -102,6 +102,8 @@ export type VDNOrVDNGeneric = VDN | VDNGeneric
 // Type guards
 
 export const isVDN = (vdn: VDNOrVDNGeneric): vdn is VDN => typeof vdn.type === 'string' && vdn.value !== undefined
+
+export const isVDNType = (type: VXLType): type is VDNType => typeof type === 'string'
 
 export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
   typeof vdn.type === 'string' && vdn.value === undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
@@ -111,3 +113,6 @@ export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
   'parameters' in vdn.type &&
   typeof vdn.type.type === 'string' &&
   vdn.value !== undefined
+
+export const isVDNGenericType = (type: VXLType): type is VDNGenericType =>
+  typeof type === 'object' && 'parameters' in type && 'type' in type
