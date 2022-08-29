@@ -75,6 +75,14 @@ export interface CompilerAmbiguousCallError extends CompilerBaseError {
   subfunction: string
 }
 
+export interface CompilerInvalidFieldError extends CompilerBaseError {
+  path: string[]
+}
+
+export interface CompilerNotAStructError extends CompilerBaseError {
+  path: string[]
+}
+
 export type CompilerError =
   | {
       type: 'compiler_undefined_function_error'
@@ -99,6 +107,14 @@ export type CompilerError =
   | {
       type: 'compiler_ambiguous_call_error'
       data: CompilerAmbiguousCallError
+    }
+  | {
+      type: 'compiler_invalid_field_error'
+      data: CompilerInvalidFieldError
+    }
+  | {
+      type: 'compiler_not_a_struct_error'
+      data: CompilerNotAStructError
     }
 
 export type VXLSubmitAPIError =
