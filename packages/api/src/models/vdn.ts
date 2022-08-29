@@ -26,7 +26,7 @@ import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNChangesetError } from './vdnchangeset-error'
 import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
-import { VDNError } from './vdnerror'
+import { VDNError, VDNErrorType } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
 import { VDNLendPosition } from './vdnlend-position'
@@ -107,6 +107,8 @@ export const isVDNType = (type: VXLType): type is VDNType => typeof type === 'st
 
 export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
   typeof vdn.type === 'string' && vdn.value === undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
+
+export const isVDNErrorType = (type: VXLType): type is VDNErrorType => ALL_VDN_ERRORS.includes(type as VDNErrorType)
 
 export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
   typeof vdn.type === 'object' &&
