@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios'
 
-import { SubfunctionSpec, VDN, VDNType } from './models'
+import { SubfunctionSpec, VDN, VDNType, VXLType } from './models'
 
 // API Errors
 export const isAPIError = (payload: any): payload is AxiosError<any> => axios.isAxiosError(payload)
@@ -77,10 +77,12 @@ export interface CompilerAmbiguousCallError extends CompilerBaseError {
 
 export interface CompilerInvalidFieldError extends CompilerBaseError {
   path: string[]
+  type: VXLType
 }
 
 export interface CompilerNotAStructError extends CompilerBaseError {
   path: string[]
+  type: VXLType
 }
 
 export type CompilerError =
