@@ -13,6 +13,7 @@
  */
 
 import { Label } from './label'
+
 /**
  * @type LabelResponse
  * Response for a single label
