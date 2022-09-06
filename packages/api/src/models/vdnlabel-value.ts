@@ -13,7 +13,6 @@
  */
 
 import { VDNAddress } from './vdnaddress'
-import { VDNBlockchain } from './vdnblockchain'
 import { VDNDateTime } from './vdndate-time'
 import { VDNString } from './vdnstring'
 
@@ -29,12 +28,6 @@ export interface VDNLabelValue {
    * @memberof VDNLabelValue
    */
   address: VDNAddress
-  /**
-   *
-   * @type {VDNBlockchain}
-   * @memberof VDNLabelValue
-   */
-  blockchain: VDNBlockchain
   /**
    *
    * @type {VDNDateTime}
