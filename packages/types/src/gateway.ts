@@ -1,4 +1,4 @@
-import type { Label, NetworkID, Session, Stream } from '@vektor-finance/api'
+import type { Alert, Label, NetworkID, Session, Stream } from '@vektor-finance/api'
 
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
@@ -97,6 +97,28 @@ export interface StreamDeletedEvent {
   payload: Pick<Stream, 'id'>
 }
 
+// Alerts
+
+export interface AlertCreatedEvent {
+  event_name: 'alert_created'
+  payload: Alert
+}
+
+export interface AlertUpdatedEvent {
+  event_name: 'alert_created'
+  payload: Alert
+}
+
+export interface AlertDeletedEvent {
+  event_name: 'alert_created'
+  payload: Pick<Alert, 'id'>
+}
+
+export interface AlertTriggeredEvent {
+  event_name: 'alert_created'
+  payload: Alert
+}
+
 export type GatewayEvent =
   | LabelCreatedEvent
   | LabelUpdatedEvent
@@ -113,5 +135,9 @@ export type GatewayEvent =
   | StreamPausedEvent
   | StreamResumedEvent
   | StreamDeletedEvent
+  | AlertCreatedEvent
+  | AlertUpdatedEvent
+  | AlertDeletedEvent
+  | AlertTriggeredEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
