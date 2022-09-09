@@ -27,12 +27,6 @@ export interface LabelCommonOptional {
    */
   address?: string
   /**
-   * Blockchain
-   * @type {string}
-   * @memberof LabelCommonOptional
-   */
-  blockchain?: string
-  /**
    * Unique name to identify the Label
    * @type {string}
    * @memberof LabelCommonOptional

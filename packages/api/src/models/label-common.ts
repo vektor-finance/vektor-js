@@ -19,12 +19,6 @@
  */
 export interface LabelCommon {
   /**
-   * Blockchain
-   * @type {string}
-   * @memberof LabelCommon
-   */
-  blockchain: string
-  /**
    * Unique name to identify the Label
    * @type {string}
    * @memberof LabelCommon
