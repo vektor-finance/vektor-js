@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.0](https://github.com/vektor-finance/vektor-js/compare/v0.18.18...v0.19.0) (2022-09-09)
+
+
+### Features
+
+* remove label blockchain ([#37](https://github.com/vektor-finance/vektor-js/issues/37)) ([39c84d8](https://github.com/vektor-finance/vektor-js/commit/39c84d822cfa8dc50515fcd2b60a428441dbce2c))
+
+
+
 ### [0.18.18](https://github.com/vektor-finance/vektor-js/compare/v0.18.17...v0.18.18) (2022-08-30)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
