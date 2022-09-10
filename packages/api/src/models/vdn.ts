@@ -14,6 +14,8 @@
 
 import { ALL_VDN_ERRORS, VXLType } from '.'
 import { VDNAddress } from './vdnaddress'
+import { VDNAlert } from './vdnalert'
+import { VDNAlertState } from './vdnalert-state'
 import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBalance } from './vdnbalance'
@@ -38,6 +40,7 @@ import { VDNPrice } from './vdnprice'
 import { VDNSellQuote } from './vdnsell-quote'
 import { VDNStream } from './vdnstream'
 import { VDNString } from './vdnstring'
+import { VDNSuccess } from './vdnsuccess'
 import { VDNSymbol } from './vdnsymbol'
 import { VDNTask } from './vdntask'
 import { VDNTransactionHash } from './vdntransaction-hash'
@@ -54,6 +57,8 @@ import { VDNVenueType } from './vdnvenue-type'
  */
 export type VDN =
   | VDNAddress
+  | VDNAlert
+  | VDNAlertState
   | VDNAsset
   | VDNAssetSymbol
   | VDNBalance
@@ -77,6 +82,7 @@ export type VDN =
   | VDNSellQuote
   | VDNStream
   | VDNString
+  | VDNSuccess
   | VDNSymbol
   | VDNTransactionHash
   | VDNURL
