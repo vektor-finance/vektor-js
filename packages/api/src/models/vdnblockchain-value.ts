@@ -27,7 +27,7 @@ export interface VDNBlockchainValue {
    * @type {VDNString}
    * @memberof VDNBlockchainValue
    */
-  blockchain: VDNString
+  name: VDNString
   /**
    *
    * @type {VDNInteger}
