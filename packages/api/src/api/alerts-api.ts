@@ -25,7 +25,6 @@ import {
 } from '../common'
 import { Configuration } from '../configuration'
 import { Alert } from '../models'
-
 /**
  * AlertsApi - axios parameter creator
  * @export
@@ -137,11 +136,11 @@ export const AlertsApiAxiosParamCreator = function (configuration?: Configuratio
     /**
      * Lists all user\'s alerts
      * @summary List alerts
-     * @param {boolean} [includeTriggered] Whether to include already triggered alerts
+     * @param {boolean} [triggered] Whether to include already triggered alerts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    list: async (includeTriggered?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    list: async (triggered?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/alerts`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL)
@@ -158,8 +157,8 @@ export const AlertsApiAxiosParamCreator = function (configuration?: Configuratio
       // http bearer authentication required
       await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
-      if (includeTriggered !== undefined) {
-        localVarQueryParameter['include_triggered'] = includeTriggered
+      if (triggered !== undefined) {
+        localVarQueryParameter['triggered'] = triggered
       }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter)
@@ -224,15 +223,15 @@ export const AlertsApiFp = function (configuration?: Configuration) {
     /**
      * Lists all user\'s alerts
      * @summary List alerts
-     * @param {boolean} [includeTriggered] Whether to include already triggered alerts
+     * @param {boolean} [triggered] Whether to include already triggered alerts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async list(
-      includeTriggered?: boolean,
+      triggered?: boolean,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Alert>>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.list(includeTriggered, options)
+      const localVarAxiosArgs = await localVarAxiosParamCreator.list(triggered, options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
   }
@@ -277,12 +276,12 @@ export const AlertsApiFactory = function (configuration?: Configuration, basePat
     /**
      * Lists all user\'s alerts
      * @summary List alerts
-     * @param {boolean} [includeTriggered] Whether to include already triggered alerts
+     * @param {boolean} [triggered] Whether to include already triggered alerts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    list(includeTriggered?: boolean, options?: any): AxiosPromise<Array<Alert>> {
-      return localVarFp.list(includeTriggered, options).then((request) => request(axios, basePath))
+    list(triggered?: boolean, options?: any): AxiosPromise<Array<Alert>> {
+      return localVarFp.list(triggered, options).then((request) => request(axios, basePath))
     },
   }
 }
@@ -298,7 +297,6 @@ export class AlertsApi extends BaseAPI {
    * Cancel a single alert
    * @summary Cancel alert
    * @param {string} id Alert ID
-   // eslint-disable-next-line max-lines
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof AlertsApi
@@ -339,14 +337,14 @@ export class AlertsApi extends BaseAPI {
   /**
    * Lists all user\'s alerts
    * @summary List alerts
-   * @param {boolean} [includeTriggered] Whether to include already triggered alerts
+   * @param {boolean} [triggered] Whether to include already triggered alerts
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof AlertsApi
    */
-  public list(includeTriggered?: boolean, options?: AxiosRequestConfig) {
+  public list(triggered?: boolean, options?: AxiosRequestConfig) {
     return AlertsApiFp(this.configuration)
-      .list(includeTriggered, options)
+      .list(triggered, options)
       .then((request) => request(this.axios, this.basePath))
   }
 }

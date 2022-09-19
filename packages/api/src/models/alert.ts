@@ -50,4 +50,10 @@ export interface Alert {
    * @memberof Alert
    */
   state_updated_at: string
+  /**
+   * ISO8601 Timestamp
+   * @type {string}
+   * @memberof Alert
+   */
+  updated_at: string
 }
