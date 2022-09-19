@@ -29,5 +29,5 @@ export interface VDNAlertState {
    * @type {string}
    * @memberof VDNAlertState
    */
-  value: string
+  value: 'running' | 'triggered' | 'delivered'
 }
