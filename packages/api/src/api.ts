@@ -13,6 +13,7 @@
  */
 
 import {
+  AlertsApi,
   AssetsApi,
   BlockchainsApi,
   FunctionsApi,
@@ -46,6 +47,7 @@ export const options: Record<APIOptionsType, APIOptions> = {
 
 export class API {
   public readonly assets: AssetsApi
+  public readonly alerts: AlertsApi
   public readonly blockchains: BlockchainsApi
   public readonly functions: FunctionsApi
   public readonly labels: LabelsApi
@@ -58,6 +60,7 @@ export class API {
 
   constructor(protected readonly _options: APIOptions = options.default) {
     this.assets = new AssetsApi(_options?.configuration, _options?.baseURL)
+    this.alerts = new AlertsApi(_options?.configuration, _options?.baseURL)
     this.blockchains = new BlockchainsApi(_options?.configuration, _options?.baseURL)
     this.functions = new FunctionsApi(_options?.configuration, _options?.baseURL)
     this.labels = new LabelsApi(_options?.configuration, _options?.baseURL)

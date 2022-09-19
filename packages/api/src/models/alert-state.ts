@@ -13,7 +13,7 @@
  */
 
 /**
- * ALert state
+ * Alert state
  * @export
  * @enum {string}
  */
