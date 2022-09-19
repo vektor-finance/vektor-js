@@ -64,7 +64,7 @@ export interface SpecAndMismatches {
 
 export interface SpecAndErrors {
   spec: SubfunctionSpec
-  errors: Record<string, unknown>
+  errors: Record<string, 'no_match' | 'conflicting_values'>
 }
 
 export interface CompilerSignatureMismatchError extends CompilerBaseError {
