@@ -15,23 +15,11 @@
 import { AlertState } from './alert-state'
 
 /**
- * Properties of a Alert
+ * Properties of an Alert
  * @export
  * @interface Alert
  */
 export interface Alert {
-  /**
-   * Short ID
-   * @type {string}
-   * @memberof Alert
-   */
-  id: string
-  /**
-   *
-   * @type {VDN}
-   * @memberof Alert
-   */
-  name: string
   /**
    * ISO8601 Timestamp
    * @type {string}
@@ -39,15 +27,33 @@ export interface Alert {
    */
   created_at: string
   /**
-   * ISO8601 Timestamp
+   * Alert id
    * @type {string}
    * @memberof Alert
    */
-  state_updated_at: string
+  id: string
+  /**
+   * Alert name
+   * @type {string}
+   * @memberof Alert
+   */
+  name: string
   /**
    *
    * @type {AlertState}
    * @memberof Alert
    */
   state: AlertState
+  /**
+   * ISO8601 Timestamp
+   * @type {string}
+   * @memberof Alert
+   */
+  state_updated_at: string
+  /**
+   * ISO8601 Timestamp
+   * @type {string}
+   * @memberof Alert
+   */
+  updated_at: string
 }

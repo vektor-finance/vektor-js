@@ -98,6 +98,8 @@ export interface CompilerTypeVarResolutionError extends CompilerBaseError {
   specs_and_errors: SpecAndErrors[]
 }
 
+export type CompilerIncompatibleSideEffectsError = CompilerBaseError
+
 export type CompilerError =
   | {
       type: 'compiler_undefined_function_error'
@@ -131,6 +133,10 @@ export type CompilerError =
       type: 'compiler_not_a_struct_error'
       data: CompilerNotAStructError
     }
+  | {
+      type: 'compiler_incompatible_side_effects_error'
+      data: CompilerIncompatibleSideEffectsError
+  }
   | {
       type: 'compiler_type_var_resolution_error'
       data: CompilerTypeVarResolutionError
