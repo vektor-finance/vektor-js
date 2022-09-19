@@ -62,6 +62,11 @@ export interface SpecAndMismatches {
   mismatches: SignatureMismatch
 }
 
+export interface SpecAndErrors {
+  spec: SubfunctionSpec
+  errors: Record<string, unknown>
+}
+
 export interface CompilerSignatureMismatchError extends CompilerBaseError {
   function: string
   subfunction: string
@@ -83,6 +88,14 @@ export interface CompilerInvalidFieldError extends CompilerBaseError {
 export interface CompilerNotAStructError extends CompilerBaseError {
   path: string[]
   type: VXLType
+}
+
+export interface CompilerTypeVarResolutionError extends CompilerBaseError {
+  function: string
+  subfunction: string
+  args: (VDN | null)[]
+  options: Record<string, VDN | null>
+  specs_and_errors: SpecAndErrors[]
 }
 
 export type CompilerError =
@@ -117,6 +130,10 @@ export type CompilerError =
   | {
       type: 'compiler_not_a_struct_error'
       data: CompilerNotAStructError
+    }
+  | {
+      type: 'compiler_type_var_resolution_error'
+      data: CompilerTypeVarResolutionError
     }
 
 export type VXLSubmitAPIError =
