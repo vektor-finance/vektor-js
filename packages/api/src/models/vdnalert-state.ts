@@ -23,7 +23,7 @@ export interface VDNAlertState {
    * @type {string}
    * @memberof VDNAlertState
    */
-  type: VDNAlertStateTypeEnum
+  type: 'alert_state'
   /**
    *
    * @type {string}
@@ -31,9 +31,3 @@ export interface VDNAlertState {
    */
   value: string
 }
-
-export const VDNAlertStateTypeEnum = {
-  AlertState: 'alert_state',
-} as const
-
-export type VDNAlertStateTypeEnum = typeof VDNAlertStateTypeEnum[keyof typeof VDNAlertStateTypeEnum]
