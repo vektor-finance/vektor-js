@@ -1,6 +1,7 @@
 export * from './assets-api'
 export * from './alerts-api'
 export * from './blockchains-api'
+export * from './errors-api'
 export * from './functions-api'
 export * from './labels-api'
 export * from './sessions-api'
