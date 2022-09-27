@@ -16,6 +16,7 @@ import {
   AlertsApi,
   AssetsApi,
   BlockchainsApi,
+  ErrorsApi,
   FunctionsApi,
   LabelsApi,
   SessionsApi,
