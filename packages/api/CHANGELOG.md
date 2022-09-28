@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.0](https://github.com/vektor-finance/vektor-js/compare/v0.21.0...v0.22.0) (2022-09-28)
+
+
+### Features
+
+* **api:** update signatures endpoint to support transaction_hash ([#42](https://github.com/vektor-finance/vektor-js/issues/42)) ([f663c04](https://github.com/vektor-finance/vektor-js/commit/f663c04ba89275e03166bc42f9588ff3ef04057a))
+
+
+
 ## [0.21.0](https://github.com/vektor-finance/vektor-js/compare/v0.20.0...v0.21.0) (2022-09-27)
 
 
