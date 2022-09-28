@@ -12,23 +12,20 @@
  * Do not edit the class manually.
  */
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios'
-import { Configuration } from '../configuration'
-// Some imports not used depending on template conditions
-// @ts-ignore
+import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
+
+import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
 import {
-  DUMMY_BASE_URL,
   assertParamExists,
+  createRequestFunction,
+  DUMMY_BASE_URL,
+  serializeDataIfNeeded,
   setBearerAuthToObject,
   setSearchParams,
-  serializeDataIfNeeded,
   toPathString,
-  createRequestFunction,
 } from '../common'
-// @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base'
-// @ts-ignore
-import { Signature } from '../models'
+import { Configuration } from '../configuration'
+import { SignatureOrTransactionHash } from '../models'
 /**
  * SignaturesApi - axios parameter creator
  * @export
@@ -39,19 +36,19 @@ export const SignaturesApiAxiosParamCreator = function (configuration?: Configur
      * Submits signatures for a signing request
      * @summary Submits signatures
      * @param {string} signatureId Signature ID
-     * @param {Array<Signature>} signature Signature
+     * @param {Array<SignatureOrTransactionHash>} signatureOrTransactionHash Signature
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     submit: async (
       signatureId: string,
-      signature: Array<Signature>,
+      signatureOrTransactionHash: Array<SignatureOrTransactionHash>,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
       // verify required parameter 'signatureId' is not null or undefined
       assertParamExists('submit', 'signatureId', signatureId)
-      // verify required parameter 'signature' is not null or undefined
-      assertParamExists('submit', 'signature', signature)
+      // verify required parameter 'signatureOrTransactionHash' is not null or undefined
+      assertParamExists('submit', 'signatureOrTransactionHash', signatureOrTransactionHash)
       const localVarPath = `/signatures/submit/{signature_id}`.replace(
         `{${'signature_id'}}`,
         encodeURIComponent(String(signatureId)),
@@ -76,7 +73,11 @@ export const SignaturesApiAxiosParamCreator = function (configuration?: Configur
       setSearchParams(localVarUrlObj, localVarQueryParameter)
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
-      localVarRequestOptions.data = serializeDataIfNeeded(signature, localVarRequestOptions, configuration)
+      localVarRequestOptions.data = serializeDataIfNeeded(
+        signatureOrTransactionHash,
+        localVarRequestOptions,
+        configuration,
+      )
 
       return {
         url: toPathString(localVarUrlObj),
@@ -97,16 +98,16 @@ export const SignaturesApiFp = function (configuration?: Configuration) {
      * Submits signatures for a signing request
      * @summary Submits signatures
      * @param {string} signatureId Signature ID
-     * @param {Array<Signature>} signature Signature
+     * @param {Array<SignatureOrTransactionHash>} signatureOrTransactionHash Signature
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async submit(
       signatureId: string,
-      signature: Array<Signature>,
+      signatureOrTransactionHash: Array<SignatureOrTransactionHash>,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.submit(signatureId, signature, options)
+      const localVarAxiosArgs = await localVarAxiosParamCreator.submit(signatureId, signatureOrTransactionHash, options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
   }
@@ -123,12 +124,18 @@ export const SignaturesApiFactory = function (configuration?: Configuration, bas
      * Submits signatures for a signing request
      * @summary Submits signatures
      * @param {string} signatureId Signature ID
-     * @param {Array<Signature>} signature Signature
+     * @param {Array<SignatureOrTransactionHash>} signatureOrTransactionHash Signature
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    submit(signatureId: string, signature: Array<Signature>, options?: any): AxiosPromise<void> {
-      return localVarFp.submit(signatureId, signature, options).then((request) => request(axios, basePath))
+    submit(
+      signatureId: string,
+      signatureOrTransactionHash: Array<SignatureOrTransactionHash>,
+      options?: any,
+    ): AxiosPromise<void> {
+      return localVarFp
+        .submit(signatureId, signatureOrTransactionHash, options)
+        .then((request) => request(axios, basePath))
     },
   }
 }
@@ -144,14 +151,18 @@ export class SignaturesApi extends BaseAPI {
    * Submits signatures for a signing request
    * @summary Submits signatures
    * @param {string} signatureId Signature ID
-   * @param {Array<Signature>} signature Signature
+   * @param {Array<SignatureOrTransactionHash>} signatureOrTransactionHash Signature
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof SignaturesApi
    */
-  public submit(signatureId: string, signature: Array<Signature>, options?: AxiosRequestConfig) {
+  public submit(
+    signatureId: string,
+    signatureOrTransactionHash: Array<SignatureOrTransactionHash>,
+    options?: AxiosRequestConfig,
+  ) {
     return SignaturesApiFp(this.configuration)
-      .submit(signatureId, signature, options)
+      .submit(signatureId, signatureOrTransactionHash, options)
       .then((request) => request(this.axios, this.basePath))
   }
 }
