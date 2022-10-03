@@ -1,6 +1,6 @@
 import type { Asset, Venue } from '@vektor-finance/api'
-import { AccountID } from './signing'
 
+import { AccountID } from './signing'
 
 export interface EVMLegacyGasFeeBase {
   gas_limit: string
@@ -126,6 +126,8 @@ export interface SplitRequestMeta extends MetaBase {
   splits: Split[]
 }
 
+export type APYType = 'fixed' | 'variable'
+
 export interface LendRequestMeta extends MetaBase {
   request_type: 'lend_request'
   from: AccountID
@@ -133,6 +135,7 @@ export interface LendRequestMeta extends MetaBase {
   amount: string
   asset: Asset
   supply_apy: string
+  supply_apy_type: APYType
 }
 
 export interface LendWithdrawRequestMeta extends MetaBase {
@@ -151,13 +154,24 @@ export interface BorrowRequestMeta extends MetaBase {
   amount: string
   asset: Asset
   borrow_apy: string
+  borrow_apy_type: APYType
 }
+
 export interface BorrowRepayRequestMeta extends MetaBase {
   request_type: 'borrow_repay_request'
   from: AccountID
   venue: Venue
   amount: string
   asset: Asset
+}
+
+export interface PermissionRequestMeta extends MetaBase {
+  request_type: 'permission_request'
+  grantor: AccountID
+  spender: AccountID
+  type: 'compound_v3_comet'
+  permission: boolean
+  contract_name: string
 }
 
 export type SigningRequestMeta =
@@ -170,6 +184,7 @@ export type SigningRequestMeta =
   | MoveRequestMeta
   | SellRequestMeta
   | SplitRequestMeta
+  | PermissionRequestMeta
   | WrapRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']
