@@ -169,9 +169,8 @@ export interface PermissionRequestMeta extends MetaBase {
   request_type: 'permission_request'
   grantor: AccountID
   spender: AccountID
-  type: 'compound_v3_comet'
+  contract: AccountID
   permission: boolean
-  contract_name: string
 }
 
 export type SigningRequestMeta =
