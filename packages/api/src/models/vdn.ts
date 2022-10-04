@@ -22,6 +22,7 @@ import { VDNBalance } from './vdnbalance'
 import { VDNBlock } from './vdnblock'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
+import { VDNBorrowAccount } from './vdnborrow-account'
 import { VDNBorrowPosition } from './vdnborrow-position'
 import { VDNBorrowRate } from './vdnborrow-rate'
 import { VDNBuyQuote } from './vdnbuy-quote'
@@ -65,6 +66,7 @@ export type VDN =
   | VDNBlock
   | VDNBlockchain
   | VDNBoolean
+  | VDNBorrowAccount
   | VDNBorrowPosition
   | VDNBorrowRate
   | VDNBuyQuote

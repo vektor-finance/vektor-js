@@ -27,6 +27,12 @@ export interface Alert {
    */
   created_at: string
   /**
+   * Alert VXL expression
+   * @type {string}
+   * @memberof Alert
+   */
+  expression: string
+  /**
    * Alert id
    * @type {string}
    * @memberof Alert

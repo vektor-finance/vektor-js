@@ -13,6 +13,7 @@
  */
 
 import { VDNAlertState } from './vdnalert-state'
+import { VDNAlertValueName } from './vdnalert-value-name'
 import { VDNDateTime } from './vdndate-time'
 import { VDNString } from './vdnstring'
 
@@ -33,13 +34,19 @@ export interface VDNAlertValue {
    * @type {VDNString}
    * @memberof VDNAlertValue
    */
-  id: VDNString
+  expression: VDNString
   /**
    *
    * @type {VDNString}
    * @memberof VDNAlertValue
    */
-  name: VDNString
+  id: VDNString
+  /**
+   *
+   * @type {VDNAlertValueName}
+   * @memberof VDNAlertValue
+   */
+  name: VDNAlertValueName
   /**
    *
    * @type {VDNAlertState}

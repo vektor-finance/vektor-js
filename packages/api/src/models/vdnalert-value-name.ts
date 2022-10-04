@@ -12,24 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { VDNNone } from './vdnnone'
 import { VDNString } from './vdnstring'
 
 /**
- *
+ * @type VDNAlertValueName
  * @export
- * @interface VDNChangesetErrorValue
  */
-export interface VDNChangesetErrorValue {
-  /**
-   *
-   * @type {VDNString}
-   * @memberof VDNChangesetErrorValue
-   */
-  error: VDNString
-  /**
-   *
-   * @type {VDNString}
-   * @memberof VDNChangesetErrorValue
-   */
-  field: VDNString
-}
+export type VDNAlertValueName = VDNNone | VDNString
