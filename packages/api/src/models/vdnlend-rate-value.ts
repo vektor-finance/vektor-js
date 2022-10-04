@@ -43,6 +43,12 @@ export interface VDNLendRateValue {
   supply_apy: VDNDecimal
   /**
    *
+   * @type {VDNDecimal}
+   * @memberof VDNLendRateValue
+   */
+  total_supply: VDNDecimal
+  /**
+   *
    * @type {VDNVenue}
    * @memberof VDNLendRateValue
    */

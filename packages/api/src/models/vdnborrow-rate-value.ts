@@ -43,6 +43,12 @@ export interface VDNBorrowRateValue {
   borrow_apy: VDNDecimal
   /**
    *
+   * @type {VDNDecimal}
+   * @memberof VDNBorrowRateValue
+   */
+  total_debt: VDNDecimal
+  /**
+   *
    * @type {VDNVenue}
    * @memberof VDNBorrowRateValue
    */

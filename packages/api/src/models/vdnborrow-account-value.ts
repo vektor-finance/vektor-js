@@ -12,52 +12,64 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNDecimal } from './vdndecimal'
 import { VDNLabel } from './vdnlabel'
+import { VDNVenue } from './vdnvenue'
 
 /**
  *
  * @export
- * @interface VDNBalanceValue
+ * @interface VDNBorrowAccountValue
  */
-export interface VDNBalanceValue {
+export interface VDNBorrowAccountValue {
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNBalanceValue
+   * @memberof VDNBorrowAccountValue
    */
-  amount: VDNDecimal
-  /**
-   *
-   * @type {VDNAsset}
-   * @memberof VDNBalanceValue
-   */
-  asset: VDNAsset
+  available_borrow: VDNDecimal
   /**
    *
    * @type {VDNBlockchain}
-   * @memberof VDNBalanceValue
+   * @memberof VDNBorrowAccountValue
    */
   blockchain: VDNBlockchain
   /**
    *
+   * @type {VDNDecimal}
+   * @memberof VDNBorrowAccountValue
+   */
+  health_factor: VDNDecimal
+  /**
+   *
    * @type {VDNLabel}
-   * @memberof VDNBalanceValue
+   * @memberof VDNBorrowAccountValue
    */
   label: VDNLabel
   /**
    *
    * @type {VDNAssetSymbol}
-   * @memberof VDNBalanceValue
+   * @memberof VDNBorrowAccountValue
    */
   quote_asset: VDNAssetSymbol
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNBalanceValue
+   * @memberof VDNBorrowAccountValue
    */
-  value: VDNDecimal
+  total_collateral: VDNDecimal
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNBorrowAccountValue
+   */
+  total_debt: VDNDecimal
+  /**
+   *
+   * @type {VDNVenue}
+   * @memberof VDNBorrowAccountValue
+   */
+  venue: VDNVenue
 }

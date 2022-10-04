@@ -24,12 +24,6 @@ import { VDNURL } from './vdnurl'
 export interface VDNBlockchainValue {
   /**
    *
-   * @type {VDNString}
-   * @memberof VDNBlockchainValue
-   */
-  name: VDNString
-  /**
-   *
    * @type {VDNInteger}
    * @memberof VDNBlockchainValue
    */
@@ -40,6 +34,12 @@ export interface VDNBlockchainValue {
    * @memberof VDNBlockchainValue
    */
   explorer: VDNURL
+  /**
+   *
+   * @type {VDNString}
+   * @memberof VDNBlockchainValue
+   */
+  name: VDNString
   /**
    *
    * @type {VDNString}

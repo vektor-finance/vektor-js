@@ -12,12 +12,11 @@
  * Do not edit the class manually.
  */
 
-
-import { VDNAsset } from './vdnasset';
-import { VDNBlockchain } from './vdnblockchain';
-import { VDNDecimal } from './vdndecimal';
-import { VDNLabel } from './vdnlabel';
-import { VDNVenue } from './vdnvenue';
+import { VDNAsset } from './vdnasset'
+import { VDNBlockchain } from './vdnblockchain'
+import { VDNDecimal } from './vdndecimal'
+import { VDNLabel } from './vdnlabel'
+import { VDNVenue } from './vdnvenue'
 
 /**
  *
@@ -25,41 +24,40 @@ import { VDNVenue } from './vdnvenue';
  * @interface VDNBorrowPositionValue
  */
 export interface VDNBorrowPositionValue {
-    /**
-     *
-     * @type {VDNAsset}
-     * @memberof VDNBorrowPositionValue
-     */
-    asset: VDNAsset;
-    /**
-     *
-     * @type {VDNBlockchain}
-     * @memberof VDNBorrowPositionValue
-     */
-    blockchain: VDNBlockchain;
-    /**
-     *
-     * @type {VDNDecimal}
-     * @memberof VDNBorrowPositionValue
-     */
-    borrow_apy: VDNDecimal;
-    /**
-     *
-     * @type {VDNDecimal}
-     * @memberof VDNBorrowPositionValue
-     */
-    debt_amount: VDNDecimal;
-    /**
-     *
-     * @type {VDNLabel}
-     * @memberof VDNBorrowPositionValue
-     */
-    label: VDNLabel;
-    /**
-     *
-     * @type {VDNVenue}
-     * @memberof VDNBorrowPositionValue
-     */
-    venue: VDNVenue;
+  /**
+   *
+   * @type {VDNAsset}
+   * @memberof VDNBorrowPositionValue
+   */
+  asset: VDNAsset
+  /**
+   *
+   * @type {VDNBlockchain}
+   * @memberof VDNBorrowPositionValue
+   */
+  blockchain: VDNBlockchain
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNBorrowPositionValue
+   */
+  borrow_apy: VDNDecimal
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNBorrowPositionValue
+   */
+  debt_amount: VDNDecimal
+  /**
+   *
+   * @type {VDNLabel}
+   * @memberof VDNBorrowPositionValue
+   */
+  label: VDNLabel
+  /**
+   *
+   * @type {VDNVenue}
+   * @memberof VDNBorrowPositionValue
+   */
+  venue: VDNVenue
 }
-
