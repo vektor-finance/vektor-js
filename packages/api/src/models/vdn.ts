@@ -23,8 +23,8 @@ import { VDNBlock } from './vdnblock'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
 import { VDNBorrowAccount } from './vdnborrow-account'
+import { VDNBorrowMarket } from './vdnborrow-market'
 import { VDNBorrowPosition } from './vdnborrow-position'
-import { VDNBorrowRate } from './vdnborrow-rate'
 import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNChangesetError } from './vdnchangeset-error'
 import { VDNDateTime } from './vdndate-time'
@@ -32,8 +32,8 @@ import { VDNDecimal } from './vdndecimal'
 import { VDNError, VDNErrorType } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
+import { VDNLendMarket } from './vdnlend-market'
 import { VDNLendPosition } from './vdnlend-position'
-import { VDNLendRate } from './vdnlend-rate'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
@@ -67,8 +67,8 @@ export type VDN =
   | VDNBlockchain
   | VDNBoolean
   | VDNBorrowAccount
+  | VDNBorrowMarket
   | VDNBorrowPosition
-  | VDNBorrowRate
   | VDNBuyQuote
   | VDNChangesetError
   | VDNDateTime
@@ -76,8 +76,8 @@ export type VDN =
   | VDNError
   | VDNInteger
   | VDNLabel
+  | VDNLendMarket
   | VDNLendPosition
-  | VDNLendRate
   | VDNMap
   | VDNNone
   | VDNPrice

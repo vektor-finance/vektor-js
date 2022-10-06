@@ -20,37 +20,37 @@ import { VDNVenue } from './vdnvenue'
 /**
  *
  * @export
- * @interface VDNBorrowRateValue
+ * @interface VDNBorrowMarketValue
  */
-export interface VDNBorrowRateValue {
+export interface VDNBorrowMarketValue {
   /**
    *
    * @type {VDNAsset}
-   * @memberof VDNBorrowRateValue
+   * @memberof VDNBorrowMarketValue
    */
   asset: VDNAsset
   /**
    *
    * @type {VDNBlockchain}
-   * @memberof VDNBorrowRateValue
+   * @memberof VDNBorrowMarketValue
    */
   blockchain: VDNBlockchain
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNBorrowRateValue
+   * @memberof VDNBorrowMarketValue
    */
   borrow_apy: VDNDecimal
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNBorrowRateValue
+   * @memberof VDNBorrowMarketValue
    */
   total_debt: VDNDecimal
   /**
    *
    * @type {VDNVenue}
-   * @memberof VDNBorrowRateValue
+   * @memberof VDNBorrowMarketValue
    */
   venue: VDNVenue
 }

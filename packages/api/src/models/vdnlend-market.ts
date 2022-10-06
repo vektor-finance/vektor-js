@@ -12,24 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { VDNLendRateValue } from './vdnlend-rate-value'
+import { VDNLendMarketValue } from './vdnlend-market-value'
 
 /**
- * VXL lend_quote representation
+ * VXL lend_market representation
  * @export
- * @interface VDNLendRate
+ * @interface VDNLendMarket
  */
-export interface VDNLendRate {
+export interface VDNLendMarket {
   /**
    *
    * @type {string}
-   * @memberof VDNLendRate
+   * @memberof VDNLendMarket
    */
-  type: 'lend_rate'
+  type: 'lend_market'
   /**
    *
-   * @type {VDNLendRateValue}
-   * @memberof VDNLendRate
+   * @type {VDNLendMarketValue}
+   * @memberof VDNLendMarket
    */
-  value: VDNLendRateValue
+  value: VDNLendMarketValue
 }
