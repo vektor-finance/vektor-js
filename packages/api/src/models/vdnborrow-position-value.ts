@@ -16,6 +16,7 @@ import { VDNAsset } from './vdnasset'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNDecimal } from './vdndecimal'
 import { VDNLabel } from './vdnlabel'
+import { VDNPercent } from './vdnpercentage'
 import { VDNVenue } from './vdnvenue'
 
 /**
@@ -38,10 +39,10 @@ export interface VDNBorrowPositionValue {
   blockchain: VDNBlockchain
   /**
    *
-   * @type {VDNDecimal}
+   * @type {VDNPercent}
    * @memberof VDNBorrowPositionValue
    */
-  borrow_apy: VDNDecimal
+  borrow_apy: VDNPercent
   /**
    *
    * @type {VDNDecimal}
