@@ -37,6 +37,7 @@ import { VDNLendPosition } from './vdnlend-position'
 import { VDNList } from './vdnlist'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
+import { VDNPercentage } from './vdnpercentage'
 import { VDNPrice } from './vdnprice'
 import { VDNSellQuote } from './vdnsell-quote'
 import { VDNStream } from './vdnstream'
@@ -80,6 +81,7 @@ export type VDN =
   | VDNLendPosition
   | VDNMap
   | VDNNone
+  | VDNPercentage
   | VDNPrice
   | VDNSellQuote
   | VDNStream

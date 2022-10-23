@@ -1,3 +1,4 @@
+
 export * from './alert'
 export * from './alert-state'
 export * from './asset'
@@ -71,6 +72,7 @@ export * from './vdnlist'
 export * from './vdnmap'
 export * from './vdnnone'
 export * from './vdnor-runtime-error'
+export * from './vdnpercentage'
 export * from './vdnprice'
 export * from './vdnprice-value'
 export * from './vdnsell-quote'
