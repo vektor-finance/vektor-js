@@ -96,4 +96,4 @@ export * from './vxlsubmit-response'
 export * from './vxltask-type'
 export * from './vxltype'
 export * from './vxlvalidate-request'
-
+export * from './vdnlppool-type'
