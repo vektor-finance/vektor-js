@@ -37,6 +37,7 @@ import { VDNLendPosition } from './vdnlend-position'
 import { VDNList } from './vdnlist'
 import { VDNLPPool } from './vdnlppool'
 import { VDNLPPoolType } from './vdnlppool-type'
+import { VDNLPPosition } from './vdnlpposition'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
 import { VDNPercentage } from './vdnpercentage'
@@ -83,6 +84,7 @@ export type VDN =
   | VDNLendPosition
   | VDNLPPool
   | VDNLPPoolType
+  | VDNLPPosition
   | VDNMap
   | VDNNone
   | VDNPercentage
