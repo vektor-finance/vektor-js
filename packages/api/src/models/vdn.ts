@@ -35,6 +35,7 @@ import { VDNLabel } from './vdnlabel'
 import { VDNLendMarket } from './vdnlend-market'
 import { VDNLendPosition } from './vdnlend-position'
 import { VDNList } from './vdnlist'
+import { VDNLPPool } from './vdnlppool'
 import { VDNLPPoolType } from './vdnlppool-type'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
@@ -80,6 +81,7 @@ export type VDN =
   | VDNLabel
   | VDNLendMarket
   | VDNLendPosition
+  | VDNLPPool
   | VDNLPPoolType
   | VDNMap
   | VDNNone
