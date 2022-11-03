@@ -12,8 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { VDNBlockchain } from './vdnblockchain'
 import { VDNString } from './vdnstring'
 import { VDNURL } from './vdnurl'
+import { VDNVenueSymbol } from './vdnvenue-symbol'
 import { VDNVenueType } from './vdnvenue-type'
 
 /**
@@ -24,16 +26,22 @@ import { VDNVenueType } from './vdnvenue-type'
 export interface VDNVenueValue {
   /**
    *
+   * @type {VDNBlockchain}
+   * @memberof VDNVenueValue
+   */
+  blockchain: VDNBlockchain
+  /**
+   *
    * @type {VDNString}
    * @memberof VDNVenueValue
    */
   name: VDNString
   /**
    *
-   * @type {VDNString}
+   * @type {VDNVenueSymbol}
    * @memberof VDNVenueValue
    */
-  symbol: VDNString
+  symbol: VDNVenueSymbol
   /**
    *
    * @type {VDNVenueType}

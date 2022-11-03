@@ -51,6 +51,7 @@ import { VDNTask } from './vdntask'
 import { VDNTransactionHash } from './vdntransaction-hash'
 import { VDNURL } from './vdnurl'
 import { VDNVenue } from './vdnvenue'
+import { VDNVenueSymbol } from './vdnvenue-symbol'
 import { VDNVenueType } from './vdnvenue-type'
 
 // Concrete Types
@@ -98,6 +99,7 @@ export type VDN =
   | VDNURL
   | VDNVenue
   | VDNVenueType
+  | VDNVenueSymbol
 
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
