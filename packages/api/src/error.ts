@@ -100,6 +100,8 @@ export interface CompilerTypeVarResolutionError extends CompilerBaseError {
 
 export type CompilerIncompatibleSideEffectsError = CompilerBaseError
 
+export type CompilerEmptyListLiteralError = CompilerBaseError
+
 export type CompilerError =
   | {
       type: 'compiler_undefined_function_error'
@@ -140,6 +142,10 @@ export type CompilerError =
   | {
       type: 'compiler_type_var_resolution_error'
       data: CompilerTypeVarResolutionError
+    }
+  | {
+      type: 'compiler_empty_list_literal_error'
+      data: CompilerEmptyListLiteralError
     }
 
 export type VXLSubmitAPIError =
