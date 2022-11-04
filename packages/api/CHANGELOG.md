@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.0](https://github.com/vektor-finance/vektor-js/compare/v0.23.0...v0.24.0) (2022-11-04)
+
+
+### Features
+
+* **types:** LP types and signing request meta ([#45](https://github.com/vektor-finance/vektor-js/issues/45)) ([457e488](https://github.com/vektor-finance/vektor-js/commit/457e488d187a97899b4068db465214824087fabc))
+
+
+
 ## [0.23.0](https://github.com/vektor-finance/vektor-js/compare/v0.22.4...v0.23.0) (2022-11-03)
 
 
