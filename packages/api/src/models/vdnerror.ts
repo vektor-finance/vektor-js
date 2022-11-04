@@ -24,6 +24,7 @@ export const ALL_VDN_ERRORS = [
   'invalid_asset_error',
   'invalid_asset_set_error',
   'invalid_list_length_error',
+  'invalid_slippage_error',
   'invalid_venue_error',
   'market_not_found_error',
   'max_fee_per_gas_less_than_block_base_fee_error',
