@@ -12,11 +12,22 @@
  * Do not edit the class manually.
  */
 
-import { VDNAssetSymbol } from './vdnasset-symbol'
-import { VDNString } from './vdnstring'
-
 /**
- * @type VDNAssetValueSymbol
+ * VXL venue_symbol representation
  * @export
+ * @interface VDNVenueSymbol
  */
-export type VDNAssetValueSymbol = VDNAssetSymbol | VDNString
+export interface VDNVenueSymbol {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNVenueSymbol
+   */
+  type: 'venue_symbol'
+  /**
+   *
+   * @type {string}
+   * @memberof VDNVenueSymbol
+   */
+  value: string
+}

@@ -173,17 +173,50 @@ export interface PermissionRequestMeta extends MetaBase {
   permission: boolean
 }
 
+export type LPPoolType = 'pair' | 'multi' | 'weighted' | 'range'
+
+export interface LPPoolInfo {
+  name: string
+  assets: Asset[]
+  fee: string
+  type: LPPoolType
+  weights: string[]
+}
+
+export interface LPDepositRequestMeta extends MetaBase {
+  request_type: 'lp_deposit_request'
+  venue: Venue
+  assets: Asset[]
+  amounts: string[]
+  from: AccountID
+  slippage_tolerance: string
+  pool_info: LPPoolInfo
+}
+
+export interface LPWithdrawRequestMeta extends MetaBase {
+  request_type: 'lp_withdraw_request'
+  venue: Venue
+  assets: Asset[]
+  amounts: string[]
+  lp_amount: string
+  from: AccountID
+  slippage_tolerance: string
+  pool_info: LPPoolInfo
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
-  | BuyRequestMeta
-  | BorrowRequestMeta
   | BorrowRepayRequestMeta
+  | BorrowRequestMeta
+  | BuyRequestMeta
   | LendRequestMeta
   | LendWithdrawRequestMeta
+  | LPDepositRequestMeta
+  | LPWithdrawRequestMeta
   | MoveRequestMeta
+  | PermissionRequestMeta
   | SellRequestMeta
   | SplitRequestMeta
-  | PermissionRequestMeta
   | WrapRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']

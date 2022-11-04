@@ -35,8 +35,12 @@ import { VDNLabel } from './vdnlabel'
 import { VDNLendMarket } from './vdnlend-market'
 import { VDNLendPosition } from './vdnlend-position'
 import { VDNList } from './vdnlist'
+import { VDNLPPool } from './vdnlppool'
+import { VDNLPPoolType } from './vdnlppool-type'
+import { VDNLPPosition } from './vdnlpposition'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
+import { VDNPercentage } from './vdnpercentage'
 import { VDNPrice } from './vdnprice'
 import { VDNSellQuote } from './vdnsell-quote'
 import { VDNStream } from './vdnstream'
@@ -47,6 +51,7 @@ import { VDNTask } from './vdntask'
 import { VDNTransactionHash } from './vdntransaction-hash'
 import { VDNURL } from './vdnurl'
 import { VDNVenue } from './vdnvenue'
+import { VDNVenueSymbol } from './vdnvenue-symbol'
 import { VDNVenueType } from './vdnvenue-type'
 
 // Concrete Types
@@ -78,8 +83,12 @@ export type VDN =
   | VDNLabel
   | VDNLendMarket
   | VDNLendPosition
+  | VDNLPPool
+  | VDNLPPoolType
+  | VDNLPPosition
   | VDNMap
   | VDNNone
+  | VDNPercentage
   | VDNPrice
   | VDNSellQuote
   | VDNStream
@@ -90,6 +99,7 @@ export type VDN =
   | VDNURL
   | VDNVenue
   | VDNVenueType
+  | VDNVenueSymbol
 
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']

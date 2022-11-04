@@ -12,11 +12,22 @@
  * Do not edit the class manually.
  */
 
-import { VDNAssetSymbol } from './vdnasset-symbol'
-import { VDNString } from './vdnstring'
-
 /**
- * @type VDNAssetValueSymbol
+ * VXL percentage representation
  * @export
+ * @interface VDNPercentage
  */
-export type VDNAssetValueSymbol = VDNAssetSymbol | VDNString
+export interface VDNPercentage {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNPercentage
+   */
+  type: 'percentage'
+  /**
+   *
+   * @type {string}
+   * @memberof VDNPercentage
+   */
+  value: string
+}

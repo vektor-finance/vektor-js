@@ -12,11 +12,22 @@
  * Do not edit the class manually.
  */
 
-import { VDNAssetSymbol } from './vdnasset-symbol'
-import { VDNString } from './vdnstring'
-
 /**
- * @type VDNAssetValueSymbol
+ * VXL lp_pool_type representation
  * @export
+ * @interface VDNLPPoolType
  */
-export type VDNAssetValueSymbol = VDNAssetSymbol | VDNString
+export interface VDNLPPoolType {
+  /**
+   *
+   * @type {string}
+   * @memberof VDNLPPoolType
+   */
+  type: 'lp_pool_type'
+  /**
+   *
+   * @type {string}
+   * @memberof VDNLPPoolType
+   */
+  value: string
+}
