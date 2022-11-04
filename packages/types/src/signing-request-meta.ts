@@ -173,8 +173,14 @@ export interface PermissionRequestMeta extends MetaBase {
   permission: boolean
 }
 
-export interface LPPoolInfo {
+export type LPPoolType = 'pair' | 'multi' | 'weighted' | 'range'
 
+export interface LPPoolInfo {
+  name: string
+  assets: Asset[]
+  fee: string
+  type: LPPoolType
+  weights: string[]
 }
 
 export interface LPDepositRequestMeta extends MetaBase {
