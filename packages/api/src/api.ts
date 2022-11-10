@@ -22,6 +22,7 @@ import {
   SessionsApi,
   SignaturesApi,
   StreamsApi,
+  TypesApi,
   UsersApi,
   VenuesApi,
   VxlApi,
@@ -47,22 +48,23 @@ export const options: Record<APIOptionsType, APIOptions> = {
 }
 
 export class API {
-  public readonly assets: AssetsApi
   public readonly alerts: AlertsApi
+  public readonly assets: AssetsApi
   public readonly blockchains: BlockchainsApi
   public readonly errors: ErrorsApi
   public readonly functions: FunctionsApi
   public readonly labels: LabelsApi
-  public readonly signatures: SignaturesApi
   public readonly sessions: SessionsApi
+  public readonly signatures: SignaturesApi
   public readonly streams: StreamsApi
+  public readonly types: TypesApi
   public readonly users: UsersApi
   public readonly venues: VenuesApi
   public readonly vxl: VxlApi
 
   constructor(protected readonly _options: APIOptions = options.default) {
-    this.assets = new AssetsApi(_options?.configuration, _options?.baseURL)
     this.alerts = new AlertsApi(_options?.configuration, _options?.baseURL)
+    this.assets = new AssetsApi(_options?.configuration, _options?.baseURL)
     this.blockchains = new BlockchainsApi(_options?.configuration, _options?.baseURL)
     this.errors = new ErrorsApi(_options?.configuration, _options?.baseURL)
     this.functions = new FunctionsApi(_options?.configuration, _options?.baseURL)
@@ -70,6 +72,7 @@ export class API {
     this.sessions = new SessionsApi(_options?.configuration, _options?.baseURL)
     this.signatures = new SignaturesApi(_options?.configuration, _options?.baseURL)
     this.streams = new StreamsApi(_options?.configuration, _options?.baseURL)
+    this.types = new TypesApi(_options?.configuration, _options?.baseURL)
     this.users = new UsersApi(_options?.configuration, _options?.baseURL)
     this.venues = new VenuesApi(_options?.configuration, _options?.baseURL)
     this.vxl = new VxlApi(_options?.configuration, _options?.baseURL)
