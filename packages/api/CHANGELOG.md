@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.0](https://github.com/vektor-finance/vektor-js/compare/v0.25.0...v0.26.0) (2022-11-16)
+
+
+### Features
+
+* **api:** update vxl/validate endpoint response type ([#49](https://github.com/vektor-finance/vektor-js/issues/49)) ([0de8066](https://github.com/vektor-finance/vektor-js/commit/0de8066783443f2159b8f26dae49ff767048f804))
+
+
+
 ## [0.25.0](https://github.com/vektor-finance/vektor-js/compare/v0.24.2...v0.25.0) (2022-11-10)
 
 
