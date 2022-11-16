@@ -12,26 +12,21 @@
  * Do not edit the class manually.
  */
 
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios'
-import { Configuration } from '../configuration'
-// Some imports not used depending on template conditions
-// @ts-ignore
+import globalAxios, { AxiosInstance, AxiosPromise, AxiosRequestConfig } from 'axios'
+
+import { BASE_PATH, BaseAPI, RequestArgs } from '../base'
 import {
-  DUMMY_BASE_URL,
   assertParamExists,
+  createRequestFunction,
+  DUMMY_BASE_URL,
+  serializeDataIfNeeded,
   setBearerAuthToObject,
   setSearchParams,
-  serializeDataIfNeeded,
   toPathString,
-  createRequestFunction,
 } from '../common'
-// @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base'
-// @ts-ignore
+import { Configuration } from '../configuration'
 import { VXLSubmitRequest } from '../models'
-// @ts-ignore
 import { VXLSubmitResponse } from '../models'
-// @ts-ignore
 import { VXLValidateRequest } from '../models'
 /**
  * VxlApi - axios parameter creator
@@ -78,7 +73,7 @@ export const VxlApiAxiosParamCreator = function (configuration?: Configuration) 
       }
     },
     /**
-     * Submit a VXL command and returns ok or a list of compilation errors
+     * Submit a VXL command and returns ok or a list of compilation errors and warnings
      * @summary Validate VXL command
      * @param {VXLValidateRequest} vXLValidateRequest VXL
      * @param {*} [options] Override http request option.
@@ -143,7 +138,7 @@ export const VxlApiFp = function (configuration?: Configuration) {
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
     /**
-     * Submit a VXL command and returns ok or a list of compilation errors
+     * Submit a VXL command and returns ok or a list of compilation errors and warnings
      * @summary Validate VXL command
      * @param {VXLValidateRequest} vXLValidateRequest VXL
      * @param {*} [options] Override http request option.
@@ -177,7 +172,7 @@ export const VxlApiFactory = function (configuration?: Configuration, basePath?:
       return localVarFp.submit(vXLSubmitRequest, options).then((request) => request(axios, basePath))
     },
     /**
-     * Submit a VXL command and returns ok or a list of compilation errors
+     * Submit a VXL command and returns ok or a list of compilation errors and warnings
      * @summary Validate VXL command
      * @param {VXLValidateRequest} vXLValidateRequest VXL
      * @param {*} [options] Override http request option.
@@ -211,7 +206,7 @@ export class VxlApi extends BaseAPI {
   }
 
   /**
-   * Submit a VXL command and returns ok or a list of compilation errors
+   * Submit a VXL command and returns ok or a list of compilation errors and warnings
    * @summary Validate VXL command
    * @param {VXLValidateRequest} vXLValidateRequest VXL
    * @param {*} [options] Override http request option.
