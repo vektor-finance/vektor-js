@@ -28,6 +28,7 @@ import { Configuration } from '../configuration'
 import { VXLSubmitRequest } from '../models'
 import { VXLSubmitResponse } from '../models'
 import { VXLValidateRequest } from '../models'
+import { VXLValidateResponse } from '../models'
 /**
  * VxlApi - axios parameter creator
  * @export
@@ -147,7 +148,7 @@ export const VxlApiFp = function (configuration?: Configuration) {
     async validate(
       vXLValidateRequest: VXLValidateRequest,
       options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VXLValidateResponse>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.validate(vXLValidateRequest, options)
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)
     },
@@ -178,7 +179,7 @@ export const VxlApiFactory = function (configuration?: Configuration, basePath?:
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validate(vXLValidateRequest: VXLValidateRequest, options?: any): AxiosPromise<void> {
+    validate(vXLValidateRequest: VXLValidateRequest, options?: any): AxiosPromise<VXLValidateResponse> {
       return localVarFp.validate(vXLValidateRequest, options).then((request) => request(axios, basePath))
     },
   }
