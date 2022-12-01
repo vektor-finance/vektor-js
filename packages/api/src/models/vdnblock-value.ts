@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBlockchain } from './vdnblockchain'
 import { VDNDateTime } from './vdndate-time'
 import { VDNInteger } from './vdninteger'
 import { VDNString } from './vdnstring'
@@ -22,6 +23,12 @@ import { VDNString } from './vdnstring'
  * @interface VDNBlockValue
  */
 export interface VDNBlockValue {
+  /**
+   *
+   * @type {VDNBlockchain}
+   * @memberof VDNBlockValue
+   */
+  blockchain: VDNBlockchain
   /**
    *
    * @type {VDNString}

@@ -12,11 +12,12 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
+import { VDNAddress } from './vdnaddress'
+import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNDecimal } from './vdndecimal'
-import { VDNList } from './vdnlist'
 import { VDNLPPoolType } from './vdnlppool-type'
+import { VDNList } from './vdnlist'
 import { VDNPercentage } from './vdnpercentage'
 import { VDNString } from './vdnstring'
 import { VDNVenue } from './vdnvenue'
@@ -53,6 +54,12 @@ export interface VDNLPPoolValue {
   name: VDNString
   /**
    *
+   * @type {VDNAddress}
+   * @memberof VDNLPPoolValue
+   */
+  pool_address: VDNAddress
+  /**
+   *
    * @type {VDNPercentage}
    * @memberof VDNLPPoolValue
    */
@@ -65,10 +72,10 @@ export interface VDNLPPoolValue {
   pool_type: VDNLPPoolType
   /**
    *
-   * @type {VDNAsset}
+   * @type {VDNAssetSymbol}
    * @memberof VDNLPPoolValue
    */
-  quote_asset: VDNAsset
+  quote_asset: VDNAssetSymbol
   /**
    *
    * @type {VDNList}

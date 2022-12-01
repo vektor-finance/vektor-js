@@ -39,7 +39,6 @@ export const ALL_VDN_ERRORS = [
   'nonce_too_low_error',
   'not_found_error',
   'position_not_found_error',
-  'runtime_error',
   'sender_not_eoa_error',
   'transfer_amount_exceeds_allowance_error',
   'unexpected_error',

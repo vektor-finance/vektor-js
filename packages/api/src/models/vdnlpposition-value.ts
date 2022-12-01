@@ -13,14 +13,12 @@
  */
 
 import { VDNAsset } from './vdnasset'
-import { VDNBlockchain } from './vdnblockchain'
+import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNDecimal } from './vdndecimal'
+import { VDNLPPool } from './vdnlppool'
 import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
-import { VDNLPPoolType } from './vdnlppool-type'
 import { VDNPercentage } from './vdnpercentage'
-import { VDNString } from './vdnstring'
-import { VDNVenue } from './vdnvenue'
 
 /**
  *
@@ -34,18 +32,6 @@ export interface VDNLPPositionValue {
    * @memberof VDNLPPositionValue
    */
   amounts: VDNList
-  /**
-   *
-   * @type {VDNList}
-   * @memberof VDNLPPositionValue
-   */
-  assets: VDNList
-  /**
-   *
-   * @type {VDNBlockchain}
-   * @memberof VDNLPPositionValue
-   */
-  blockchain: VDNBlockchain
   /**
    *
    * @type {VDNLabel}
@@ -66,50 +52,26 @@ export interface VDNLPPositionValue {
   lp_asset: VDNAsset
   /**
    *
-   * @type {VDNString}
-   * @memberof VDNLPPositionValue
-   */
-  name: VDNString
-  /**
-   *
    * @type {VDNPercentage}
    * @memberof VDNLPPositionValue
    */
   ownership: VDNPercentage
   /**
    *
-   * @type {VDNPercentage}
+   * @type {VDNLPPool}
    * @memberof VDNLPPositionValue
    */
-  pool_fee: VDNPercentage
+  pool: VDNLPPool
   /**
    *
-   * @type {VDNLPPoolType}
+   * @type {VDNAssetSymbol}
    * @memberof VDNLPPositionValue
    */
-  pool_type: VDNLPPoolType
-  /**
-   *
-   * @type {VDNAsset}
-   * @memberof VDNLPPositionValue
-   */
-  quote_asset: VDNAsset
-  /**
-   *
-   * @type {VDNList}
-   * @memberof VDNLPPositionValue
-   */
-  target_weights: VDNList
+  quote_asset: VDNAssetSymbol
   /**
    *
    * @type {VDNDecimal}
    * @memberof VDNLPPositionValue
    */
   value: VDNDecimal
-  /**
-   *
-   * @type {VDNVenue}
-   * @memberof VDNLPPositionValue
-   */
-  venue: VDNVenue
 }

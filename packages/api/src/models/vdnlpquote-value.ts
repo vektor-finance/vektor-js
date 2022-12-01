@@ -12,92 +12,60 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
-import { VDNBlockchain } from './vdnblockchain'
-import { VDNDecimal } from './vdndecimal'
-import { VDNLabel } from './vdnlabel'
-import { VDNList } from './vdnlist'
-import { VDNNone } from './vdnnone'
-import { VDNPercentage } from './vdnpercentage'
-import { VDNString } from './vdnstring'
-import { VDNVenue } from './vdnvenue'
+ import { VDNAssetSymbol } from './vdnasset-symbol'
+ import { VDNDecimal } from './vdndecimal'
+ import { VDNLabel } from './vdnlabel'
+ import { VDNList } from './vdnlist'
+ import { VDNLPPool } from './vdnlppool'
+ import { VDNNone } from './vdnnone'
+ import { VDNPercentage } from './vdnpercentage'
 
-/**
- *
- * @export
- * @interface VDNLPQuoteValue
- */
-export interface VDNLPQuoteValue {
-  /**
-   *
-   * @type {VDNList}
-   * @memberof VDNLPQuoteValue
-   */
-  after_amounts: VDNList
-  /**
-   *
-   * @type {VDNPercentage}
-   * @memberof VDNLPQuoteValue
-   */
-  after_pct: VDNPercentage
-  /**
-   *
-   * @type {VDNDecimal}
-   * @memberof VDNLPQuoteValue
-   */
-  after_value: VDNDecimal
-  /**
-   *
-   * @type {VDNList}
-   * @memberof VDNLPQuoteValue
-   */
-  assets: VDNList
-  /**
-   *
-   * @type {VDNList}
-   * @memberof VDNLPQuoteValue
-   */
-  before_amounts: VDNList
-  /**
-   *
-   * @type {VDNPercentage}
-   * @memberof VDNLPQuoteValue
-   */
-  before_pct: VDNPercentage
-  /**
-   *
-   * @type {VDNDecimal}
-   * @memberof VDNLPQuoteValue
-   */
-  before_value: VDNDecimal
-  /**
-   *
-   * @type {VDNBlockchain}
-   * @memberof VDNLPQuoteValue
-   */
-  blockchain: VDNBlockchain
-  /**
-   *
-   * @type {VDNLPQuoteValueLabel}
-   * @memberof VDNLPQuoteValue
-   */
-  label: VDNLabel | VDNNone
-  /**
-   *
-   * @type {VDNString}
-   * @memberof VDNLPQuoteValue
-   */
-  name: VDNString
-  /**
-   *
-   * @type {VDNAsset}
-   * @memberof VDNLPQuoteValue
-   */
-  quote_asset: VDNAsset
-  /**
-   *
-   * @type {VDNVenue}
-   * @memberof VDNLPQuoteValue
-   */
-  venue: VDNVenue
-}
+ /**
+  *
+  * @export
+  * @interface VDNLPQuoteValue
+  */
+ export interface VDNLPQuoteValue {
+   /**
+    *
+    * @type {VDNList}
+    * @memberof VDNLPQuoteValue
+    */
+   amounts: VDNList
+   /**
+    *
+    * @type {VDNList}
+    * @memberof VDNLPQuoteValue
+    */
+   amounts_delta: VDNList
+   /**
+    *
+    * @type {VDNLPQuoteValueLabel}
+    * @memberof VDNLPQuoteValue
+    */
+   label: VDNLabel | VDNNone
+   /**
+    *
+    * @type {VDNPercentage}
+    * @memberof VDNLPQuoteValue
+    */
+   ownership: VDNPercentage
+   /**
+    *
+    * @type {VDNLPPool}
+    * @memberof VDNLPQuoteValue
+    */
+   pool: VDNLPPool
+   /**
+    *
+    * @type {VDNAssetSymbol}
+    * @memberof VDNLPQuoteValue
+    */
+   quote_asset: VDNAssetSymbol
+   /**
+    *
+    * @type {VDNDecimal}
+    * @memberof VDNLPQuoteValue
+    */
+   value: VDNDecimal
+ }
