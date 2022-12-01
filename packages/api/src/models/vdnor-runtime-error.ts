@@ -12,10 +12,9 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError } from './runtime-error'
-import { RuntimeSignatureMismatchError } from './runtime-signature-mismatch-error'
+import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
 import { VDN } from './vdn'
-import { VDNStructWithListValue } from './vdnstruct-with-list-value'
+
 
 /**
  * @type VDNOrRuntimeError
