@@ -41,6 +41,7 @@ export interface CompilerIncorrectArgumentCountError extends CompilerBaseError {
 
 export interface IncorrectlyTyped {
   name: string
+  value: VDN | null
   expected_type: VDNType
   provided_type: VDNType
   token_info: TokenInfo
