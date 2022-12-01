@@ -12,15 +12,12 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
-import { VDNBlockchain } from './vdnblockchain'
+import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNDecimal } from './vdndecimal'
-import { VDNLabel } from './vdnlabel'
+import { VDNLPPool } from './vdnlppool'
+import { VDNLPQuoteValueLabel } from './vdnlpquote-value-label'
 import { VDNList } from './vdnlist'
-import { VDNNone } from './vdnnone'
 import { VDNPercentage } from './vdnpercentage'
-import { VDNString } from './vdnstring'
-import { VDNVenue } from './vdnvenue'
 
 /**
  *
@@ -33,71 +30,41 @@ export interface VDNLPQuoteValue {
    * @type {VDNList}
    * @memberof VDNLPQuoteValue
    */
-  after_amounts: VDNList
-  /**
-   *
-   * @type {VDNPercentage}
-   * @memberof VDNLPQuoteValue
-   */
-  after_pct: VDNPercentage
-  /**
-   *
-   * @type {VDNDecimal}
-   * @memberof VDNLPQuoteValue
-   */
-  after_value: VDNDecimal
+  amounts: VDNList
   /**
    *
    * @type {VDNList}
    * @memberof VDNLPQuoteValue
    */
-  assets: VDNList
-  /**
-   *
-   * @type {VDNList}
-   * @memberof VDNLPQuoteValue
-   */
-  before_amounts: VDNList
-  /**
-   *
-   * @type {VDNPercentage}
-   * @memberof VDNLPQuoteValue
-   */
-  before_pct: VDNPercentage
-  /**
-   *
-   * @type {VDNDecimal}
-   * @memberof VDNLPQuoteValue
-   */
-  before_value: VDNDecimal
-  /**
-   *
-   * @type {VDNBlockchain}
-   * @memberof VDNLPQuoteValue
-   */
-  blockchain: VDNBlockchain
+  amounts_delta: VDNList
   /**
    *
    * @type {VDNLPQuoteValueLabel}
    * @memberof VDNLPQuoteValue
    */
-  label: VDNLabel | VDNNone
+  label: VDNLPQuoteValueLabel
   /**
    *
-   * @type {VDNString}
+   * @type {VDNPercentage}
    * @memberof VDNLPQuoteValue
    */
-  name: VDNString
+  ownership: VDNPercentage
   /**
    *
-   * @type {VDNAsset}
+   * @type {VDNLPPool}
    * @memberof VDNLPQuoteValue
    */
-  quote_asset: VDNAsset
+  pool: VDNLPPool
   /**
    *
-   * @type {VDNVenue}
+   * @type {VDNAssetSymbol}
    * @memberof VDNLPQuoteValue
    */
-  venue: VDNVenue
+  quote_asset: VDNAssetSymbol
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNLPQuoteValue
+   */
+  value: VDNDecimal
 }

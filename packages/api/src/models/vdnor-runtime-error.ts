@@ -13,11 +13,13 @@
  */
 
 import { RuntimeError } from './runtime-error'
+import { RuntimeSignatureMismatchError } from './runtime-signature-mismatch-error'
 import { VDN } from './vdn'
+import { VDNStructWithListValue } from './vdnstruct-with-list-value'
 
 /**
  * @type VDNOrRuntimeError
  * VDN or RuntimeError
  * @export
  */
-export type VDNOrRuntimeError = RuntimeError | VDN
+export type VDNOrRuntimeError = RuntimeError | RuntimeSignatureMismatchError | VDN
