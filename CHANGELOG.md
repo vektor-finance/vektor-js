@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.26.5](https://github.com/vektor-finance/vektor-js/compare/v0.26.4...v0.26.5) (2022-12-01)
+
+
+### Bug Fixes
+
+* add missing VDN type in VDN list ([1d84d92](https://github.com/vektor-finance/vektor-js/commit/1d84d928fa304e4ed66743f9a4f26d46d85c698c))
+* remove duplicate runtime_error ([171293b](https://github.com/vektor-finance/vektor-js/commit/171293bb2cc0e8143ff5c367f619a16e2a06323c))
+
+
+
 ### [0.26.4](https://github.com/vektor-finance/vektor-js/compare/v0.26.3...v0.26.4) (2022-12-01)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
