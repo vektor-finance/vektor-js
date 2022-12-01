@@ -38,6 +38,7 @@ import { VDNList } from './vdnlist'
 import { VDNLPPool } from './vdnlppool'
 import { VDNLPPoolType } from './vdnlppool-type'
 import { VDNLPPosition } from './vdnlpposition'
+import { VDNLPQuote } from './vdnlpquote'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
 import { VDNPercentage } from './vdnpercentage'
@@ -86,6 +87,7 @@ export type VDN =
   | VDNLPPool
   | VDNLPPoolType
   | VDNLPPosition
+  | VDNLPQuote
   | VDNMap
   | VDNNone
   | VDNPercentage
@@ -98,8 +100,8 @@ export type VDN =
   | VDNTransactionHash
   | VDNURL
   | VDNVenue
-  | VDNVenueType
   | VDNVenueSymbol
+  | VDNVenueType
 
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
