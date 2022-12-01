@@ -148,11 +148,23 @@ export type CompilerError =
       data: CompilerEmptyListLiteralError
     }
 
+// Runtime Errors
+
+export interface RuntimeError {
+  type: 'runtime_error'
+  data: Record<string, unknown>
+}
+
+export interface RuntimeSignatureMismatchError {
+  type: 'runtime_signature_mismatch_error'
+  data: { function: string; subfunction: string } & SpecAndMismatches
+}
+
 export type VXLSubmitAPIError =
-  | {
-      type: 'runtime_error' | 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
-      data: Record<string, unknown>
-    }
-  | CompilerError
+  |
+  CompilerError | RuntimeError | RuntimeSignatureMismatchError | {
+    type: 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
+    data: Record<string, unknown>
+  }
 
 export type VXLSubmitAPIErrorType = VXLSubmitAPIError['type']
