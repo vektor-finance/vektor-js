@@ -164,7 +164,7 @@ export interface RuntimeSignatureMismatchError {
 export type VXLSubmitAPIError =
   |
   CompilerError | RuntimeError | RuntimeSignatureMismatchError | {
-    type: 'runtime_error' | 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
+    type: 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
     data: Record<string, unknown>
   }
 
