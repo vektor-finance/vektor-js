@@ -12,7 +12,8 @@
  * Do not edit the class manually.
  */
 
-import { ALL_VDN_ERRORS, VXLType } from '.'
+import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
+import { ALL_VDN_ERRORS, VDNOrRuntimeError, VXLType } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAlert } from './vdnalert'
 import { VDNAlertState } from './vdnalert-state'
@@ -143,6 +144,13 @@ export const isVDNGenericType = (type: VXLType): type is VDNGenericType =>
 export const isVDNTask = (vdn: VDNOrVDNGeneric): vdn is VDNTask =>
   isVDNGeneric(vdn) && vdn.type.type === 'task' && typeof vdn.value === 'string'
 
-  export const isVDNList = (vdn: VDNOrVDNGeneric): vdn is VDNList =>
+export const isVDNList = (vdn: VDNOrVDNGeneric): vdn is VDNList =>
   isVDNGeneric(vdn) && vdn.type.type === 'list' && 'items' in vdn.type.parameters
+
+export  const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream => vdn.type === 'stream' && typeof vdn.value === 'string'
+
+export  const isRuntimeError = (
+    vdnOrRuntimeError: VDNOrRuntimeError,
+  ): vdnOrRuntimeError is RuntimeError | RuntimeSignatureMismatchError =>
+    (vdnOrRuntimeError.type == 'runtime_error' || vdnOrRuntimeError.type === 'runtime_signature_mismatch_error') && typeof vdnOrRuntimeError.data === 'object'
 
