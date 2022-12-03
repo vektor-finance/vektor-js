@@ -161,9 +161,12 @@ export interface RuntimeSignatureMismatchError {
   data: { function: string; subfunction: string } & SpecAndMismatches
 }
 
+export type AnyRuntimeError = RuntimeError | RuntimeSignatureMismatchError
+
 export type VXLSubmitAPIError =
-  |
-  CompilerError | RuntimeError | RuntimeSignatureMismatchError | {
+  | CompilerError
+  | AnyRuntimeError
+  | {
     type: 'parser_error' | 'unknown_error' | 'local_compiler_mixed_functions_error'
     data: Record<string, unknown>
   }
