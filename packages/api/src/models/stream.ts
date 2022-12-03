@@ -12,7 +12,8 @@
  * Do not edit the class manually.
  */
 
-import { AnyRuntimeError } from '../error'
+import { StreamError } from './stream-error'
+import { StreamReason } from './stream-reason'
 import { StreamState } from './stream-state'
 import { VDN } from './vdn'
 
@@ -29,11 +30,11 @@ export interface Stream {
    */
   created_at: string
   /**
-   * Any possible RuntimeError
-   * @type {AnyRuntimeError}
+   *
+   * @type {StreamError}
    * @memberof Stream
    */
-  error: AnyRuntimeError | null
+  error: StreamError | null
   /**
    * Universally unique identifier - UUID V4
    * @type {string}
@@ -45,19 +46,19 @@ export interface Stream {
    * @type {VDN}
    * @memberof Stream
    */
-  last_value: VDN | null
+  last_value?: VDN
   /**
    * ISO8601 Timestamp
    * @type {string}
    * @memberof Stream
    */
-  last_value_updated_at: string | null
+  last_value_updated_at?: string
   /**
-   * Reason stream was stopped
-   * @type {string}
+   *
+   * @type {StreamReason}
    * @memberof Stream
    */
-  reason: string | null
+  reason: StreamReason | null
   /**
    *
    * @type {StreamState}
