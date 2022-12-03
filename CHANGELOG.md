@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.26.6](https://github.com/vektor-finance/vektor-js/compare/v0.26.5...v0.26.6) (2022-12-02)
+
+
+### Bug Fixes
+
+* add type guards for runtime errors and stream ([8a6e83b](https://github.com/vektor-finance/vektor-js/commit/8a6e83b64f4a3105a809815275c7cb7682f28942))
+
+
+
 ### [0.26.5](https://github.com/vektor-finance/vektor-js/compare/v0.26.4...v0.26.5) (2022-12-01)
 
 
