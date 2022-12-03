@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AnyRuntimeError } from '../error'
 import { StreamState } from './stream-state'
 import { VDN } from './vdn'
 
@@ -27,6 +28,12 @@ export interface Stream {
    * @memberof Stream
    */
   created_at: string
+  /**
+   * Any possible RuntimeError
+   * @type {AnyRuntimeError}
+   * @memberof Stream
+   */
+  error: AnyRuntimeError | null
   /**
    * Universally unique identifier - UUID V4
    * @type {string}
@@ -45,6 +52,12 @@ export interface Stream {
    * @memberof Stream
    */
   last_value_updated_at: string | null
+  /**
+   * Reason stream was stopped
+   * @type {string}
+   * @memberof Stream
+   */
+  reason: string | null
   /**
    *
    * @type {StreamState}
