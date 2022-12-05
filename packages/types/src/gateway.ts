@@ -84,12 +84,12 @@ export interface StreamUpdatedEvent {
 
 export interface StreamPausedEvent {
   event_name: 'stream_paused'
-  payload: Pick<Stream, 'id' | 'error' | 'reason'>
+  payload: Pick<Stream, 'id'>
 }
 
 export interface StreamResumedEvent {
   event_name: 'stream_resumed'
-  payload: Pick<Stream, 'id' | 'error' | 'reason'>
+  payload: Pick<Stream, 'id'>
 }
 
 export interface StreamDeletedEvent {
