@@ -46,7 +46,7 @@ export interface Stream {
    * @type {VDN}
    * @memberof Stream
    */
-  last_value?: VDN
+  last_value?: VDN | null
   /**
    * ISO8601 Timestamp
    * @type {string}
