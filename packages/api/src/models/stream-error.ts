@@ -13,10 +13,11 @@
  */
 
 import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
+import { VDNError } from './vdnerror'
 
 /**
  * @type StreamError
  * Stream error
  * @export
  */
-export type StreamError = RuntimeError | RuntimeSignatureMismatchError
+export type StreamError = RuntimeError | RuntimeSignatureMismatchError | VDNError
