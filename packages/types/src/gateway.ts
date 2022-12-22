@@ -1,4 +1,4 @@
-import type { Alert, Label, NetworkID, Session, Stream } from '@vektor-finance/api'
+import type { Alert, Label, NetworkID, Session, Stream, StreamClosureReason, VDN } from '@vektor-finance/api'
 
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
@@ -94,7 +94,7 @@ export interface StreamResumedEvent {
 
 export interface StreamDeletedEvent {
   event_name: 'stream_deleted'
-  payload: Pick<Stream, 'id' | 'error'> & { reason: string }
+  payload: Pick<Stream, 'id' | 'error' | 'reason'>
 }
 
 // Alerts

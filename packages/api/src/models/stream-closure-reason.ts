@@ -17,4 +17,4 @@
  * @export
  * @enum {string}
  */
-export type StreamReason = 'user' | 'error'
+export type StreamClosureReason = 'user' | 'error'
