@@ -74,7 +74,7 @@ export interface TaskCompletedEvent {
 
 export interface StreamCreatedEvent {
   event_name: 'stream_created'
-  payload: Pick<Stream, 'id' | 'created_at' | 'updated_at'>
+  payload: Pick<Stream, 'id' | 'created_at' | 'updated_at' | 'vxl'>
 }
 
 export interface StreamUpdatedEvent {
@@ -94,7 +94,7 @@ export interface StreamResumedEvent {
 
 export interface StreamDeletedEvent {
   event_name: 'stream_deleted'
-  payload: Pick<Stream, 'id'>
+  payload: Pick<Stream, 'id' | 'error'> & { reason: string }
 }
 
 // Alerts
