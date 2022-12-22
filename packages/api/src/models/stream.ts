@@ -13,9 +13,7 @@
  */
 
 import { StreamError } from './stream-error'
-import { StreamReason } from './stream-reason'
 import { StreamState } from './stream-state'
-import { VDN } from './vdn'
 
 /**
  * Properties of a Stream
@@ -42,23 +40,11 @@ export interface Stream {
    */
   id: string
   /**
-   *
-   * @type {VDN}
-   * @memberof Stream
-   */
-  last_value?: VDN | null
-  /**
    * ISO8601 Timestamp
    * @type {string}
    * @memberof Stream
    */
-  last_value_updated_at?: string
-  /**
-   *
-   * @type {StreamReason}
-   * @memberof Stream
-   */
-  reason: StreamReason | null
+  last_value_updated_at: string
   /**
    *
    * @type {StreamState}
@@ -77,4 +63,10 @@ export interface Stream {
    * @memberof Stream
    */
   updated_at: string
+  /**
+   * VXL statement that created the stream
+   * @type {string}
+   * @memberof Stream
+   */
+  vxl: string
 }
