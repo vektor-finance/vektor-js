@@ -16,7 +16,6 @@ import {
   AlertsApi,
   AssetsApi,
   BlockchainsApi,
-  ErrorsApi,
   FunctionsApi,
   LabelsApi,
   SessionsApi,
@@ -51,7 +50,6 @@ export class API {
   public readonly alerts: AlertsApi
   public readonly assets: AssetsApi
   public readonly blockchains: BlockchainsApi
-  public readonly errors: ErrorsApi
   public readonly functions: FunctionsApi
   public readonly labels: LabelsApi
   public readonly sessions: SessionsApi
@@ -66,7 +64,6 @@ export class API {
     this.alerts = new AlertsApi(_options?.configuration, _options?.baseURL)
     this.assets = new AssetsApi(_options?.configuration, _options?.baseURL)
     this.blockchains = new BlockchainsApi(_options?.configuration, _options?.baseURL)
-    this.errors = new ErrorsApi(_options?.configuration, _options?.baseURL)
     this.functions = new FunctionsApi(_options?.configuration, _options?.baseURL)
     this.labels = new LabelsApi(_options?.configuration, _options?.baseURL)
     this.sessions = new SessionsApi(_options?.configuration, _options?.baseURL)

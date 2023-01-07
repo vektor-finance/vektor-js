@@ -2,7 +2,6 @@
 export * from './alert'
 export * from './alert-state'
 export * from './asset'
-export * from './error-descriptor'
 export * from './function-spec'
 export * from './id'
 export * from './label'

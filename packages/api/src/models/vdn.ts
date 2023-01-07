@@ -13,7 +13,7 @@
  */
 
 import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
-import { ALL_VDN_ERRORS, VDNOrRuntimeError, VXLType } from '.'
+import { VDNOrRuntimeError, VXLType } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAlert } from './vdnalert'
 import { VDNAlertState } from './vdnalert-state'
@@ -30,7 +30,7 @@ import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNChangesetError } from './vdnchangeset-error'
 import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
-import { VDNError, VDNErrorType } from './vdnerror'
+import { VDNError } from './vdnerror'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
 import { VDNLendMarket } from './vdnlend-market'
@@ -127,10 +127,7 @@ export const isVDN = (vdn: VDNOrVDNGeneric): vdn is VDN => typeof vdn.type === '
 export const isVDNType = (type: VXLType): type is VDNType => typeof type === 'string'
 
 export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
-  typeof vdn.type === 'string' && vdn.value === undefined && (vdn as VDNError).type.endsWith("_error")
-  // typeof vdn.type === 'string' && vdn.value === undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
-
-export const isVDNErrorType = (type: VXLType): type is VDNErrorType => ALL_VDN_ERRORS.includes(type as VDNErrorType)
+  typeof vdn.type === 'string' && (vdn as VDNError).type.endsWith('_error')
 
 export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
   typeof vdn.type === 'object' &&
@@ -147,10 +144,12 @@ export const isVDNTask = (vdn: VDNOrVDNGeneric): vdn is VDNTask =>
 export const isVDNList = (vdn: VDNOrVDNGeneric): vdn is VDNList =>
   isVDNGeneric(vdn) && vdn.type.type === 'list' && 'items' in vdn.type.parameters
 
-export  const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream => vdn.type === 'stream' && typeof vdn.value === 'string'
+export const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream =>
+  vdn.type === 'stream' && typeof vdn.value === 'string'
 
-export  const isRuntimeError = (
-    vdnOrRuntimeError: VDNOrRuntimeError,
-  ): vdnOrRuntimeError is RuntimeError | RuntimeSignatureMismatchError =>
-    (vdnOrRuntimeError.type == 'runtime_error' || vdnOrRuntimeError.type === 'runtime_signature_mismatch_error') && typeof vdnOrRuntimeError.data === 'object'
-
+export const isRuntimeError = (
+  vdnOrRuntimeError: VDNOrRuntimeError,
+): vdnOrRuntimeError is RuntimeError | RuntimeSignatureMismatchError =>
+  (vdnOrRuntimeError.type == 'runtime_error' || vdnOrRuntimeError.type === 'runtime_signature_mismatch_error') &&
+  'data' in vdnOrRuntimeError &&
+  typeof vdnOrRuntimeError.data === 'object'
