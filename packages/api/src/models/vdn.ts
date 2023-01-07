@@ -13,7 +13,7 @@
  */
 
 import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
-import { ALL_VDN_ERRORS, VDNOrRuntimeError, VXLType } from '.'
+import { VDNOrRuntimeError, VXLType } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAlert } from './vdnalert'
 import { VDNAlertState } from './vdnalert-state'
@@ -127,10 +127,7 @@ export const isVDN = (vdn: VDNOrVDNGeneric): vdn is VDN => typeof vdn.type === '
 export const isVDNType = (type: VXLType): type is VDNType => typeof type === 'string'
 
 export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
-  typeof vdn.type === 'string' && vdn.value === undefined && (vdn as VDNError).type.endsWith("_error")
-  // typeof vdn.type === 'string' && vdn.value === undefined && ALL_VDN_ERRORS.includes((vdn as VDNError).type)
-
-export const isVDNErrorType = (type: VXLType): type is VDNErrorType => ALL_VDN_ERRORS.includes(type as VDNErrorType)
+  typeof vdn.type === 'string' && (vdn as VDNError).type.endsWith("_error")
 
 export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
   typeof vdn.type === 'object' &&

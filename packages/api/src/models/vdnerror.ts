@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { VDN } from "./vdn"
+
 export const ALL_VDN_ERRORS = [
   'division_by_zero_error',
   'gas_limit_reached_error',
@@ -62,7 +64,7 @@ export interface VDNError {
   type: VDNErrorType
 
   /**
-   * Dummy value for Typescript inference
+   * Error values
    */
-  value?: undefined
+  value: Record<string, VDN>
 }
