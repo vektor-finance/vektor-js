@@ -51,14 +51,38 @@ export interface NFT {
   id: number
 }
 
-export interface ApproveRequestMeta extends MetaBase {
+export interface ApproveRequestBaseMeta extends MetaBase {
   request_type: 'approve_request'
   amount: string
-  asset: Asset | NFT | NFTCollection
   grantor: AccountID
   spender: AccountID
-  type: 'spend_erc20' | 'borrow_erc20' | 'spend_erc721' | 'spend_erc721_collection'
 }
+
+export interface ApproveSpendRequestMeta extends ApproveRequestBaseMeta {
+  asset: Asset
+  type: 'spend_erc20'
+}
+
+export interface ApproveBorrowRequestMeta extends ApproveRequestBaseMeta {
+  asset: Asset
+  type: 'borrow_erc20'
+}
+
+export interface ApproveNFTRequestMeta extends ApproveRequestBaseMeta {
+  asset: NFT
+  type: 'spend_erc721'
+}
+
+export interface ApproveNFTCollectionRequestMeta extends ApproveRequestBaseMeta {
+  asset: NFTCollection
+  type: 'spend_erc721_collection'
+}
+
+export type ApproveRequestMeta =
+  | ApproveSpendRequestMeta
+  | ApproveBorrowRequestMeta
+  | ApproveNFTRequestMeta
+  | ApproveNFTCollectionRequestMeta
 
 export interface WrapRequestMeta extends MetaBase {
   request_type: 'wrap_request'
