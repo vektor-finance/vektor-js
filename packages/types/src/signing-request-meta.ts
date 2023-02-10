@@ -1,4 +1,4 @@
-import type { Asset, Venue } from '@vektor-finance/api'
+import type { Asset, NetworkID, Venue } from '@vektor-finance/api'
 
 import { AccountID } from './signing'
 
@@ -7,6 +7,7 @@ export interface EVMLegacyGasFeeBase {
   total_fee: string
   total_fee_usd: string
 }
+
 export interface EVMLegacyGasFee extends EVMLegacyGasFeeBase {
   type: 'evm_legacy'
   gas_price: string
@@ -39,13 +40,24 @@ export interface MoveRequestMeta extends MetaBase {
   to: AccountID
 }
 
+export interface NFTCollection {
+  address: string
+  name: string
+  network_id: NetworkID
+}
+
+export interface NFT {
+  collection: NFTCollection
+  id: number
+}
+
 export interface ApproveRequestMeta extends MetaBase {
   request_type: 'approve_request'
   amount: string
-  asset: Asset
+  asset: Asset | NFT | NFTCollection
   grantor: AccountID
   spender: AccountID
-  type: 'spend_erc20' | 'borrow_erc20'
+  type: 'spend_erc20' | 'borrow_erc20' | 'spend_erc721' | 'spend_erc721_collection'
 }
 
 export interface WrapRequestMeta extends MetaBase {
