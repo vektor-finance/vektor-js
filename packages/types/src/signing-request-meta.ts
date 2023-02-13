@@ -230,7 +230,6 @@ export interface LPRangePositionInfo {
   range: LPRange;
 }
 
-
 export interface LPDepositRequestMeta extends MetaBase {
   request_type: 'lp_deposit_request'
   venue: Venue
