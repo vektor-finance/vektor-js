@@ -219,6 +219,18 @@ export interface LPPoolInfo {
   weights: string[]
 }
 
+export interface LPRange {
+  lower: string;
+  upper: string;
+  in_range: boolean;
+}
+
+export interface LPRangePositionInfo {
+  id?: number;
+  range: LPRange;
+}
+
+
 export interface LPDepositRequestMeta extends MetaBase {
   request_type: 'lp_deposit_request'
   venue: Venue
@@ -227,6 +239,7 @@ export interface LPDepositRequestMeta extends MetaBase {
   from: AccountID
   slippage_tolerance: string
   pool_info: LPPoolInfo
+  position_info?: LPRangePositionInfo
 }
 
 export interface LPWithdrawRequestMeta extends MetaBase {
@@ -238,6 +251,7 @@ export interface LPWithdrawRequestMeta extends MetaBase {
   from: AccountID
   slippage_tolerance: string
   pool_info: LPPoolInfo
+  position_info?: LPRangePositionInfo
 }
 
 export type SigningRequestMeta =
