@@ -103,6 +103,11 @@ export type CompilerIncompatibleSideEffectsError = CompilerBaseError
 
 export type CompilerEmptyListLiteralError = CompilerBaseError
 
+export interface CompilerNotSortableError extends CompilerBaseError {
+  path: string[]
+  type: VXLType
+}
+
 export type CompilerError =
   | {
       type: 'compiler_undefined_function_error'
@@ -147,6 +152,10 @@ export type CompilerError =
   | {
       type: 'compiler_empty_list_literal_error'
       data: CompilerEmptyListLiteralError
+    }
+  | {
+      type: 'compiler_not_sortable_error'
+      data: CompilerNotSortableError
     }
 
 // Runtime Errors

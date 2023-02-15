@@ -13,7 +13,6 @@
  */
 
 import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
-import { VDNOrRuntimeError, VXLType } from '.'
 import { VDNAddress } from './vdnaddress'
 import { VDNAlert } from './vdnalert'
 import { VDNAlertState } from './vdnalert-state'
@@ -42,6 +41,7 @@ import { VDNLPPosition } from './vdnlpposition'
 import { VDNLPQuote } from './vdnlpquote'
 import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
+import { VDNOrRuntimeError } from './vdnor-runtime-error'
 import { VDNPercentage } from './vdnpercentage'
 import { VDNPrice } from './vdnprice'
 import { VDNSellQuote } from './vdnsell-quote'
@@ -55,6 +55,9 @@ import { VDNURL } from './vdnurl'
 import { VDNVenue } from './vdnvenue'
 import { VDNVenueSymbol } from './vdnvenue-symbol'
 import { VDNVenueType } from './vdnvenue-type'
+import { VXLListType } from './vxllist-type'
+import { VXLTaskType } from './vxltask-type'
+import { VXLType } from './vxltype'
 
 // Concrete Types
 
@@ -127,7 +130,7 @@ export const isVDN = (vdn: VDNOrVDNGeneric): vdn is VDN => typeof vdn.type === '
 export const isVDNType = (type: VXLType): type is VDNType => typeof type === 'string'
 
 export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
-  typeof vdn.type === 'string' && (vdn as VDNError).type.endsWith('_error')
+  typeof vdn.type === 'string' && vdn.type.endsWith('_error')
 
 export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
   typeof vdn.type === 'object' &&
@@ -137,6 +140,12 @@ export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
 
 export const isVDNGenericType = (type: VXLType): type is VDNGenericType =>
   typeof type === 'object' && 'parameters' in type && 'type' in type
+
+export const isVXLListType = (type: VXLType): type is VXLListType =>
+  isVDNGenericType(type) && type.type === 'list'
+
+export const isVXLTaskType = (type: VXLType): type is VXLTaskType =>
+  isVDNGenericType(type) && type.type === 'task'
 
 export const isVDNTask = (vdn: VDNOrVDNGeneric): vdn is VDNTask =>
   isVDNGeneric(vdn) && vdn.type.type === 'task' && typeof vdn.value === 'string'

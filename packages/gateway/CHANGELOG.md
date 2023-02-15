@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.28.5](https://github.com/vektor-finance/vektor-js/compare/v0.28.4...v0.28.5) (2023-02-15)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+### [0.28.4](https://github.com/vektor-finance/vektor-js/compare/v0.28.3...v0.28.4) (2023-02-15)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+### [0.28.3](https://github.com/vektor-finance/vektor-js/compare/v0.28.2...v0.28.3) (2023-02-15)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+### [0.28.2](https://github.com/vektor-finance/vektor-js/compare/v0.28.1...v0.28.2) (2023-02-13)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+### [0.28.1](https://github.com/vektor-finance/vektor-js/compare/v0.28.0...v0.28.1) (2023-02-10)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+## [0.28.0](https://github.com/vektor-finance/vektor-js/compare/v0.27.2...v0.28.0) (2023-02-10)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+### [0.27.2](https://github.com/vektor-finance/vektor-js/compare/v0.27.1...v0.27.2) (2023-01-18)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
+### [0.27.1](https://github.com/vektor-finance/vektor-js/compare/v0.27.0...v0.27.1) (2023-01-07)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
 ## [0.27.0](https://github.com/vektor-finance/vektor-js/compare/v0.26.13...v0.27.0) (2023-01-07)
 
 **Note:** Version bump only for package @vektor-finance/gateway

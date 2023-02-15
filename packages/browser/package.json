@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/browser",
-  "version": "0.27.0",
+  "version": "0.28.5",
   "description": "Official Vektor SDK for browsers",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/browser",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -47,20 +47,20 @@
     ]
   },
   "dependencies": {
-    "@vektor-finance/api": "^0.27.0",
-    "@vektor-finance/gateway": "^0.27.0",
-    "@vektor-finance/types": "^0.27.0",
+    "@vektor-finance/api": "^0.28.5",
+    "@vektor-finance/gateway": "^0.28.5",
+    "@vektor-finance/types": "^0.28.5",
     "phoenix": "1.6.9",
     "tslib": "1.9.3"
   },
   "devDependencies": {
     "@types/eslint": "7.28.0",
-    "@types/phoenix": "1.5.4",
-    "@vektor-finance/eslint-config-sdk": "^0.27.0",
-    "chai": "4.3.6",
+    "@types/phoenix": "1.5.5",
+    "@vektor-finance/eslint-config-sdk": "^0.28.5",
+    "chai": "4.3.7",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
-    "karma": "6.3.20",
+    "karma": "6.4.1",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "2.2.0",
     "karma-mocha": "1.3.0",
@@ -72,7 +72,7 @@
     "lint-staged": "12.4.1",
     "node-fetch": "2.6.7",
     "npm-run-all": "4.1.5",
-    "prettier": "2.6.2",
+    "prettier": "2.8.4",
     "rimraf": "3.0.2",
     "rollup": "1.10.1",
     "rollup-plugin-commonjs": "9.3.4",
@@ -81,7 +81,7 @@
     "rollup-plugin-terser": "4.0.4",
     "rollup-plugin-typescript2": "0.21.0",
     "sinon": "7.3.2",
-    "typescript": "4.6.4",
+    "typescript": "4.9.5",
     "webpack": "4.30.0"
   },
   "engines": {
