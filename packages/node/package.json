@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@types/eslint": "7.28.0",
-    "@types/phoenix": "1.5.4",
+    "@types/phoenix": "1.5.5",
     "@vektor-finance/eslint-config-sdk": "^0.28.4",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
