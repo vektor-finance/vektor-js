@@ -1,4 +1,4 @@
-import type { Asset, Venue } from '@vektor-finance/api'
+import type { Asset, NetworkID, Venue } from '@vektor-finance/api'
 
 import { AccountID } from './signing'
 
@@ -7,6 +7,7 @@ export interface EVMLegacyGasFeeBase {
   total_fee: string
   total_fee_usd: string
 }
+
 export interface EVMLegacyGasFee extends EVMLegacyGasFeeBase {
   type: 'evm_legacy'
   gas_price: string
@@ -39,14 +40,49 @@ export interface MoveRequestMeta extends MetaBase {
   to: AccountID
 }
 
-export interface ApproveRequestMeta extends MetaBase {
+export interface NFTCollection {
+  address: string
+  name: string
+  network_id: NetworkID
+}
+
+export interface NFT {
+  collection: NFTCollection
+  id: number
+}
+
+export interface ApproveRequestBaseMeta extends MetaBase {
   request_type: 'approve_request'
   amount: string
-  asset: Asset
   grantor: AccountID
   spender: AccountID
-  type: 'spend_erc20' | 'borrow_erc20'
 }
+
+export interface ApproveSpendRequestMeta extends ApproveRequestBaseMeta {
+  asset: Asset
+  type: 'spend_erc20'
+}
+
+export interface ApproveBorrowRequestMeta extends ApproveRequestBaseMeta {
+  asset: Asset
+  type: 'borrow_erc20'
+}
+
+export interface ApproveNFTRequestMeta extends ApproveRequestBaseMeta {
+  asset: NFT
+  type: 'spend_erc721'
+}
+
+export interface ApproveNFTCollectionRequestMeta extends ApproveRequestBaseMeta {
+  asset: NFTCollection
+  type: 'spend_erc721_collection'
+}
+
+export type ApproveRequestMeta =
+  | ApproveSpendRequestMeta
+  | ApproveBorrowRequestMeta
+  | ApproveNFTRequestMeta
+  | ApproveNFTCollectionRequestMeta
 
 export interface WrapRequestMeta extends MetaBase {
   request_type: 'wrap_request'
@@ -183,6 +219,17 @@ export interface LPPoolInfo {
   weights: string[]
 }
 
+export interface LPRange {
+  lower: string;
+  upper: string;
+  in_range: boolean;
+}
+
+export interface LPRangePositionInfo {
+  id?: number;
+  range: LPRange;
+}
+
 export interface LPDepositRequestMeta extends MetaBase {
   request_type: 'lp_deposit_request'
   venue: Venue
@@ -191,6 +238,7 @@ export interface LPDepositRequestMeta extends MetaBase {
   from: AccountID
   slippage_tolerance: string
   pool_info: LPPoolInfo
+  position_info?: LPRangePositionInfo
 }
 
 export interface LPWithdrawRequestMeta extends MetaBase {
@@ -202,6 +250,7 @@ export interface LPWithdrawRequestMeta extends MetaBase {
   from: AccountID
   slippage_tolerance: string
   pool_info: LPPoolInfo
+  position_info?: LPRangePositionInfo
 }
 
 export type SigningRequestMeta =
