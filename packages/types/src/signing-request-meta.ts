@@ -253,10 +253,19 @@ export interface LPWithdrawRequestMeta extends MetaBase {
   position_info?: LPRangePositionInfo
 }
 
+export interface BridgeRequestMeta extends MetaBase {
+  request_type: 'bridge_request'
+  amount: string
+  asset: Asset
+  from: AccountID
+  to: AccountID
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BorrowRepayRequestMeta
   | BorrowRequestMeta
+  | BridgeRequestMeta
   | BuyRequestMeta
   | LendRequestMeta
   | LendWithdrawRequestMeta
