@@ -260,7 +260,7 @@ export interface BridgeRequestMeta extends MetaBase {
   send_asset: Asset
   receive_asset: Asset
   sender: AccountID
-  reciever: AccountID
+  receiver: AccountID
 }
 
 export type SigningRequestMeta =
