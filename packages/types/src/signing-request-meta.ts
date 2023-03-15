@@ -255,10 +255,12 @@ export interface LPWithdrawRequestMeta extends MetaBase {
 
 export interface BridgeRequestMeta extends MetaBase {
   request_type: 'bridge_request'
-  amount: string
-  asset: Asset
-  from: AccountID
-  to: AccountID
+  send_amount: string
+  receive_amount: string
+  send_asset: Asset
+  receive_asset: Asset
+  sender: AccountID
+  reciever: AccountID
 }
 
 export type SigningRequestMeta =
