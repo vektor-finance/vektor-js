@@ -261,6 +261,8 @@ export interface BridgeRequestMeta extends MetaBase {
   receive_asset: Asset
   sender: AccountID
   receiver: AccountID
+  venue: Venue
+  route: string
 }
 
 export type SigningRequestMeta =
