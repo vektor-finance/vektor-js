@@ -263,6 +263,7 @@ export interface BridgeRequestMeta extends MetaBase {
   receiver: AccountID
   venue: Venue
   route: string
+  receive_time_est: number
 }
 
 export type SigningRequestMeta =
