@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
+import { AnyRuntimeError } from '../error'
 import { VDN, VDNGeneric } from './vdn'
 
 
@@ -21,4 +21,4 @@ import { VDN, VDNGeneric } from './vdn'
  * VDN or RuntimeError
  * @export
  */
-export type VDNOrRuntimeError = RuntimeError | RuntimeSignatureMismatchError | VDN | VDNGeneric
+export type VDNOrRuntimeError = AnyRuntimeError | VDN | VDNGeneric

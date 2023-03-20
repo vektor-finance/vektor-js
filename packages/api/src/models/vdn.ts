@@ -141,11 +141,9 @@ export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
 export const isVDNGenericType = (type: VXLType): type is VDNGenericType =>
   typeof type === 'object' && 'parameters' in type && 'type' in type
 
-export const isVXLListType = (type: VXLType): type is VXLListType =>
-  isVDNGenericType(type) && type.type === 'list'
+export const isVXLListType = (type: VXLType): type is VXLListType => isVDNGenericType(type) && type.type === 'list'
 
-export const isVXLTaskType = (type: VXLType): type is VXLTaskType =>
-  isVDNGenericType(type) && type.type === 'task'
+export const isVXLTaskType = (type: VXLType): type is VXLTaskType => isVDNGenericType(type) && type.type === 'task'
 
 export const isVDNTask = (vdn: VDNOrVDNGeneric): vdn is VDNTask =>
   isVDNGeneric(vdn) && vdn.type.type === 'task' && typeof vdn.value === 'string'
@@ -159,6 +157,11 @@ export const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream =>
 export const isRuntimeError = (
   vdnOrRuntimeError: VDNOrRuntimeError,
 ): vdnOrRuntimeError is RuntimeError | RuntimeSignatureMismatchError =>
-  (vdnOrRuntimeError.type == 'runtime_error' || vdnOrRuntimeError.type === 'runtime_signature_mismatch_error') &&
+  [
+    'runtime_error',
+    'runtime_signature_mismatch_error',
+    'runtime_signature_mismatch_error',
+    'runtime_not_a_list_error',
+  ].includes(vdnOrRuntimeError.type as string) &&
   'data' in vdnOrRuntimeError &&
   typeof vdnOrRuntimeError.data === 'object'

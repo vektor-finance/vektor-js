@@ -170,7 +170,17 @@ export interface RuntimeSignatureMismatchError {
   data: { function: string; subfunction: string } & SpecAndMismatches
 }
 
-export type AnyRuntimeError = RuntimeError | RuntimeSignatureMismatchError
+export interface RuntimeInvalidFieldError {
+  type: 'runtime_invalid_field_error'
+  data: { value: VDN; path: string[] }
+}
+
+export interface RuntimeNotAListError {
+  type: 'runtime_not_a_list_error'
+  data: { value: VDN }
+}
+
+export type AnyRuntimeError = RuntimeError | RuntimeSignatureMismatchError | RuntimeInvalidFieldError | RuntimeNotAListError
 
 export type VXLSubmitAPIError =
   | CompilerError
