@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { RuntimeError, RuntimeSignatureMismatchError } from '../error'
+import { AnyRuntimeError } from '../error'
 import { VDNAddress } from './vdnaddress'
 import { VDNAlert } from './vdnalert'
 import { VDNAlertState } from './vdnalert-state'
@@ -156,10 +156,10 @@ export const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream =>
 
 export const isRuntimeError = (
   vdnOrRuntimeError: VDNOrRuntimeError,
-): vdnOrRuntimeError is RuntimeError | RuntimeSignatureMismatchError =>
+): vdnOrRuntimeError is AnyRuntimeError =>
   [
     'runtime_error',
-    'runtime_signature_mismatch_error',
+    'runtime_invalid_field_error',
     'runtime_signature_mismatch_error',
     'runtime_not_a_list_error',
   ].includes(vdnOrRuntimeError.type as string) &&
