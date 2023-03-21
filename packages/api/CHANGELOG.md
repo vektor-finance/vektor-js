@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.28.16](https://github.com/vektor-finance/vektor-js/compare/v0.28.15...v0.28.16) (2023-03-21)
+
+
+### Bug Fixes
+
+* update Stream schema type ([715e4c7](https://github.com/vektor-finance/vektor-js/commit/715e4c79087b88269314c072dbd22ba4dad0edbd))
+
+
+
 ### [0.28.15](https://github.com/vektor-finance/vektor-js/compare/v0.28.14...v0.28.15) (2023-03-21)
 
 **Note:** Version bump only for package @vektor-finance/api
