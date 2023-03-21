@@ -54,6 +54,18 @@ export interface Stream {
    */
   last_value_updated_at: string
   /**
+   * Maximum number of entries to be returned (max = 250)
+   * @type {number}
+   * @memberof Stream
+   */
+  limit: number
+  /**
+   * Initial position from which to take entries (0-indexed).
+   * @type {number}
+   * @memberof Stream
+   */
+  offset: number
+  /**
    *
    * @type {StreamClosureReason}
    * @memberof Stream
