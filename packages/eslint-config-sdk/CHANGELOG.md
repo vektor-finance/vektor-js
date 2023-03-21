@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.28.17](https://github.com/vektor-finance/vektor-js/compare/v0.28.16...v0.28.17) (2023-03-21)
+
+**Note:** Version bump only for package @vektor-finance/eslint-config-sdk
+
+
+
+
+
 ### [0.28.16](https://github.com/vektor-finance/vektor-js/compare/v0.28.15...v0.28.16) (2023-03-21)
 
 **Note:** Version bump only for package @vektor-finance/eslint-config-sdk
