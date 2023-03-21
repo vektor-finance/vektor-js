@@ -79,7 +79,7 @@ export interface StreamCreatedEvent {
 
 export interface StreamUpdatedEvent {
   event_name: 'stream_updated'
-  payload: Required<Stream>
+  payload: Stream & NonNullable<Pick<Stream, 'last_value'>>
 }
 
 export interface StreamPausedEvent {
