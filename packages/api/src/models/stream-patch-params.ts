@@ -21,9 +21,21 @@ import { StreamState } from './stream-state'
  */
 export interface StreamPatchParams {
   /**
+   * Maximum number of entries to be returned (max = 250)
+   * @type {number}
+   * @memberof StreamPatchParams
+   */
+  limit?: number
+  /**
+   * Initial position from which to take entries (0-indexed).
+   * @type {number}
+   * @memberof StreamPatchParams
+   */
+  offset?: number
+  /**
    *
    * @type {StreamState}
    * @memberof StreamPatchParams
    */
-  state: StreamState
+  state?: StreamState
 }
