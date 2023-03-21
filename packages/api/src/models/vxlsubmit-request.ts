@@ -19,6 +19,12 @@
  */
 export interface VXLSubmitRequest {
   /**
+   * Maximum number of entries to be returned
+   * @type {number}
+   * @memberof VXLSubmitRequest
+   */
+  limit?: number | null
+  /**
    * Is local VXL submission
    * @type {boolean}
    * @memberof VXLSubmitRequest
