@@ -14,6 +14,7 @@
 
 import { StreamClosureReason } from './stream-closure-reason'
 import { StreamError } from './stream-error'
+import { StreamPagination } from './stream-pagination'
 import { StreamState } from './stream-state'
 import { VDN } from './vdn'
 
@@ -54,17 +55,11 @@ export interface Stream {
    */
   last_value_updated_at: string
   /**
-   * Maximum number of entries to be returned (max = 250)
-   * @type {number}
+   *
+   * @type {StreamPagination}
    * @memberof Stream
    */
-  limit: number
-  /**
-   * Initial position from which to take entries (0-indexed).
-   * @type {number}
-   * @memberof Stream
-   */
-  offset: number
+  pagination: StreamPagination | null
   /**
    *
    * @type {StreamClosureReason}
