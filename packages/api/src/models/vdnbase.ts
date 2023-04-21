@@ -32,5 +32,5 @@ export interface VDNBase {
      * @type {VDNAction}
      * @memberof VDNBase
      */
-    actions: VDNAction[]
+    actions?: VDNAction[]
 }
