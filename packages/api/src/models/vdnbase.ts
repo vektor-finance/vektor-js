@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { VDNAction } from "./vdnaction"
+
 /**
  * VXL base type to inherit from
  * @export
@@ -24,4 +26,11 @@ export interface VDNBase {
      * @memberof VDNBase
      */
     parent_type: string | null
+
+    /**
+     *
+     * @type {VDNAction}
+     * @memberof VDNBase
+     */
+    actions: VDNAction[]
 }
