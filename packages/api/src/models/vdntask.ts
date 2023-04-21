@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { VDNBase } from './vdn-base'
+import { VDNBase } from './vdnbase'
 import { VXLTaskType } from './vxltask-type'
 
 /**

@@ -13,7 +13,7 @@
  */
 
 import { VDN } from './vdn'
-import { VDNBase } from './vdn-base'
+import { VDNBase } from './vdnbase'
 import { VXLListType } from './vxllist-type'
 
 /**

@@ -13,7 +13,7 @@
  */
 
 
-import { VDNBase } from './vdn-base';
+import { VDNBase } from './vdnbase';
 import { VDNBorrowPositionValue } from './vdnborrow-position-value';
 
 /**

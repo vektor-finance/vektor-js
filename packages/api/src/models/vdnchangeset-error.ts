@@ -13,7 +13,7 @@
  */
 
 
-import { VDNBase } from './vdn-base';
+import { VDNBase } from './vdnbase';
 import { VDNChangesetErrorValue } from './vdnchangeset-error-value';
 
 /**

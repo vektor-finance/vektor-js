@@ -13,7 +13,7 @@
  */
 
 
-import { VDNBase } from './vdn-base';
+import { VDNBase } from './vdnbase';
 import { VDNPriceValue } from './vdnprice-value';
 
 /**

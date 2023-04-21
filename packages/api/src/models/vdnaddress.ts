@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VDNBase } from "./vdn-base"
+import { VDNBase } from "./vdnbase"
 
 /**
  * VXL blockchain address representation

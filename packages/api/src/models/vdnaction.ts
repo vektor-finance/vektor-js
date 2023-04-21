@@ -12,24 +12,23 @@
  * Do not edit the class manually.
  */
 
-import { VDNBase } from "./vdnbase"
-
 /**
- * VXL decimal representation
+ * VXL base type to inherit from
  * @export
- * @interface VDNDecimal
+ * @interface VDNAction
  */
-export interface VDNDecimal extends VDNBase {
-  /**
-   *
-   * @type {string}
-   * @memberof VDNDecimal
-   */
-  type: 'decimal'
-  /**
-   *
-   * @type {string}
-   * @memberof VDNDecimal
-   */
-  value: string
+export interface VDNAction {
+    /**
+     *
+     * @type {string}
+     * @memberof VDNAction
+     */
+    name: string
+
+    /**
+     *
+     * @type {string}
+     * @memberof VDNAction
+     */
+    actions: string
 }
