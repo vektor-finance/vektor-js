@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL asset_symbol representation
  * @export
  * @interface VDNAssetSymbol
  */
-export interface VDNAssetSymbol {
+export interface VDNAssetSymbol extends VDNBase {
   /**
    *
    * @type {string}

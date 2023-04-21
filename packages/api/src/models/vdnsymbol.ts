@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL symbol representation
  * @export
  * @interface VDNSymbol
  */
-export interface VDNSymbol {
+export interface VDNSymbol extends VDNBase {
   /**
    *
    * @type {string}

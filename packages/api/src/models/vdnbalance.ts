@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdnbase'
 import { VDNBalanceValue } from './vdnbalance-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNBalanceValue } from './vdnbalance-value'
  * @export
  * @interface VDNBalance
  */
-export interface VDNBalance {
+export interface VDNBalance extends VDNBase {
   /**
    *
    * @type {string}

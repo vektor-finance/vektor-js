@@ -13,6 +13,7 @@
  */
 
 import { VDN } from './vdn'
+import { VDNBase } from './vdnbase'
 import { VXLListType } from './vxllist-type'
 
 /**
@@ -20,7 +21,7 @@ import { VXLListType } from './vxllist-type'
  * @export
  * @interface VDNList
  */
-export interface VDNList {
+export interface VDNList extends VDNBase {
   /**
    *
    * @type {VXLListType}

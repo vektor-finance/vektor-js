@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdnbase'
 import { VDNAssetValue } from './vdnasset-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNAssetValue } from './vdnasset-value'
  * @export
  * @interface VDNAsset
  */
-export interface VDNAsset {
+export interface VDNAsset extends VDNBase {
   /**
    *
    * @type {string}

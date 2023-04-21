@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdnbase'
 import { VDNLabelValue } from './vdnlabel-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNLabelValue } from './vdnlabel-value'
  * @export
  * @interface VDNLabel
  */
-export interface VDNLabel {
+export interface VDNLabel extends VDNBase {
   /**
    *
    * @type {string}

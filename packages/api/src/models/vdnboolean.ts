@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL boolean representation
  * @export
  * @interface VDNBoolean
  */
-export interface VDNBoolean {
+export interface VDNBoolean extends VDNBase {
   /**
    *
    * @type {string}

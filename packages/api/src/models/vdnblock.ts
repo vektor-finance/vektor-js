@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdnbase'
 import { VDNBlockValue } from './vdnblock-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNBlockValue } from './vdnblock-value'
  * @export
  * @interface VDNBlock
  */
-export interface VDNBlock {
+export interface VDNBlock extends VDNBase {
   /**
    *
    * @type {string}

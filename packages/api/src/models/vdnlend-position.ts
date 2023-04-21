@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdnbase'
 import { VDNLendPositionValue } from './vdnlend-position-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNLendPositionValue } from './vdnlend-position-value'
  * @export
  * @interface VDNLendPosition
  */
-export interface VDNLendPosition {
+export interface VDNLendPosition extends VDNBase {
   /**
    *
    * @type {string}

@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL transaction_state representation
  * @export
  * @interface VDNTransactionState
  */
-export interface VDNTransactionState {
+export interface VDNTransactionState extends VDNBase {
   /**
    *
    * @type {string}

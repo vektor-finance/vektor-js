@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL None representation
  * @export
  * @interface VDNNone
  */
-export interface VDNNone {
+export interface VDNNone extends VDNBase {
   /**
    *
    * @type {string}

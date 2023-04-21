@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdnbase'
 import { VDNBorrowAccountValue } from './vdnborrow-account-value'
 
 /**
@@ -19,13 +20,13 @@ import { VDNBorrowAccountValue } from './vdnborrow-account-value'
  * @export
  * @interface VDNBorrowAccount
  */
-export interface VDNBorrowAccount {
+export interface VDNBorrowAccount extends VDNBase {
   /**
    *
    * @type {string}
    * @memberof VDNBorrowAccount
    */
-  type: VDNBorrowAccountTypeEnum
+  type: 'borrow_account'
   /**
    *
    * @type {VDNBorrowAccountValue}
@@ -33,9 +34,3 @@ export interface VDNBorrowAccount {
    */
   value: VDNBorrowAccountValue
 }
-
-export const VDNBorrowAccountTypeEnum = {
-  BorrowAccount: 'borrow_account',
-} as const
-
-export type VDNBorrowAccountTypeEnum = typeof VDNBorrowAccountTypeEnum[keyof typeof VDNBorrowAccountTypeEnum]

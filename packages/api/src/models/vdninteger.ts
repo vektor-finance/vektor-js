@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL integer representation
  * @export
  * @interface VDNInteger
  */
-export interface VDNInteger {
+export interface VDNInteger extends VDNBase {
   /**
    *
    * @type {string}

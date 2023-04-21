@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdnbase"
+
 /**
  * VXL venue_type representation
  * @export
  * @interface VDNVenueType
  */
-export interface VDNVenueType {
+export interface VDNVenueType extends VDNBase {
   /**
    *
    * @type {string}
