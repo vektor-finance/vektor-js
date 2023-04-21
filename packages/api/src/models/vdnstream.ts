@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL stream representation
  * @export
  * @interface VDNStream
  */
-export interface VDNStream {
+export interface VDNStream extends VDNBase {
   /**
    *
    * @type {string}

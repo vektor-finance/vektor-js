@@ -13,6 +13,7 @@
  */
 
 
+import { VDNBase } from './vdn-base';
 import { VDNPriceValue } from './vdnprice-value';
 
 /**
@@ -20,7 +21,7 @@ import { VDNPriceValue } from './vdnprice-value';
  * @export
  * @interface VDNPrice
  */
-export interface VDNPrice {
+export interface VDNPrice extends VDNBase {
   /**
    *
    * @type {string}

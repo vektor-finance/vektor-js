@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL venue_symbol representation
  * @export
  * @interface VDNVenueSymbol
  */
-export interface VDNVenueSymbol {
+export interface VDNVenueSymbol extends VDNBase {
   /**
    *
    * @type {string}

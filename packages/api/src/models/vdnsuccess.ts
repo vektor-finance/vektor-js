@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL Success representation
  * @export
  * @interface VDNSuccess
  */
-export interface VDNSuccess {
+export interface VDNSuccess extends VDNBase {
   /**
    *
    * @type {string}

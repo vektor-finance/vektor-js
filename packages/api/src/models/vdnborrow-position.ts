@@ -13,6 +13,7 @@
  */
 
 
+import { VDNBase } from './vdn-base';
 import { VDNBorrowPositionValue } from './vdnborrow-position-value';
 
 /**
@@ -20,7 +21,7 @@ import { VDNBorrowPositionValue } from './vdnborrow-position-value';
  * @export
  * @interface VDNBorrowPosition
  */
-export interface VDNBorrowPosition {
+export interface VDNBorrowPosition extends VDNBase {
   /**
    *
    * @type {string}

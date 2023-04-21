@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL alert_state representation
  * @export
  * @interface VDNAlertState
  */
-export interface VDNAlertState {
+export interface VDNAlertState extends VDNBase {
   /**
    *
    * @type {string}

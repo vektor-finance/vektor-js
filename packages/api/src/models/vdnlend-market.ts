@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNLendMarketValue } from './vdnlend-market-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNLendMarketValue } from './vdnlend-market-value'
  * @export
  * @interface VDNLendMarket
  */
-export interface VDNLendMarket {
+export interface VDNLendMarket extends VDNBase {
   /**
    *
    * @type {string}

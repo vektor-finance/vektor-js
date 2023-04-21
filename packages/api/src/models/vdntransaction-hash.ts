@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNTransactionHashValue } from './vdntransaction-hash-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNTransactionHashValue } from './vdntransaction-hash-value'
  * @export
  * @interface VDNTransactionHash
  */
-export interface VDNTransactionHash {
+export interface VDNTransactionHash extends VDNBase {
   /**
    *
    * @type {string}

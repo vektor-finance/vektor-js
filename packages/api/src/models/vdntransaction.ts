@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNTransactionValue } from './vdntransaction-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNTransactionValue } from './vdntransaction-value'
  * @export
  * @interface VDNTransaction
  */
-export interface VDNTransaction {
+export interface VDNTransaction extends VDNBase {
   /**
    *
    * @type {string}

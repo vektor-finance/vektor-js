@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNBlockchainValue } from './vdnblockchain-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNBlockchainValue } from './vdnblockchain-value'
  * @export
  * @interface VDNBlockchain
  */
-export interface VDNBlockchain {
+export interface VDNBlockchain extends VDNBase {
   /**
    *
    * @type {string}

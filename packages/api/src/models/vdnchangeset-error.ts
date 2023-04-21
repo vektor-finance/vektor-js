@@ -13,6 +13,7 @@
  */
 
 
+import { VDNBase } from './vdn-base';
 import { VDNChangesetErrorValue } from './vdnchangeset-error-value';
 
 /**
@@ -20,7 +21,7 @@ import { VDNChangesetErrorValue } from './vdnchangeset-error-value';
  * @export
  * @interface VDNChangesetError
  */
-export interface VDNChangesetError {
+export interface VDNChangesetError extends VDNBase {
   /**
    *
    * @type {string}

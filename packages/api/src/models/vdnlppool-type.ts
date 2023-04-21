@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL lp_pool_type representation
  * @export
  * @interface VDNLPPoolType
  */
-export interface VDNLPPoolType {
+export interface VDNLPPoolType extends VDNBase {
   /**
    *
    * @type {string}

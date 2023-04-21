@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL datetime representation
  * @export
  * @interface VDNDateTime
  */
-export interface VDNDateTime {
+export interface VDNDateTime extends VDNBase {
   /**
    *
    * @type {string}

@@ -39,7 +39,6 @@ import { VDNLPPool } from './vdnlppool'
 import { VDNLPPoolType } from './vdnlppool-type'
 import { VDNLPPosition } from './vdnlpposition'
 import { VDNLPQuote } from './vdnlpquote'
-import { VDNMap } from './vdnmap'
 import { VDNNone } from './vdnnone'
 import { VDNOrRuntimeError } from './vdnor-runtime-error'
 import { VDNPercentage } from './vdnpercentage'
@@ -92,7 +91,6 @@ export type VDN =
   | VDNLPPoolType
   | VDNLPPosition
   | VDNLPQuote
-  | VDNMap
   | VDNNone
   | VDNPercentage
   | VDNPrice

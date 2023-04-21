@@ -11,6 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { VDNBase } from './vdn-base'
 import { VXLTaskType } from './vxltask-type'
 
 /**
@@ -18,7 +19,7 @@ import { VXLTaskType } from './vxltask-type'
  * @export
  * @interface VDNTask
  */
-export interface VDNTask {
+export interface VDNTask extends VDNBase {
   /**
    *
    * @type {VXLTaskType}

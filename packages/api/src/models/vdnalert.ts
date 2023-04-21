@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNAlertValue } from './vdnalert-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNAlertValue } from './vdnalert-value'
  * @export
  * @interface VDNAlert
  */
-export interface VDNAlert {
+export interface VDNAlert extends VDNBase {
   /**
    *
    * @type {string}

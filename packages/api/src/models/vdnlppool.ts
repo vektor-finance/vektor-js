@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNLPPoolValue } from './vdnlppool-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNLPPoolValue } from './vdnlppool-value'
  * @export
  * @interface VDNLPPool
  */
-export interface VDNLPPool {
+export interface VDNLPPool extends VDNBase {
   /**
    *
    * @type {string}

@@ -13,21 +13,15 @@
  */
 
 /**
- * VXL object map representation
+ * VXL base type to inherit from
  * @export
- * @interface VDNMap
+ * @interface VDNBase
  */
-export interface VDNMap {
-  /**
-   *
-   * @type {string}
-   * @memberof VDNMap
-   */
-  type: 'map'
-  /**
-   *
-   * @type {object}
-   * @memberof VDNMap
-   */
-  value: Record<string, unknown>
+export interface VDNBase {
+    /**
+     *
+     * @type {string}
+     * @memberof VDNBase
+     */
+    parent_type: string | null
 }

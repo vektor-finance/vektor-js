@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNQuoteValue } from './vdn-quote-value'
 
 /**
@@ -19,7 +20,7 @@ import { VDNQuoteValue } from './vdn-quote-value'
  * @export
  * @interface VDNBuyQuote
  */
-export interface VDNBuyQuote {
+export interface VDNBuyQuote extends VDNBase {
   /**
    *
    * @type {string}

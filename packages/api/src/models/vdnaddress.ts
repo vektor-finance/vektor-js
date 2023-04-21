@@ -12,12 +12,14 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from "./vdn-base"
+
 /**
  * VXL blockchain address representation
  * @export
  * @interface VDNAddress
  */
-export interface VDNAddress {
+export interface VDNAddress extends VDNBase {
   /**
    *
    * @type {string}

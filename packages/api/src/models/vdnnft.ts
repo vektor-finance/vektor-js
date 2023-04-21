@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { VDNBase } from './vdn-base'
 import { VDNNFTValue } from './vdnnftvalue'
 
 /**
@@ -19,7 +20,7 @@ import { VDNNFTValue } from './vdnnftvalue'
  * @export
  * @interface VDNNFT
  */
-export interface VDNNFT {
+export interface VDNNFT extends VDNBase {
   /**
    *
    * @type {string}
