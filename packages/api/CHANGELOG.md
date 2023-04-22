@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.29.2](https://github.com/vektor-finance/vektor-js/compare/v0.29.1...v0.29.2) (2023-04-22)
+
+
+### Bug Fixes
+
+* make VDNError inherit from VDNBase ([6cf8b4b](https://github.com/vektor-finance/vektor-js/commit/6cf8b4b2fe78c5d2543ead57a4f29289842ccaa5))
+
+
+
 ### [0.29.1](https://github.com/vektor-finance/vektor-js/compare/v0.29.0...v0.29.1) (2023-04-21)
 
 
