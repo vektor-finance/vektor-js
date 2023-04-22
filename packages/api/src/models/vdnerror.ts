@@ -13,13 +13,14 @@
  */
 
 import { VDN } from "./vdn"
+import { VDNBase } from "./vdnbase"
 
 /**
  * VXL error representation
  * @export
  * @interface VDNError
  */
-export interface VDNError {
+export interface VDNError extends VDNBase {
   /**
    *
    * @type {string}
