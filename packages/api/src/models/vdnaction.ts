@@ -30,5 +30,5 @@ export interface VDNAction {
      * @type {string}
      * @memberof VDNAction
      */
-    action: string
+    vxl: string
 }
