@@ -15,20 +15,27 @@
 /**
  * VXL base type to inherit from
  * @export
- * @interface VDNAction
+ * @interface VXLAction
  */
-export interface VDNAction {
+export interface VXLAction {
     /**
      *
      * @type {string}
-     * @memberof VDNAction
+     * @memberof VXLAction
+     */
+    id: string
+
+    /**
+     *
+     * @type {string}
+     * @memberof VXLAction
      */
     name: string
 
     /**
      *
      * @type {string}
-     * @memberof VDNAction
+     * @memberof VXLAction
      */
     vxl: string
 }

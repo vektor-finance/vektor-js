@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VDNAction } from "./vdnaction"
+import { VXLAction } from "./vxlaction"
 
 /**
  * VXL base type to inherit from
@@ -29,8 +29,8 @@ export interface VDNBase {
 
     /**
      *
-     * @type {VDNAction}
+     * @type {VXLAction}
      * @memberof VDNBase
      */
-    actions?: VDNAction[]
+    actions?: VXLAction[]
 }
