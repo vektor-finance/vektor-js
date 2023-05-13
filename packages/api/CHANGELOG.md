@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.29.4](https://github.com/vektor-finance/vektor-js/compare/v0.29.3...v0.29.4) (2023-04-27)
+
+
+### Bug Fixes
+
+* **types:** rename vdnaction vxlaction and add id ([15c6686](https://github.com/vektor-finance/vektor-js/commit/15c6686c8b95418c037c553a7e5107fe0d0226b9))
+
+
+
 ### [0.29.3](https://github.com/vektor-finance/vektor-js/compare/v0.29.2...v0.29.3) (2023-04-24)
 
 
