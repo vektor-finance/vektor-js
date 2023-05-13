@@ -30,6 +30,13 @@ export interface VXLAction {
      * @type {string}
      * @memberof VXLAction
      */
+    type: string
+
+    /**
+     *
+     * @type {string}
+     * @memberof VXLAction
+     */
     name: string
 
     /**
