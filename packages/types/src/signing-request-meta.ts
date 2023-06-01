@@ -279,7 +279,7 @@ export interface CollateralRequestMeta extends MetaBase {
   from: AccountID
   asset: Asset
   venue: Venue
-  enabled: boolean
+  action: 'enable' | 'disable'
 }
 
 export type SigningRequestMeta =
