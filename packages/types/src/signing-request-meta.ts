@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import type { Asset, NetworkID, Venue } from '@vektor-finance/api'
 
 import { AccountID } from './signing'
@@ -273,6 +274,14 @@ export interface BridgeRequestMeta extends MetaBase {
   receive_time_est: number
 }
 
+export interface CollateralRequestMeta extends MetaBase {
+  request_type: 'collateral_request'
+  from: AccountID
+  asset: Asset
+  venue: Venue
+  enabled: boolean
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BorrowRepayRequestMeta
@@ -288,5 +297,6 @@ export type SigningRequestMeta =
   | SellRequestMeta
   | SplitRequestMeta
   | WrapRequestMeta
+  | CollateralRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']
