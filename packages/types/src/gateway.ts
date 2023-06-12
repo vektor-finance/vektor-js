@@ -119,8 +119,8 @@ export interface AlertTriggeredEvent {
   payload: Alert
 }
 
-export interface LocalFunctionCallEvent {
-  event_name: 'local_function_call'
+export interface LocalFunctionCalledEvent {
+  event_name: 'local_function_called'
   payload: LocalFunctionCall
 }
 
@@ -144,6 +144,6 @@ export type GatewayEvent =
   | AlertUpdatedEvent
   | AlertDeletedEvent
   | AlertTriggeredEvent
-  | LocalFunctionCallEvent
+  | LocalFunctionCalledEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
