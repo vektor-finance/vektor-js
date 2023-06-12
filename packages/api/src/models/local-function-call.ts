@@ -21,6 +21,13 @@ import { VDN } from './vdn'
  */
 export interface LocalFunctionCall {
   /**
+   * LocalFunctionCall vxl statement
+   * @type {string}
+   * @memberof LocalFunctionCall
+   */
+  statement: string
+
+  /**
    * LocalFunctionCall function
    * @type {string}
    * @memberof LocalFunctionCall
