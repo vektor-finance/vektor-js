@@ -1,4 +1,4 @@
-import type { Alert, Label, NetworkID, Session, Stream } from '@vektor-finance/api'
+import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream } from '@vektor-finance/api'
 
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
@@ -119,6 +119,11 @@ export interface AlertTriggeredEvent {
   payload: Alert
 }
 
+export interface LocalFunctionCallEvent {
+  event_name: 'local_function_call'
+  payload: LocalFunctionCall
+}
+
 export type GatewayEvent =
   | LabelCreatedEvent
   | LabelUpdatedEvent
@@ -139,5 +144,6 @@ export type GatewayEvent =
   | AlertUpdatedEvent
   | AlertDeletedEvent
   | AlertTriggeredEvent
+  | LocalFunctionCallEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
