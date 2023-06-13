@@ -12,12 +12,11 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
-import { VDNBlockchain } from './vdnblockchain'
+import { VDNAssetSymbol } from './vdnasset-symbol'
+import { VDNBoolean } from './vdnboolean'
 import { VDNDecimal } from './vdndecimal'
 import { VDNLabel } from './vdnlabel'
-import { VDNPercentage } from './vdnpercentage'
-import { VDNVenue } from './vdnvenue'
+import { VDNLendMarket } from './vdnlend-market'
 
 /**
  *
@@ -27,16 +26,10 @@ import { VDNVenue } from './vdnvenue'
 export interface VDNLendPositionValue {
   /**
    *
-   * @type {VDNAsset}
+   * @type {VDNBoolean}
    * @memberof VDNLendPositionValue
    */
-  asset: VDNAsset
-  /**
-   *
-   * @type {VDNBlockchain}
-   * @memberof VDNLendPositionValue
-   */
-  blockchain: VDNBlockchain
+  collateral_enabled: VDNBoolean
   /**
    *
    * @type {VDNLabel}
@@ -45,20 +38,26 @@ export interface VDNLendPositionValue {
   label: VDNLabel
   /**
    *
+   * @type {VDNLendMarket}
+   * @memberof VDNLendPositionValue
+   */
+  market: VDNLendMarket
+  /**
+   *
+   * @type {VDNAssetSymbol}
+   * @memberof VDNLendPositionValue
+   */
+  quote_asset: VDNAssetSymbol
+  /**
+   *
    * @type {VDNDecimal}
    * @memberof VDNLendPositionValue
    */
   supplied_amount: VDNDecimal
   /**
    *
-   * @type {VDNPercentage}
+   * @type {VDNDecimal}
    * @memberof VDNLendPositionValue
    */
-  supply_apy: VDNPercentage
-  /**
-   *
-   * @type {VDNVenue}
-   * @memberof VDNLendPositionValue
-   */
-  venue: VDNVenue
+  value: VDNDecimal
 }
