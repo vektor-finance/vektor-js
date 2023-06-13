@@ -12,45 +12,38 @@
  * Do not edit the class manually.
  */
 
+import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
-import { VDNBorrowMarket } from './vdnborrow-market'
 import { VDNDecimal } from './vdndecimal'
-import { VDNLabel } from './vdnlabel'
 
 /**
  *
  * @export
- * @interface VDNBorrowPositionValue
+ * @interface VDNFeeValue
  */
-export interface VDNBorrowPositionValue {
+export interface VDNFeeValue {
   /**
    *
    * @type {VDNDecimal}
-   * @memberof VDNBorrowPositionValue
+   * @memberof VDNFeeValue
    */
-  debt_amount: VDNDecimal
+  amount: VDNDecimal
   /**
    *
-   * @type {VDNLabel}
-   * @memberof VDNBorrowPositionValue
+   * @type {VDNAsset}
+   * @memberof VDNFeeValue
    */
-  label: VDNLabel
+  asset: VDNAsset
   /**
    *
-   * @type {VDNBorrowMarket}
-   * @memberof VDNBorrowPositionValue
+   * @type {VDNDecimal}
+   * @memberof VDNFeeValue
    */
-  market: VDNBorrowMarket
+  cost: VDNDecimal
   /**
    *
    * @type {VDNAssetSymbol}
-   * @memberof VDNBorrowPositionValue
+   * @memberof VDNFeeValue
    */
   quote_asset: VDNAssetSymbol
-  /**
-   *
-   * @type {VDNDecimal}
-   * @memberof VDNBorrowPositionValue
-   */
-  value: VDNDecimal
 }

@@ -13,22 +13,24 @@
  */
 
 import { VDNBase } from './vdnbase'
+import { VDNFunctionSpecValue } from './vdnfunction-spec-value'
+
 /**
- * VXL code representation
+ * VXL function_spec representation
  * @export
- * @interface VDNVXL
+ * @interface VDNFunctionSpec
  */
-export interface VDNVXL extends VDNBase {
+export interface VDNFunctionSpec extends VDNBase {
   /**
    *
    * @type {string}
-   * @memberof VDNVXL
+   * @memberof VDNFunctionSpec
    */
-  type: 'vxl'
+  type: 'function_spec'
   /**
    *
-   * @type {string}
-   * @memberof VDNVXL
+   * @type {VDNFunctionSpecValue}
+   * @memberof VDNFunctionSpec
    */
-  value: string
+  value: VDNFunctionSpecValue
 }

@@ -39,17 +39,5 @@ export interface VDNLabelValue {
    * @type {VDNString}
    * @memberof VDNLabelValue
    */
-  id: VDNString
-  /**
-   *
-   * @type {VDNString}
-   * @memberof VDNLabelValue
-   */
   name: VDNString
-  /**
-   *
-   * @type {VDNDateTime}
-   * @memberof VDNLabelValue
-   */
-  updated_at: VDNDateTime
 }

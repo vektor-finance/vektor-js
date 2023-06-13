@@ -19,6 +19,7 @@ import { VDNTransactionState } from './vdntransaction-state'
 import { VDNTransactionType } from './vdntransaction-type'
 import { VDNTransactionValueExplorer } from './vdntransaction-value-explorer'
 import { VDNTransactionValueLabel } from './vdntransaction-value-label'
+import { VDNVXL } from './vdnvxl'
 
 /**
  *
@@ -40,10 +41,10 @@ export interface VDNTransactionValue {
   explorer: VDNTransactionValueExplorer
   /**
    *
-   * @type {VDNString}
+   * @type {VDNVXL}
    * @memberof VDNTransactionValue
    */
-  expression: VDNString
+  expression: VDNVXL
   /**
    *
    * @type {VDNTransactionValueExplorer}

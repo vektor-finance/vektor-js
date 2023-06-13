@@ -12,60 +12,67 @@
  * Do not edit the class manually.
  */
 
- import { VDNAssetSymbol } from './vdnasset-symbol'
- import { VDNDecimal } from './vdndecimal'
- import { VDNLabel } from './vdnlabel'
- import { VDNList } from './vdnlist'
- import { VDNLPPool } from './vdnlppool'
- import { VDNNone } from './vdnnone'
- import { VDNPercentage } from './vdnpercentage'
+import { VDNAssetSymbol } from './vdnasset-symbol'
+import { VDNDecimal } from './vdndecimal'
+import { VDNLPPool } from './vdnlppool'
+import { VDNList } from './vdnlist'
+import { VDNPercentage } from './vdnpercentage'
+import { VDNNone } from './vdnnone'
+import { VDNLPPoolRange } from './vdnlppool-range'
+import { VDNLabel } from './vdnlabel'
 
- /**
-  *
-  * @export
-  * @interface VDNLPQuoteValue
-  */
- export interface VDNLPQuoteValue {
-   /**
-    *
-    * @type {VDNList}
-    * @memberof VDNLPQuoteValue
-    */
-   amounts: VDNList
-   /**
-    *
-    * @type {VDNList}
-    * @memberof VDNLPQuoteValue
-    */
-   amounts_delta: VDNList
-   /**
-    *
-    * @type {VDNLPQuoteValueLabel}
-    * @memberof VDNLPQuoteValue
-    */
-   label: VDNLabel | VDNNone
-   /**
-    *
-    * @type {VDNPercentage}
-    * @memberof VDNLPQuoteValue
-    */
-   ownership: VDNPercentage
-   /**
-    *
-    * @type {VDNLPPool}
-    * @memberof VDNLPQuoteValue
-    */
-   pool: VDNLPPool
-   /**
-    *
-    * @type {VDNAssetSymbol}
-    * @memberof VDNLPQuoteValue
-    */
-   quote_asset: VDNAssetSymbol
-   /**
-    *
-    * @type {VDNDecimal}
-    * @memberof VDNLPQuoteValue
-    */
-   value: VDNDecimal
- }
+/**
+ *
+ * @export
+ * @interface VDNLPQuoteValue
+ */
+export interface VDNLPQuoteValue {
+  /**
+   *
+   * @type {VDNList}
+   * @memberof VDNLPQuoteValue
+   */
+  amounts: VDNList
+  /**
+   *
+   * @type {VDNList}
+   * @memberof VDNLPQuoteValue
+   */
+  amounts_delta: VDNList
+  /**
+   *
+   * @type {VDNTransactionValueLabel}
+   * @memberof VDNLPQuoteValue
+   */
+  label: VDNLabel | VDNNone
+  /**
+   *
+   * @type {VDNPercentage}
+   * @memberof VDNLPQuoteValue
+   */
+  ownership: VDNPercentage
+  /**
+   *
+   * @type {VDNLPPool}
+   * @memberof VDNLPQuoteValue
+   */
+  pool: VDNLPPool
+  /**
+   *
+   * @type {VDNAssetSymbol}
+   * @memberof VDNLPQuoteValue
+   */
+  quote_asset: VDNAssetSymbol
+  /**
+   *
+   * @type {VDNLPPoolRange}
+   * @memberof VDNLPQuoteValue
+   */
+  range: VDNLPPoolRange | VDNNone
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNLPQuoteValue
+   */
+  value: VDNDecimal
+}

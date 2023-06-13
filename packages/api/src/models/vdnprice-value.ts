@@ -14,6 +14,8 @@
 
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNDecimal } from './vdndecimal'
+import { VDNNone } from './vdnnone'
+import { VDNPercentage } from './vdnpercentage'
 
 /**
  *
@@ -27,6 +29,42 @@ export interface VDNPriceValue {
    * @memberof VDNPriceValue
    */
   asset: VDNAssetSymbol
+  /**
+   *
+   * @type {VDNPercentage}
+   * @memberof VDNPriceValue
+   */
+  change_1h: VDNPercentage | VDNNone
+  /**
+   *
+   * @type {VDNPriceValueChange1h}
+   * @memberof VDNPriceValue
+   */
+  change_1y: VDNPercentage | VDNNone
+  /**
+   *
+   * @type {VDNPercentage}
+   * @memberof VDNPriceValue
+   */
+  change_24h: VDNPercentage | VDNNone
+  /**
+   *
+   * @type {VDNPercentage}
+   * @memberof VDNPriceValue
+   */
+  change_30d: VDNPercentage | VDNNone
+  /**
+   *
+   * @type {VDNPercentage}
+   * @memberof VDNPriceValue
+   */
+  change_7d: VDNPercentage | VDNNone
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNPriceValue
+   */
+  market_cap: VDNDecimal | VDNNone
   /**
    *
    * @type {VDNDecimal}

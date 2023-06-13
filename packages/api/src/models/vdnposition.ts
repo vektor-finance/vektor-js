@@ -13,22 +13,24 @@
  */
 
 import { VDNBase } from './vdnbase'
+import { VDNPositionValue } from './vdnposition-value'
+
 /**
- * VXL code representation
+ * VXL position representation
  * @export
- * @interface VDNVXL
+ * @interface VDNPosition
  */
-export interface VDNVXL extends VDNBase {
+export interface VDNPosition extends VDNBase {
   /**
    *
    * @type {string}
-   * @memberof VDNVXL
+   * @memberof VDNPosition
    */
-  type: 'vxl'
+  type: 'position'
   /**
    *
-   * @type {string}
-   * @memberof VDNVXL
+   * @type {VDNPositionValue}
+   * @memberof VDNPosition
    */
-  value: string
+  value: VDNPositionValue
 }

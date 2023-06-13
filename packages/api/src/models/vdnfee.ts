@@ -13,22 +13,24 @@
  */
 
 import { VDNBase } from './vdnbase'
+import { VDNFeeValue } from './vdnfee-value'
+
 /**
- * VXL code representation
+ * VXL fee representation
  * @export
- * @interface VDNVXL
+ * @interface VDNFee
  */
-export interface VDNVXL extends VDNBase {
+export interface VDNFee extends VDNBase {
   /**
    *
    * @type {string}
-   * @memberof VDNVXL
+   * @memberof VDNFee
    */
-  type: 'vxl'
+  type: 'fee'
   /**
    *
-   * @type {string}
-   * @memberof VDNVXL
+   * @type {VDNFeeValue}
+   * @memberof VDNFee
    */
-  value: string
+  value: VDNFeeValue
 }

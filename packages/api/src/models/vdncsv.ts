@@ -13,22 +13,24 @@
  */
 
 import { VDNBase } from './vdnbase'
+import { VDNCSVValue } from './vdncsvvalue'
+
 /**
- * VXL code representation
+ * VXL csv representation
  * @export
- * @interface VDNVXL
+ * @interface VDNCSV
  */
-export interface VDNVXL extends VDNBase {
+export interface VDNCSV extends VDNBase {
   /**
    *
    * @type {string}
-   * @memberof VDNVXL
+   * @memberof VDNCSV
    */
-  type: 'vxl'
+  type: 'csv'
   /**
    *
-   * @type {string}
-   * @memberof VDNVXL
+   * @type {VDNCSVValue}
+   * @memberof VDNCSV
    */
-  value: string
+  value: VDNCSVValue
 }

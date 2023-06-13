@@ -13,22 +13,24 @@
  */
 
 import { VDNBase } from './vdnbase'
+import { VDNBridgeQuoteValue } from './vdnbridge-quote-value'
+
 /**
- * VXL code representation
+ * VXL bridge_quote representation
  * @export
- * @interface VDNVXL
+ * @interface VDNBridgeQuote
  */
-export interface VDNVXL extends VDNBase {
+export interface VDNBridgeQuote extends VDNBase {
   /**
    *
    * @type {string}
-   * @memberof VDNVXL
+   * @memberof VDNBridgeQuote
    */
-  type: 'vxl'
+  type: 'bridge_quote'
   /**
    *
-   * @type {string}
-   * @memberof VDNVXL
+   * @type {VDNBridgeQuoteValue}
+   * @memberof VDNBridgeQuote
    */
-  value: string
+  value: VDNBridgeQuoteValue
 }

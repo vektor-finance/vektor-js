@@ -12,23 +12,26 @@
  * Do not edit the class manually.
  */
 
+import { VDNAPYValue } from './vdnapyvalue'
 import { VDNBase } from './vdnbase'
+
 /**
- * VXL code representation
+ * VXL apy representation
  * @export
- * @interface VDNVXL
+ * @interface VDNAPY
  */
-export interface VDNVXL extends VDNBase {
+export interface VDNAPY extends VDNBase {
+
   /**
    *
    * @type {string}
-   * @memberof VDNVXL
+   * @memberof VDNAPY
    */
-  type: 'vxl'
+  type: 'apy'
   /**
    *
-   * @type {string}
-   * @memberof VDNVXL
+   * @type {VDNAPYValue}
+   * @memberof VDNAPY
    */
-  value: string
+  value: VDNAPYValue
 }
