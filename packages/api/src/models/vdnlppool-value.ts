@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VDNAddress } from './vdnaddress'
+import { VDNAPY } from './vdnapy'
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNDecimal } from './vdndecimal'
@@ -28,6 +28,12 @@ import { VDNVenue } from './vdnvenue'
  * @interface VDNLPPoolValue
  */
 export interface VDNLPPoolValue {
+  /**
+   *
+   * @type {VDNAPY}
+   * @memberof VDNLPPoolValue
+   */
+  apys: VDNAPY
   /**
    *
    * @type {VDNList}
@@ -52,12 +58,6 @@ export interface VDNLPPoolValue {
    * @memberof VDNLPPoolValue
    */
   name: VDNString
-  /**
-   *
-   * @type {VDNAddress}
-   * @memberof VDNLPPoolValue
-   */
-  pool_address: VDNAddress
   /**
    *
    * @type {VDNPercentage}
