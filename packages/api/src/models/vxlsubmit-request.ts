@@ -25,12 +25,6 @@ export interface VXLSubmitRequest {
    */
   limit?: number | null
   /**
-   * Is local VXL submission
-   * @type {boolean}
-   * @memberof VXLSubmitRequest
-   */
-  local?: boolean
-  /**
    * Should results be returned as streams (when possible)
    * @type {boolean}
    * @memberof VXLSubmitRequest
