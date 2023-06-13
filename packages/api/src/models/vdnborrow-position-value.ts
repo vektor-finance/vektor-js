@@ -12,12 +12,10 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
-import { VDNBlockchain } from './vdnblockchain'
+import { VDNAssetSymbol } from './vdnasset-symbol'
+import { VDNBorrowMarket } from './vdnborrow-market'
 import { VDNDecimal } from './vdndecimal'
 import { VDNLabel } from './vdnlabel'
-import { VDNPercentage } from './vdnpercentage'
-import { VDNVenue } from './vdnvenue'
 
 /**
  *
@@ -25,24 +23,6 @@ import { VDNVenue } from './vdnvenue'
  * @interface VDNBorrowPositionValue
  */
 export interface VDNBorrowPositionValue {
-  /**
-   *
-   * @type {VDNAsset}
-   * @memberof VDNBorrowPositionValue
-   */
-  asset: VDNAsset
-  /**
-   *
-   * @type {VDNBlockchain}
-   * @memberof VDNBorrowPositionValue
-   */
-  blockchain: VDNBlockchain
-  /**
-   *
-   * @type {VDNPercentage}
-   * @memberof VDNBorrowPositionValue
-   */
-  borrow_apy: VDNPercentage
   /**
    *
    * @type {VDNDecimal}
@@ -57,8 +37,20 @@ export interface VDNBorrowPositionValue {
   label: VDNLabel
   /**
    *
-   * @type {VDNVenue}
+   * @type {VDNBorrowMarket}
    * @memberof VDNBorrowPositionValue
    */
-  venue: VDNVenue
+  market: VDNBorrowMarket
+  /**
+   *
+   * @type {VDNAssetSymbol}
+   * @memberof VDNBorrowPositionValue
+   */
+  quote_asset: VDNAssetSymbol
+  /**
+   *
+   * @type {VDNDecimal}
+   * @memberof VDNBorrowPositionValue
+   */
+  value: VDNDecimal
 }
