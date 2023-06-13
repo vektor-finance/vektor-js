@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.29.12](https://github.com/vektor-finance/vektor-js/compare/v0.29.11...v0.29.12) (2023-06-13)
+
+
+### Bug Fixes
+
+* **types:** remove local?: from VXLSubmitRequest ([#74](https://github.com/vektor-finance/vektor-js/issues/74)) ([48fc469](https://github.com/vektor-finance/vektor-js/commit/48fc46932a5e0ed5ef0ed212de3a2d6187a591e9))
+
+
+
 ### [0.29.11](https://github.com/vektor-finance/vektor-js/compare/v0.29.10...v0.29.11) (2023-06-12)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
