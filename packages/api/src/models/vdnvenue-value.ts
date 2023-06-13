@@ -14,7 +14,6 @@
 
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNString } from './vdnstring'
-import { VDNURL } from './vdnurl'
 import { VDNVenueSymbol } from './vdnvenue-symbol'
 import { VDNVenueType } from './vdnvenue-type'
 
@@ -50,8 +49,8 @@ export interface VDNVenueValue {
   type: VDNVenueType
   /**
    *
-   * @type {VDNURL}
+   * @type {VDNString}
    * @memberof VDNVenueValue
    */
-  website: VDNURL
+  website: VDNString
 }

@@ -14,7 +14,6 @@
 
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNString } from './vdnstring'
-import { VDNURL } from './vdnurl'
 
 /**
  *
@@ -30,10 +29,10 @@ export interface VDNTransactionHashValue {
   blockchain: VDNBlockchain
   /**
    *
-   * @type {VDNURL}
+   * @type {VDNString}
    * @memberof VDNTransactionHashValue
    */
-  explorer_url: VDNURL
+  explorer_url: VDNString
   /**
    *
    * @type {VDNString}

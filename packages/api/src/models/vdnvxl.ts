@@ -12,25 +12,23 @@
  * Do not edit the class manually.
  */
 
-
-import { VDNBase } from './vdnbase';
-
+import { VDNBase } from './vdnbase'
 /**
- * VXL string representation
+ * VXL code representation
  * @export
- * @interface VDNVxl
+ * @interface VDNVXL
  */
-export interface VDNVxl extends VDNBase {
+export interface VDNVXL extends VDNBase {
   /**
    *
    * @type {string}
-   * @memberof VDNVxl
+   * @memberof VDNVXL
    */
   type: 'vxl'
   /**
    *
    * @type {string}
-   * @memberof VDNVxl
+   * @memberof VDNVXL
    */
   value: string
 }
