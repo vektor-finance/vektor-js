@@ -12,10 +12,10 @@
  * Do not edit the class manually.
  */
 
-import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNDecimal } from './vdndecimal'
 import { VDNLPPool } from './vdnlppool'
+import { VDNLPQuoteValueRange } from './vdnlpquote-value-range'
 import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
 import { VDNPercentage } from './vdnpercentage'
@@ -40,18 +40,6 @@ export interface VDNLPPositionValue {
   label: VDNLabel
   /**
    *
-   * @type {VDNDecimal}
-   * @memberof VDNLPPositionValue
-   */
-  lp_amount: VDNDecimal
-  /**
-   *
-   * @type {VDNAsset}
-   * @memberof VDNLPPositionValue
-   */
-  lp_asset: VDNAsset
-  /**
-   *
    * @type {VDNPercentage}
    * @memberof VDNLPPositionValue
    */
@@ -68,6 +56,12 @@ export interface VDNLPPositionValue {
    * @memberof VDNLPPositionValue
    */
   quote_asset: VDNAssetSymbol
+  /**
+   *
+   * @type {VDNLPQuoteValueRange}
+   * @memberof VDNLPPositionValue
+   */
+  range: VDNLPQuoteValueRange
   /**
    *
    * @type {VDNDecimal}
