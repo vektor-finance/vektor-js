@@ -19,6 +19,8 @@ import { VDNLPQuoteValueRange } from './vdnlpquote-value-range'
 import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
 import { VDNPercentage } from './vdnpercentage'
+import { VDNNone } from './vdnnone'
+import { VDNLPPoolRange } from './vdnlppool-range'
 
 /**
  *
@@ -61,7 +63,7 @@ export interface VDNLPPositionValue {
    * @type {VDNLPQuoteValueRange}
    * @memberof VDNLPPositionValue
    */
-  range: VDNLPQuoteValueRange
+  range: VDNLPPoolRange | VDNNone
   /**
    *
    * @type {VDNDecimal}
