@@ -15,7 +15,6 @@
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNDecimal } from './vdndecimal'
 import { VDNLPPool } from './vdnlppool'
-import { VDNLPQuoteValueRange } from './vdnlpquote-value-range'
 import { VDNLabel } from './vdnlabel'
 import { VDNList } from './vdnlist'
 import { VDNPercentage } from './vdnpercentage'
