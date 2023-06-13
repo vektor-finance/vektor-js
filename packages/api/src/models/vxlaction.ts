@@ -13,36 +13,33 @@
  */
 
 /**
- * VXL base type to inherit from
+ * Represents VXL commands that act on a given output
  * @export
  * @interface VXLAction
  */
 export interface VXLAction {
-    /**
-     *
-     * @type {string}
-     * @memberof VXLAction
-     */
-    id: string
-
-    /**
-     *
-     * @type {string}
-     * @memberof VXLAction
-     */
-    type: string
-
-    /**
-     *
-     * @type {string}
-     * @memberof VXLAction
-     */
-    name: string
-
-    /**
-     *
-     * @type {string}
-     * @memberof VXLAction
-     */
-    vxl: string
+  /**
+   * Action ID
+   * @type {string}
+   * @memberof VXLAction
+   */
+  id: string
+  /**
+   * Action Type
+   * @type {string}
+   * @memberof VXLAction
+   */
+  type: string
+  /**
+   * Action Name
+   * @type {string}
+   * @memberof VXLAction
+   */
+  name: string
+  /**
+   * Action VXL command
+   * @type {string}
+   * @memberof VXLAction
+   */
+  vxl: string
 }
