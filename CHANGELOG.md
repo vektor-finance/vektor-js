@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.0](https://github.com/vektor-finance/vektor-js/compare/v0.29.14...v0.30.0) (2023-06-17)
+
+
+### Features
+
+* remove vxl package ([#76](https://github.com/vektor-finance/vektor-js/issues/76)) ([6d01a03](https://github.com/vektor-finance/vektor-js/commit/6d01a031074dac483b92b6313867c9eca62ede03))
+
+
+
 ### [0.29.14](https://github.com/vektor-finance/vektor-js/compare/v0.29.13...v0.29.14) (2023-06-13)
 
 
