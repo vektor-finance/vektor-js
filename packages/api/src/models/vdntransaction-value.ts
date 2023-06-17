@@ -14,11 +14,11 @@
 
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNDateTime } from './vdndate-time'
+import { VDNLabel } from './vdnlabel'
+import { VDNNone } from './vdnnone'
 import { VDNString } from './vdnstring'
 import { VDNTransactionState } from './vdntransaction-state'
 import { VDNTransactionType } from './vdntransaction-type'
-import { VDNTransactionValueExplorer } from './vdntransaction-value-explorer'
-import { VDNTransactionValueLabel } from './vdntransaction-value-label'
 import { VDNVXL } from './vdnvxl'
 
 /**
@@ -38,7 +38,7 @@ export interface VDNTransactionValue {
    * @type {VDNTransactionValueExplorer}
    * @memberof VDNTransactionValue
    */
-  explorer: VDNTransactionValueExplorer
+  explorer: VDNString | VDNNone
   /**
    *
    * @type {VDNVXL}
@@ -50,7 +50,7 @@ export interface VDNTransactionValue {
    * @type {VDNTransactionValueExplorer}
    * @memberof VDNTransactionValue
    */
-  hash: VDNTransactionValueExplorer
+  hash: VDNString | VDNNone
   /**
    *
    * @type {VDNString}
@@ -62,7 +62,7 @@ export interface VDNTransactionValue {
    * @type {VDNTransactionValueLabel}
    * @memberof VDNTransactionValue
    */
-  label: VDNTransactionValueLabel
+  label: VDNLabel | VDNNone
   /**
    *
    * @type {VDNTransactionState}
