@@ -85,7 +85,6 @@ below:
 
 - [`@vektor-finance/utils`](packages/utils): A set of helpers and utility functions useful for various SDKs.
 - [`@vektor-finance/types`](packages/types): Types used in all packages.
-- [`@vektor-finance/vxl`](packages/vxl): Types used for VXL
 
 ## Publishing NPM Packages
 
