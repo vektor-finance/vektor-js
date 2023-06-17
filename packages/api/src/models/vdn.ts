@@ -29,22 +29,29 @@ import { VDNBorrowPosition } from './vdnborrow-position'
 import { VDNBridgeQuote } from './vdnbridge-quote'
 import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNChangesetError } from './vdnchangeset-error'
+import { VDNCSV } from './vdncsv'
 import { VDNDateTime } from './vdndate-time'
 import { VDNDecimal } from './vdndecimal'
 import { VDNError } from './vdnerror'
+import { VDNFee } from './vdnfee'
+import { VDNFunctionSpec } from './vdnfunction-spec'
 import { VDNInteger } from './vdninteger'
 import { VDNLabel } from './vdnlabel'
 import { VDNLendMarket } from './vdnlend-market'
 import { VDNLendPosition } from './vdnlend-position'
 import { VDNList } from './vdnlist'
+import { VDNLocalFunctionCall } from './vdnlocal-function-call'
 import { VDNLPPool } from './vdnlppool'
 import { VDNLPPoolRange } from './vdnlppool-range'
 import { VDNLPPoolType } from './vdnlppool-type'
 import { VDNLPPosition } from './vdnlpposition'
 import { VDNLPQuote } from './vdnlpquote'
+import { VDNNFT } from './vdnnft'
+import { VDNNFTCollection } from './vdnnftcollection'
 import { VDNNone } from './vdnnone'
 import { VDNOrRuntimeError } from './vdnor-runtime-error'
 import { VDNPercentage } from './vdnpercentage'
+import { VDNPositionType } from './vdnposition-type'
 import { VDNPrice } from './vdnprice'
 import { VDNSellQuote } from './vdnsell-quote'
 import { VDNStream } from './vdnstream'
@@ -53,10 +60,13 @@ import { VDNSuccess } from './vdnsuccess'
 import { VDNSymbol } from './vdnsymbol'
 import { VDNTask } from './vdntask'
 import { VDNTransactionHash } from './vdntransaction-hash'
+import { VDNTransactionState } from './vdntransaction-state'
+import { VDNTransactionType } from './vdntransaction-type'
 import { VDNURL } from './vdnurl'
 import { VDNVenue } from './vdnvenue'
 import { VDNVenueSymbol } from './vdnvenue-symbol'
 import { VDNVenueType } from './vdnvenue-type'
+import { VDNVXL } from './vdnvxl'
 import { VXLListType } from './vxllist-type'
 import { VXLTaskType } from './vxltask-type'
 import { VXLType } from './vxltype'
@@ -85,20 +95,27 @@ export type VDN =
   | VDNBridgeQuote
   | VDNBuyQuote
   | VDNChangesetError
+  | VDNCSV
   | VDNDateTime
   | VDNDecimal
   | VDNError
+  | VDNFee
+  | VDNFunctionSpec
   | VDNInteger
   | VDNLabel
   | VDNLendMarket
   | VDNLendPosition
+  | VDNLocalFunctionCall
   | VDNLPPool
   | VDNLPPoolRange
   | VDNLPPoolType
   | VDNLPPosition
   | VDNLPQuote
+  | VDNNFT
+  | VDNNFTCollection
   | VDNNone
   | VDNPercentage
+  | VDNPositionType
   | VDNPrice
   | VDNSellQuote
   | VDNStream
@@ -106,10 +123,13 @@ export type VDN =
   | VDNSuccess
   | VDNSymbol
   | VDNTransactionHash
+  | VDNTransactionState
+  | VDNTransactionType
   | VDNURL
   | VDNVenue
   | VDNVenueSymbol
   | VDNVenueType
+  | VDNVXL
 
 export type VDNType = VDN['type']
 export type VDNValue = VDN['value']
