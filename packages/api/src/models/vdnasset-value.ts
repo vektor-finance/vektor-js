@@ -12,11 +12,12 @@
  * Do not edit the class manually.
  */
 
-import { VDNAssetValueAddress } from './vdnasset-value-address'
-import { VDNAssetValueSymbol } from './vdnasset-value-symbol'
+import { VDNAddress } from './vdnaddress'
+import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBlockchain } from './vdnblockchain'
 import { VDNBoolean } from './vdnboolean'
 import { VDNInteger } from './vdninteger'
+import { VDNNone } from './vdnnone'
 import { VDNString } from './vdnstring'
 
 /**
@@ -30,7 +31,7 @@ export interface VDNAssetValue {
    * @type {VDNAssetValueAddress}
    * @memberof VDNAssetValue
    */
-  address: VDNAssetValueAddress
+  address: VDNAddress | VDNNone
   /**
    *
    * @type {VDNBlockchain}
@@ -60,5 +61,5 @@ export interface VDNAssetValue {
    * @type {VDNAssetValueSymbol}
    * @memberof VDNAssetValue
    */
-  symbol: VDNAssetValueSymbol
+  symbol: VDNAssetSymbol | VDNString
 }

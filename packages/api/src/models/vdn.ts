@@ -16,6 +16,7 @@ import { AnyRuntimeError } from '../error'
 import { VDNAddress } from './vdnaddress'
 import { VDNAlert } from './vdnalert'
 import { VDNAlertState } from './vdnalert-state'
+import { VDNAPY } from './vdnapy'
 import { VDNAsset } from './vdnasset'
 import { VDNAssetSymbol } from './vdnasset-symbol'
 import { VDNBalance } from './vdnbalance'
@@ -25,6 +26,7 @@ import { VDNBoolean } from './vdnboolean'
 import { VDNBorrowAccount } from './vdnborrow-account'
 import { VDNBorrowMarket } from './vdnborrow-market'
 import { VDNBorrowPosition } from './vdnborrow-position'
+import { VDNBridgeQuote } from './vdnbridge-quote'
 import { VDNBuyQuote } from './vdnbuy-quote'
 import { VDNChangesetError } from './vdnchangeset-error'
 import { VDNDateTime } from './vdndate-time'
@@ -36,6 +38,7 @@ import { VDNLendMarket } from './vdnlend-market'
 import { VDNLendPosition } from './vdnlend-position'
 import { VDNList } from './vdnlist'
 import { VDNLPPool } from './vdnlppool'
+import { VDNLPPoolRange } from './vdnlppool-range'
 import { VDNLPPoolType } from './vdnlppool-type'
 import { VDNLPPosition } from './vdnlpposition'
 import { VDNLPQuote } from './vdnlpquote'
@@ -69,6 +72,7 @@ export type VDN =
   | VDNAddress
   | VDNAlert
   | VDNAlertState
+  | VDNAPY
   | VDNAsset
   | VDNAssetSymbol
   | VDNBalance
@@ -78,6 +82,7 @@ export type VDN =
   | VDNBorrowAccount
   | VDNBorrowMarket
   | VDNBorrowPosition
+  | VDNBridgeQuote
   | VDNBuyQuote
   | VDNChangesetError
   | VDNDateTime
@@ -88,6 +93,7 @@ export type VDN =
   | VDNLendMarket
   | VDNLendPosition
   | VDNLPPool
+  | VDNLPPoolRange
   | VDNLPPoolType
   | VDNLPPosition
   | VDNLPQuote
@@ -129,6 +135,9 @@ export const isVDNType = (type: VXLType): type is VDNType => typeof type === 'st
 
 export const isVDNError = (vdn: VDNOrVDNGeneric): vdn is VDNError =>
   typeof vdn.type === 'string' && vdn.type.endsWith('_error')
+
+export const isVDNStruct = (vdn: VDNOrVDNGeneric): vdn is VDN =>
+  !isVDNGeneric(vdn) && typeof vdn.value === 'object' && vdn.value !== null
 
 export const isVDNGeneric = (vdn: VDNOrVDNGeneric): vdn is VDNGeneric =>
   typeof vdn.type === 'object' &&
