@@ -94,11 +94,3 @@ export class Api {
     return httpClient
   }
 }
-
-new Api({
-  options: {},
-
-  interceptors: {
-    request: [{}],
-  },
-})
