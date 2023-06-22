@@ -15,6 +15,7 @@ import {
   SessionsApi,
   SignaturesApi,
   StreamsApi,
+  TypesApi,
 } from './api/index'
 
 export type InterceptorManager<V> = {
@@ -45,6 +46,7 @@ export class Api {
   public readonly sessions: SessionsApi
   public readonly signatures: SignaturesApi
   public readonly streams: StreamsApi
+  public readonly types: TypesApi
 
   private readonly httpClient: AxiosInstance
 
@@ -59,6 +61,7 @@ export class Api {
     this.sessions = new SessionsApi(this.httpClient)
     this.signatures = new SignaturesApi(this.httpClient)
     this.streams = new StreamsApi(this.httpClient)
+    this.types = new TypesApi(this.httpClient)
   }
 
   /**
