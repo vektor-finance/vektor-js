@@ -181,9 +181,7 @@ export const isVDNList = (vdn: VDNOrVDNGeneric): vdn is VDNList =>
 export const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream =>
   vdn.type === 'stream' && typeof vdn.value === 'string'
 
-export const isRuntimeError = (
-  vdnOrRuntimeError: VDNOrRuntimeError,
-): vdnOrRuntimeError is AnyRuntimeError =>
+export const isRuntimeError = (vdnOrRuntimeError: VDNOrRuntimeError): vdnOrRuntimeError is AnyRuntimeError =>
   [
     'runtime_error',
     'runtime_invalid_field_error',

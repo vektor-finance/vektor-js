@@ -1,4 +1,5 @@
-import type { FunctionSpec } from '../../models'
+import type { FunctionSpec } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

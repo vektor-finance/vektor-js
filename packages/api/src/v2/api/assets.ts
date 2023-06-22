@@ -1,4 +1,5 @@
-import type { Asset, NetworkMode } from '../../models'
+import type { Asset, NetworkMode } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 type AssetsApiListParams = {

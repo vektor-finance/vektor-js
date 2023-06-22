@@ -1,4 +1,5 @@
-import type { Venue } from '../../models'
+import type { Venue } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

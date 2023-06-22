@@ -1,10 +1,5 @@
-import axios, {
-  type AxiosInstance,
-  type AxiosInterceptorOptions,
-  type AxiosResponse,
-  type CreateAxiosDefaults,
-  type InternalAxiosRequestConfig,
-} from 'axios'
+import type { ApiConfig } from '@vektor-finance/types'
+import axios, { type AxiosInstance } from 'axios'
 
 import {
   AlertsApi,
@@ -20,22 +15,6 @@ import {
   VenuesApi,
   VxlApi,
 } from './api/index'
-
-export type InterceptorManager<V> = {
-  onFulfilled?: ((value: V) => V | Promise<V>) | null
-  onRejected?: ((error: unknown) => unknown) | null
-  options?: AxiosInterceptorOptions
-}
-
-export type Interceptors = {
-  request?: InterceptorManager<InternalAxiosRequestConfig>[]
-  response?: InterceptorManager<AxiosResponse>[]
-}
-
-export type ApiConfig = {
-  options?: CreateAxiosDefaults
-  interceptors?: Interceptors
-}
 
 /**
  *

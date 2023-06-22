@@ -1,4 +1,5 @@
-import type { Label, LabelCreateRequest, LabelUpdateRequest, NetworkMode } from '../../models'
+import type { Label, LabelCreateRequest, LabelUpdateRequest, NetworkMode } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 type LabelsApiListParams = {

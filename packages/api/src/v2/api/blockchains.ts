@@ -1,13 +1,6 @@
-import type { NetworkID, NetworkMode } from '../../models'
+import type { BlockchainsApiListParams, BlockchainsApiSymbolsParams, NetworkID } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
-
-type BlockchainsApiListParams = {
-  networkMode?: NetworkMode
-}
-
-type BlockchainsApiSymbolsParams = {
-  networkMode?: NetworkMode
-}
 
 /**
  *

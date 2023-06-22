@@ -1,4 +1,5 @@
-import type { Stream, StreamPatchParams } from '../../models'
+import type { Stream, StreamPatchParams } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

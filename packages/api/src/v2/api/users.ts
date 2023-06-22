@@ -1,4 +1,5 @@
-import type { LoginRequest, LoginResponse, ResetPasswordRequest } from '../../models'
+import type { LoginRequest, LoginResponse, ResetPasswordRequest } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

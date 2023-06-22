@@ -1,4 +1,5 @@
-import type { SignatureOrTransactionHash } from '../../models'
+import type { SignatureOrTransactionHash } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

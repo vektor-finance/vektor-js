@@ -1,9 +1,6 @@
-import type { Alert } from '../../models/alert'
-import { BaseApi } from '../base'
+import type { Alert, AlertsListParams } from '@vektor-finance/types'
 
-type AlertsListParams = {
-  triggered?: boolean
-}
+import { BaseApi } from '../base'
 
 /**
  *

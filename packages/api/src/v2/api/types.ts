@@ -1,4 +1,5 @@
-import type { StructSpec } from '../../models'
+import type { StructSpec } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

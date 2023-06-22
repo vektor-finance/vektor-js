@@ -1,4 +1,10 @@
-import type { VXLSubmitRequest, VXLSubmitResponse, VXLValidateRequest, VXLValidateResponse } from '../../models'
+import type {
+  VXLSubmitRequest,
+  VXLSubmitResponse,
+  VXLValidateRequest,
+  VXLValidateResponse,
+} from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**

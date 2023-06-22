@@ -1,4 +1,5 @@
-import type { Session } from '../../models'
+import type { Session } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 
 /**
