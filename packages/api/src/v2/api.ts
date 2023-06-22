@@ -18,6 +18,7 @@ import {
   TypesApi,
   UsersApi,
   VenuesApi,
+  VxlApi,
 } from './api/index'
 
 export type InterceptorManager<V> = {
@@ -51,6 +52,7 @@ export class Api {
   public readonly types: TypesApi
   public readonly users: UsersApi
   public readonly venues: VenuesApi
+  public readonly vxl: VxlApi
 
   private readonly httpClient: AxiosInstance
 
@@ -68,6 +70,7 @@ export class Api {
     this.types = new TypesApi(this.httpClient)
     this.users = new UsersApi(this.httpClient)
     this.venues = new VenuesApi(this.httpClient)
+    this.vxl = new VxlApi(this.httpClient)
   }
 
   /**
