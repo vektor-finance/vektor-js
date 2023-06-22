@@ -6,7 +6,16 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from 'axios'
 
-import { AlertsApi, AssetsApi, BlockchainsApi, FunctionsApi, LabelsApi, SessionsApi, SignaturesApi } from './api/index'
+import {
+  AlertsApi,
+  AssetsApi,
+  BlockchainsApi,
+  FunctionsApi,
+  LabelsApi,
+  SessionsApi,
+  SignaturesApi,
+  StreamsApi,
+} from './api/index'
 
 export type InterceptorManager<V> = {
   onFulfilled?: ((value: V) => V | Promise<V>) | null
@@ -35,6 +44,7 @@ export class Api {
   public readonly labels: LabelsApi
   public readonly sessions: SessionsApi
   public readonly signatures: SignaturesApi
+  public readonly streams: StreamsApi
 
   private readonly httpClient: AxiosInstance
 
@@ -48,6 +58,7 @@ export class Api {
     this.labels = new LabelsApi(this.httpClient)
     this.sessions = new SessionsApi(this.httpClient)
     this.signatures = new SignaturesApi(this.httpClient)
+    this.streams = new StreamsApi(this.httpClient)
   }
 
   /**
@@ -71,3 +82,11 @@ export class Api {
     return httpClient
   }
 }
+
+new Api({
+  options: {},
+
+  interceptors: {
+    request: [{}],
+  },
+})
