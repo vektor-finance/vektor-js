@@ -1,2 +1,2 @@
-export * from './alerts-api'
-export * from './assets-api'
+export * from './alerts'
+export * from './assets'
