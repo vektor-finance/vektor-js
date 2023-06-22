@@ -1,4 +1,4 @@
-import { NetworkMode } from '../../models'
+import { Asset, NetworkMode } from '../../models'
 import { BaseApi } from '../base'
 
 /**
@@ -9,7 +9,7 @@ export class AssetsApi extends BaseApi {
    *
    */
   public list(networkMode?: NetworkMode) {
-    return this.httpClient.get('/assets', {
+    return this.httpClient.get<Asset[]>('/assets', {
       params: {
         network_mode: networkMode,
       },
@@ -20,7 +20,7 @@ export class AssetsApi extends BaseApi {
    *
    */
   public symbol(networkMode?: NetworkMode) {
-    return this.httpClient.get('/assets/symbol', {
+    return this.httpClient.get<string[]>('/assets/symbols', {
       params: {
         network_mode: networkMode,
       },

@@ -1,4 +1,4 @@
-import { NetworkMode } from '../../models'
+import { NetworkID, NetworkMode } from '../../models'
 import { BaseApi } from '../base'
 
 /**
@@ -9,7 +9,7 @@ export class BlockchainsApi extends BaseApi {
    *
    */
   public list(networkMode?: NetworkMode) {
-    return this.httpClient.get('/blockchains', {
+    return this.httpClient.get<NetworkID[]>('/blockchains', {
       params: {
         network_mode: networkMode,
       },
@@ -20,7 +20,7 @@ export class BlockchainsApi extends BaseApi {
    *
    */
   public symbols(networkMode?: NetworkMode) {
-    return this.httpClient.get('/blockchains/symbols', {
+    return this.httpClient.get<string[]>('/blockchains/symbols', {
       params: {
         network_mode: networkMode,
       },
