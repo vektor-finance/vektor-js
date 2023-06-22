@@ -8,7 +8,7 @@ export class SignaturesApi extends BaseApi {
   /**
    *
    */
-  public submit(signatureId: string, signatureOrTransactionHash: SignatureOrTransactionHash[]) {
-    return this.httpClient.post<void>(`/signatures/submit/${signatureId}`, signatureOrTransactionHash)
+  public submit(signatureId: string, payload: SignatureOrTransactionHash[]) {
+    return this.httpClient.post<void>(`/signatures/submit/${signatureId}`, payload)
   }
 }

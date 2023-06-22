@@ -1,6 +1,10 @@
 import type { Label, LabelCreateRequest, LabelUpdateRequest, NetworkMode } from '../../models'
 import { BaseApi } from '../base'
 
+type LabelsApiListParams = {
+  networkMode?: NetworkMode
+}
+
 /**
  *
  */
@@ -29,10 +33,10 @@ export class LabelsApi extends BaseApi {
   /**
    *
    */
-  public list(networkMode: NetworkMode) {
+  public list(params?: LabelsApiListParams) {
     return this.httpClient.get<Label[]>('/labels', {
       params: {
-        network_mode: networkMode,
+        network_mode: params?.networkMode,
       },
     })
   }

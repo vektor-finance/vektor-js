@@ -1,6 +1,14 @@
 import type { Asset, NetworkMode } from '../../models'
 import { BaseApi } from '../base'
 
+type AssetsApiListParams = {
+  networkMode?: NetworkMode
+}
+
+type AssetsApiSymbolParams = {
+  networkMode?: NetworkMode
+}
+
 /**
  *
  */
@@ -8,10 +16,10 @@ export class AssetsApi extends BaseApi {
   /**
    *
    */
-  public list(networkMode?: NetworkMode) {
+  public list(params?: AssetsApiListParams) {
     return this.httpClient.get<Asset[]>('/assets', {
       params: {
-        network_mode: networkMode,
+        network_mode: params?.networkMode,
       },
     })
   }
@@ -19,10 +27,10 @@ export class AssetsApi extends BaseApi {
   /**
    *
    */
-  public symbol(networkMode?: NetworkMode) {
+  public symbol(params?: AssetsApiSymbolParams) {
     return this.httpClient.get<string[]>('/assets/symbols', {
       params: {
-        network_mode: networkMode,
+        network_mode: params?.networkMode,
       },
     })
   }
