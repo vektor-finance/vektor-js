@@ -1,4 +1,4 @@
-import { Asset, NetworkMode } from '../../models'
+import type { Asset, NetworkMode } from '../../models'
 import { BaseApi } from '../base'
 
 /**

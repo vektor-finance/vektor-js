@@ -1,4 +1,4 @@
-import { Stream, StreamPatchParams } from '../../models'
+import type { Stream, StreamPatchParams } from '../../models'
 import { BaseApi } from '../base'
 
 /**

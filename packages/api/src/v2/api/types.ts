@@ -1,4 +1,4 @@
-import { StructSpec } from '../../models'
+import type { StructSpec } from '../../models'
 import { BaseApi } from '../base'
 
 /**

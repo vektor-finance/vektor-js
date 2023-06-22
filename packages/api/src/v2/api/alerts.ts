@@ -1,4 +1,4 @@
-import { Alert } from '../../models/alert'
+import type { Alert } from '../../models/alert'
 import { BaseApi } from '../base'
 
 type AlertsListParams = {

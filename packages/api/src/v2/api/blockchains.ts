@@ -1,4 +1,4 @@
-import { NetworkID, NetworkMode } from '../../models'
+import type { NetworkID, NetworkMode } from '../../models'
 import { BaseApi } from '../base'
 
 /**

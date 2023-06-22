@@ -1,4 +1,4 @@
-import { VXLSubmitRequest, VXLSubmitResponse, VXLValidateRequest, VXLValidateResponse } from '../../models'
+import type { VXLSubmitRequest, VXLSubmitResponse, VXLValidateRequest, VXLValidateResponse } from '../../models'
 import { BaseApi } from '../base'
 
 /**

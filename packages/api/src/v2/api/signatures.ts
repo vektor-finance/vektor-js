@@ -1,4 +1,4 @@
-import { SignatureOrTransactionHash } from '../../models'
+import type { SignatureOrTransactionHash } from '../../models'
 import { BaseApi } from '../base'
 
 /**

@@ -1,4 +1,4 @@
-import { LoginRequest, LoginResponse, ResetPasswordRequest } from '../../models'
+import type { LoginRequest, LoginResponse, ResetPasswordRequest } from '../../models'
 import { BaseApi } from '../base'
 
 /**

@@ -1,4 +1,4 @@
-import { Venue } from '../../models'
+import type { Venue } from '../../models'
 import { BaseApi } from '../base'
 
 /**

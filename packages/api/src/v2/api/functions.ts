@@ -1,4 +1,4 @@
-import { FunctionSpec } from '../../models'
+import type { FunctionSpec } from '../../models'
 import { BaseApi } from '../base'
 
 /**

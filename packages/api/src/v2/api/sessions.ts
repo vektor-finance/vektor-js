@@ -1,4 +1,4 @@
-import { Session } from '../../models'
+import type { Session } from '../../models'
 import { BaseApi } from '../base'
 
 /**
