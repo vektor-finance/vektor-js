@@ -6,7 +6,7 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from 'axios'
 
-import { AlertsApi, AssetsApi } from './api/index'
+import { AlertsApi, AssetsApi, BlockchainsApi } from './api/index'
 
 export type InterceptorManager<V> = {
   onFulfilled?: ((value: V) => V | Promise<V>) | null
@@ -30,6 +30,7 @@ export type ApiConfig = {
 export class Api {
   public readonly alerts: AlertsApi
   public readonly assets: AssetsApi
+  public readonly blockchains: BlockchainsApi
 
   private readonly httpClient: AxiosInstance
 
@@ -38,6 +39,7 @@ export class Api {
 
     this.alerts = new AlertsApi(this.httpClient)
     this.assets = new AssetsApi(this.httpClient)
+    this.blockchains = new BlockchainsApi(this.httpClient)
   }
 
   /**
