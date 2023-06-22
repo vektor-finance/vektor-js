@@ -39,7 +39,7 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "axios": "0.21.4"
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "@types/eslint": "7.28.0",
