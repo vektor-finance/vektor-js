@@ -45,7 +45,7 @@
     "@types/eslint": "7.28.0",
     "@types/node": "^12.11.5",
     "@vektor-finance/eslint-config-sdk": "^0.30.1",
-    "@vektor-finance/types": "*",
+    "@vektor-finance/types": "0.30.1",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
     "karma": "^6.4.1",
