@@ -1,4 +1,2 @@
-import axios, { AxiosError } from 'axios'
-
 // API Errors
-export const isAPIError = (payload: any): payload is AxiosError<any> => axios.isAxiosError(payload)
+export { isAxiosError as isAPIError } from 'axios'
