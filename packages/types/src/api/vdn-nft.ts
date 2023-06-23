@@ -5,7 +5,7 @@ import { VDNInteger } from './vdn-integer'
 import { VDNString } from './vdn-string'
 
 /**
- * VXL nft representation
+ * VXL NFT representation
  * @export
  * @interface VDNNFT
  */
