@@ -1,6 +1,6 @@
 import { NetworkMode } from './network'
 
-export type Session = {
+export interface Session {
   /**
    * ISO8601 Timestamp
    * @type {string}

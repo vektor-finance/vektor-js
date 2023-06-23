@@ -5,18 +5,18 @@ import {
   type InternalAxiosRequestConfig,
 } from 'axios'
 
-export type InterceptorManager<V> = {
+export interface InterceptorManager<V> {
   onFulfilled?: ((value: V) => V | Promise<V>) | null
   onRejected?: ((error: unknown) => unknown) | null
   options?: AxiosInterceptorOptions
 }
 
-export type Interceptors = {
+export interface Interceptors {
   request?: InterceptorManager<InternalAxiosRequestConfig>[]
   response?: InterceptorManager<AxiosResponse>[]
 }
 
-export type ApiConfig = {
+export interface ApiConfig {
   options?: CreateAxiosDefaults
   interceptors?: Interceptors
 }

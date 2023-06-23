@@ -9,7 +9,7 @@ export type StreamState = 'running' | 'paused'
  * @export
  * @interface StreamPagination
  */
-export type StreamPagination = {
+export interface StreamPagination {
   /**
    * Maximum number of entries to be returned (max = 250)
    * @type {number}
@@ -34,7 +34,7 @@ export type StreamError = RuntimeError | RuntimeSignatureMismatchError | VDNErro
 
 export type StreamClosureReason = 'user' | 'error'
 
-export type Stream = {
+export interface Stream {
   /**
    * ISO8601 Timestamp
    * @type {string}
@@ -103,7 +103,7 @@ export type Stream = {
   vxl: string
 }
 
-export type StreamPatchParams = {
+export interface StreamPatchParams {
   /**
    * Maximum number of entries to be returned (max = 250)
    * @type {number}

@@ -1,4 +1,4 @@
-export type ID = {
+export interface ID {
   /**
    * Universally unique identifier - UUID V4
    * @type {string}

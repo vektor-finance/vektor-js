@@ -5,7 +5,7 @@ import { VDN } from './vdn'
  * @export
  * @interface LocalFunctionCall
  */
-export type LocalFunctionCall = {
+export interface LocalFunctionCall {
   /**
    * LocalFunctionCall vxl statement
    * @type {string}

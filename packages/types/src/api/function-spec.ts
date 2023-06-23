@@ -5,7 +5,7 @@ import { SubfunctionSpec } from './subfunction'
  * @export
  * @interface FunctionSpec
  */
-export type FunctionSpec = {
+export interface FunctionSpec {
   /**
    * Default subfunction name
    * @type {string}

@@ -1,4 +1,4 @@
-export type LoginRequest = {
+export interface LoginRequest {
   /**
    * User\'s email address
    * @type {string}
@@ -13,7 +13,7 @@ export type LoginRequest = {
   password: string
 }
 
-export type LoginResponse = {
+export interface LoginResponse {
   /**
    * User\'s authentication token
    * @type {string}

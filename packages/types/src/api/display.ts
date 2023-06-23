@@ -1,4 +1,4 @@
-export type FieldDisplayNumberFormat = {
+export interface FieldDisplayNumberFormat {
   type: 'default' | 'si' | 'raw' | 'duration'
   style: 'default' | 'change'
 }
@@ -7,11 +7,11 @@ export const isFieldDisplayNumberFormat = (
   format: FieldDisplayNumberFormat | FieldDisplayStringFormat,
 ): format is FieldDisplayNumberFormat => 'style' in format
 
-export type FieldDisplayStringFormat = {
+export interface FieldDisplayStringFormat {
   type: 'default' | 'url'
 }
 
-export type FieldDisplay = {
+export interface FieldDisplay {
   hidden: boolean
   sensitive: boolean
   flex: string
@@ -19,16 +19,16 @@ export type FieldDisplay = {
   image_uri_prefix: string | null
 }
 
-export type UnionDisplay = {
+export interface UnionDisplay {
   hidden: boolean
   flex: string
 }
 
-export type StructDisplay = {
+export interface StructDisplay {
   order: string[]
 }
 
-export type ListDisplay = {
+export interface ListDisplay {
   hidden: boolean
   flex: number
 }

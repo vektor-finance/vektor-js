@@ -3,7 +3,7 @@
  * @export
  * @interface Venue
  */
-export type Venue = {
+export interface Venue {
   /**
    * Venue id
    * @type {string}

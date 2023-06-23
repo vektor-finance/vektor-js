@@ -1,10 +1,10 @@
-export type AlertsListParams = {
+export interface AlertsListRequestParams {
   triggered?: boolean
 }
 
 export type AlertState = 'running' | 'triggered' | 'delivered'
 
-export type Alert = {
+export interface Alert {
   /**
    * ISO8601 Timestamp
    * @type {string}

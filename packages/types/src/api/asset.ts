@@ -1,6 +1,6 @@
-import { NetworkID } from './network-id'
+import { NetworkID } from './network'
 
-export type Asset = {
+export interface Asset {
   /**
    * Assets\'s on-chain address (optional)
    * @type {string}

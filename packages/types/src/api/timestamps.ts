@@ -1,4 +1,4 @@
-export type Timestamps = {
+export interface Timestamps {
   /**
    * ISO8601 Timestamp
    * @type {string}

@@ -3,7 +3,7 @@
  * @export
  * @interface PublicKey
  */
-export type PublicKey = {
+export interface PublicKey {
   /**
    * Curve type
    * @type {string}

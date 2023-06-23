@@ -1,3 +1,3 @@
-export type TransactionHash = {
+export interface TransactionHash {
   transaction_hash: string
 }

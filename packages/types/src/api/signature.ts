@@ -1,3 +1,3 @@
-export type Signature = {
+export interface Signature {
   signed_transaction: string
 }

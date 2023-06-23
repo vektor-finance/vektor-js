@@ -5,24 +5,24 @@ import { VXLListType } from './vxl'
 
 export type VDNSpec = StructSpec | UnionSpec | ListSpec | FieldSpec
 
-export type StructSpec = {
+export interface StructSpec {
   type: string
   display: StructDisplay
   fields: Record<string, VDNSpec>
 }
 
-export type UnionSpec = {
+export interface UnionSpec {
   type: UnionType
   display: UnionDisplay
   types: Record<string, VDNSpec>
 }
 
-export type FieldSpec = {
+export interface FieldSpec {
   type: string
   display: FieldDisplay
 }
 
-export type ListSpec = {
+export interface ListSpec {
   type: VXLListType
   display: ListDisplay
   items: VDNSpec
