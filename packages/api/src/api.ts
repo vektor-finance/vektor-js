@@ -98,14 +98,14 @@ export class Api {
     const httpClient = axios.create(config?.options)
 
     if (config?.interceptors?.request) {
-      config.interceptors.request.forEach(({ onFulfilled, onRejected, options }) => {
-        httpClient.interceptors.request.use(onFulfilled, onRejected, options)
+      config.interceptors.request.forEach(({ onSuccess, onError, options }) => {
+        httpClient.interceptors.request.use(onSuccess, onError, options)
       })
     }
 
     if (config?.interceptors?.response) {
-      config.interceptors.response.forEach(({ onFulfilled, onRejected, options }) => {
-        httpClient.interceptors.response.use(onFulfilled, onRejected, options)
+      config.interceptors.response.forEach(({ onSuccess, onError, options }) => {
+        httpClient.interceptors.response.use(onSuccess, onError, options)
       })
     }
 
