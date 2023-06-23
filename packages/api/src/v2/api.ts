@@ -1,4 +1,3 @@
-import type { ApiConfig } from '@vektor-finance/types'
 import axios, { type AxiosInstance } from 'axios'
 
 import {
@@ -15,6 +14,7 @@ import {
   VenuesApi,
   VxlApi,
 } from './api/index'
+import type { ApiConfig } from './types'
 
 /**
  *
