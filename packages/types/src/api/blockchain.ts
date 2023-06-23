@@ -1,9 +1,9 @@
 import { NetworkMode } from './network'
 
-export interface BlockchainsApiListParams {
+export interface BlockchainsListRequestParams {
   networkMode?: NetworkMode
 }
 
-export interface BlockchainsApiSymbolsParams {
+export interface BlockchainsSymbolsRequestParams {
   networkMode?: NetworkMode
 }
