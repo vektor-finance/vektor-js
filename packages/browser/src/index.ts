@@ -1,5 +1,5 @@
 export * from './sdk'
-export { API, APIOptions, Configuration, options as apiOptions, createAuthHeader } from '@vektor-finance/api'
+export { Api, ApiConfig, defaultApiConfig, createAuthHeader } from '@vektor-finance/api'
 export {
   Gateway,
   GatewayOptions,
