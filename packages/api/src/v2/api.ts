@@ -35,7 +35,7 @@ export class Api {
 
   private readonly httpClient: HttpClient
 
-  constructor(protected readonly config: ApiConfig) {
+  constructor(protected readonly config: ApiConfig = {}) {
     this.httpClient = this.makeHttpClient(config)
 
     this.alerts = new AlertsApi(this.httpClient)
@@ -50,6 +50,20 @@ export class Api {
     this.users = new UsersApi(this.httpClient)
     this.venues = new VenuesApi(this.httpClient)
     this.vxl = new VxlApi(this.httpClient)
+  }
+
+  /**
+   *
+   */
+  public setAuthToken(token: string, tokenType = 'Bearer'): void {
+    this.httpClient.defaults.headers.common.Authorization = `${tokenType} ${token}`
+  }
+
+  /**
+   *
+   */
+  public removeAuthToken(): void {
+    this.httpClient.defaults.headers.common.Authorization = undefined
   }
 
   /**
