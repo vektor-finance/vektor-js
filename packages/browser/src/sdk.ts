@@ -1,5 +1,5 @@
 import { Api, ApiConfig, defaultApiConfig } from '@vektor-finance/api'
-import { Gateway, GatewayOptions, options as gatewayOptions } from '@vektor-finance/gateway'
+import { defaultGatewayOptions, Gateway, GatewayOptions } from '@vektor-finance/gateway'
 import { Socket } from 'phoenix'
 
 /**
@@ -14,20 +14,12 @@ export interface VektorOptions {
   gateway?: GatewayOptions
 }
 
-export type VektorOptionsType = 'default' | 'local'
-
 /**
  * Default options for Vektor class
  */
-export const options: Record<VektorOptionsType, VektorOptions> = {
-  default: {
-    api: defaultApiConfig,
-    gateway: gatewayOptions.default,
-  },
-  local: {
-    api: {},
-    gateway: gatewayOptions.local,
-  },
+export const defaultVektorOptions: VektorOptions = {
+  api: defaultApiConfig,
+  gateway: defaultGatewayOptions,
 }
 
 /**

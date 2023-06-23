@@ -17,18 +17,9 @@ export interface GatewayOptions {
   }
 }
 
-export type GatewayOptionsType = 'default' | 'local'
-
-/** Option sets for connecting to Vektor's gateway service */
-export const options: Record<GatewayOptionsType, GatewayOptions> = {
-  default: {
-    url: 'wss://api.vektor.finance/gateway',
-    timeout: 10_000,
-  },
-  local: {
-    url: 'ws://localhost:4000/gateway',
-    timeout: 10_000,
-  },
+export const defaultGatewayOptions: GatewayOptions = {
+  url: 'wss://api.vektor.finance/gateway',
+  timeout: 10_000,
 }
 
 // Callback Signatures
@@ -68,7 +59,7 @@ export class Gateway {
   public constructor(
     private _socketClass: typeof Socket,
     authToken: string,
-    protected readonly _options: GatewayOptions = options.default,
+    protected readonly _options: GatewayOptions = defaultGatewayOptions,
   ) {
     this._socket = new this._socketClass(this._options.url, { params: { token: authToken } })
 
