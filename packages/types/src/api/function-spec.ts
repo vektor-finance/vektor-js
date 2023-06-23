@@ -30,10 +30,6 @@ export interface FunctionSpec {
    * @memberof FunctionSpec
    */
   name: string
-  /**
-   *
-   * @type {Array<SubfunctionSpec>}
-   * @memberof FunctionSpec
-   */
-  subfunctions: Array<SubfunctionSpec>
+
+  subfunctions: SubfunctionSpec[]
 }

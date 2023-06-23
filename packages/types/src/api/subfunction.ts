@@ -25,21 +25,15 @@ export interface SubfunctionSpec {
    */
   name: string
   /**
-   *
-   * @type {Array<SubfunctionOption>}
-   * @memberof SubfunctionSpec
+   * Subfunction options
    */
-  options: Array<SubfunctionOption>
+  options: SubfunctionOption[]
   /**
-   *
-   * @type {Array<SubfunctionParameter>}
-   * @memberof SubfunctionSpec
+   * Subfunction parameters
    */
-  parameters: Array<SubfunctionParameter>
+  parameters: SubfunctionParameter[]
   /**
-   *
-   * @type {VXLType}
-   * @memberof SubfunctionSpec
+   * Subfunction returns
    */
   returns: VXLType
 }

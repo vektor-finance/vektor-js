@@ -10,10 +10,8 @@ import { VDNOrRuntimeError } from './vdn-or-runtime-error'
 export interface VXLSubmitResponse {
   /**
    * Array with all responses for a VXL submission
-   * @type {Array<VXLEvalResult>}
-   * @memberof VXLSubmitResponse
    */
-  results: Array<VXLEvalResult>
+  results: VXLEvalResult[]
 }
 
 export interface VXLSubmitRequest {
@@ -40,10 +38,8 @@ export interface VXLSubmitRequest {
 export interface VXLValidateResponse {
   /**
    * Response for multiple VXL validation errors
-   * @type {Array<object>}
-   * @memberof VXLValidateResponse
    */
-  errors: Array<Record<string, unknown>>
+  errors: Record<string, unknown>[]
 }
 
 export interface VXLValidateRequest {

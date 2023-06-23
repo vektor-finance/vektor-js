@@ -29,8 +29,7 @@ export interface LocalFunctionCall {
 
   /**
    * LocalFunctionCall arguments
-   * @type {Array<VDN>}
-   * @memberof LocalFunctionCall
+
    */
   args: VDN[]
 

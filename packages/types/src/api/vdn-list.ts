@@ -8,16 +8,6 @@ import { VXLListType } from './vxl'
  * @interface VDNList
  */
 export interface VDNList extends VDNBase {
-  /**
-   *
-   * @type {VXLListType}
-   * @memberof VDNList
-   */
   type: VXLListType
-  /**
-   *
-   * @type {Array<VDN>}
-   * @memberof VDNList
-   */
-  value: Array<VDN>
+  value: VDN[]
 }
