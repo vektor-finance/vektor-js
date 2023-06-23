@@ -10,7 +10,7 @@ export class StreamsApi extends BaseApi {
   /**
    *
    */
-  public _delete(streamId: string): Promise<ApiResponse<void>> {
+  public delete(streamId: string): Promise<ApiResponse<void>> {
     return this.httpClient.delete<void>(`/streams/${streamId}`)
   }
 

@@ -14,7 +14,7 @@ export class LabelsApi extends BaseApi {
   /**
    *
    */
-  public _delete(labelId: string): Promise<ApiResponse<void>> {
+  public delete(labelId: string): Promise<ApiResponse<void>> {
     return this.httpClient.delete<void>(`/labels/${labelId}`)
   }
 
