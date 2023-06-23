@@ -1,5 +1,6 @@
+import { ID } from './id'
 import { NetworkMode } from './network'
-import { ResourceCommon } from './resource-common'
+import { Timestamps } from './timestamps'
 
 /**
  * Common properties of a Label schema
@@ -46,7 +47,7 @@ export type LabelCreateRequest = LabelCommonRequired
  * Identifier to easily reference an Address or Transaction
  * @export
  */
-export type Label = LabelCommonRequired & ResourceCommon
+export type Label = LabelCommonRequired & ID & Timestamps
 
 /**
  * @type LabelResponse
@@ -100,4 +101,8 @@ export interface LabelCommonRequired {
    * @memberof LabelCommonRequired
    */
   network_mode: NetworkMode
+}
+
+export interface LabelsListRequestParams {
+  networkMode?: NetworkMode
 }
