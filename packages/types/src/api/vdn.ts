@@ -1,4 +1,4 @@
-import { AnyRuntimeError } from '../../error'
+import { AnyRuntimeError } from './error'
 import { VDNAddress } from './vdn-address'
 import { VDNAlert, VDNAlertState } from './vdn-alert'
 import { VDNAPY } from './vdn-apy'

@@ -1,4 +1,4 @@
-import { RuntimeError, RuntimeSignatureMismatchError } from '../../error'
+import { RuntimeError, RuntimeSignatureMismatchError } from './error'
 import { VDN } from './vdn'
 import { VDNError } from './vdn-error'
 
