@@ -16,8 +16,14 @@ import {
 } from './api/index'
 import type { ApiConfig, HttpClient } from './types'
 
+export const defaultApiConfig: ApiConfig = {
+  options: {
+    baseURL: 'https://api.vektor.finance',
+  },
+}
+
 /**
- *
+ * API class for making HTTP requests to the Vektor API.
  */
 export class Api {
   public readonly alerts: AlertsApi
@@ -35,8 +41,12 @@ export class Api {
 
   private readonly httpClient: HttpClient
 
+  /**
+   * Creates a new instance of the API class with the specified configuration.
+   * @param config The configuration to use for the API.
+   */
   constructor(protected readonly config: ApiConfig = {}) {
-    this.httpClient = this.makeHttpClient(config)
+    this.httpClient = this.makeHttpClient(this.mergeDefaultConfig(config))
 
     this.alerts = new AlertsApi(this.httpClient)
     this.assets = new AssetsApi(this.httpClient)
@@ -53,21 +63,36 @@ export class Api {
   }
 
   /**
-   *
+   * Sets the authorization token to use for API requests.
+   * @param token The authorization token to use.
+   * @param tokenType The type of authorization token (e.g. Bearer).
    */
   public setAuthToken(token: string, tokenType = 'Bearer'): void {
     this.httpClient.defaults.headers.common.Authorization = `${tokenType} ${token}`
   }
 
   /**
-   *
+   * Removes the authorization token from API requests.
    */
   public removeAuthToken(): void {
     this.httpClient.defaults.headers.common.Authorization = undefined
   }
 
   /**
-   *
+   * Merges the specified configuration with the default API configuration.
+   * @param config The configuration to merge with the default configuration.
+   */
+  private mergeDefaultConfig(config: ApiConfig): ApiConfig {
+    return {
+      ...defaultApiConfig,
+      ...config,
+      options: { ...defaultApiConfig.options, ...config?.options },
+    }
+  }
+
+  /**
+   * Creates a new HTTP client with the specified configuration.
+   * @param config The configuration to use for the HTTP client.
    */
   private makeHttpClient(config: ApiConfig): HttpClient {
     const httpClient = axios.create(config?.options)
