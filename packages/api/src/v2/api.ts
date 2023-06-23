@@ -1,4 +1,4 @@
-import axios, { type AxiosInstance } from 'axios'
+import axios from 'axios'
 
 import {
   AlertsApi,
@@ -14,7 +14,7 @@ import {
   VenuesApi,
   VxlApi,
 } from './api/index'
-import type { ApiConfig } from './types'
+import type { ApiConfig, HttpClient } from './types'
 
 /**
  *
@@ -33,7 +33,7 @@ export class Api {
   public readonly venues: VenuesApi
   public readonly vxl: VxlApi
 
-  private readonly httpClient: AxiosInstance
+  private readonly httpClient: HttpClient
 
   constructor(protected readonly config: ApiConfig) {
     this.httpClient = this.makeHttpClient(config)
@@ -55,7 +55,7 @@ export class Api {
   /**
    *
    */
-  private makeHttpClient(config: ApiConfig) {
+  private makeHttpClient(config: ApiConfig): HttpClient {
     const httpClient = axios.create(config?.options)
 
     if (config?.interceptors?.request) {

@@ -1,4 +1,5 @@
 import {
+  type AxiosInstance,
   type AxiosInterceptorOptions,
   type AxiosResponse,
   type CreateAxiosDefaults,
@@ -20,3 +21,6 @@ export interface ApiConfig {
   options?: CreateAxiosDefaults
   interceptors?: Interceptors
 }
+
+export type ApiResponse<T = unknown> = AxiosResponse<T>
+export type HttpClient = AxiosInstance
