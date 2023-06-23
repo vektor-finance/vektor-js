@@ -1,5 +1,6 @@
-import { VDNGenericType, VDNOrRuntimeError, VDNType } from '../../models'
 import { UnionType } from './union-type'
+import { VDNGenericType, VDNType } from './vdn'
+import { VDNOrRuntimeError } from './vdn-or-runtime-error'
 
 /**
  * Response for a VXL submission
