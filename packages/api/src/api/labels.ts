@@ -1,11 +1,7 @@
-import type { Label, LabelCreateRequest, LabelUpdateRequest, NetworkMode } from '@vektor-finance/types'
+import type { Label, LabelCreateRequest, LabelsListRequestParams, LabelUpdateRequest } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
-
-type LabelsApiListParams = {
-  networkMode?: NetworkMode
-}
 
 /**
  *
@@ -35,7 +31,7 @@ export class LabelsApi extends BaseApi {
   /**
    *
    */
-  public list(params?: LabelsApiListParams): Promise<ApiResponse<Label[]>> {
+  public list(params?: LabelsListRequestParams): Promise<ApiResponse<Label[]>> {
     return this.httpClient.get<Label[]>('/labels', {
       params: {
         network_mode: params?.networkMode,
