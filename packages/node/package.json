@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/node",
-  "version": "0.30.1",
+  "version": "0.31.0-alpha.0",
   "description": "Official Vektor SDK for Node.js",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/node",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -46,9 +46,9 @@
     ]
   },
   "dependencies": {
-    "@vektor-finance/api": "^0.30.1",
-    "@vektor-finance/gateway": "^0.30.1",
-    "@vektor-finance/types": "^0.30.1",
+    "@vektor-finance/api": "^0.31.0-alpha.0",
+    "@vektor-finance/gateway": "^0.31.0-alpha.0",
+    "@vektor-finance/types": "^0.31.0-alpha.0",
     "phoenix-channels": "1.0.0",
     "tslib": "1.9.3"
   },
