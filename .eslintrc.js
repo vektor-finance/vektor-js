@@ -19,8 +19,15 @@ module.exports = {
       },
       rules: {
         '@typescript-eslint/explicit-member-accessibility': ['error', { accessibility: 'off' }],
-        '@typescript-eslint/naming-convention': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/naming-convention': [
+          'error',
+          {
+            selector: 'method',
+            modifiers: ['private'],
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+          },
+        ],
       },
     },
     {
