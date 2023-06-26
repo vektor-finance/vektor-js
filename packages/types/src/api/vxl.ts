@@ -51,7 +51,7 @@ export interface VXLValidateRequest {
   vxl: string
 }
 
-export type VXLType = VDNType | VDNGenericType | UnionType | 'workspace' | 'function'
+export type VXLType = VDNType | VDNGenericType | UnionType | 'function'
 
 export interface VXLTaskType extends VXLGenericParameters {
   /**
