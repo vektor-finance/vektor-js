@@ -1,5 +1,5 @@
-import { API, APIOptions, options as apiOptions } from '@vektor-finance/api'
-import { Gateway, GatewayOptions, options as gatewayOptions } from '@vektor-finance/gateway'
+import { Api, ApiConfig, defaultApiConfig } from '@vektor-finance/api'
+import { defaultGatewayOptions, Gateway, GatewayOptions } from '@vektor-finance/gateway'
 import { Socket } from 'phoenix-channels'
 
 /**
@@ -8,23 +8,15 @@ import { Socket } from 'phoenix-channels'
  */
 export interface VektorOptions {
   /** API client options */
-  api?: APIOptions
+  api?: ApiConfig
 
   /** Gateway client options */
   gateway?: GatewayOptions
 }
 
-export type VektorOptionsType = 'default' | 'local'
-
-export const options: Record<VektorOptionsType, VektorOptions> = {
-  default: {
-    api: apiOptions.default,
-    gateway: gatewayOptions.default,
-  },
-  local: {
-    api: apiOptions.local,
-    gateway: gatewayOptions.local,
-  },
+export const defaultVektorOptions: VektorOptions = {
+  api: defaultApiConfig,
+  gateway: defaultGatewayOptions,
 }
 
 /**
@@ -39,7 +31,7 @@ export const options: Record<VektorOptionsType, VektorOptions> = {
  * ```
  */
 export class Vektor {
-  public readonly api: API
+  public readonly api: Api
   public readonly gateway: Gateway
 
   /**
@@ -49,7 +41,7 @@ export class Vektor {
    * @param options Options to configure the SDK and sub-clients.
    */
   public constructor(authToken: string, options?: VektorOptions) {
-    this.api = new API(options?.api)
+    this.api = new Api(options?.api)
     this.gateway = new Gateway(Socket, authToken, options?.gateway)
   }
 }

@@ -1,0 +1,42 @@
+import { VDN } from './vdn'
+
+/**
+ * Properties of a LocalFunctionCall
+ * @export
+ * @interface LocalFunctionCall
+ */
+export interface LocalFunctionCall {
+  /**
+   * LocalFunctionCall vxl statement
+   * @type {string}
+   * @memberof LocalFunctionCall
+   */
+  statement: string
+
+  /**
+   * LocalFunctionCall function
+   * @type {string}
+   * @memberof LocalFunctionCall
+   */
+  function: string
+
+  /**
+   * LocalFunctionCall subfunction
+   * @type {string}
+   * @memberof LocalFunctionCall
+   */
+  subfunction: string
+
+  /**
+   * LocalFunctionCall arguments
+
+   */
+  args: VDN[]
+
+  /**
+   * LocalFunctionCall options
+   * @type {Record<string, VDN>}
+   * @memberof LocalFunctionCall
+   */
+  options: Record<string, VDN>
+}

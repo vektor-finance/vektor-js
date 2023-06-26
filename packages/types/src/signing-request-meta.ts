@@ -1,6 +1,5 @@
 /* eslint-disable max-lines */
-import type { Asset, NetworkID, Venue } from '@vektor-finance/api'
-
+import type { Asset, NetworkID, Venue } from './api'
 import { AccountID } from './signing'
 
 export interface EVMLegacyGasFeeBase {
@@ -124,7 +123,6 @@ export interface DexAggregatorTradeInfo {
   route: string[]
 }
 
-
 export type TradeInfo = UniswapV2TradeInfo | UniswapV3TradeInfo | CurveTradeInfo | DexAggregatorTradeInfo
 export type VenueType = TradeInfo['venue_type']
 
@@ -228,14 +226,14 @@ export interface LPPoolInfo {
 }
 
 export interface LPRange {
-  lower: string;
-  upper: string;
-  in_range: boolean;
+  lower: string
+  upper: string
+  in_range: boolean
 }
 
 export interface LPRangePositionInfo {
-  id?: number;
-  range: LPRange;
+  id?: number
+  range: LPRange
 }
 
 export interface LPDepositRequestMeta extends MetaBase {

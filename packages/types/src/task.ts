@@ -1,4 +1,4 @@
-import type { VDN } from '@vektor-finance/api'
+import type { VDN } from './api'
 
 export interface TaskState {
   id: string

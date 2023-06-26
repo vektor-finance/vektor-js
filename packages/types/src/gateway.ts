@@ -1,5 +1,4 @@
-import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream } from '@vektor-finance/api'
-
+import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
 
