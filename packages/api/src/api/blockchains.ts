@@ -4,11 +4,11 @@ import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
 
 /**
- *
+ * An API Client for interacting with Blockchains.
  */
 export class BlockchainsApi extends BaseApi {
   /**
-   *
+   * Retrieves all blockchains.
    */
   public list(params?: BlockchainsListRequestParams): Promise<ApiResponse<NetworkID[]>> {
     return this.httpClient.get<NetworkID[]>('/blockchains', {
@@ -19,7 +19,7 @@ export class BlockchainsApi extends BaseApi {
   }
 
   /**
-   *
+   * Retrieves all blockchain symbols.
    */
   public symbols(params?: BlockchainsSymbolsRequestParams): Promise<ApiResponse<string[]>> {
     return this.httpClient.get<string[]>('/blockchains/symbols', {
