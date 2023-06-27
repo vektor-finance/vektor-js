@@ -86,11 +86,11 @@ export interface VXLGenericParameters {
 
 export interface VXLEvalResult {
   /**
-   * VXL command
+   * VXL statement
    * @type {string}
    * @memberof VXLEvalResult
    */
-  command: string
+  statement: string
   /**
    *
    * @type {VDNOrRuntimeError}
