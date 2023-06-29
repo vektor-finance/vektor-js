@@ -3,7 +3,7 @@ import { VDNGenericType, VDNType } from './vdn'
 import { VDNOrRuntimeError } from './vdn-or-runtime-error'
 
 /**
- * TODO
+ * VXL history entry
  */
 export interface VXLHistoryEntry {
   id: string
@@ -11,6 +11,9 @@ export interface VXLHistoryEntry {
   entry: string
 }
 
+/**
+ * VXL History request parameters
+ */
 export interface VXLHistoryRequestParams {
   /**
    * Maximum number of entries to be returned
@@ -27,7 +30,7 @@ export interface VXLHistoryRequestParams {
 }
 
 /**
- * TODO
+ * Response for VXL history
  */
 export type VXLHistoryResponse = VXLHistoryEntry[]
 
