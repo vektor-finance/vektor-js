@@ -1,4 +1,4 @@
-import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream } from './api'
+import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream, VXLHistoryEntry } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
 
@@ -123,6 +123,21 @@ export interface LocalFunctionCalledEvent {
   payload: LocalFunctionCall
 }
 
+export interface VXLHistoryEntryCreatedEvent {
+  event_name: 'vxl_history_entry_created'
+  payload: VXLHistoryEntry
+}
+
+export interface VXLHistoryEntryDeletedEvent {
+  event_name: 'vxl_history_entry_deleted'
+  payload: Pick<VXLHistoryEntry, 'id'>
+}
+
+export interface VXLHistoryDeletedEvent {
+  event_name: 'vxl_history_deleted'
+  payload: undefined
+}
+
 export type GatewayEvent =
   | LabelCreatedEvent
   | LabelUpdatedEvent
@@ -144,5 +159,8 @@ export type GatewayEvent =
   | AlertDeletedEvent
   | AlertTriggeredEvent
   | LocalFunctionCalledEvent
+  | VXLHistoryEntryCreatedEvent
+  | VXLHistoryEntryDeletedEvent
+  | VXLHistoryDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']

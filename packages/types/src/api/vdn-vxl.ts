@@ -1,4 +1,5 @@
 import { VDNBase } from './vdn-base'
+
 /**
  * VXL code representation
  * @export

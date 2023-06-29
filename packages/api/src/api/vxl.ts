@@ -1,4 +1,6 @@
 import type {
+  VXLHistoryRequestParams,
+  VXLHistoryResponse,
   VXLSubmitRequest,
   VXLSubmitResponse,
   VXLValidateRequest,
@@ -24,5 +26,12 @@ export class VxlApi extends BaseApi {
    */
   public validate(payload: VXLValidateRequest): Promise<ApiResponse<VXLValidateResponse>> {
     return this.httpClient.post<VXLValidateResponse>('/vxl/validate', payload)
+  }
+
+  /**
+   * Returns VXL entries history.
+   */
+  public history(params?: VXLHistoryRequestParams): Promise<ApiResponse<VXLHistoryResponse>> {
+    return this.httpClient.get<VXLHistoryResponse>('/vxl/history', { params })
   }
 }
