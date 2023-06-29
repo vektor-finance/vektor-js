@@ -129,12 +129,12 @@ export interface VXLHistoryEntryCreatedEvent {
 }
 
 export interface VXLHistoryEntryDeletedEvent {
-  event_name: 'vxl_history_entry_deleted',
+  event_name: 'vxl_history_entry_deleted'
   payload: Pick<VXLHistoryEntry, 'id'>
 }
 
 export interface VXLHistoryDeletedEvent {
-  event_name: 'vxl_history_deleted',
+  event_name: 'vxl_history_deleted'
   payload: never // TODO
 }
 
