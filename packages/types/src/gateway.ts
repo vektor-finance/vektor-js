@@ -135,7 +135,7 @@ export interface VXLHistoryEntryDeletedEvent {
 
 export interface VXLHistoryDeletedEvent {
   event_name: 'vxl_history_deleted'
-  payload: never // TODO
+  payload: undefined
 }
 
 export type GatewayEvent =
