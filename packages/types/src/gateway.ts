@@ -79,5 +79,8 @@ export type GatewayEvent =
   | AlertDeletedEvent
   | AlertTriggeredEvent
   | LocalFunctionCalledEvent
+  | VXLHistoryEntryCreatedEvent
+  | VXLHistoryEntryDeletedEvent
+  | VXLHistoryDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
