@@ -2,141 +2,61 @@ import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream, VXLHi
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
 
+type GatewayBaseEvent<EventName extends Lowercase<string>, Payload> = {
+  event_name: EventName
+  payload: Payload
+}
+
 // Label
-
-export interface LabelCreatedEvent {
-  event_name: 'label_created'
-  payload: Label
-}
-
-export interface LabelUpdatedEvent {
-  event_name: 'label_updated'
-  payload: Label
-}
-
-export interface LabelDeletedEvent {
-  event_name: 'label_deleted'
-  payload: Pick<Label, 'id'>
-}
+export type LabelCreatedEvent = GatewayBaseEvent<'label_created', Label>
+export type LabelUpdatedEvent = GatewayBaseEvent<'label_updated', Label>
+export type LabelDeletedEvent = GatewayBaseEvent<'label_deleted', Pick<Label, 'id'>>
 
 // Sessions
-
-export interface SessionCreatedEvent {
-  event_name: 'session_created'
-  payload: Session
-}
-
-export interface SessionUpdatedEvent {
-  event_name: 'session_updated'
-  payload: Session
-}
-
-export interface SessionDeletedEvent {
-  event_name: 'session_deleted'
-  payload: Pick<Session, 'id'>
-}
+export type SessionCreatedEvent = GatewayBaseEvent<'session_created', Session>
+export type SessionUpdatedEvent = GatewayBaseEvent<'session_updated', Session>
+export type SessionDeletedEvent = GatewayBaseEvent<'session_deleted', Pick<Session, 'id'>>
 
 // Signing
-
-export interface SigningRequestCreatedEvent {
-  event_name: 'signing_request_created'
-  payload: SigningRequests
-}
-
-export interface SigningRequestCompletedEvent {
-  event_name: 'signing_request_completed'
-  payload: SigningRequestCompleted
-}
+export type SigningRequestCreatedEvent = GatewayBaseEvent<'signing_request_created', SigningRequests>
+export type SigningRequestCompletedEvent = GatewayBaseEvent<'signing_request_completed', SigningRequestCompleted>
 
 // Transaction
-
 export interface TransactionBroadcasted {
   id: string
   transaction_hash: string
   explorer_url: string
   network_id: NetworkID
 }
-
-export interface TransactionBroadcastedEvent {
-  event_name: 'transaction_broadcasted'
-  payload: TransactionBroadcasted
-}
+export type TransactionBroadcastedEvent = GatewayBaseEvent<'transaction_broadcasted', TransactionBroadcasted>
 
 // Tasks
-
-export interface TaskCompletedEvent {
-  event_name: 'task_completed'
-  payload: TaskState
-}
+export type TaskCompletedEvent = GatewayBaseEvent<'task_completed', TaskState>
 
 // Streams
-
-export interface StreamCreatedEvent {
-  event_name: 'stream_created'
-  payload: Pick<Stream, 'id' | 'created_at' | 'updated_at' | 'vxl'>
-}
-
-export interface StreamUpdatedEvent {
-  event_name: 'stream_updated'
-  payload: Stream & NonNullable<Pick<Stream, 'last_value'>>
-}
-
-export interface StreamPausedEvent {
-  event_name: 'stream_paused'
-  payload: Pick<Stream, 'id'>
-}
-
-export interface StreamResumedEvent {
-  event_name: 'stream_resumed'
-  payload: Pick<Stream, 'id'>
-}
-
-export interface StreamDeletedEvent {
-  event_name: 'stream_deleted'
-  payload: Required<Pick<Stream, 'id' | 'reason'>> & Pick<Stream, 'error'>
-}
+export type StreamCreatedEvent = GatewayBaseEvent<
+  'stream_created',
+  Pick<Stream, 'id' | 'created_at' | 'updated_at' | 'vxl'>
+>
+export type StreamUpdatedEvent = GatewayBaseEvent<'stream_updated', Stream & NonNullable<Pick<Stream, 'last_value'>>>
+export type StreamPausedEvent = GatewayBaseEvent<'stream_paused', Pick<Stream, 'id'>>
+export type StreamResumedEvent = GatewayBaseEvent<'stream_resumed', Pick<Stream, 'id'>>
+export type StreamDeletedEvent = GatewayBaseEvent<
+  'stream_deleted',
+  Required<Pick<Stream, 'id' | 'reason'>> & Pick<Stream, 'error'>
+>
 
 // Alerts
+export type AlertCreatedEvent = GatewayBaseEvent<'alert_created', Alert>
+export type AlertUpdatedEvent = GatewayBaseEvent<'alert_created', Alert>
+export type AlertDeletedEvent = GatewayBaseEvent<'alert_created', Pick<Alert, 'id'>>
+export type AlertTriggeredEvent = GatewayBaseEvent<'alert_created', Alert>
+export type LocalFunctionCalledEvent = GatewayBaseEvent<'local_function_called', LocalFunctionCall>
 
-export interface AlertCreatedEvent {
-  event_name: 'alert_created'
-  payload: Alert
-}
-
-export interface AlertUpdatedEvent {
-  event_name: 'alert_created'
-  payload: Alert
-}
-
-export interface AlertDeletedEvent {
-  event_name: 'alert_created'
-  payload: Pick<Alert, 'id'>
-}
-
-export interface AlertTriggeredEvent {
-  event_name: 'alert_created'
-  payload: Alert
-}
-
-export interface LocalFunctionCalledEvent {
-  event_name: 'local_function_called'
-  payload: LocalFunctionCall
-}
-
-export interface VXLHistoryEntryCreatedEvent {
-  event_name: 'vxl_history_entry_created'
-  payload: VXLHistoryEntry
-}
-
-export interface VXLHistoryEntryDeletedEvent {
-  event_name: 'vxl_history_entry_deleted'
-  payload: Pick<VXLHistoryEntry, 'id'>
-}
-
-export interface VXLHistoryDeletedEvent {
-  event_name: 'vxl_history_deleted'
-  payload: undefined
-}
+// History
+export type VXLHistoryEntryCreatedEvent = GatewayBaseEvent<'vxl_history_entry_created', VXLHistoryEntry>
+export type VXLHistoryEntryDeletedEvent = GatewayBaseEvent<'vxl_history_entry_deleted', Pick<VXLHistoryEntry, 'id'>>
+export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', undefined>
 
 export type GatewayEvent =
   | LabelCreatedEvent
@@ -159,8 +79,5 @@ export type GatewayEvent =
   | AlertDeletedEvent
   | AlertTriggeredEvent
   | LocalFunctionCalledEvent
-  | VXLHistoryEntryCreatedEvent
-  | VXLHistoryEntryDeletedEvent
-  | VXLHistoryDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
