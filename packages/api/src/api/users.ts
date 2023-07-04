@@ -1,4 +1,4 @@
-import type { LoginRequest, LoginResponse, ResetPasswordRequest } from '@vektor-finance/types'
+import type { LoginRequest, LoginResponse, ResetPasswordRequest, UserSettings } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
@@ -26,5 +26,19 @@ export class UsersApi extends BaseApi {
    */
   public resetPassword(payload: ResetPasswordRequest): Promise<ApiResponse<void>> {
     return this.httpClient.post<void>('/users/reset_password', payload)
+  }
+
+  /**
+   * Retrieves a user's settings
+   */
+  public getSettings(): Promise<ApiResponse<UserSettings>> {
+    return this.httpClient.get<UserSettings>('/users/settings')
+  }
+
+  /**
+   * Updates a user's settings
+   */
+  public updateSettings(payload: Partial<UserSettings>): Promise<ApiResponse<UserSettings>> {
+    return this.httpClient.patch<UserSettings>('/users/settings', payload)
   }
 }
