@@ -69,4 +69,3 @@ export * from './vdn-vxl-history-event'
 export * from './venue'
 export * from './vxl'
 export * from './user'
-
