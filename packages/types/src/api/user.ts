@@ -1,3 +1,5 @@
+import type { RecursivePartial } from '@vektor-finance/utils'
+
 /**
  * User display settings
  * @export
@@ -64,3 +66,5 @@ export interface UserSettings {
    */
   autocomplete: UserAutocompleteSettings
 }
+
+export type UserSettingsUpdateRequest = RecursivePartial<UserSettings>

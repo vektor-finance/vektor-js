@@ -41,7 +41,7 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "@vektor-finance/eslint-config-sdk": "^0.32.3-alpha.0",
+    "@vektor-finance/eslint-config-sdk": "^0.32.4-alpha.0",
     "@vektor-finance/types": "^0.32.4-alpha.0"
   },
   "devDependencies": {
