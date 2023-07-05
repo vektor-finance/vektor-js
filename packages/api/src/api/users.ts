@@ -4,7 +4,7 @@ import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
 
 /**
- *
+ * User auth and settings endpoint
  */
 export class UsersApi extends BaseApi {
   /**
@@ -38,7 +38,7 @@ export class UsersApi extends BaseApi {
   /**
    * Updates a user's settings
    */
-  public updateSettings(payload: UserSettingsUpdateRequest): Promise<ApiResponse<UserSettings>> {
+  public updateSettings(payload: UserSettingsUpdateRequest): Promise<ApiResponse<UserSettingsUpdateRequest>> {
     return this.httpClient.patch<UserSettings>('/users/settings', payload)
   }
 }

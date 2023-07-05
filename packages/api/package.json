@@ -39,14 +39,14 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "@vektor-finance/utils": "^0.32.4-alpha.0"
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "@types/eslint": "7.28.0",
     "@types/node": "^12.11.5",
     "@vektor-finance/eslint-config-sdk": "^0.32.4-alpha.0",
     "@vektor-finance/types": "^0.32.4-alpha.0",
+    "@vektor-finance/utils": "^0.32.4-alpha.0",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
     "karma": "^6.4.1",
