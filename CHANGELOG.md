@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.32.2](https://github.com/vektor-finance/vektor-js/compare/v0.32.1...v0.32.2) (2023-07-05)
+
+
+### Bug Fixes
+
+* stream update should be patch not put ([#84](https://github.com/vektor-finance/vektor-js/issues/84)) ([368f1c7](https://github.com/vektor-finance/vektor-js/commit/368f1c79e3404695128c3ec10ca7fb6f19ffc466))
+
+
+
 ### [0.32.1](https://github.com/vektor-finance/vektor-js/compare/v0.32.0...v0.32.1) (2023-07-03)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
