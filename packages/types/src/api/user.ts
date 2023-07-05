@@ -17,11 +17,11 @@ export interface UserDisplaySettings {
    */
   show_icons: boolean
   /**
-   * If TRUE, data is formatted
+   * If TRUE, data is unformatted
    * @type {boolean}
    * @memberof UserDisplaySettings
    */
-  show_formatted_data: boolean
+  show_unformatted_data: boolean
   /**
    * If TRUE, sensitive fields will not be obfuscated e.g. balances
    * @type {boolean}
