@@ -1,4 +1,11 @@
-import type { LoginRequest, LoginResponse, ResetPasswordRequest, UserSettings, UserSettingsUpdateRequest, UserSettingsUpdateResponse } from '@vektor-finance/types'
+import type {
+  LoginRequest,
+  LoginResponse,
+  ResetPasswordRequest,
+  UserSettings,
+  UserSettingsUpdateRequest,
+  UserSettingsUpdateResponse,
+} from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
