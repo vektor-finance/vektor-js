@@ -39,6 +39,6 @@ export class StreamsApi extends BaseApi {
    * Updates a stream with the specified ID.
    */
   public update(streamId: string, payload: StreamPatchParams): Promise<ApiResponse<void>> {
-    return this.httpClient.put<void>(`/streams/${streamId}`, payload)
+    return this.httpClient.patch<void>(`/streams/${streamId}`, payload)
   }
 }
