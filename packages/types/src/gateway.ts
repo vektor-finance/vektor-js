@@ -1,4 +1,4 @@
-import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream, VXLHistoryEntry } from './api'
+import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream, UserSettings, VXLHistoryEntry } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
 
@@ -58,29 +58,33 @@ export type VXLHistoryEntryCreatedEvent = GatewayBaseEvent<'vxl_history_entry_cr
 export type VXLHistoryEntryDeletedEvent = GatewayBaseEvent<'vxl_history_entry_deleted', Pick<VXLHistoryEntry, 'id'>>
 export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', undefined>
 
+// User Settings
+export type UserSettingsUpdatedEvent = GatewayBaseEvent<'user_settings_updated', UserSettings>
+
 export type GatewayEvent =
   | LabelCreatedEvent
-  | LabelUpdatedEvent
-  | LabelDeletedEvent
-  | SigningRequestCreatedEvent
-  | SigningRequestCompletedEvent
-  | TransactionBroadcastedEvent
-  | TaskCompletedEvent
-  | SessionCreatedEvent
-  | SessionUpdatedEvent
-  | SessionDeletedEvent
-  | StreamCreatedEvent
-  | StreamUpdatedEvent
-  | StreamPausedEvent
-  | StreamResumedEvent
-  | StreamDeletedEvent
   | AlertCreatedEvent
-  | AlertUpdatedEvent
   | AlertDeletedEvent
   | AlertTriggeredEvent
+  | AlertUpdatedEvent
+  | LabelDeletedEvent
+  | LabelUpdatedEvent
   | LocalFunctionCalledEvent
+  | SessionCreatedEvent
+  | SessionDeletedEvent
+  | SessionUpdatedEvent
+  | SigningRequestCompletedEvent
+  | SigningRequestCreatedEvent
+  | StreamCreatedEvent
+  | StreamDeletedEvent
+  | StreamPausedEvent
+  | StreamResumedEvent
+  | StreamUpdatedEvent
+  | TaskCompletedEvent
+  | TransactionBroadcastedEvent
+  | UserSettingsUpdatedEvent
+  | VXLHistoryDeletedEvent
   | VXLHistoryEntryCreatedEvent
   | VXLHistoryEntryDeletedEvent
-  | VXLHistoryDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
