@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.33.0](https://github.com/vektor-finance/vektor-js/compare/v0.32.2...v0.33.0) (2023-07-06)
+
+
+### Features
+
+* user settings API endpoint + types ([#83](https://github.com/vektor-finance/vektor-js/issues/83)) ([105a0ac](https://github.com/vektor-finance/vektor-js/commit/105a0ace1692af600bff205799e58cabfaf9e879))
+
+
+
 ### [0.32.2](https://github.com/vektor-finance/vektor-js/compare/v0.32.1...v0.32.2) (2023-07-05)
 
 
