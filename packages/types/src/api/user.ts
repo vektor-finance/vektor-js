@@ -68,4 +68,4 @@ export interface UserSettings {
 }
 
 export type UserSettingsUpdateRequest = RecursivePartial<UserSettings>
-export type UserSettingsUpdateResponse = RecursivePartial<UserSettings>
+export type UserSettingsUpdateResponse = UserSettings
