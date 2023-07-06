@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/utils",
-  "version": "0.32.10-alpha.0",
+  "version": "0.32.2",
   "description": "Utilities for all Vektor JavaScript SDKs",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/utils",
   "repository": "git://github.com/vektor-finance/vektor-js.git",

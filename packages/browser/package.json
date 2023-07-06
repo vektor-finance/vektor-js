@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/browser",
-  "version": "0.32.10-alpha.0",
+  "version": "0.32.2",
   "description": "Official Vektor SDK for browsers",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/browser",
   "repository": "git://github.com/vektor-finance/vektor-js.git",

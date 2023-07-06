@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/node",
-  "version": "0.32.10-alpha.0",
+  "version": "0.32.2",
   "description": "Official Vektor SDK for Node.js",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/node",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
