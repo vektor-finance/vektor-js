@@ -184,7 +184,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [10, 12, 14, 16, 17]
+        node: [14, 16, 17, 18, 19, 20]
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
