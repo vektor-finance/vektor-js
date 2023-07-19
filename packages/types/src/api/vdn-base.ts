@@ -18,5 +18,5 @@ export interface VDNBase {
    * @type {VXLAction}
    * @memberof VDNBase
    */
-  actions?: VXLAction[]
+  actions: VXLAction[]
 }
