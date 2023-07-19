@@ -1,6 +1,6 @@
 import { VDN } from './vdn'
 import { VDNBase } from './vdn-base'
-import { VXLListType } from './vxl'
+import { VXLAction, VXLListType } from './vxl'
 
 /**
  * VDN list representation
@@ -8,6 +8,24 @@ import { VXLListType } from './vxl'
  * @interface VDNList
  */
 export interface VDNList extends VDNBase {
+  /**
+   *
+   * @type {VXLListType}
+   * @memberof VDNList
+   */
   type: VXLListType
+
+  /**
+   *
+   * @type {VDN}
+   * @memberof VDNList
+   */
   value: VDN[]
+
+  /**
+   *
+   * @type {VXLAction[]}
+   * @memberof VDNList
+   */
+  actions: VXLAction[]
 }
