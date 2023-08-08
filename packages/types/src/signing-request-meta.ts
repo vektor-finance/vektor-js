@@ -287,6 +287,7 @@ export interface IncentivizeRequestMeta extends MetaBase {
   amount: string
   from: AccountID
   pool_info: LPPoolInfo
+  pool_venue: Venue
 }
 
 export type SigningRequestMeta =
