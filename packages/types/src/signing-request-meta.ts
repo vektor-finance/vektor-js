@@ -280,6 +280,15 @@ export interface CollateralRequestMeta extends MetaBase {
   action: 'enable' | 'disable'
 }
 
+export interface IncentivizeRequestMeta extends MetaBase {
+  request_type: 'incentivize_request'
+  venue: Venue
+  asset: Asset
+  amount: string
+  from: AccountID
+  pool_info: LPPoolInfo
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BorrowRepayRequestMeta
@@ -296,5 +305,6 @@ export type SigningRequestMeta =
   | SplitRequestMeta
   | WrapRequestMeta
   | CollateralRequestMeta
+  | IncentivizeRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']
