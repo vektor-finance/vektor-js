@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/typescript",
-  "version": "0.33.4",
+  "version": "0.33.5-0.33.5-alpha.1.0",
   "description": "Typescript configuration in Vektor",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/typescript",
