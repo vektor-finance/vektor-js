@@ -70,4 +70,3 @@ export * from './vdn-vxl'
 export * from './vdn-vxl-history-event'
 export * from './venue'
 export * from './vxl'
-
