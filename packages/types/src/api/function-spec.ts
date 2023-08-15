@@ -30,6 +30,16 @@ export interface FunctionSpec {
    * @memberof FunctionSpec
    */
   name: string
-
+  /**
+   * Should use full name in UI?
+   * @type {boolean}
+   * @memberof FunctionSpec
+   */
+  use_full_name: boolean
+  /**
+   * Subfunctions
+   * @type {Array<SubfunctionSpec>}
+   * @memberof FunctionSpec
+   */
   subfunctions: SubfunctionSpec[]
 }
