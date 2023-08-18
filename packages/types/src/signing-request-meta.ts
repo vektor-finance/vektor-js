@@ -117,13 +117,19 @@ export interface CurveTradeInfo {
   pool_address: string
 }
 
+export interface SolidlyTradeInfo {
+  venue: string
+  venue_type: 'solidly'
+  path: Asset[]
+}
+
 export interface DexAggregatorTradeInfo {
   venue: string
   venue_type: 'dex_aggregator'
   route: string[]
 }
 
-export type TradeInfo = UniswapV2TradeInfo | UniswapV3TradeInfo | CurveTradeInfo | DexAggregatorTradeInfo
+export type TradeInfo = UniswapV2TradeInfo | UniswapV3TradeInfo | CurveTradeInfo | SolidlyTradeInfo | DexAggregatorTradeInfo
 export type VenueType = TradeInfo['venue_type']
 
 export interface BuyRequestMeta extends MetaBase {
