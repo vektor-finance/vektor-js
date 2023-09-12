@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.33.13](https://github.com/vektor-finance/vektor-js/compare/v0.33.12...v0.33.13) (2023-09-12)
+
+**Note:** Version bump only for package @vektor-finance/gateway
+
+
+
+
+
 ### [0.33.12](https://github.com/vektor-finance/vektor-js/compare/v0.33.11...v0.33.12) (2023-08-18)
 
 **Note:** Version bump only for package @vektor-finance/gateway
