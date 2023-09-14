@@ -301,6 +301,15 @@ export interface IncentivizeRequestMeta extends MetaBase {
   pool_venue: Venue
 }
 
+export interface LockRequestMeta extends MetaBase {
+  request_type: 'lock_request'
+  venue: Venue
+  asset: Asset
+  amount: string
+  from: AccountID
+  unlock_at: string
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BorrowRepayRequestMeta
@@ -318,5 +327,6 @@ export type SigningRequestMeta =
   | WrapRequestMeta
   | CollateralRequestMeta
   | IncentivizeRequestMeta
+  | LockRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']
