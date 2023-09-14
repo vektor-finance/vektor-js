@@ -4,18 +4,22 @@ export interface FieldDisplayNumberFormat {
 }
 
 export const isFieldDisplayNumberFormat = (
-  format: FieldDisplayNumberFormat | FieldDisplayStringFormat,
+  format: FieldDisplayNumberFormat | FieldDisplayStringFormat | FieldDisplayDateTimeFormat,
 ): format is FieldDisplayNumberFormat => 'style' in format
 
 export interface FieldDisplayStringFormat {
   type: 'default' | 'url'
 }
 
+export interface FieldDisplayDateTimeFormat {
+  type: 'default' | 'relative'
+}
+
 export interface FieldDisplay {
   hidden: boolean
   sensitive: boolean
   flex: string
-  format: FieldDisplayNumberFormat | FieldDisplayStringFormat | null
+  format: FieldDisplayNumberFormat | FieldDisplayStringFormat | FieldDisplayDateTimeFormat | null
   image_uri_prefix: string | null
 }
 
