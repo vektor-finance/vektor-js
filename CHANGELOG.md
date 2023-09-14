@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.0](https://github.com/vektor-finance/vektor-js/compare/v0.33.13...v0.34.0) (2023-09-14)
+
+
+### Features
+
+* **types:** add type actions endpoint ([#96](https://github.com/vektor-finance/vektor-js/issues/96)) ([b431ed5](https://github.com/vektor-finance/vektor-js/commit/b431ed5111779e0ca95bbfdc77b0359538dec4c7))
+
+
+
 ### [0.33.13](https://github.com/vektor-finance/vektor-js/compare/v0.33.12...v0.33.13) (2023-09-12)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
