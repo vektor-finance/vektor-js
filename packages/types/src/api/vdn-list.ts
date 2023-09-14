@@ -1,6 +1,7 @@
+import { VXLAction } from './actions'
 import { VDN } from './vdn'
 import { VDNBase } from './vdn-base'
-import { VXLAction, VXLListType } from './vxl'
+import { VXLListType } from './vxl'
 
 /**
  * VDN list representation

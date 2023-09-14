@@ -129,7 +129,12 @@ export interface DexAggregatorTradeInfo {
   route: string[]
 }
 
-export type TradeInfo = UniswapV2TradeInfo | UniswapV3TradeInfo | CurveTradeInfo | SolidlyTradeInfo | DexAggregatorTradeInfo
+export type TradeInfo =
+  | UniswapV2TradeInfo
+  | UniswapV3TradeInfo
+  | CurveTradeInfo
+  | SolidlyTradeInfo
+  | DexAggregatorTradeInfo
 export type VenueType = TradeInfo['venue_type']
 
 export interface BuyRequestMeta extends MetaBase {
