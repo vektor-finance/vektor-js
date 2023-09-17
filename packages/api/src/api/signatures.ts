@@ -10,7 +10,7 @@ export class SignaturesApi extends BaseApi {
   /**
    * Submits a signature or a transaction hash.
    */
-  public submit(signatureId: string, payload: SignatureOrTransactionHash[]): Promise<ApiResponse<void>> {
-    return this.httpClient.post<void>(`/signatures/submit/${signatureId}`, payload)
+  public submit(id: string, payload: SignatureOrTransactionHash[]): Promise<ApiResponse<void>> {
+    return this.httpClient.post<void>(`/signatures/submit/${id}`, payload)
   }
 }
