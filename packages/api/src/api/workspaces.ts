@@ -62,6 +62,13 @@ export class WorkspacesApi extends BaseApi {
     return this.httpClient.delete(`/workspaces/${id}`)
   }
 
+  //   /**
+  //    * Retrieves all Workspace symbols.
+  //    */
+  //   public symbols(): Promise<ApiResponse<string[]>> {
+  //     return this.httpClient.get('/workspaces/symbols')
+  //   }
+
   // Panes
 
   /**
