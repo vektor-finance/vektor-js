@@ -1,4 +1,5 @@
 import type {
+  Pane,
   Workspace,
   WorkspaceCreateRequest,
   WorkspacesListRequestParams,
@@ -61,6 +62,13 @@ export class WorkspacesApi extends BaseApi {
   }
 
   // Panes
+
+  /**
+   * Retrieves a Pane with the specified ID.
+   */
+  public getPane(id: string): Promise<ApiResponse<Pane>> {
+    return this.httpClient.get<Pane>(`/workspaces/pane/${id}`)
+  }
 
   /**
    * Deletes a Pane with the specified ID.
