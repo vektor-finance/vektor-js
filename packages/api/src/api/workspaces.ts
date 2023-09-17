@@ -44,8 +44,8 @@ export class WorkspacesApi extends BaseApi {
   /**
    * Deletes a Workspace with the specified ID.
    */
-  public delete(workspaceId: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete<void>(`/workspaces/${workspaceId}`)
+  public delete(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.delete<void>(`/workspaces/${id}`)
   }
 
   // Panes
@@ -53,7 +53,7 @@ export class WorkspacesApi extends BaseApi {
   /**
    * Deletes a Pane with the specified ID.
    */
-  public deletePane(paneId: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete<void>(`/workspaces/pane/${paneId}`)
+  public deletePane(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.delete<void>(`/workspaces/pane/${id}`)
   }
 }

@@ -10,8 +10,8 @@ export class LabelsApi extends BaseApi {
   /**
    * Deletes a Label with the specified ID.
    */
-  public delete(labelId: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete<void>(`/labels/${labelId}`)
+  public delete(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.delete<void>(`/labels/${id}`)
   }
 
   /**
@@ -24,8 +24,8 @@ export class LabelsApi extends BaseApi {
   /**
    * Retrieves a Label with the specified ID.
    */
-  public get(labelId: string): Promise<ApiResponse<Label>> {
-    return this.httpClient.get<Label>(`/labels/${labelId}`)
+  public get(id: string): Promise<ApiResponse<Label>> {
+    return this.httpClient.get<Label>(`/labels/${id}`)
   }
 
   /**
@@ -42,14 +42,14 @@ export class LabelsApi extends BaseApi {
   /**
    * Updates a Label with the specified ID.
    */
-  public update(labelId: string, payload: LabelUpdateRequest): Promise<ApiResponse<Label>> {
-    return this.httpClient.put<Label>(`/labels/${labelId}`, payload)
+  public update(id: string, payload: LabelUpdateRequest): Promise<ApiResponse<Label>> {
+    return this.httpClient.put<Label>(`/labels/${id}`, payload)
   }
 
   /**
    * Updates a Label partially with the specified ID.
    */
-  public updatePartial(labelId: string, payload: LabelUpdateRequest): Promise<ApiResponse<Label>> {
-    return this.httpClient.patch<Label>(`/labels/${labelId}`, payload)
+  public updatePartial(id: string, payload: LabelUpdateRequest): Promise<ApiResponse<Label>> {
+    return this.httpClient.patch<Label>(`/labels/${id}`, payload)
   }
 }
