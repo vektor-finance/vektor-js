@@ -1,3 +1,5 @@
+import type { Workspace, WorkspaceCreateRequest } from '@vektor-finance/types'
+
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
 
@@ -6,6 +8,13 @@ import type { ApiResponse } from '../types'
  */
 export class WorkspacesApi extends BaseApi {
   // Workspaces
+
+  /**
+   * Creates a new Workspace.
+   */
+  public create(payload: WorkspaceCreateRequest): Promise<ApiResponse<Workspace>> {
+    return this.httpClient.post<Workspace>('/workspaces/new', payload)
+  }
 
   /**
    * Deletes a Workspace with the specified ID.

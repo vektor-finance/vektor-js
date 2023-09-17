@@ -10,3 +10,5 @@ export interface Workspace {
   panes: Pane[] | null
   open: boolean
 }
+
+export type WorkspaceCreateRequest = Partial<Pick<Workspace, 'name' | 'network_mode' | 'open'>>
