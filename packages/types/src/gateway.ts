@@ -1,4 +1,4 @@
-import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream, UserSettings, VXLHistoryEntry } from './api'
+import type { Alert, Label, LocalFunctionCall, NetworkID, Session, Stream, UserSettings, VXLHistoryEntry, Workspace } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
 
@@ -61,6 +61,13 @@ export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', und
 // User Settings
 export type UserSettingsUpdatedEvent = GatewayBaseEvent<'user_settings_updated', UserSettings>
 
+// Workspaces
+
+export type WorkspaceCreatedEvent = GatewayBaseEvent<'workspace_created', Workspace>
+export type WorkspaceOpenedEvent = GatewayBaseEvent<'workspace_opened', Workspace>
+export type WorkspaceUpdatedEvent = GatewayBaseEvent<'workspace_updated', Workspace>
+export type WorkspaceDeletedEvent = GatewayBaseEvent<'workspace_deleted', Pick<Workspace, 'id'>>
+
 export type GatewayEvent =
   | LabelCreatedEvent
   | AlertCreatedEvent
@@ -86,5 +93,9 @@ export type GatewayEvent =
   | VXLHistoryDeletedEvent
   | VXLHistoryEntryCreatedEvent
   | VXLHistoryEntryDeletedEvent
+  | WorkspaceCreatedEvent
+  | WorkspaceOpenedEvent
+  | WorkspaceUpdatedEvent
+  | WorkspaceDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
