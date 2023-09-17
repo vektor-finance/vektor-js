@@ -30,7 +30,7 @@ export type PaneContentType = 'vdn' | 'local_function' | 'error'
 export interface Pane {
   id: string
   workspace_id: string
-  index: string
+  index: number
   last_updated_at: string
   title: string
   source: PaneSource
