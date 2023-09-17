@@ -1,34 +1,9 @@
 import { RuntimeError, RuntimeSignatureMismatchError } from './error'
+import { Pagination } from './pagination'
 import { VDN } from './vdn'
 import { VDNError } from './vdn-error'
 
 export type StreamState = 'running' | 'paused'
-
-/**
- * Object grouping pagination parameters.
- * @export
- * @interface StreamPagination
- */
-export interface StreamPagination {
-  /**
-   * Maximum number of entries to be returned (max = 250)
-   * @type {number}
-   * @memberof StreamPagination
-   */
-  limit: number
-  /**
-   * Initial position from which to take entries (0-indexed).
-   * @type {number}
-   * @memberof StreamPagination
-   */
-  offset: number
-  /**
-   * The total number of entries the list holds.
-   * @type {number}
-   * @memberof StreamPagination
-   */
-  total_count: number | null
-}
 
 export type StreamError = RuntimeError | RuntimeSignatureMismatchError | VDNError
 
@@ -67,10 +42,10 @@ export interface Stream {
   last_value_updated_at: string
   /**
    *
-   * @type {StreamPagination}
+   * @type {Pagination}
    * @memberof Stream
    */
-  pagination: StreamPagination | null
+  pagination: Pagination | null
   /**
    *
    * @type {StreamClosureReason}
