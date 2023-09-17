@@ -12,3 +12,7 @@ export interface Workspace {
 }
 
 export type WorkspaceCreateRequest = Partial<Pick<Workspace, 'name' | 'network_mode' | 'open'>>
+
+export interface WorkspacesListRequestParams {
+  networkMode?: NetworkMode
+}

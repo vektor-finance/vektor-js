@@ -1,4 +1,4 @@
-import type { Workspace, WorkspaceCreateRequest } from '@vektor-finance/types'
+import type { Workspace, WorkspaceCreateRequest, WorkspacesListRequestParams } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
@@ -14,6 +14,31 @@ export class WorkspacesApi extends BaseApi {
    */
   public create(payload: WorkspaceCreateRequest): Promise<ApiResponse<Workspace>> {
     return this.httpClient.post<Workspace>('/workspaces/new', payload)
+  }
+
+  /**
+   * Retrieves a Workspace with the specified ID.
+   */
+  public get(id: string): Promise<ApiResponse<Workspace>> {
+    return this.httpClient.get<Workspace>(`/workspaces/${id}`)
+  }
+
+  /**
+   * Retrieves all Workspaces.
+   */
+  public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<Workspace[]>> {
+    return this.httpClient.get<Workspace[]>('/workspaces', {
+      params: {
+        network_mode: params?.networkMode, // TODO: Remove this?
+      },
+    })
+  }
+
+  /**
+   * Opens a Workspace.
+   */
+  public open(id: string): Promise<ApiResponse<Workspace>> {
+    return this.httpClient.post<Workspace>(`/workspaces/${id}/open`)
   }
 
   /**
