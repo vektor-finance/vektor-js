@@ -8,37 +8,37 @@ import type { ApiResponse } from '../types'
  */
 export class StreamsApi extends BaseApi {
   /**
-   * Deletes a stream with the specified ID.
+   * Deletes a Stream with the specified ID.
    */
   public delete(streamId: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete<void>(`/streams/${streamId}`)
+    return this.httpClient.delete(`/streams/${streamId}`)
   }
 
   /**
-   * Deletes all streams.
+   * Deletes all Streams.
    */
   public deleteAll(): Promise<ApiResponse<void>> {
     return this.httpClient.delete<void>(`/streams`)
   }
 
   /**
-   * Retrieves a stream with the specified ID.
+   * Retrieves a Stream with the specified ID.
    */
   public get(streamId: string): Promise<ApiResponse<Stream>> {
-    return this.httpClient.get<Stream>(`/streams/${streamId}`)
+    return this.httpClient.get(`/streams/${streamId}`)
   }
 
   /**
-   * Retrieves all streams.
+   * Retrieves all Streams.
    */
   public list(): Promise<ApiResponse<Stream[]>> {
-    return this.httpClient.get<Stream[]>(`/streams`)
+    return this.httpClient.get(`/streams`)
   }
 
   /**
-   * Updates a stream with the specified ID.
+   * Updates a Stream with the specified ID.
    */
   public update(streamId: string, payload: StreamPatchParams): Promise<ApiResponse<void>> {
-    return this.httpClient.patch<void>(`/streams/${streamId}`, payload)
+    return this.httpClient.patch(`/streams/${streamId}`, payload)
   }
 }

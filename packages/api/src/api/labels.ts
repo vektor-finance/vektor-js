@@ -18,21 +18,21 @@ export class LabelsApi extends BaseApi {
    * Creates a new Label.
    */
   public create(payload: LabelCreateRequest): Promise<ApiResponse<Label>> {
-    return this.httpClient.post<Label>('/labels', payload)
+    return this.httpClient.post('/labels', payload)
   }
 
   /**
    * Retrieves a Label with the specified ID.
    */
   public get(id: string): Promise<ApiResponse<Label>> {
-    return this.httpClient.get<Label>(`/labels/${id}`)
+    return this.httpClient.get(`/labels/${id}`)
   }
 
   /**
    * Retrieves all Labels.
    */
   public list(params?: LabelsListRequestParams): Promise<ApiResponse<Label[]>> {
-    return this.httpClient.get<Label[]>('/labels', {
+    return this.httpClient.get('/labels', {
       params: {
         network_mode: params?.networkMode,
       },
@@ -43,13 +43,13 @@ export class LabelsApi extends BaseApi {
    * Updates a Label with the specified ID.
    */
   public update(id: string, payload: LabelUpdateRequest): Promise<ApiResponse<Label>> {
-    return this.httpClient.put<Label>(`/labels/${id}`, payload)
+    return this.httpClient.put(`/labels/${id}`, payload)
   }
 
   /**
    * Updates a Label partially with the specified ID.
    */
   public updatePartial(id: string, payload: LabelUpdateRequest): Promise<ApiResponse<Label>> {
-    return this.httpClient.patch<Label>(`/labels/${id}`, payload)
+    return this.httpClient.patch(`/labels/${id}`, payload)
   }
 }

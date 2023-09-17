@@ -8,30 +8,30 @@ import type { ApiResponse } from '../types'
  */
 export class AlertsApi extends BaseApi {
   /**
-   * Deletes an alert with the specified ID.
+   * Deletes an Alert with the specified ID.
    */
   public delete(alertId: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete<void>(`/alerts/${alertId}`)
+    return this.httpClient.delete(`/alerts/${alertId}`)
   }
 
   /**
-   * Deletes all alerts.
+   * Deletes all Alerts.
    */
   public deleteAll(): Promise<ApiResponse<void>> {
-    return this.httpClient.delete<void>(`/alerts`)
+    return this.httpClient.delete(`/alerts`)
   }
 
   /**
-   * Retrieves an alert with the specified ID.
+   * Retrieves an Alert with the specified ID.
    */
   public get(alertId: string): Promise<ApiResponse<Alert>> {
-    return this.httpClient.get<Alert>(`/alerts/${alertId}`)
+    return this.httpClient.get(`/alerts/${alertId}`)
   }
 
   /**
-   * Retrieves all alerts.
+   * Retrieves all Alerts.
    */
   public list(params?: AlertsListRequestParams): Promise<ApiResponse<Alert[]>> {
-    return this.httpClient.get<Alert[]>(`/alerts`, { params })
+    return this.httpClient.get(`/alerts`, { params })
   }
 }

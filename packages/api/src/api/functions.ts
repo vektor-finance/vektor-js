@@ -11,6 +11,6 @@ export class FunctionsApi extends BaseApi {
    * Retrieves all functions.
    */
   public list(): Promise<ApiResponse<FunctionSpec[]>> {
-    return this.httpClient.get<FunctionSpec[]>('/functions')
+    return this.httpClient.get('/functions')
   }
 }

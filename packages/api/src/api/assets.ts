@@ -16,7 +16,7 @@ type AssetsApiSymbolParams = {
  */
 export class AssetsApi extends BaseApi {
   /**
-   * Retrieves all assets.
+   * Retrieves all Assets.
    */
   public list(params?: AssetsApiListParams): Promise<ApiResponse<Asset[]>> {
     return this.httpClient.get<Asset[]>('/assets', {
@@ -27,7 +27,7 @@ export class AssetsApi extends BaseApi {
   }
 
   /**
-   * Retrieves all asset symbols.
+   * Retrieves all Asset symbols.
    */
   public symbol(params?: AssetsApiSymbolParams): Promise<ApiResponse<string[]>> {
     return this.httpClient.get<string[]>('/assets/symbols', {

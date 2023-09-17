@@ -17,6 +17,6 @@ export class TypesApi extends BaseApi {
    * Retrieves all VXL type actions.
    */
   public actonsList(): Promise<ApiResponse<VXLTypeActions>> {
-    return this.httpClient.get<VXLTypeActions>('/types/actions')
+    return this.httpClient.get('/types/actions')
   }
 }

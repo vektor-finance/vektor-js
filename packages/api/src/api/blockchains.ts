@@ -8,7 +8,7 @@ import type { ApiResponse } from '../types'
  */
 export class BlockchainsApi extends BaseApi {
   /**
-   * Retrieves all blockchains.
+   * Retrieves all Blockchains.
    */
   public list(params?: BlockchainsListRequestParams): Promise<ApiResponse<NetworkID[]>> {
     return this.httpClient.get<NetworkID[]>('/blockchains', {
@@ -19,7 +19,7 @@ export class BlockchainsApi extends BaseApi {
   }
 
   /**
-   * Retrieves all blockchain symbols.
+   * Retrieves all Blockchain symbols.
    */
   public symbols(params?: BlockchainsSymbolsRequestParams): Promise<ApiResponse<string[]>> {
     return this.httpClient.get<string[]>('/blockchains/symbols', {

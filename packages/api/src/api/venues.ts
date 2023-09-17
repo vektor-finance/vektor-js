@@ -8,16 +8,16 @@ import type { ApiResponse } from '../types'
  */
 export class VenuesApi extends BaseApi {
   /**
-   * Retrieves all venues.
+   * Retrieves all Venues.
    */
   public list(): Promise<ApiResponse<Venue[]>> {
-    return this.httpClient.get<Venue[]>('/venues')
+    return this.httpClient.get('/venues')
   }
 
   /**
-   * Retrieves all venue symbols.
+   * Retrieves all Venue symbols.
    */
   public symbols(): Promise<ApiResponse<string[]>> {
-    return this.httpClient.get<string[]>('/venues/symbols')
+    return this.httpClient.get('/venues/symbols')
   }
 }

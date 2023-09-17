@@ -11,13 +11,13 @@ export class SessionsApi extends BaseApi {
    * Retrieves a session with the specified ID.
    */
   public get(id: string): Promise<ApiResponse<Session>> {
-    return this.httpClient.get<Session>(`/sessions/${id}`)
+    return this.httpClient.get(`/sessions/${id}`)
   }
 
   /**
    * Retrieves all sessions.
    */
   public list(): Promise<ApiResponse<Session[]>> {
-    return this.httpClient.get<Session[]>('/sessions')
+    return this.httpClient.get('/sessions')
   }
 }
