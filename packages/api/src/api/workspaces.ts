@@ -38,7 +38,7 @@ export class WorkspacesApi extends BaseApi {
    * Creates a new Workspace.
    */
   public create(payload: WorkspaceCreateRequest): Promise<ApiResponse<Workspace>> {
-    return this.httpClient.post('/workspaces/new', payload)
+    return this.httpClient.post('/workspaces', payload)
   }
 
   /**
