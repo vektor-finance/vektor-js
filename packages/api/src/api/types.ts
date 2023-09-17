@@ -1,4 +1,4 @@
-import type { StructSpec } from '@vektor-finance/types'
+import type { StructSpec, VXLTypeActions } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
@@ -16,7 +16,7 @@ export class TypesApi extends BaseApi {
   /**
    * Retrieves all VXL type actions.
    */
-  public actonsList(): Promise<ApiResponse<StructSpec[]>> {
-    return this.httpClient.get<StructSpec[]>('/types/actions')
+  public actonsList(): Promise<ApiResponse<VXLTypeActions>> {
+    return this.httpClient.get<VXLTypeActions>('/types/actions')
   }
 }
