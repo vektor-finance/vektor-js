@@ -1,4 +1,15 @@
-import type { Alert, Label, LocalFunctionCall, NetworkID, Pane, Session, Stream, UserSettings, VXLHistoryEntry, Workspace } from './api'
+import type {
+  Alert,
+  Label,
+  LocalFunctionCall,
+  NetworkID,
+  Pane,
+  Session,
+  Stream,
+  UserSettings,
+  VXLHistoryEntry,
+  Workspace,
+} from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
 
@@ -70,7 +81,7 @@ export type WorkspaceDeletedEvent = GatewayBaseEvent<'workspace_deleted', Pick<W
 // Panes
 export type PaneCreatedEvent = GatewayBaseEvent<'pane_created', Pane>
 export type PaneUpdatedEvent = GatewayBaseEvent<'pane_updated', Pane>
-export type PaneIndexesUpdatedEvent = GatewayBaseEvent<'pane_indexes_updated', { id: string, index: number }[]>
+export type PaneIndexesUpdatedEvent = GatewayBaseEvent<'pane_indexes_updated', { id: string; index: number }[]>
 export type PaneDeletedEvent = GatewayBaseEvent<'pane_deleted', Pick<Pane, 'id'>>
 
 export type GatewayEvent =
