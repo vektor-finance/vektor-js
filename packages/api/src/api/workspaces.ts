@@ -1,5 +1,6 @@
 import type {
   Pane,
+  PaneUpdateRequest,
   Workspace,
   WorkspaceCreateRequest,
   WorkspacesListRequestParams,
@@ -68,6 +69,13 @@ export class WorkspacesApi extends BaseApi {
    */
   public getPane(id: string): Promise<ApiResponse<Pane>> {
     return this.httpClient.get<Pane>(`/workspaces/pane/${id}`)
+  }
+
+  /**
+   * Updates a Pane with the specified ID.
+   */
+  public updatePane(id: string, payload: PaneUpdateRequest): Promise<ApiResponse<Pane>> {
+    return this.httpClient.patch<Pane>(`/workspaces/pane/${id}`, payload)
   }
 
   /**

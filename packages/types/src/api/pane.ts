@@ -38,3 +38,5 @@ export interface Pane {
   state: PaneState
   pagination: Pagination
 }
+
+export type PaneUpdateRequest = Partial<Pick<Pane, 'title'>>
