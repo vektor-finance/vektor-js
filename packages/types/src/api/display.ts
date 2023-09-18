@@ -17,6 +17,7 @@ export interface FieldDisplayDateTimeFormat {
 
 export interface FieldDisplayBooleanFormat {
   style: 'default' | 'true_only' | 'false_only' | 'both'
+  icon: boolean
 }
 
 export interface FieldDisplay {
