@@ -15,11 +15,15 @@ export interface FieldDisplayDateTimeFormat {
   type: 'default' | 'relative'
 }
 
+export interface FieldDisplayBooleanFormat {
+  style: 'default' | 'true' | 'false' | 'both'
+}
+
 export interface FieldDisplay {
   hidden: boolean
   sensitive: boolean
   flex: string
-  format: FieldDisplayNumberFormat | FieldDisplayStringFormat | FieldDisplayDateTimeFormat | null
+  format: FieldDisplayDateTimeFormat | FieldDisplayBooleanFormat | FieldDisplayNumberFormat | FieldDisplayStringFormat | null
   image_uri_prefix: string | null
 }
 
