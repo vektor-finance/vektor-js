@@ -29,7 +29,7 @@ export class WorkspacesApi extends BaseApi {
   public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<Workspace[]>> {
     return this.httpClient.get('/workspaces', {
       params: {
-        network_mode: params?.networkMode, // TODO: Remove this?
+        network_mode: params?.networkMode,
       },
     })
   }
