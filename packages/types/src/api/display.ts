@@ -24,7 +24,12 @@ export interface FieldDisplay {
   hidden: boolean
   sensitive: boolean
   flex: string
-  format: FieldDisplayDateTimeFormat | FieldDisplayBooleanFormat | FieldDisplayNumberFormat | FieldDisplayStringFormat | null
+  format:
+    | FieldDisplayDateTimeFormat
+    | FieldDisplayBooleanFormat
+    | FieldDisplayNumberFormat
+    | FieldDisplayStringFormat
+    | null
   image_uri_prefix: string | null
 }
 
