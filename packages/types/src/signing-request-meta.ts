@@ -315,7 +315,7 @@ export interface LockRequestMeta extends MetaBase {
   asset: Asset
   amount: string
   from: AccountID
-  unlock_at: string
+  unlocked_at: string
 }
 
 export interface VoteRequestMeta extends MetaBase {
