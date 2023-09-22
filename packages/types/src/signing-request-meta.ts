@@ -51,6 +51,14 @@ export interface NFT {
   id: number
 }
 
+export interface LockPosition {
+  used: boolean
+  unlocked_at: string
+  voting_power: string
+  locked_amount: string
+  locked_asset: NFT
+}
+
 export interface ApproveRequestBaseMeta extends MetaBase {
   request_type: 'approve_request'
   amount: string
@@ -310,6 +318,14 @@ export interface LockRequestMeta extends MetaBase {
   unlock_at: string
 }
 
+export interface VoteRequestMeta extends MetaBase {
+  request_type: 'vote_request'
+  pool_info: LPPoolInfo
+  lock_position: LockPosition
+  venue: Venue
+  from: AccountID
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BorrowRepayRequestMeta
@@ -328,5 +344,6 @@ export type SigningRequestMeta =
   | CollateralRequestMeta
   | IncentivizeRequestMeta
   | LockRequestMeta
+  | VoteRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']
