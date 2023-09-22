@@ -242,6 +242,7 @@ export interface LPPoolInfo {
   fee: string
   type: LPPoolType
   weights: string[]
+  address: string
 }
 
 export interface LPRange {
