@@ -14,6 +14,7 @@ import {
   VenuesApi,
   VxlApi,
 } from './api/index'
+import { WorkspacesApi } from './api/workspaces'
 import type { ApiConfig, HttpClient } from './types'
 
 export const defaultApiConfig: ApiConfig = {
@@ -38,6 +39,7 @@ export class Api {
   public readonly users: UsersApi
   public readonly venues: VenuesApi
   public readonly vxl: VxlApi
+  public readonly workspaces: WorkspacesApi
 
   private readonly httpClient: HttpClient
 
@@ -60,6 +62,7 @@ export class Api {
     this.users = new UsersApi(this.httpClient)
     this.venues = new VenuesApi(this.httpClient)
     this.vxl = new VxlApi(this.httpClient)
+    this.workspaces = new WorkspacesApi(this.httpClient)
   }
 
   /**

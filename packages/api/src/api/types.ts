@@ -11,7 +11,7 @@ export class TypesApi extends BaseApi {
    * Retrieves all Structs.
    */
   public structsList(): Promise<ApiResponse<StructSpec[]>> {
-    return this.httpClient.get<StructSpec[]>('/types/structs')
+    return this.httpClient.get('/types/structs')
   }
   /**
    * Retrieves all VXL Type Actions.

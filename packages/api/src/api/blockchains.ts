@@ -8,10 +8,10 @@ import type { ApiResponse } from '../types'
  */
 export class BlockchainsApi extends BaseApi {
   /**
-   * Retrieves all blockchains.
+   * Retrieves all Blockchains.
    */
   public list(params?: BlockchainsListRequestParams): Promise<ApiResponse<NetworkID[]>> {
-    return this.httpClient.get<NetworkID[]>('/blockchains', {
+    return this.httpClient.get('/blockchains', {
       params: {
         network_mode: params?.networkMode,
       },
@@ -19,10 +19,10 @@ export class BlockchainsApi extends BaseApi {
   }
 
   /**
-   * Retrieves all blockchain symbols.
+   * Retrieves all Blockchain symbols.
    */
   public symbols(params?: BlockchainsSymbolsRequestParams): Promise<ApiResponse<string[]>> {
-    return this.httpClient.get<string[]>('/blockchains/symbols', {
+    return this.httpClient.get('/blockchains/symbols', {
       params: {
         network_mode: params?.networkMode,
       },

@@ -8,9 +8,9 @@ import type { ApiResponse } from '../types'
  */
 export class SignaturesApi extends BaseApi {
   /**
-   * Submits a signature or a transaction hash.
+   * Submits a Signature or a Transaction Hash.
    */
-  public submit(signatureId: string, payload: SignatureOrTransactionHash[]): Promise<ApiResponse<void>> {
-    return this.httpClient.post<void>(`/signatures/submit/${signatureId}`, payload)
+  public submit(id: string, payload: SignatureOrTransactionHash[]): Promise<ApiResponse<void>> {
+    return this.httpClient.post(`/signatures/submit/${id}`, payload)
   }
 }
