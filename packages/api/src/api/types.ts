@@ -8,15 +8,15 @@ import type { ApiResponse } from '../types'
  */
 export class TypesApi extends BaseApi {
   /**
-   * Retrieves all structs.
+   * Retrieves all Structs.
    */
   public structsList(): Promise<ApiResponse<StructSpec[]>> {
     return this.httpClient.get('/types/structs')
   }
   /**
-   * Retrieves all VXL type actions.
+   * Retrieves all VXL Type Actions.
    */
-  public actonsList(): Promise<ApiResponse<VXLTypeActions>> {
-    return this.httpClient.get('/types/actions')
+  public actionsList(): Promise<ApiResponse<VXLTypeActions>> {
+    return this.httpClient.get<VXLTypeActions>('/types/actions')
   }
 }
