@@ -7,9 +7,11 @@ export interface Workspace {
   updated_at: string
   name: string
   network_mode: NetworkMode
-  panes: Pane[] | null
+  panes: Pane[]
   open: boolean
 }
+
+export type WorkspaceWithoutPanes = Omit<Workspace, 'panes'>
 
 export type WorkspaceCreateRequest = Partial<Pick<Workspace, 'name' | 'network_mode' | 'open'>>
 export type WorkspaceUpdateRequest = Partial<Pick<Workspace, 'name'>>

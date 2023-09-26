@@ -9,6 +9,7 @@ import type {
   UserSettings,
   VXLHistoryEntry,
   Workspace,
+  WorkspaceWithoutPanes,
 } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
@@ -73,9 +74,9 @@ export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', und
 export type UserSettingsUpdatedEvent = GatewayBaseEvent<'user_settings_updated', UserSettings>
 
 // Workspaces
-export type WorkspaceCreatedEvent = GatewayBaseEvent<'workspace_created', Workspace>
+export type WorkspaceCreatedEvent = GatewayBaseEvent<'workspace_created', WorkspaceWithoutPanes>
 export type WorkspaceOpenedEvent = GatewayBaseEvent<'workspace_opened', Workspace>
-export type WorkspaceUpdatedEvent = GatewayBaseEvent<'workspace_updated', Workspace>
+export type WorkspaceUpdatedEvent = GatewayBaseEvent<'workspace_updated', WorkspaceWithoutPanes>
 export type WorkspaceDeletedEvent = GatewayBaseEvent<'workspace_deleted', Pick<Workspace, 'id'>>
 
 // Panes

@@ -2,6 +2,7 @@ import type {
   Pane,
   PaneUpdateRequest,
   Workspace,
+  WorkspaceWithoutPanes,
   WorkspaceCreateRequest,
   WorkspacesListRequestParams,
   WorkspaceUpdateRequest,
@@ -26,7 +27,7 @@ export class WorkspacesApi extends BaseApi {
   /**
    * Retrieves all Workspaces.
    */
-  public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<Workspace[]>> {
+  public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<WorkspaceWithoutPanes[]>> {
     return this.httpClient.get('/workspaces', {
       params: {
         network_mode: params?.networkMode,
@@ -44,7 +45,7 @@ export class WorkspacesApi extends BaseApi {
   /**
    * Updates a Workspace.
    */
-  public update(id: string, payload: WorkspaceUpdateRequest): Promise<ApiResponse<Workspace>> {
+  public update(id: string, payload: WorkspaceUpdateRequest): Promise<ApiResponse<void>> {
     return this.httpClient.patch(`/workspaces/${id}`, payload)
   }
 
@@ -62,13 +63,6 @@ export class WorkspacesApi extends BaseApi {
     return this.httpClient.delete(`/workspaces/${id}`)
   }
 
-  //   /**
-  //    * Retrieves all Workspace symbols.
-  //    */
-  //   public symbols(): Promise<ApiResponse<string[]>> {
-  //     return this.httpClient.get('/workspaces/symbols')
-  //   }
-
   // Panes
 
   /**
@@ -81,7 +75,7 @@ export class WorkspacesApi extends BaseApi {
   /**
    * Updates a Pane with the specified ID.
    */
-  public updatePane(id: string, payload: PaneUpdateRequest): Promise<ApiResponse<Pane>> {
+  public updatePane(id: string, payload: PaneUpdateRequest): Promise<ApiResponse<void>> {
     return this.httpClient.patch(`/workspaces/pane/${id}`, payload)
   }
 
