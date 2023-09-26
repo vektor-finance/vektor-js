@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.0](https://github.com/vektor-finance/vektor-js/compare/v0.34.9...v0.35.0) (2023-09-26)
+
+
+### Features
+
+* **api:** add workspaces and panes endpoints with respective types [TASK-4330] ([#99](https://github.com/vektor-finance/vektor-js/issues/99)) ([9cf2aac](https://github.com/vektor-finance/vektor-js/commit/9cf2aaced0c05e90cb460f8d4a798d638689c801))
+
+
+
 ### [0.34.9](https://github.com/vektor-finance/vektor-js/compare/v0.34.8...v0.34.9) (2023-09-25)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
