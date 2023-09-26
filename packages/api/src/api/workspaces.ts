@@ -2,10 +2,10 @@ import type {
   Pane,
   PaneUpdateRequest,
   Workspace,
-  WorkspaceWithoutPanes,
   WorkspaceCreateRequest,
   WorkspacesListRequestParams,
   WorkspaceUpdateRequest,
+  WorkspaceWithoutPanes,
 } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
