@@ -23,6 +23,8 @@ import { VDNLendMarket } from './vdn-lend-market'
 import { VDNLendPosition } from './vdn-lend-position'
 import { VDNList } from './vdn-list'
 import { VDNLocalFunctionCall } from './vdn-local-function-call'
+import { VDNLockMarket } from './vdn-lock-market'
+import { VDNLockPosition } from './vdn-lock-position'
 import { VDNLPPool, VDNLPPoolRange, VDNLPPoolType } from './vdn-lp-pool'
 import { VDNLPPosition } from './vdn-lp-position'
 import { VDNLPQuote } from './vdn-lp-quote'
@@ -79,6 +81,8 @@ export type VDN =
   | VDNLendMarket
   | VDNLendPosition
   | VDNLocalFunctionCall
+  | VDNLockMarket
+  | VDNLockPosition
   | VDNLPPool
   | VDNLPPoolRange
   | VDNLPPoolType
