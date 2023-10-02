@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.36.4](https://github.com/vektor-finance/vektor-js/compare/v0.36.3...v0.36.4) (2023-10-02)
+
+
+### Bug Fixes
+
+* correct type action field names ([#106](https://github.com/vektor-finance/vektor-js/issues/106)) ([cf37fd0](https://github.com/vektor-finance/vektor-js/commit/cf37fd0607bff804b6fe6ca328955031c9091352))
+
+
+
 ### [0.36.3](https://github.com/vektor-finance/vektor-js/compare/v0.36.2...v0.36.3) (2023-10-02)
 
 **Note:** Version bump only for package @vektor-finance/types
