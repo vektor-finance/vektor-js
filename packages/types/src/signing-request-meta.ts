@@ -327,6 +327,16 @@ export interface VoteRequestMeta extends MetaBase {
   from: AccountID
 }
 
+export interface VoteClaimRequestMeta extends MetaBase {
+  request_type: 'vote_claim_request'
+  venue: Venue
+  pool_info: LPPoolInfo
+  lock_positions: LockPosition[]
+  from: AccountID
+  reward_amounts: string[]
+  reward_assets: Asset[]
+}
+
 export type SigningRequestMeta =
   | ApproveRequestMeta
   | BorrowRepayRequestMeta
@@ -346,5 +356,6 @@ export type SigningRequestMeta =
   | IncentivizeRequestMeta
   | LockRequestMeta
   | VoteRequestMeta
+  | VoteClaimRequestMeta
 
 export type SigningRequestType = SigningRequestMeta['request_type']

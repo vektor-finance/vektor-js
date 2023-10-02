@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.36.2](https://github.com/vektor-finance/vektor-js/compare/v0.36.1...v0.36.2) (2023-10-02)
+
+**Note:** Version bump only for package @vektor-finance/vektor-js
+
+
+
+
+
+### [0.36.1](https://github.com/vektor-finance/vektor-js/compare/v0.36.0...v0.36.1) (2023-09-29)
+
+**Note:** Version bump only for package @vektor-finance/vektor-js
+
+
+
+
+
+## [0.36.0](https://github.com/vektor-finance/vektor-js/compare/v0.35.0...v0.36.0) (2023-09-29)
+
+
+### Features
+
+* **types:** add vdn lockmarket and lockposition ([#103](https://github.com/vektor-finance/vektor-js/issues/103)) ([261267d](https://github.com/vektor-finance/vektor-js/commit/261267ddd4ba5f2ed697e3b1d63cfbde5b98dc31))
+
+
+
 ## [0.35.0](https://github.com/vektor-finance/vektor-js/compare/v0.34.9...v0.35.0) (2023-09-26)
 
 
