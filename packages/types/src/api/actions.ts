@@ -30,7 +30,7 @@ export interface VXLAction {
   vxl: string
 }
 
-export type VXLTypeActionsType = 'blockchains' | 'venues' | 'labels'
+export type VXLTypeActionsType = 'blockchain' | 'venue' | 'label'
 
 /**
  * Represents VXL type actions
