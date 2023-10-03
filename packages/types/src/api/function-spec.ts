@@ -37,6 +37,12 @@ export interface FunctionSpec {
    */
   use_full_name: boolean
   /**
+   * UI Menu group
+   * @type {string}
+   * @memberof FunctionSpec
+   */
+  menu_group: string
+  /**
    * Subfunctions
    * @type {Array<SubfunctionSpec>}
    * @memberof FunctionSpec
