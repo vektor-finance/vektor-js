@@ -31,11 +31,29 @@ export interface FunctionSpec {
    */
   name: string
   /**
-   * Should use full name in UI?
+   * Use full name in UI
    * @type {boolean}
    * @memberof FunctionSpec
    */
   use_full_name: boolean
+  /**
+   * Grouping in UI
+   * @type {string}
+   * @memberof FunctionSpec
+   */
+  group: string
+  /**
+   * Mark as featured in UI
+   * @type {boolean}
+   * @memberof FunctionSpec
+   */
+  featured: boolean
+  /**
+   * Mark as new in UI
+   * @type {string}
+   * @memberof FunctionSpec
+   */
+  new: boolean
   /**
    * Subfunctions
    * @type {Array<SubfunctionSpec>}
