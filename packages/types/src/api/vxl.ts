@@ -7,6 +7,7 @@ import { VDNOrRuntimeError } from './vdn-or-runtime-error'
  */
 export interface VXLHistoryEntry {
   id: string
+  short_id: string
   created_at: string
   entry: string
 }
