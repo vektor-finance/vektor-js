@@ -24,6 +24,12 @@ export interface Alert {
    */
   id: string
   /**
+   * Alert short id
+   * @type {string}
+   * @memberof Alert
+   */
+  short_id: string
+  /**
    * Alert name
    * @type {string}
    * @memberof Alert
