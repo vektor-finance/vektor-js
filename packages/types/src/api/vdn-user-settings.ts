@@ -37,6 +37,12 @@ export interface VDNUserSettingsValue {
    * @type {VDNBoolean}
    * @memberof VDNUserSettingsValue
    */
+  show_command_line: VDNBoolean
+  /**
+   *
+   * @type {VDNBoolean}
+   * @memberof VDNUserSettingsValue
+   */
   enter_accepts_suggestions: VDNBoolean
 }
 
