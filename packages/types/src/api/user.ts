@@ -39,6 +39,12 @@ export interface UserDisplaySettings {
  */
 export interface UserAutocompleteSettings {
   /**
+   * If TRUE, command line will be shown
+   * @type {boolean}
+   * @memberof UserAutocompleteSettings
+   */
+  show_command_line: boolean
+  /**
    * If TRUE, pressing ENTER will accept an autocomplete suggestion. Otherwise, TAB is used
    * @type {boolean}
    * @memberof UserAutocompleteSettings
