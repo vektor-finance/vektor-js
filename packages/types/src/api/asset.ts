@@ -36,7 +36,3 @@ export interface Asset {
 export interface AssetsListRequestParams {
   networkMode?: NetworkMode
 }
-
-export interface AssetsSymbolsParams {
-  networkMode?: NetworkMode
-}

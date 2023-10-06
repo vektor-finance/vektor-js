@@ -1,4 +1,4 @@
-import type { BlockchainsListRequestParams, BlockchainsSymbolsRequestParams, NetworkID } from '@vektor-finance/types'
+import type { BlockchainsListRequestParams, NetworkID } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
@@ -12,17 +12,6 @@ export class BlockchainsApi extends BaseApi {
    */
   public list(params?: BlockchainsListRequestParams): Promise<ApiResponse<NetworkID[]>> {
     return this.httpClient.get('/blockchains', {
-      params: {
-        network_mode: params?.networkMode,
-      },
-    })
-  }
-
-  /**
-   * Retrieves all Blockchain symbols.
-   */
-  public symbols(params?: BlockchainsSymbolsRequestParams): Promise<ApiResponse<string[]>> {
-    return this.httpClient.get('/blockchains/symbols', {
       params: {
         network_mode: params?.networkMode,
       },

@@ -13,11 +13,4 @@ export class VenuesApi extends BaseApi {
   public list(): Promise<ApiResponse<Venue[]>> {
     return this.httpClient.get('/venues')
   }
-
-  /**
-   * Retrieves all Venue symbols.
-   */
-  public symbols(): Promise<ApiResponse<string[]>> {
-    return this.httpClient.get('/venues/symbols')
-  }
 }
