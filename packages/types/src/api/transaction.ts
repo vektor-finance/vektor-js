@@ -33,7 +33,7 @@ export interface Transaction {
    * @type {string}
    * @memberof Transaction
    */
-  expression: string | null
+  expression: string
   /**
    * Transaction hash
    * @type {string}
