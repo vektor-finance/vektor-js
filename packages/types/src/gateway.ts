@@ -108,6 +108,7 @@ export type GatewayEvent =
   | StreamUpdatedEvent
   | TaskCompletedEvent
   | TransactionBroadcastedEvent
+  | TransactionUpdatedEvent
   | UserSettingsUpdatedEvent
   | VXLHistoryDeletedEvent
   | VXLHistoryEntryCreatedEvent
