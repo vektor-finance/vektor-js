@@ -1,4 +1,6 @@
-export type AlertState = 'running' | 'triggered' | 'delivered'
+export const ALL_ALERT_STATES = ['running', 'triggered', 'delivered'] as const
+
+export type AlertState = (typeof ALL_ALERT_STATES)[number]
 
 export interface Alert {
   /**

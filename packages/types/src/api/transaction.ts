@@ -1,14 +1,17 @@
 import { Label } from './label'
 import { NetworkID, NetworkMode } from './network'
 
-export type TransactionState =
-  | 'initiated'
-  | 'requires_signature'
-  | 'invalid_signature'
-  | 'signed'
-  | 'broadcasted'
-  | 'confirmed'
-  | 'canceled'
+export const ALL_TRANSACTION_STATES = [
+  'initiated',
+  'requires_signature',
+  'invalid_signature',
+  'signed',
+  'broadcasted',
+  'confirmed',
+  'canceled',
+] as const
+
+export type TransactionState = (typeof ALL_TRANSACTION_STATES)[number]
 
 export interface Transaction {
   /**
