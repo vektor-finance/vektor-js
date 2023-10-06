@@ -1,7 +1,14 @@
 import { Label } from './label'
 import { NetworkID, NetworkMode } from './network'
 
-export type TransactionState = 'broadcasted'
+export type TransactionState =
+  | 'initiated'
+  | 'requires_signature'
+  | 'invalid_signature'
+  | 'signed'
+  | 'broadcasted'
+  | 'confirmed'
+  | 'canceled'
 
 export interface Transaction {
   /**
