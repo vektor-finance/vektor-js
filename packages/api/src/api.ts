@@ -9,6 +9,7 @@ import {
   SessionsApi,
   SignaturesApi,
   StreamsApi,
+  TransactionsApi,
   TypesApi,
   UsersApi,
   VenuesApi,
@@ -35,6 +36,7 @@ export class Api {
   public readonly sessions: SessionsApi
   public readonly signatures: SignaturesApi
   public readonly streams: StreamsApi
+  public readonly transactions: TransactionsApi
   public readonly types: TypesApi
   public readonly users: UsersApi
   public readonly venues: VenuesApi
@@ -58,6 +60,7 @@ export class Api {
     this.sessions = new SessionsApi(this.httpClient)
     this.signatures = new SignaturesApi(this.httpClient)
     this.streams = new StreamsApi(this.httpClient)
+    this.transactions = new TransactionsApi(this.httpClient)
     this.types = new TypesApi(this.httpClient)
     this.users = new UsersApi(this.httpClient)
     this.venues = new VenuesApi(this.httpClient)

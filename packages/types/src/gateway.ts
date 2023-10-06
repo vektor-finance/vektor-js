@@ -6,6 +6,7 @@ import type {
   Pane,
   Session,
   Stream,
+  Transaction,
   UserSettings,
   VXLHistoryEntry,
   Workspace,
@@ -41,6 +42,7 @@ export interface TransactionBroadcasted {
   network_id: NetworkID
 }
 export type TransactionBroadcastedEvent = GatewayBaseEvent<'transaction_broadcasted', TransactionBroadcasted>
+export type TransactionUpdatedEvent = GatewayBaseEvent<'transaction_updated', Transaction>
 
 // Tasks
 export type TaskCompletedEvent = GatewayBaseEvent<'task_completed', TaskState>

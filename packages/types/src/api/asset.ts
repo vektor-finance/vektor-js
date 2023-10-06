@@ -1,4 +1,4 @@
-import { NetworkID } from './network'
+import { NetworkID, NetworkMode } from './network'
 
 export interface Asset {
   /**
@@ -31,4 +31,12 @@ export interface Asset {
    * @memberof Asset
    */
   symbol: string
+}
+
+export interface AssetsListRequestParams {
+  networkMode?: NetworkMode
+}
+
+export interface AssetsSymbolsParams {
+  networkMode?: NetworkMode
 }

@@ -1,15 +1,7 @@
-import type { Asset, NetworkMode } from '@vektor-finance/types'
+import type { Asset, AssetsListRequestParams, AssetsSymbolsParams } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
 import type { ApiResponse } from '../types'
-
-type AssetsApiListParams = {
-  networkMode?: NetworkMode
-}
-
-type AssetsApiSymbolParams = {
-  networkMode?: NetworkMode
-}
 
 /**
  * An API Client for interacting with Assets.
@@ -18,7 +10,7 @@ export class AssetsApi extends BaseApi {
   /**
    * Retrieves all Assets.
    */
-  public list(params?: AssetsApiListParams): Promise<ApiResponse<Asset[]>> {
+  public list(params?: AssetsListRequestParams): Promise<ApiResponse<Asset[]>> {
     return this.httpClient.get('/assets', {
       params: {
         network_mode: params?.networkMode,
@@ -29,7 +21,7 @@ export class AssetsApi extends BaseApi {
   /**
    * Retrieves all Asset symbols.
    */
-  public symbol(params?: AssetsApiSymbolParams): Promise<ApiResponse<string[]>> {
+  public symbols(params?: AssetsSymbolsParams): Promise<ApiResponse<string[]>> {
     return this.httpClient.get('/assets/symbols', {
       params: {
         network_mode: params?.networkMode,
