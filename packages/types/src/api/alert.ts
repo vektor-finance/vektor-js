@@ -1,7 +1,3 @@
-export interface AlertsListRequestParams {
-  triggered?: boolean
-}
-
 export type AlertState = 'running' | 'triggered' | 'delivered'
 
 export interface Alert {
@@ -53,4 +49,8 @@ export interface Alert {
    * @memberof Alert
    */
   updated_at: string
+}
+
+export interface AlertsListRequestParams {
+  triggered?: boolean
 }

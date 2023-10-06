@@ -10,8 +10,8 @@ export class AlertsApi extends BaseApi {
   /**
    * Deletes an Alert with the specified ID.
    */
-  public delete(alertId: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete(`/alerts/${alertId}`)
+  public delete(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.delete(`/alerts/${id}`)
   }
 
   /**
@@ -24,8 +24,8 @@ export class AlertsApi extends BaseApi {
   /**
    * Retrieves an Alert with the specified ID.
    */
-  public get(alertId: string): Promise<ApiResponse<Alert>> {
-    return this.httpClient.get(`/alerts/${alertId}`)
+  public get(id: string): Promise<ApiResponse<Alert>> {
+    return this.httpClient.get(`/alerts/${id}`)
   }
 
   /**
