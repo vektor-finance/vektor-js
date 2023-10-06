@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.38.0](https://github.com/vektor-finance/vektor-js/compare/v0.37.3...v0.38.0) (2023-10-06)
+
+
+### Features
+
+* remove asset, venue and blockchain symbol endpoints since they are unused ([#113](https://github.com/vektor-finance/vektor-js/issues/113)) ([37430bc](https://github.com/vektor-finance/vektor-js/commit/37430bc7cd2e3f0ca979d2699c9fa8d1b192c0f5))
+
+
+
 ### [0.37.3](https://github.com/vektor-finance/vektor-js/compare/v0.37.2...v0.37.3) (2023-10-06)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
