@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.37.0](https://github.com/vektor-finance/vektor-js/compare/v0.36.9...v0.37.0) (2023-10-06)
+
+
+### Features
+
+* **api:** add transactions endpoint ([#112](https://github.com/vektor-finance/vektor-js/issues/112)) ([cef2180](https://github.com/vektor-finance/vektor-js/commit/cef2180efd2ec4095788c5dfdd22305719f5c2f9))
+
+
+
 ### [0.36.9](https://github.com/vektor-finance/vektor-js/compare/v0.36.8...v0.36.9) (2023-10-06)
 
 **Note:** Version bump only for package @vektor-finance/vektor-js
