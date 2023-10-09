@@ -8,7 +8,7 @@ export const ALL_TRANSACTION_STATES = [
   'signed',
   'broadcasted',
   'confirmed',
-  'canceled',
+  'expired',
 ] as const
 
 export type TransactionState = (typeof ALL_TRANSACTION_STATES)[number]
