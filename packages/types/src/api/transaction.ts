@@ -77,5 +77,5 @@ export interface Transaction {
 }
 
 export interface TransactionsListRequestParams {
-  networkMode?: NetworkMode
+  network_mode?: NetworkMode
 }

@@ -67,6 +67,6 @@ export interface Report {
 }
 
 export interface ReportsListRequestParams {
-  include_canceled?: boolean
+  canceled?: boolean
   network_mode?: NetworkMode
 }

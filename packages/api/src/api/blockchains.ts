@@ -11,10 +11,6 @@ export class BlockchainsApi extends BaseApi {
    * Retrieves all Blockchains.
    */
   public list(params?: BlockchainsListRequestParams): Promise<ApiResponse<NetworkID[]>> {
-    return this.httpClient.get('/blockchains', {
-      params: {
-        network_mode: params?.networkMode,
-      },
-    })
+    return this.httpClient.get('/blockchains', { params })
   }
 }
