@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.39.1](https://github.com/vektor-finance/vektor-js/compare/v0.39.0...v0.39.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* **api:** param casing ([#116](https://github.com/vektor-finance/vektor-js/issues/116)) ([a86d21b](https://github.com/vektor-finance/vektor-js/commit/a86d21bb0d54af160ed38e9ce26fbaa254447f7b))
+
+
+
 ## [0.39.0](https://github.com/vektor-finance/vektor-js/compare/v0.38.1...v0.39.0) (2023-10-10)
 
 
