@@ -6,6 +6,7 @@ import {
   BlockchainsApi,
   FunctionsApi,
   LabelsApi,
+  ReportsApi,
   SessionsApi,
   SignaturesApi,
   StreamsApi,
@@ -33,6 +34,7 @@ export class Api {
   public readonly blockchains: BlockchainsApi
   public readonly functions: FunctionsApi
   public readonly labels: LabelsApi
+  public readonly reports: ReportsApi
   public readonly sessions: SessionsApi
   public readonly signatures: SignaturesApi
   public readonly streams: StreamsApi
@@ -57,6 +59,7 @@ export class Api {
     this.blockchains = new BlockchainsApi(this.httpClient)
     this.functions = new FunctionsApi(this.httpClient)
     this.labels = new LabelsApi(this.httpClient)
+    this.reports = new ReportsApi(this.httpClient)
     this.sessions = new SessionsApi(this.httpClient)
     this.signatures = new SignaturesApi(this.httpClient)
     this.streams = new StreamsApi(this.httpClient)

@@ -4,6 +4,7 @@ import type {
   LocalFunctionCall,
   NetworkID,
   Pane,
+  Report,
   Session,
   Stream,
   Transaction,
@@ -43,6 +44,11 @@ export interface TransactionBroadcasted {
 }
 export type TransactionBroadcastedEvent = GatewayBaseEvent<'transaction_broadcasted', TransactionBroadcasted>
 export type TransactionUpdatedEvent = GatewayBaseEvent<'transaction_updated', Transaction>
+
+// Report
+export type ReportCreatedEvent = GatewayBaseEvent<'report_created', Report>
+export type ReportUpdatedEvent = GatewayBaseEvent<'report_updated', Report>
+export type ReportDeletedEvent = GatewayBaseEvent<'report_deleted', Pick<Report, 'id'>>
 
 // Tasks
 export type TaskCompletedEvent = GatewayBaseEvent<'task_completed', TaskState>
@@ -88,14 +94,21 @@ export type PaneIndexesUpdatedEvent = GatewayBaseEvent<'pane_indexes_updated', {
 export type PaneDeletedEvent = GatewayBaseEvent<'pane_deleted', Pick<Pane, 'id'>>
 
 export type GatewayEvent =
-  | LabelCreatedEvent
   | AlertCreatedEvent
   | AlertDeletedEvent
   | AlertTriggeredEvent
   | AlertUpdatedEvent
+  | LabelCreatedEvent
   | LabelDeletedEvent
   | LabelUpdatedEvent
   | LocalFunctionCalledEvent
+  | PaneCreatedEvent
+  | PaneDeletedEvent
+  | PaneIndexesUpdatedEvent
+  | PaneUpdatedEvent
+  | ReportCreatedEvent
+  | ReportDeletedEvent
+  | ReportUpdatedEvent
   | SessionCreatedEvent
   | SessionDeletedEvent
   | SessionUpdatedEvent
@@ -114,12 +127,8 @@ export type GatewayEvent =
   | VXLHistoryEntryCreatedEvent
   | VXLHistoryEntryDeletedEvent
   | WorkspaceCreatedEvent
+  | WorkspaceDeletedEvent
   | WorkspaceOpenedEvent
   | WorkspaceUpdatedEvent
-  | WorkspaceDeletedEvent
-  | PaneCreatedEvent
-  | PaneUpdatedEvent
-  | PaneIndexesUpdatedEvent
-  | PaneDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
