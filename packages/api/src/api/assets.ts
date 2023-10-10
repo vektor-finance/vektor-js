@@ -11,10 +11,6 @@ export class AssetsApi extends BaseApi {
    * Retrieves all Assets.
    */
   public list(params?: AssetsListRequestParams): Promise<ApiResponse<Asset[]>> {
-    return this.httpClient.get('/assets', {
-      params: {
-        network_mode: params?.networkMode,
-      },
-    })
+    return this.httpClient.get('/assets', { params })
   }
 }

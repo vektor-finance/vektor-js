@@ -28,11 +28,7 @@ export class WorkspacesApi extends BaseApi {
    * Retrieves all Workspaces.
    */
   public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<WorkspaceWithoutPanes[]>> {
-    return this.httpClient.get('/workspaces', {
-      params: {
-        network_mode: params?.networkMode,
-      },
-    })
+    return this.httpClient.get('/workspaces', { params })
   }
 
   /**

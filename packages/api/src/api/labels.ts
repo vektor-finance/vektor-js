@@ -32,11 +32,7 @@ export class LabelsApi extends BaseApi {
    * Retrieves all Labels.
    */
   public list(params?: LabelsListRequestParams): Promise<ApiResponse<Label[]>> {
-    return this.httpClient.get('/labels', {
-      params: {
-        network_mode: params?.networkMode,
-      },
-    })
+    return this.httpClient.get('/labels', { params })
   }
 
   /**

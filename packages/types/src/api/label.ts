@@ -13,5 +13,5 @@ export type LabelCreateRequest = Pick<Label, 'address' | 'name' | 'network_mode'
 export type LabelUpdateRequest = Partial<Pick<Label, 'address' | 'name' | 'network_mode'>>
 
 export interface LabelsListRequestParams {
-  networkMode?: NetworkMode
+  network_mode?: NetworkMode
 }

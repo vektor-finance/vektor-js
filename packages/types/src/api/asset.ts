@@ -34,5 +34,5 @@ export interface Asset {
 }
 
 export interface AssetsListRequestParams {
-  networkMode?: NetworkMode
+  network_mode?: NetworkMode
 }
