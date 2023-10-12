@@ -33,21 +33,21 @@ export interface UserDisplaySettings {
 }
 
 /**
- * User autocomplete settings
+ * User command line settings
  * @export
- * @interface UserAutocompleteSettings
+ * @interface UserCommandLineSettings
  */
-export interface UserAutocompleteSettings {
+export interface UserCommandLineSettings {
   /**
    * If TRUE, command line will be shown
    * @type {boolean}
-   * @memberof UserAutocompleteSettings
+   * @memberof UserCommandLineSettings
    */
   show_command_line: boolean
   /**
    * If TRUE, pressing ENTER will accept an autocomplete suggestion. Otherwise, TAB is used
    * @type {boolean}
-   * @memberof UserAutocompleteSettings
+   * @memberof UserCommandLineSettings
    */
   enter_accepts_suggestions: boolean
 }
@@ -66,11 +66,11 @@ export interface UserSettings {
   display: UserDisplaySettings
 
   /**
-   * User's autocomplete settings
-   * @type {UserAutocompleteSettings}
+   * User's command line settings
+   * @type {UserCommandLineSettings}
    * @memberof UserSettings
    */
-  autocomplete: UserAutocompleteSettings
+  command_line: UserCommandLineSettings
 }
 
 export type UserSettingsUpdateRequest = RecursivePartial<UserSettings>
