@@ -1,7 +1,4 @@
 import { NetworkMode } from './network'
-import { VDNError } from './vdn-error'
-import { VDNNone } from './vdn-none'
-import { VDNSuccess } from './vdn-success'
 
 export interface Report {
   /**
@@ -54,10 +51,10 @@ export interface Report {
   last_executed_at: string | null
   /**
    * Last executed status
-   * @type {VDN}
+   * @type {boolean}
    * @memberof Report
    */
-  last_executed_status: VDNSuccess | VDNError | VDNNone
+  last_executed_status: boolean | null
   /**
    * Network mode
    * @type {NetworkMode}
