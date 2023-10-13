@@ -23,8 +23,7 @@ export type PaneContent = LocalFunctionPaneContent | VDNPaneContent | ErrorPaneC
 export type PaneContentPayloadType = PaneContent['type']
 export type PaneContentPayloadData = PaneContent['data']
 
-export type PaneState = 'running' | 'paused' | 'loading' | 'closed'
-export type PaneSource = 'live' | 'static'
+export type PaneSource = { type: 'live'; running: boolean } | { type: 'static' }
 export type PaneContentType = 'vdn' | 'local_function' | 'error'
 
 export interface Pane {
@@ -35,7 +34,6 @@ export interface Pane {
   title: string
   source: PaneSource
   content: PaneContent | null
-  state: PaneState
   pagination: Pagination
 }
 
