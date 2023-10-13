@@ -16,7 +16,7 @@ import {
   VenuesApi,
   VxlApi,
 } from './api/index'
-import { WorkspacesApi } from './api/workspaces'
+import { LayoutsApi } from './api/layouts'
 import type { ApiConfig, HttpClient } from './types'
 
 export const defaultApiConfig: ApiConfig = {
@@ -34,6 +34,7 @@ export class Api {
   public readonly blockchains: BlockchainsApi
   public readonly functions: FunctionsApi
   public readonly labels: LabelsApi
+  public readonly layouts: LayoutsApi
   public readonly reports: ReportsApi
   public readonly sessions: SessionsApi
   public readonly signatures: SignaturesApi
@@ -43,7 +44,6 @@ export class Api {
   public readonly users: UsersApi
   public readonly venues: VenuesApi
   public readonly vxl: VxlApi
-  public readonly workspaces: WorkspacesApi
 
   private readonly httpClient: HttpClient
 
@@ -59,6 +59,7 @@ export class Api {
     this.blockchains = new BlockchainsApi(this.httpClient)
     this.functions = new FunctionsApi(this.httpClient)
     this.labels = new LabelsApi(this.httpClient)
+    this.layouts = new LayoutsApi(this.httpClient)
     this.reports = new ReportsApi(this.httpClient)
     this.sessions = new SessionsApi(this.httpClient)
     this.signatures = new SignaturesApi(this.httpClient)
@@ -68,7 +69,6 @@ export class Api {
     this.users = new UsersApi(this.httpClient)
     this.venues = new VenuesApi(this.httpClient)
     this.vxl = new VxlApi(this.httpClient)
-    this.workspaces = new WorkspacesApi(this.httpClient)
   }
 
   /**

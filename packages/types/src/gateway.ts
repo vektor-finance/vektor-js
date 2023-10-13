@@ -2,6 +2,8 @@ import type {
   Alert,
   Component,
   Label,
+  Layout,
+  LayoutWithoutComponents,
   LocalFunctionCall,
   NetworkID,
   Report,
@@ -10,8 +12,6 @@ import type {
   Transaction,
   UserSettings,
   VXLHistoryEntry,
-  Workspace,
-  WorkspaceWithoutComponents,
 } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
@@ -81,16 +81,19 @@ export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', und
 // User Settings
 export type UserSettingsUpdatedEvent = GatewayBaseEvent<'user_settings_updated', UserSettings>
 
-// Workspaces
-export type WorkspaceCreatedEvent = GatewayBaseEvent<'workspace_created', WorkspaceWithoutComponents>
-export type WorkspaceOpenedEvent = GatewayBaseEvent<'workspace_opened', Workspace>
-export type WorkspaceUpdatedEvent = GatewayBaseEvent<'workspace_updated', WorkspaceWithoutComponents>
-export type WorkspaceDeletedEvent = GatewayBaseEvent<'workspace_deleted', Pick<Workspace, 'id'>>
+// Layouts
+export type LayoutCreatedEvent = GatewayBaseEvent<'layout_created', LayoutWithoutComponents>
+export type LayoutOpenedEvent = GatewayBaseEvent<'layout_opened', Layout>
+export type LayoutUpdatedEvent = GatewayBaseEvent<'layout_updated', LayoutWithoutComponents>
+export type LayoutDeletedEvent = GatewayBaseEvent<'layout_deleted', Pick<Layout, 'id'>>
 
 // Components
 export type ComponentCreatedEvent = GatewayBaseEvent<'component_created', Component>
 export type ComponentUpdatedEvent = GatewayBaseEvent<'component_updated', Component>
-export type ComponentIndexesUpdatedEvent = GatewayBaseEvent<'component_indexes_updated', { id: string; index: number }[]>
+export type ComponentIndexesUpdatedEvent = GatewayBaseEvent<
+  'component_indexes_updated',
+  { id: string; index: number }[]
+>
 export type ComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<Component, 'id'>>
 
 export type GatewayEvent =
@@ -98,14 +101,18 @@ export type GatewayEvent =
   | AlertDeletedEvent
   | AlertTriggeredEvent
   | AlertUpdatedEvent
-  | LabelCreatedEvent
-  | LabelDeletedEvent
-  | LabelUpdatedEvent
-  | LocalFunctionCalledEvent
   | ComponentCreatedEvent
   | ComponentDeletedEvent
   | ComponentIndexesUpdatedEvent
   | ComponentUpdatedEvent
+  | LabelCreatedEvent
+  | LabelDeletedEvent
+  | LabelUpdatedEvent
+  | LayoutCreatedEvent
+  | LayoutDeletedEvent
+  | LayoutOpenedEvent
+  | LayoutUpdatedEvent
+  | LocalFunctionCalledEvent
   | ReportCreatedEvent
   | ReportDeletedEvent
   | ReportUpdatedEvent
@@ -126,9 +133,5 @@ export type GatewayEvent =
   | VXLHistoryDeletedEvent
   | VXLHistoryEntryCreatedEvent
   | VXLHistoryEntryDeletedEvent
-  | WorkspaceCreatedEvent
-  | WorkspaceDeletedEvent
-  | WorkspaceOpenedEvent
-  | WorkspaceUpdatedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']

@@ -28,7 +28,7 @@ export type ComponentContentType = 'vdn' | 'local_function' | 'error'
 
 export interface Component {
   id: string
-  workspace_id: string
+  layout_id: string
   index: number
   last_updated_at: string
   title: string
