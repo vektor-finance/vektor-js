@@ -26,7 +26,7 @@ export type ComponentContentPayloadData = ComponentContent['data']
 export type ComponentSource = { type: 'live'; running: boolean } | { type: 'static' }
 export type ComponentContentType = 'vdn' | 'local_function' | 'error'
 
-export interface Component {
+export interface LayoutComponent {
   id: string
   layout_id: string
   index: number
@@ -37,4 +37,4 @@ export interface Component {
   pagination: Pagination
 }
 
-export type ComponentUpdateRequest = Partial<Pick<Component, 'title' | 'pagination'>>
+export type ComponentUpdateRequest = Partial<Pick<LayoutComponent, 'title' | 'pagination'>>

@@ -1,8 +1,8 @@
 import type {
   Alert,
-  Component,
   Label,
   Layout,
+  LayoutComponent,
   LayoutWithoutComponents,
   LocalFunctionCall,
   NetworkID,
@@ -87,27 +87,27 @@ export type LayoutOpenedEvent = GatewayBaseEvent<'layout_opened', Layout>
 export type LayoutUpdatedEvent = GatewayBaseEvent<'layout_updated', LayoutWithoutComponents>
 export type LayoutDeletedEvent = GatewayBaseEvent<'layout_deleted', Pick<Layout, 'id'>>
 
-// Components
-export type ComponentCreatedEvent = GatewayBaseEvent<'component_created', Component>
-export type ComponentUpdatedEvent = GatewayBaseEvent<'component_updated', Component>
-export type ComponentIndexesUpdatedEvent = GatewayBaseEvent<
+// Layout Components
+export type LayoutComponentCreatedEvent = GatewayBaseEvent<'component_created', LayoutComponent>
+export type LayoutComponentUpdatedEvent = GatewayBaseEvent<'component_updated', LayoutComponent>
+export type LayoutComponentIndexesUpdatedEvent = GatewayBaseEvent<
   'component_indexes_updated',
   { id: string; index: number }[]
 >
-export type ComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<Component, 'id'>>
+export type LayoutComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<LayoutComponent, 'id'>>
 
 export type GatewayEvent =
   | AlertCreatedEvent
   | AlertDeletedEvent
   | AlertTriggeredEvent
   | AlertUpdatedEvent
-  | ComponentCreatedEvent
-  | ComponentDeletedEvent
-  | ComponentIndexesUpdatedEvent
-  | ComponentUpdatedEvent
   | LabelCreatedEvent
   | LabelDeletedEvent
   | LabelUpdatedEvent
+  | LayoutComponentCreatedEvent
+  | LayoutComponentDeletedEvent
+  | LayoutComponentIndexesUpdatedEvent
+  | LayoutComponentUpdatedEvent
   | LayoutCreatedEvent
   | LayoutDeletedEvent
   | LayoutOpenedEvent

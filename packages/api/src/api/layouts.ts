@@ -1,7 +1,7 @@
 import type {
-  Component,
   ComponentUpdateRequest,
   Layout,
+  LayoutComponent,
   LayoutCreateRequest,
   LayoutsListRequestParams,
   LayoutUpdateRequest,
@@ -62,21 +62,21 @@ export class LayoutsApi extends BaseApi {
   // Components
 
   /**
-   * Retrieves a Component with the specified ID.
+   * Retrieves a LayoutComponent with the specified ID.
    */
-  public getComponent(id: string): Promise<ApiResponse<Component>> {
+  public getComponent(id: string): Promise<ApiResponse<LayoutComponent>> {
     return this.httpClient.get(`/layouts/component/${id}`)
   }
 
   /**
-   * Updates a Component with the specified ID.
+   * Updates a LayoutComponent with the specified ID.
    */
   public updateComponent(id: string, payload: ComponentUpdateRequest): Promise<ApiResponse<void>> {
     return this.httpClient.patch(`/layouts/component/${id}`, payload)
   }
 
   /**
-   * Deletes a Component with the specified ID.
+   * Deletes a LayoutComponent with the specified ID.
    */
   public deleteComponent(id: string): Promise<ApiResponse<void>> {
     return this.httpClient.delete(`/layouts/component/${id}`)

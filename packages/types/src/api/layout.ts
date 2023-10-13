@@ -1,4 +1,4 @@
-import { Component } from './component'
+import { LayoutComponent } from './component'
 import { NetworkMode } from './network'
 
 export interface Layout {
@@ -7,7 +7,7 @@ export interface Layout {
   updated_at: string
   name: string
   network_mode: NetworkMode
-  components: Component[]
+  components: LayoutComponent[]
   open: boolean
 }
 
