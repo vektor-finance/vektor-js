@@ -1,9 +1,9 @@
 import type {
   Alert,
+  Component,
   Label,
   LocalFunctionCall,
   NetworkID,
-  Pane,
   Report,
   Session,
   Stream,
@@ -11,7 +11,7 @@ import type {
   UserSettings,
   VXLHistoryEntry,
   Workspace,
-  WorkspaceWithoutPanes,
+  WorkspaceWithoutComponents,
 } from './api'
 import type { SigningRequestCompleted, SigningRequests } from './signing'
 import type { TaskState } from './task'
@@ -82,16 +82,16 @@ export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', und
 export type UserSettingsUpdatedEvent = GatewayBaseEvent<'user_settings_updated', UserSettings>
 
 // Workspaces
-export type WorkspaceCreatedEvent = GatewayBaseEvent<'workspace_created', WorkspaceWithoutPanes>
+export type WorkspaceCreatedEvent = GatewayBaseEvent<'workspace_created', WorkspaceWithoutComponents>
 export type WorkspaceOpenedEvent = GatewayBaseEvent<'workspace_opened', Workspace>
-export type WorkspaceUpdatedEvent = GatewayBaseEvent<'workspace_updated', WorkspaceWithoutPanes>
+export type WorkspaceUpdatedEvent = GatewayBaseEvent<'workspace_updated', WorkspaceWithoutComponents>
 export type WorkspaceDeletedEvent = GatewayBaseEvent<'workspace_deleted', Pick<Workspace, 'id'>>
 
-// Panes
-export type PaneCreatedEvent = GatewayBaseEvent<'pane_created', Pane>
-export type PaneUpdatedEvent = GatewayBaseEvent<'pane_updated', Pane>
-export type PaneIndexesUpdatedEvent = GatewayBaseEvent<'pane_indexes_updated', { id: string; index: number }[]>
-export type PaneDeletedEvent = GatewayBaseEvent<'pane_deleted', Pick<Pane, 'id'>>
+// Components
+export type ComponentCreatedEvent = GatewayBaseEvent<'component_created', Component>
+export type ComponentUpdatedEvent = GatewayBaseEvent<'component_updated', Component>
+export type ComponentIndexesUpdatedEvent = GatewayBaseEvent<'component_indexes_updated', { id: string; index: number }[]>
+export type ComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<Component, 'id'>>
 
 export type GatewayEvent =
   | AlertCreatedEvent
@@ -102,10 +102,10 @@ export type GatewayEvent =
   | LabelDeletedEvent
   | LabelUpdatedEvent
   | LocalFunctionCalledEvent
-  | PaneCreatedEvent
-  | PaneDeletedEvent
-  | PaneIndexesUpdatedEvent
-  | PaneUpdatedEvent
+  | ComponentCreatedEvent
+  | ComponentDeletedEvent
+  | ComponentIndexesUpdatedEvent
+  | ComponentUpdatedEvent
   | ReportCreatedEvent
   | ReportDeletedEvent
   | ReportUpdatedEvent

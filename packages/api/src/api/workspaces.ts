@@ -1,11 +1,11 @@
 import type {
-  Pane,
-  PaneUpdateRequest,
+  Component,
+  ComponentUpdateRequest,
   Workspace,
   WorkspaceCreateRequest,
   WorkspacesListRequestParams,
   WorkspaceUpdateRequest,
-  WorkspaceWithoutPanes,
+  WorkspaceWithoutComponents,
 } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
@@ -27,7 +27,7 @@ export class WorkspacesApi extends BaseApi {
   /**
    * Retrieves all Workspaces.
    */
-  public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<WorkspaceWithoutPanes[]>> {
+  public list(params?: WorkspacesListRequestParams): Promise<ApiResponse<WorkspaceWithoutComponents[]>> {
     return this.httpClient.get('/workspaces', { params })
   }
 
@@ -59,26 +59,26 @@ export class WorkspacesApi extends BaseApi {
     return this.httpClient.delete(`/workspaces/${id}`)
   }
 
-  // Panes
+  // Components
 
   /**
-   * Retrieves a Pane with the specified ID.
+   * Retrieves a Component with the specified ID.
    */
-  public getPane(id: string): Promise<ApiResponse<Pane>> {
-    return this.httpClient.get(`/workspaces/pane/${id}`)
+  public getComponent(id: string): Promise<ApiResponse<Component>> {
+    return this.httpClient.get(`/workspaces/component/${id}`)
   }
 
   /**
-   * Updates a Pane with the specified ID.
+   * Updates a Component with the specified ID.
    */
-  public updatePane(id: string, payload: PaneUpdateRequest): Promise<ApiResponse<void>> {
-    return this.httpClient.patch(`/workspaces/pane/${id}`, payload)
+  public updateComponent(id: string, payload: ComponentUpdateRequest): Promise<ApiResponse<void>> {
+    return this.httpClient.patch(`/workspaces/component/${id}`, payload)
   }
 
   /**
-   * Deletes a Pane with the specified ID.
+   * Deletes a Component with the specified ID.
    */
-  public deletePane(id: string): Promise<ApiResponse<void>> {
-    return this.httpClient.delete(`/workspaces/pane/${id}`)
+  public deleteComponent(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.delete(`/workspaces/component/${id}`)
   }
 }

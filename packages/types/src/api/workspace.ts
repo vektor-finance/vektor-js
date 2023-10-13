@@ -1,5 +1,5 @@
+import { Component } from './component'
 import { NetworkMode } from './network'
-import { Pane } from './pane'
 
 export interface Workspace {
   id: string
@@ -7,11 +7,11 @@ export interface Workspace {
   updated_at: string
   name: string
   network_mode: NetworkMode
-  panes: Pane[]
+  components: Component[]
   open: boolean
 }
 
-export type WorkspaceWithoutPanes = Omit<Workspace, 'panes'>
+export type WorkspaceWithoutComponents = Omit<Workspace, 'components'>
 
 export type WorkspaceCreateRequest = Partial<Pick<Workspace, 'name' | 'network_mode' | 'open'>>
 export type WorkspaceUpdateRequest = Partial<Pick<Workspace, 'name'>>
