@@ -88,7 +88,7 @@ export type LayoutUpdatedEvent = GatewayBaseEvent<'layout_updated', LayoutWithou
 export type LayoutDeletedEvent = GatewayBaseEvent<'layout_deleted', Pick<Layout, 'id'>>
 
 // Layout Components
-export type LayoutComponentCreatedEvent = GatewayBaseEvent<'component_created', LayoutComponent>
+export type LayoutComponentAddedEvent = GatewayBaseEvent<'component_added', LayoutComponent>
 export type LayoutComponentUpdatedEvent = GatewayBaseEvent<'component_updated', LayoutComponent>
 export type LayoutComponentIndexesUpdatedEvent = GatewayBaseEvent<
   'component_indexes_updated',
@@ -104,7 +104,7 @@ export type GatewayEvent =
   | LabelCreatedEvent
   | LabelDeletedEvent
   | LabelUpdatedEvent
-  | LayoutComponentCreatedEvent
+  | LayoutComponentAddedEvent
   | LayoutComponentDeletedEvent
   | LayoutComponentIndexesUpdatedEvent
   | LayoutComponentUpdatedEvent
