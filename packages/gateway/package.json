@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/gateway",
-  "version": "0.39.4-alpha.7+c18a0de",
+  "version": "0.39.4-alpha.8+f904970",
   "description": "Vektor gateway service client",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/gateway",
@@ -41,8 +41,8 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "@vektor-finance/eslint-config-sdk": "^0.39.4-alpha.7+c18a0de",
-    "@vektor-finance/types": "^0.39.4-alpha.7+c18a0de"
+    "@vektor-finance/eslint-config-sdk": "^0.39.4-alpha.8+f904970",
+    "@vektor-finance/types": "^0.39.4-alpha.8+f904970"
   },
   "devDependencies": {
     "@types/phoenix": "1.6.0",
@@ -67,5 +67,5 @@
     ]
   },
   "sideEffects": false,
-  "gitHead": "c18a0deb3dc5aad48c892e42536f3eccc7e4cd36"
+  "gitHead": "f904970127e983633263b09bf8875c0282a8eb94"
 }
