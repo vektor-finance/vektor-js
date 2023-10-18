@@ -7,7 +7,6 @@ import type {
   LocalFunctionCall,
   NetworkID,
   Report,
-  Session,
   Stream,
   Transaction,
   UserSettings,
@@ -25,11 +24,6 @@ type GatewayBaseEvent<EventName extends Lowercase<string>, Payload> = {
 export type LabelCreatedEvent = GatewayBaseEvent<'label_created', Label>
 export type LabelUpdatedEvent = GatewayBaseEvent<'label_updated', Label>
 export type LabelDeletedEvent = GatewayBaseEvent<'label_deleted', Pick<Label, 'id'>>
-
-// Sessions
-export type SessionCreatedEvent = GatewayBaseEvent<'session_created', Session>
-export type SessionUpdatedEvent = GatewayBaseEvent<'session_updated', Session>
-export type SessionDeletedEvent = GatewayBaseEvent<'session_deleted', Pick<Session, 'id'>>
 
 // Signing
 export type SigningRequestCreatedEvent = GatewayBaseEvent<'signing_request_created', SigningRequests>
@@ -116,9 +110,6 @@ export type GatewayEvent =
   | ReportCreatedEvent
   | ReportDeletedEvent
   | ReportUpdatedEvent
-  | SessionCreatedEvent
-  | SessionDeletedEvent
-  | SessionUpdatedEvent
   | SigningRequestCompletedEvent
   | SigningRequestCreatedEvent
   | StreamCreatedEvent

@@ -7,7 +7,6 @@ import {
   FunctionsApi,
   LabelsApi,
   ReportsApi,
-  SessionsApi,
   SignaturesApi,
   StreamsApi,
   TransactionsApi,
@@ -36,7 +35,6 @@ export class Api {
   public readonly labels: LabelsApi
   public readonly layouts: LayoutsApi
   public readonly reports: ReportsApi
-  public readonly sessions: SessionsApi
   public readonly signatures: SignaturesApi
   public readonly streams: StreamsApi
   public readonly transactions: TransactionsApi
@@ -61,7 +59,6 @@ export class Api {
     this.labels = new LabelsApi(this.httpClient)
     this.layouts = new LayoutsApi(this.httpClient)
     this.reports = new ReportsApi(this.httpClient)
-    this.sessions = new SessionsApi(this.httpClient)
     this.signatures = new SignaturesApi(this.httpClient)
     this.streams = new StreamsApi(this.httpClient)
     this.transactions = new TransactionsApi(this.httpClient)
