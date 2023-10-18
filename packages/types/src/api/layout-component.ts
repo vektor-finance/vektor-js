@@ -18,7 +18,10 @@ export interface ErrorLayoutComponentContent {
   value: AnyRuntimeError
 }
 
-export type LayoutComponentContent = LocalFunctionLayoutComponentContent | VDNLayoutComponentContent | ErrorLayoutComponentContent
+export type LayoutComponentContent =
+  | LocalFunctionLayoutComponentContent
+  | VDNLayoutComponentContent
+  | ErrorLayoutComponentContent
 
 export type LayoutComponentContentPayloadType = LayoutComponentContent['type']
 export type LayoutComponentContentPayloadValue = LayoutComponentContent['value']
