@@ -5,17 +5,17 @@ import { VDNOrVDNGeneric } from './vdn'
 
 export interface VDNLayoutComponentContent {
   type: 'vdn'
-  value: VDNOrVDNGeneric
+  data: VDNOrVDNGeneric
 }
 
 export interface LocalFunctionLayoutComponentContent {
   type: 'local_function'
-  value: LocalFunctionCall
+  data: LocalFunctionCall
 }
 
 export interface ErrorLayoutComponentContent {
   type: 'error'
-  value: AnyRuntimeError
+  data: AnyRuntimeError
 }
 
 export type LayoutComponentContent =
@@ -24,7 +24,7 @@ export type LayoutComponentContent =
   | ErrorLayoutComponentContent
 
 export type LayoutComponentContentPayloadType = LayoutComponentContent['type']
-export type LayoutComponentContentPayloadValue = LayoutComponentContent['value']
+export type LayoutComponentContentPayloadValue = LayoutComponentContent['data']
 
 export type LayoutComponentSource = { type: 'live'; running: boolean } | { type: 'static' }
 export type LayoutComponentContentType = 'vdn' | 'local_function' | 'error'
