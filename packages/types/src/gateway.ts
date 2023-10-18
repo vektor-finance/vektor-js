@@ -7,7 +7,6 @@ import type {
   LocalFunctionCall,
   NetworkID,
   Report,
-  Stream,
   Transaction,
   UserSettings,
   VXLHistoryEntry,
@@ -46,19 +45,6 @@ export type ReportDeletedEvent = GatewayBaseEvent<'report_deleted', Pick<Report,
 
 // Tasks
 export type TaskCompletedEvent = GatewayBaseEvent<'task_completed', TaskState>
-
-// Streams
-export type StreamCreatedEvent = GatewayBaseEvent<
-  'stream_created',
-  Pick<Stream, 'id' | 'created_at' | 'updated_at' | 'vxl'>
->
-export type StreamUpdatedEvent = GatewayBaseEvent<'stream_updated', Stream & NonNullable<Pick<Stream, 'last_value'>>>
-export type StreamPausedEvent = GatewayBaseEvent<'stream_paused', Pick<Stream, 'id'>>
-export type StreamResumedEvent = GatewayBaseEvent<'stream_resumed', Pick<Stream, 'id'>>
-export type StreamDeletedEvent = GatewayBaseEvent<
-  'stream_deleted',
-  Required<Pick<Stream, 'id' | 'reason'>> & Pick<Stream, 'error'>
->
 
 // Alerts
 export type AlertCreatedEvent = GatewayBaseEvent<'alert_created', Alert>
@@ -112,11 +98,6 @@ export type GatewayEvent =
   | ReportUpdatedEvent
   | SigningRequestCompletedEvent
   | SigningRequestCreatedEvent
-  | StreamCreatedEvent
-  | StreamDeletedEvent
-  | StreamPausedEvent
-  | StreamResumedEvent
-  | StreamUpdatedEvent
   | TaskCompletedEvent
   | TransactionBroadcastedEvent
   | TransactionUpdatedEvent
