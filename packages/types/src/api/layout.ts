@@ -1,4 +1,4 @@
-import { LayoutComponent } from './component'
+import { LayoutComponent } from './layout-component'
 import { NetworkMode } from './network'
 
 export interface Layout {
