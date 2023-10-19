@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/browser",
-  "version": "0.40.0-alpha.6+835c791",
+  "version": "0.40.0-alpha.10+7baa15f",
   "description": "Official Vektor SDK for browsers",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/browser",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -47,16 +47,16 @@
     ]
   },
   "dependencies": {
-    "@vektor-finance/api": "^0.40.0-alpha.6+835c791",
-    "@vektor-finance/gateway": "^0.40.0-alpha.6+835c791",
-    "@vektor-finance/types": "^0.40.0-alpha.6+835c791",
+    "@vektor-finance/api": "^0.40.0-alpha.10+7baa15f",
+    "@vektor-finance/gateway": "^0.40.0-alpha.10+7baa15f",
+    "@vektor-finance/types": "^0.40.0-alpha.10+7baa15f",
     "phoenix": "1.7.6",
     "tslib": "1.9.3"
   },
   "devDependencies": {
     "@types/eslint": "7.28.0",
     "@types/phoenix": "1.6.0",
-    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.6+835c791",
+    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.10+7baa15f",
     "chai": "4.3.7",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
@@ -87,5 +87,5 @@
   "engines": {
     "node": ">=6"
   },
-  "gitHead": "835c79161d400aa5a5ebf6c282349ac62151df9e"
+  "gitHead": "7baa15fb5338de8f4ee99b2cf729fa10cc73e082"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/typescript",
-  "version": "0.40.0-alpha.6+835c791",
+  "version": "0.40.0-alpha.10+7baa15f",
   "description": "Typescript configuration in Vektor",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/typescript",
@@ -13,5 +13,5 @@
     "link:yarn": "yarn link",
     "pack": "npm pack"
   },
-  "gitHead": "835c79161d400aa5a5ebf6c282349ac62151df9e"
+  "gitHead": "7baa15fb5338de8f4ee99b2cf729fa10cc73e082"
 }
