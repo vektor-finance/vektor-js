@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/node",
-  "version": "0.40.0-alpha.10+7baa15f",
+  "version": "0.40.0-alpha.12+ca69cfb",
   "description": "Official Vektor SDK for Node.js",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/node",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -46,16 +46,16 @@
     ]
   },
   "dependencies": {
-    "@vektor-finance/api": "^0.40.0-alpha.10+7baa15f",
-    "@vektor-finance/gateway": "^0.40.0-alpha.10+7baa15f",
-    "@vektor-finance/types": "^0.40.0-alpha.10+7baa15f",
+    "@vektor-finance/api": "^0.40.0-alpha.12+ca69cfb",
+    "@vektor-finance/gateway": "^0.40.0-alpha.12+ca69cfb",
+    "@vektor-finance/types": "^0.40.0-alpha.12+ca69cfb",
     "phoenix-channels": "1.0.0",
     "tslib": "1.9.3"
   },
   "devDependencies": {
     "@types/eslint": "7.28.0",
     "@types/phoenix": "1.6.0",
-    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.10+7baa15f",
+    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.12+ca69cfb",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
     "karma": "^6.4.2",
@@ -105,5 +105,5 @@
       }
     }
   },
-  "gitHead": "7baa15fb5338de8f4ee99b2cf729fa10cc73e082"
+  "gitHead": "ca69cfb055d1434e6ddac718125f594557c928ac"
 }
