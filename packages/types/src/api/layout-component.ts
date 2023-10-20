@@ -29,6 +29,8 @@ export type LayoutComponentContentPayloadValue = LayoutComponentContent['data']
 export type LayoutComponentSource = { type: 'live'; running: boolean } | { type: 'static' }
 export type LayoutComponentContentType = 'vdn' | 'local_function' | 'error'
 
+export type LayoutComponentExpectedType = 'list' | 'struct' | 'primitive'
+
 export interface LayoutComponent {
   id: string
   layout_id: string
@@ -37,6 +39,7 @@ export interface LayoutComponent {
   title: string
   source: LayoutComponentSource
   content: LayoutComponentContent | null
+  expected_type: LayoutComponentExpectedType
   pagination: Pagination
 }
 
