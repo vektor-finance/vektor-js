@@ -6,6 +6,7 @@ export interface Layout {
   created_at: string
   updated_at: string
   name: string
+  description: string | null
   network_mode: NetworkMode
   components: LayoutComponent[]
   open: boolean
@@ -14,7 +15,7 @@ export interface Layout {
 export type LayoutWithoutComponents = Omit<Layout, 'components'>
 
 export type LayoutCreateRequest = Partial<Pick<Layout, 'name' | 'network_mode' | 'open'>>
-export type LayoutUpdateRequest = Partial<Pick<Layout, 'name'>>
+export type LayoutUpdateRequest = Partial<Pick<Layout, 'name' | 'description'>>
 
 export interface LayoutsListRequestParams {
   network_mode?: NetworkMode
