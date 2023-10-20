@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/types",
-  "version": "0.40.0-alpha.12+ca69cfb",
+  "version": "0.40.0-alpha.14+7f390b2",
   "description": "Common types for all Vektor JavaScript SDKs",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/types",
@@ -33,8 +33,8 @@
     "pre-commit": "lint-staged"
   },
   "devDependencies": {
-    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.12+ca69cfb",
-    "@vektor-finance/utils": "^0.40.0-alpha.12+ca69cfb",
+    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.14+7f390b2",
+    "@vektor-finance/utils": "^0.40.0-alpha.14+7f390b2",
     "lint-staged": "12.4.1",
     "npm-run-all": "4.1.5",
     "prettier": "2.8.4",
@@ -49,5 +49,5 @@
     ]
   },
   "sideEffects": false,
-  "gitHead": "ca69cfb055d1434e6ddac718125f594557c928ac"
+  "gitHead": "7f390b23e47407a2ea02b30e1339867f9378ae45"
 }

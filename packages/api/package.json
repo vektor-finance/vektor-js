@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/api",
-  "version": "0.40.0-alpha.12+ca69cfb",
+  "version": "0.40.0-alpha.14+7f390b2",
   "description": "Vektor API client",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/api",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -44,9 +44,9 @@
   "devDependencies": {
     "@types/eslint": "7.28.0",
     "@types/node": "^12.11.5",
-    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.12+ca69cfb",
-    "@vektor-finance/types": "^0.40.0-alpha.12+ca69cfb",
-    "@vektor-finance/utils": "^0.40.0-alpha.12+ca69cfb",
+    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.14+7f390b2",
+    "@vektor-finance/types": "^0.40.0-alpha.14+7f390b2",
+    "@vektor-finance/utils": "^0.40.0-alpha.14+7f390b2",
     "jest": "27.5.1",
     "jsdom": "16.5.0",
     "karma": "^6.4.2",
@@ -82,5 +82,5 @@
       "prettier --write"
     ]
   },
-  "gitHead": "ca69cfb055d1434e6ddac718125f594557c928ac"
+  "gitHead": "7f390b23e47407a2ea02b30e1339867f9378ae45"
 }
