@@ -6,6 +6,8 @@ import type {
   LayoutsListRequestParams,
   LayoutUpdateRequest,
   LayoutWithoutComponents,
+  LayoutComponentsPositions,
+  LayoutComponentsPositionsUpdateRequest,
 } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
@@ -64,21 +66,44 @@ export class LayoutsApi extends BaseApi {
   /**
    * Retrieves a LayoutComponent with the specified ID.
    */
-  public getComponent(id: string): Promise<ApiResponse<LayoutComponent>> {
+  public getLayoutComponent(id: string): Promise<ApiResponse<LayoutComponent>> {
     return this.httpClient.get(`/layouts/component/${id}`)
   }
 
   /**
    * Updates a LayoutComponent with the specified ID.
    */
-  public updateComponent(id: string, payload: ComponentUpdateRequest): Promise<ApiResponse<void>> {
+  public updateLayoutComponent(id: string, payload: ComponentUpdateRequest): Promise<ApiResponse<void>> {
     return this.httpClient.patch(`/layouts/component/${id}`, payload)
   }
 
   /**
    * Deletes a LayoutComponent with the specified ID.
    */
-  public deleteComponent(id: string): Promise<ApiResponse<void>> {
+  public deleteLayoutComponent(id: string): Promise<ApiResponse<void>> {
     return this.httpClient.delete(`/layouts/component/${id}`)
+  }
+
+  // Positions
+
+  /**
+   * Retrieves a LayoutComponentsPositions with the specified layout ID.
+   */
+  public getLayoutComponentsPositions(id: string): Promise<ApiResponse<LayoutComponentsPositions>> {
+    return this.httpClient.get(`/layouts/${id}/positions`)
+  }
+
+  /**
+   * Updates a LayoutComponentsPositions with the specified ID.
+   */
+  public updateLayoutComponentsPositions(id: string, payload: LayoutComponentsPositionsUpdateRequest): Promise<ApiResponse<void>> {
+    return this.httpClient.put(`/layouts/${id}/positions`, payload)
+  }
+
+  /**
+   * Deletes a LayoutComponentsPositions with the specified ID.
+   */
+  public deleteLayoutComponentsPositions(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.delete(`/layouts/${id}/positions`)
   }
 }
