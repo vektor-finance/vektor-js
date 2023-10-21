@@ -66,6 +66,5 @@
       "prettier --write"
     ]
   },
-  "sideEffects": false,
-  "gitHead": "3afb86de8001393b835cdf7095bf08bb04719c03"
+  "sideEffects": false
 }
