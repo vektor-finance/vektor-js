@@ -2,12 +2,12 @@ import type {
   ComponentUpdateRequest,
   Layout,
   LayoutComponent,
+  LayoutComponentsPositions,
+  LayoutComponentsPositionsUpdateRequest,
   LayoutCreateRequest,
   LayoutsListRequestParams,
   LayoutUpdateRequest,
   LayoutWithoutComponents,
-  LayoutComponentsPositions,
-  LayoutComponentsPositionsUpdateRequest,
 } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
@@ -96,7 +96,10 @@ export class LayoutsApi extends BaseApi {
   /**
    * Updates a LayoutComponentsPositions with the specified ID.
    */
-  public updateLayoutComponentsPositions(id: string, payload: LayoutComponentsPositionsUpdateRequest): Promise<ApiResponse<void>> {
+  public updateLayoutComponentsPositions(
+    id: string,
+    payload: LayoutComponentsPositionsUpdateRequest,
+  ): Promise<ApiResponse<void>> {
     return this.httpClient.put(`/layouts/${id}/positions`, payload)
   }
 
