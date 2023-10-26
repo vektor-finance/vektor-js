@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/utils",
-  "version": "0.40.0-alpha.27+5c3931f",
+  "version": "0.40.0-alpha.30+f7dfe39",
   "description": "Utilities for all Vektor JavaScript SDKs",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/utils",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
@@ -58,7 +58,7 @@
     "tslib": "1.9.3"
   },
   "devDependencies": {
-    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.27+5c3931f",
+    "@vektor-finance/eslint-config-sdk": "^0.40.0-alpha.30+f7dfe39",
     "jest": "27.5.1",
     "npm-run-all": "4.1.5",
     "prettier": "2.8.4",
@@ -76,5 +76,5 @@
       "prettier --write"
     ]
   },
-  "gitHead": "5c3931f475d45ed91783f8a03a104f90e27d5946"
+  "gitHead": "f7dfe3928951919bdd39d14d69fc8ba12102204e"
 }
