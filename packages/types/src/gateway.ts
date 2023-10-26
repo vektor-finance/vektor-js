@@ -3,7 +3,7 @@ import type {
   Label,
   Layout,
   LayoutComponent,
-  LayoutWithoutComponents,
+  LayoutWithoutNested,
   LocalFunctionCall,
   NetworkID,
   Report,
@@ -62,10 +62,10 @@ export type VXLHistoryDeletedEvent = GatewayBaseEvent<'vxl_history_deleted', und
 export type UserSettingsUpdatedEvent = GatewayBaseEvent<'user_settings_updated', UserSettings>
 
 // Layouts
-export type LayoutCreatedEvent = GatewayBaseEvent<'layout_created', LayoutWithoutComponents>
-export type LayoutOpenedEvent = GatewayBaseEvent<'layout_opened', Layout>
-export type LayoutUpdatedEvent = GatewayBaseEvent<'layout_updated', LayoutWithoutComponents>
+export type LayoutCreatedEvent = GatewayBaseEvent<'layout_created', LayoutWithoutNested>
+export type LayoutUpdatedEvent = GatewayBaseEvent<'layout_updated', LayoutWithoutNested>
 export type LayoutDeletedEvent = GatewayBaseEvent<'layout_deleted', Pick<Layout, 'id'>>
+export type LayoutOpenedEvent = GatewayBaseEvent<'layout_opened', Layout>
 export type LayoutClearedEvent = GatewayBaseEvent<'layout_cleared', Pick<Layout, 'id'>>
 
 // Layout Components
@@ -75,7 +75,10 @@ export type LayoutComponentIndexesUpdatedEvent = GatewayBaseEvent<
   'component_indexes_updated',
   { id: string; index: number }[]
 >
-export type LayoutComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<LayoutComponent, 'id' | 'layout_id'>>
+export type LayoutComponentDeletedEvent = GatewayBaseEvent<
+  'component_deleted',
+  Pick<LayoutComponent, 'id' | 'layout_id'>
+>
 
 export type GatewayEvent =
   | AlertCreatedEvent

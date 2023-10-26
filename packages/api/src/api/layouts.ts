@@ -7,7 +7,7 @@ import type {
   LayoutCreateRequest,
   LayoutsListRequestParams,
   LayoutUpdateRequest,
-  LayoutWithoutComponents,
+  LayoutWithoutNested,
 } from '@vektor-finance/types'
 
 import { BaseApi } from '../base'
@@ -29,7 +29,7 @@ export class LayoutsApi extends BaseApi {
   /**
    * Retrieves all Layouts.
    */
-  public list(params?: LayoutsListRequestParams): Promise<ApiResponse<LayoutWithoutComponents[]>> {
+  public list(params?: LayoutsListRequestParams): Promise<ApiResponse<LayoutWithoutNested[]>> {
     return this.httpClient.get('/layouts', { params })
   }
 

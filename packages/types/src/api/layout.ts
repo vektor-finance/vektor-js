@@ -1,4 +1,5 @@
 import { LayoutComponent } from './layout-component'
+import { LayoutComponentsPositions } from './layout-components-positions'
 import { NetworkMode } from './network'
 
 export interface Layout {
@@ -9,10 +10,11 @@ export interface Layout {
   description: string | null
   network_mode: NetworkMode
   components: LayoutComponent[]
+  positions: LayoutComponentsPositions
   open: boolean
 }
 
-export type LayoutWithoutComponents = Omit<Layout, 'components'>
+export type LayoutWithoutNested = Omit<Layout, 'components' | 'positions'>
 
 export type LayoutCreateRequest = Pick<Layout, 'name' | 'network_mode'> & Partial<Pick<Layout, 'description' | 'open'>>
 export type LayoutUpdateRequest = Partial<Pick<Layout, 'name' | 'description'>>
