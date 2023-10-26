@@ -15,7 +15,7 @@ export interface Layout {
 export type LayoutWithoutComponents = Omit<Layout, 'components'>
 
 export type LayoutCreateRequest = Pick<Layout, 'name' | 'network_mode'> & Partial<Pick<Layout, 'description' | 'open'>>
-export type LayoutUpdateRequest = Partial<Pick<Layout, 'name' | 'description' | 'open'>>
+export type LayoutUpdateRequest = Partial<Pick<Layout, 'name' | 'description'>>
 
 export interface LayoutsListRequestParams {
   network_mode?: NetworkMode
