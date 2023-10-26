@@ -1,6 +1,6 @@
 {
   "name": "@vektor-finance/eslint-config-sdk",
-  "version": "0.40.0-alpha.33+f1d6f69",
+  "version": "0.40.0-alpha.35+d75a9fd",
   "description": "Official Vektor SDK ESLint config",
   "repository": "git://github.com/vektor-finance/vektor-js.git",
   "homepage": "https://github.com/vektor-finance/vektor-js/tree/master/packages/eslint-config-sdk",
@@ -16,7 +16,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.32.0",
     "@typescript-eslint/parser": "4.32.0",
-    "@vektor-finance/typescript": "^0.40.0-alpha.33+f1d6f69",
+    "@vektor-finance/typescript": "^0.40.0-alpha.35+d75a9fd",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-deprecation": "^1.4.1",
     "eslint-plugin-import": "^2.27.5",
@@ -33,5 +33,5 @@
   "engines": {
     "node": ">=6"
   },
-  "gitHead": "f1d6f69d38573e1d2d7c06546022e1104c6b2e7d"
+  "gitHead": "d75a9fd388e25d85cdfbee0f8749985bc215e550"
 }
