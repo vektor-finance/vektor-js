@@ -64,7 +64,7 @@ export class LayoutsApi extends BaseApi {
   /**
    * Clears a layout of components i.e. deletes them all
    */
-  public clearLayout(id: string): Promise<ApiResponse<void>> {
+  public clear(id: string): Promise<ApiResponse<void>> {
     return this.httpClient.delete(`/layouts/${id}/components`)
   }
 
