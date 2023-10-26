@@ -75,7 +75,7 @@ export type LayoutComponentIndexesUpdatedEvent = GatewayBaseEvent<
   'component_indexes_updated',
   { id: string; index: number }[]
 >
-export type LayoutComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<LayoutComponent, 'id'>>
+export type LayoutComponentDeletedEvent = GatewayBaseEvent<'component_deleted', Pick<LayoutComponent, 'id' | 'layout_id'>>
 
 export type GatewayEvent =
   | AlertCreatedEvent
