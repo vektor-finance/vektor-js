@@ -10,7 +10,7 @@ export interface Layout {
   description: string | null
   network_mode: NetworkMode
   components: LayoutComponent[]
-  positions: LayoutComponentsPositions
+  positions: LayoutComponentsPositions | null
   open: boolean
 }
 
