@@ -1,5 +1,4 @@
 import { AnyRuntimeError } from './error'
-import { LocalFunctionCall } from './local-function-call'
 import { Pagination } from './pagination'
 import { VDNOrVDNGeneric } from './vdn'
 
@@ -8,28 +7,20 @@ export interface VDNLayoutComponentContent {
   data: VDNOrVDNGeneric
 }
 
-export interface LocalFunctionLayoutComponentContent {
-  type: 'local_function'
-  data: LocalFunctionCall
-}
-
 export interface ErrorLayoutComponentContent {
   type: 'error'
   data: AnyRuntimeError
 }
 
-export type LayoutComponentContent =
-  | LocalFunctionLayoutComponentContent
-  | VDNLayoutComponentContent
-  | ErrorLayoutComponentContent
+export type LayoutComponentContent = VDNLayoutComponentContent | ErrorLayoutComponentContent
 
 export type LayoutComponentContentPayloadType = LayoutComponentContent['type']
 export type LayoutComponentContentPayloadValue = LayoutComponentContent['data']
 
 export type LayoutComponentSource = { type: 'live'; running: boolean } | { type: 'static' }
-export type LayoutComponentContentType = 'vdn' | 'local_function' | 'error'
+export type LayoutComponentContentType = 'vdn' | 'error'
 
-export type LayoutComponentExpectedType = 'list' | 'struct' | 'primitive'
+export type LayoutComponentExpectedType = 'list' | 'struct' | 'primitive' | 'local_function_call'
 
 export interface LayoutComponent {
   id: string

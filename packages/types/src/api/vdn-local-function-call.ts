@@ -34,7 +34,6 @@ export interface VDNLocalFunctionCallValue {
   options: VDNJSON
 }
 
-
 /**
  * VXL LocalFunctionCall representation
  * @export

@@ -4,7 +4,7 @@ import type {
   Layout,
   LayoutComponent,
   LayoutWithoutNested,
-  LocalFunctionCall,
+  LocalFunctionCalled,
   NetworkID,
   Report,
   Transaction,
@@ -51,7 +51,7 @@ export type AlertCreatedEvent = GatewayBaseEvent<'alert_created', Alert>
 export type AlertUpdatedEvent = GatewayBaseEvent<'alert_created', Alert>
 export type AlertDeletedEvent = GatewayBaseEvent<'alert_created', Pick<Alert, 'id'>>
 export type AlertTriggeredEvent = GatewayBaseEvent<'alert_created', Alert>
-export type LocalFunctionCalledEvent = GatewayBaseEvent<'local_function_called', LocalFunctionCall>
+export type LocalFunctionCalledEvent = GatewayBaseEvent<'local_function_called', LocalFunctionCalled>
 
 // History
 export type VXLHistoryEntryCreatedEvent = GatewayBaseEvent<'vxl_history_entry_created', VXLHistoryEntry>
