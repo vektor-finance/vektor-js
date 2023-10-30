@@ -5,7 +5,7 @@ export type Breakpoint = 'lg' | 'md' | 'sm' | 'xs' | 'xxs'
 export interface LayoutComponentsPositions {
   id: string
   layoutsByBreakpoint: RGLayoutsByBreakpoint
-  activeId?: string
+  focusedId?: string
   maximizedId?: string
 }
 
