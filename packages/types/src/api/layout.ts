@@ -16,7 +16,7 @@ export interface Layout {
 
 export type LayoutWithoutNested = Omit<Layout, 'components' | 'positions'>
 
-export type LayoutCreateRequest = Pick<Layout, 'name' | 'network_mode'> & Partial<Pick<Layout, 'description' | 'open'>>
+export type LayoutCreateRequest = Pick<Layout, 'name'> & Partial<Pick<Layout, 'description' | 'open' | 'network_mode'>>
 export type LayoutUpdateRequest = Partial<Pick<Layout, 'name' | 'description'>>
 
 export interface LayoutsListRequestParams {
