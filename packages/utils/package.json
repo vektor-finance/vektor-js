@@ -75,6 +75,5 @@
     "*.{js,jsx,ts,tsx,json}": [
       "prettier --write"
     ]
-  },
-  "gitHead": "983d22c12bf13925ba04e7fd5f63772930441176"
+  }
 }

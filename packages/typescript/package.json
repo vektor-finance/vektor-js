@@ -12,6 +12,5 @@
   "scripts": {
     "link:yarn": "yarn link",
     "pack": "npm pack"
-  },
-  "gitHead": "983d22c12bf13925ba04e7fd5f63772930441176"
+  }
 }
