@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.40.0](https://github.com/vektor-finance/vektor-js/compare/v0.39.3...v0.40.0) (2023-11-01)
+
+
+### Features
+
+* rename workspaces -> layouts and panes -> components ([#119](https://github.com/vektor-finance/vektor-js/issues/119)) ([0b82843](https://github.com/vektor-finance/vektor-js/commit/0b828434631c87d00193b13f9fb5c326986d8ec2))
+
+
+
 ### [0.39.3](https://github.com/vektor-finance/vektor-js/compare/v0.39.2...v0.39.3) (2023-10-12)
 
 **Note:** Version bump only for package @vektor-finance/types
