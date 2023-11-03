@@ -31,7 +31,9 @@ export interface LayoutComponent {
   source: LayoutComponentSource
   content: LayoutComponentContent | null
   expected_type: LayoutComponentExpectedType
-  pagination: Pagination
+  pagination: Pagination | null
 }
 
-export type ComponentUpdateRequest = Partial<Pick<LayoutComponent, 'title' | 'pagination'>>
+export type ComponentUpdateRequest = Partial<Pick<LayoutComponent, 'title'>> & {
+  pagination?: Omit<Pagination, 'total_count'>
+}

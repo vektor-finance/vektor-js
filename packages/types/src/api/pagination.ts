@@ -21,5 +21,5 @@ export interface Pagination {
    * @type {number}
    * @memberof Pagination
    */
-  total_count: number | null
+  total_count: number
 }
