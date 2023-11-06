@@ -3,6 +3,7 @@ import type {
   LayoutComponent,
   LayoutComponentsPositions,
   LayoutComponentsPositionsUpdateRequest,
+  LayoutComponentUpdateRequest,
   LayoutCreateRequest,
   LayoutsListRequestParams,
   LayoutUpdateRequest,
