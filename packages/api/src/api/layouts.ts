@@ -1,5 +1,4 @@
 import type {
-  ComponentUpdateRequest,
   Layout,
   LayoutComponent,
   LayoutComponentsPositions,
@@ -80,7 +79,7 @@ export class LayoutsApi extends BaseApi {
   /**
    * Updates a LayoutComponent with the specified ID.
    */
-  public updateLayoutComponent(id: string, payload: ComponentUpdateRequest): Promise<ApiResponse<void>> {
+  public updateLayoutComponent(id: string, payload: LayoutComponentUpdateRequest): Promise<ApiResponse<void>> {
     return this.httpClient.patch(`/layouts/component/${id}`, payload)
   }
 
