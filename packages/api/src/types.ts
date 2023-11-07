@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {
-  AxiosError,
   type AxiosInstance,
   type AxiosInterceptorOptions,
   type AxiosResponse,
   type CreateAxiosDefaults,
   type InternalAxiosRequestConfig,
+  AxiosError,
 } from 'axios'
 
 export interface InterceptorManager<V> {

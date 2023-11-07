@@ -14,8 +14,8 @@
     "pack": "npm pack"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.32.0",
-    "@typescript-eslint/parser": "4.32.0",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
+    "@typescript-eslint/parser": "6.10.0",
     "@vektor-finance/typescript": "^0.40.4",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-deprecation": "^1.4.1",
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "typescript": "4.9.5"
+    "typescript": "5.2.2"
   },
   "peerDependencies": {
     "eslint": ">=5"

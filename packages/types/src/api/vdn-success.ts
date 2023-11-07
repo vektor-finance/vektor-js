@@ -14,8 +14,8 @@ export interface VDNSuccess extends VDNBase {
   type: 'success'
   /**
    *
-   * @type {any}
+   * @type {unknown}
    * @memberof VDNSuccess
    */
-  value: any
+  value: unknown
 }
