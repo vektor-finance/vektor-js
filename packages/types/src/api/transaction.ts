@@ -74,6 +74,12 @@ export interface Transaction {
    * @memberof Transaction
    */
   label: Label
+  /**
+   *
+   * @type {string}
+   * @memberof Transaction
+   */
+  explorer_url: string | null
 }
 
 export interface TransactionsListRequestParams {
