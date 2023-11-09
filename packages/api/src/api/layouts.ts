@@ -6,6 +6,7 @@ import type {
   LayoutComponentUpdateRequest,
   LayoutCreateRequest,
   LayoutsListRequestParams,
+  LayoutTemplate,
   LayoutUpdateRequest,
   LayoutWithoutNested,
 } from '@vektor-finance/types'
@@ -115,5 +116,21 @@ export class LayoutsApi extends BaseApi {
    */
   public deleteLayoutComponentsPositions(id: string): Promise<ApiResponse<void>> {
     return this.httpClient.delete(`/layouts/${id}/positions`)
+  }
+
+  // Templates
+
+  /**
+   * Retrieves a LayoutTemplates
+   */
+  public getLayoutTemplates(): Promise<ApiResponse<LayoutTemplate[]>> {
+    return this.httpClient.get('/layouts/templates')
+  }
+
+  /**
+   * Retrieves a LayoutTemplates
+   */
+  public cloneTemplate(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.post(`/layouts/templates/${id}/clone`)
   }
 }
