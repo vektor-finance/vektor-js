@@ -27,7 +27,8 @@ export interface LayoutComponent {
   layout_id: string
   index: number
   last_updated_at: string
-  title: string
+  title: string | null
+  vxl: string
   source: LayoutComponentSource
   content: LayoutComponentContent | null
   expected_type: LayoutComponentExpectedType
