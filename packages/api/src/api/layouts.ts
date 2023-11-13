@@ -63,6 +63,13 @@ export class LayoutsApi extends BaseApi {
   }
 
   /**
+   * Clones a Layout.
+   */
+  public clone(id: string, payload: LayoutCreateRequest): Promise<ApiResponse<void>> {
+    return this.httpClient.post(`/layouts/${id}/clone`, payload)
+  }
+
+  /**
    * Clears a layout of components i.e. deletes them all
    */
   public clear(id: string): Promise<ApiResponse<void>> {
