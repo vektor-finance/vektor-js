@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.40.10](https://github.com/vektor-finance/vektor-js/compare/v0.40.9...v0.40.10) (2023-11-14)
+
+**Note:** Version bump only for package @vektor-finance/types
+
+
+
+
+
 ### [0.40.9](https://github.com/vektor-finance/vektor-js/compare/v0.40.8...v0.40.9) (2023-11-14)
 
 **Note:** Version bump only for package @vektor-finance/types
