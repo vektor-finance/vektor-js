@@ -1,11 +1,11 @@
 import type {
   Layout,
-  LayoutCloneRequest,
   LayoutComponent,
   LayoutComponentsPositions,
   LayoutComponentsPositionsUpdateRequest,
   LayoutComponentUpdateRequest,
   LayoutCreateRequest,
+  LayoutDuplicateRequest,
   LayoutsListRequestParams,
   LayoutTemplate,
   LayoutUpdateRequest,
@@ -64,10 +64,10 @@ export class LayoutsApi extends BaseApi {
   }
 
   /**
-   * Clones a Layout.
+   * Duplicates a Layout.
    */
-  public clone(id: string, payload: LayoutCloneRequest): Promise<ApiResponse<void>> {
-    return this.httpClient.post(`/layouts/${id}/clone`, payload)
+  public duplicate(id: string, payload: LayoutDuplicateRequest): Promise<ApiResponse<void>> {
+    return this.httpClient.post(`/layouts/${id}/duplicate`, payload)
   }
 
   /**
@@ -129,16 +129,16 @@ export class LayoutsApi extends BaseApi {
   // Templates
 
   /**
-   * Retrieves a LayoutTemplates
+   * Retrieves Layout Templates
    */
   public getLayoutTemplates(): Promise<ApiResponse<LayoutTemplate[]>> {
     return this.httpClient.get('/layouts/templates')
   }
 
   /**
-   * Retrieves a LayoutTemplates
+   * Duplicates a Layout Template
    */
-  public cloneTemplate(id: string): Promise<ApiResponse<void>> {
-    return this.httpClient.post(`/layouts/templates/${id}/clone`)
+  public duplicateTemplate(id: string): Promise<ApiResponse<void>> {
+    return this.httpClient.post(`/layouts/templates/${id}/duplicate`)
   }
 }
