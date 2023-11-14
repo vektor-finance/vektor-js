@@ -9,7 +9,7 @@ export interface Label {
   updated_at: string
 }
 
-export type LabelCreateRequest = Pick<Label, 'address' | 'name' | 'network_mode'>
+export type LabelCreateRequest = Pick<Label, 'address' | 'name'> & Partial<Pick<Label, 'network_mode'>>
 export type LabelUpdateRequest = Partial<Pick<Label, 'address' | 'name' | 'network_mode'>>
 
 export interface LabelsListRequestParams {
