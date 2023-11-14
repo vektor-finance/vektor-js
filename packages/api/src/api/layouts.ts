@@ -1,5 +1,6 @@
 import type {
   Layout,
+  LayoutCloneRequest,
   LayoutComponent,
   LayoutComponentsPositions,
   LayoutComponentsPositionsUpdateRequest,
@@ -65,7 +66,7 @@ export class LayoutsApi extends BaseApi {
   /**
    * Clones a Layout.
    */
-  public clone(id: string, payload: LayoutCreateRequest): Promise<ApiResponse<void>> {
+  public clone(id: string, payload: LayoutCloneRequest): Promise<ApiResponse<void>> {
     return this.httpClient.post(`/layouts/${id}/clone`, payload)
   }
 
