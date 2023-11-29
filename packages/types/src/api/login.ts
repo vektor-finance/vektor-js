@@ -26,4 +26,11 @@ export interface LoginResponse {
    * @memberof LoginResponse
    */
   user_id: string
+
+  /**
+   * SHA256 hash of the user\'s id & Intercom secret key
+   * @type {string}
+   * @memberof LoginResponse
+   */
+  intercom_user_hash: string | null
 }
