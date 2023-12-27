@@ -11,6 +11,7 @@ import { VDNBorrowAccount, VDNBorrowMarket, VDNBorrowPosition } from './vdn-borr
 import { VDNBridgeQuote } from './vdn-bridge'
 import { VDNBuyQuote } from './vdn-buy-quote'
 import { VDNChangesetError } from './vdn-changeset-error'
+import { VDNComponentID } from './vdn-component-id'
 import { VDNCSV } from './vdn-csv'
 import { VDNDateTime } from './vdn-date-time'
 import { VDNDecimal } from './vdn-decimal'
@@ -35,7 +36,6 @@ import { VDNPercentage } from './vdn-percentage'
 import { VDNPositionType } from './vdn-position'
 import { VDNPrice } from './vdn-price'
 import { VDNSellQuote } from './vdn-sell-quote'
-import { VDNStream } from './vdn-stream'
 import { VDNString } from './vdn-string'
 import { VDNSuccess } from './vdn-success'
 import { VDNSymbol } from './vdn-symbol'
@@ -70,6 +70,7 @@ export type VDN =
   | VDNBridgeQuote
   | VDNBuyQuote
   | VDNChangesetError
+  | VDNComponentID
   | VDNCSV
   | VDNDateTime
   | VDNDecimal
@@ -95,7 +96,6 @@ export type VDN =
   | VDNPositionType
   | VDNPrice
   | VDNSellQuote
-  | VDNStream
   | VDNString
   | VDNSuccess
   | VDNSymbol
@@ -155,8 +155,8 @@ export const isVDNTask = (vdn: VDNOrVDNGeneric): vdn is VDNTask =>
 export const isVDNList = (vdn: VDNOrVDNGeneric): vdn is VDNList =>
   isVDNGeneric(vdn) && vdn.type.type === 'list' && 'items' in vdn.type.parameters
 
-export const isVDNStream = (vdn: VDNOrVDNGeneric): vdn is VDNStream =>
-  vdn.type === 'stream' && typeof vdn.value === 'string'
+export const isVDNComponentID = (vdn: VDNOrVDNGeneric): vdn is VDNComponentID =>
+  vdn.type === 'component_id' && typeof vdn.value === 'string'
 
 export const isRuntimeError = (vdnOrRuntimeError: VDNOrRuntimeError): vdnOrRuntimeError is AnyRuntimeError =>
   [
