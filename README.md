@@ -4,7 +4,7 @@ Official Vektor SDKs for JavaScript.
 
 ## PLEASE READ FIRST
 
-When working in this project, please assume it will be open-sourced. For now a `LICENSE` has not been selected and none of those details have been discussed, but we do plan to make Vektor work with via the API and this SDK will help with that. With that in mind, do not add proprietary code here and keep it as clean and well documented as possible.
+This project has not been publically released yet - a license has not been added and it is not currently published on NPM. If you wish to use the Vektor API, please contact `engineering [at] vektor [dot] finance`.
 
 ## Requirements
 
@@ -20,12 +20,6 @@ For each major JavaScript platform, there is a specific high-level SDK that prov
 
 - [`@vektor-finance/browser`](packages/browser): SDK for browsers
 - [`@vektor-finance/node`](packages/node): SDK for Node
-
-### Future Supported Platforms
-
-- @vektor-finance/react: browser SDK with React integration enabled - _for web app_
-- @vektor-finance/react-native: SDK for React Native _for mobile apps_
-- @vektor-finance/electron: SDK for Electron _for desktop app_
 
 ## Installation
 
