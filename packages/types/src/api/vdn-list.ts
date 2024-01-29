@@ -1,6 +1,7 @@
 import { VXLAction } from './actions'
 import { VDN } from './vdn'
 import { VDNBase } from './vdn-base'
+import { VDNListAttribute } from './vdn-list-attribute'
 import { VXLListType } from './vxl'
 
 /**
@@ -29,4 +30,11 @@ export interface VDNList extends VDNBase {
    * @memberof VDNList
    */
   actions: VXLAction[]
+
+  /**
+   *
+   * @type {VDNListAttribute[]}
+   * @memberof VDNList
+   */
+  attributes: VDNListAttribute[]
 }
