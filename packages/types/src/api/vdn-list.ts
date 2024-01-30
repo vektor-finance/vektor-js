@@ -1,4 +1,4 @@
-import { VXLAction } from './actions'
+import { VXLAction } from './vxl-action'
 import { VDN } from './vdn'
 import { VDNBase } from './vdn-base'
 import { VDNListAttribute } from './vdn-list-attribute'
