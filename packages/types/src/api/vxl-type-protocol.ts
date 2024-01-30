@@ -1,4 +1,4 @@
-import type { VDNType } from "./vdn"
+import type { VDNType } from './vdn'
 
 /**
  * Represents VXL Type Protocol
