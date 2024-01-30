@@ -1,8 +1,8 @@
-import { VXLAction } from './actions'
-import { VDN } from './vdn'
-import { VDNBase } from './vdn-base'
-import { VDNListAttribute } from './vdn-list-attribute'
-import { VXLListType } from './vxl'
+import type { VDN } from './vdn'
+import type { VDNBase } from './vdn-base'
+import type { VDNListAttribute } from './vdn-list-attribute'
+import type { VXLListType } from './vxl'
+import type { VXLAction } from './vxl-action'
 
 /**
  * VDN list representation

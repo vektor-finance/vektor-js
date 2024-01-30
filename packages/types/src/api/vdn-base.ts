@@ -1,4 +1,4 @@
-import { VXLAction } from './actions'
+import { VXLAction } from './vxl-action'
 
 /**
  * VXL base type to inherit from
