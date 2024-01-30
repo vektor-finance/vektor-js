@@ -20,4 +20,11 @@ export class TypesApi extends BaseApi {
   public actions(): Promise<ApiResponse<VXLTypeActions>> {
     return this.httpClient.get<VXLTypeActions>('/types/actions')
   }
+
+  /**
+   * Retrieves all VXL Type Protocols.
+   */
+  public protocols(): Promise<ApiResponse<VXLTypeProtocol[]>> {
+    return this.httpClient.get<VXLTypeProtocol[]>('/types/protocols')
+  }
 }
