@@ -23,6 +23,12 @@ export interface VXLAction {
    */
   name: string
   /**
+   * Action Group
+   * @type {string}
+   * @memberof VXLAction
+   */
+  group: string | null
+  /**
    * Action VXL command
    * @type {string}
    * @memberof VXLAction
