@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.41.1](https://github.com/vektor-finance/vektor-js/compare/v0.41.0...v0.41.1) (2024-01-30)
+
+
+### Bug Fixes
+
+* **type:** add group to VXLAction ([#141](https://github.com/vektor-finance/vektor-js/issues/141)) ([af3b603](https://github.com/vektor-finance/vektor-js/commit/af3b60388cf3fb4f3f5629c5b9f7e27e22a2825b))
+
+
+
 ## [0.41.0](https://github.com/vektor-finance/vektor-js/compare/v0.40.17...v0.41.0) (2024-01-30)
 
 
