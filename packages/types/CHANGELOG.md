@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.42.1](https://github.com/vektor-finance/vektor-js/compare/v0.42.0...v0.42.1) (2024-02-06)
+
+
+### Bug Fixes
+
+* runtime_ prefix has been added to the eval errors for consistency ([#143](https://github.com/vektor-finance/vektor-js/issues/143)) ([6594d0e](https://github.com/vektor-finance/vektor-js/commit/6594d0e32e9ad801126eb7aeee180daefb8ce3e7))
+
+
+
 ## [0.42.0](https://github.com/vektor-finance/vektor-js/compare/v0.41.1...v0.42.0) (2024-02-06)
 
 
