@@ -177,11 +177,23 @@ export interface RuntimeNotAListError {
   data: { value: VDN }
 }
 
+export interface EvalMemoryExceededError {
+  type: 'eval_timeout_error'
+  data: { eval_timeout: number }
+}
+
+export interface EvalTimeoutError {
+  type: 'eval_memory_exceeded_error'
+  data: never
+}
+
 export type AnyRuntimeError =
   | RuntimeError
   | RuntimeSignatureMismatchError
   | RuntimeInvalidFieldError
   | RuntimeNotAListError
+  | EvalMemoryExceededError
+  | EvalTimeoutError
 
 export type VXLSubmitAPIError =
   | CompilerError
