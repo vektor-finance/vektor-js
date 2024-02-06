@@ -184,7 +184,7 @@ export interface EvalMemoryExceededError {
 
 export interface EvalTimeoutError {
   type: 'eval_memory_exceeded_error'
-  data: Record<string, unknown>
+  data: never
 }
 
 export type AnyRuntimeError =
