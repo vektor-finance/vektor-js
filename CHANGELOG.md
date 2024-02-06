@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.42.0](https://github.com/vektor-finance/vektor-js/compare/v0.41.1...v0.42.0) (2024-02-06)
+
+
+### Features
+
+* **types:** add Eval errors for memory and timeout ([#142](https://github.com/vektor-finance/vektor-js/issues/142)) ([fa02bb8](https://github.com/vektor-finance/vektor-js/commit/fa02bb8731bc3aa833ac0c191bc2ab523d8acd5b))
+
+
+
 ### [0.41.1](https://github.com/vektor-finance/vektor-js/compare/v0.41.0...v0.41.1) (2024-01-30)
 
 
