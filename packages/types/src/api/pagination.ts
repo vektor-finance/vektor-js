@@ -23,3 +23,5 @@ export interface Pagination {
    */
   total_count: number
 }
+
+export type UpdatePagination = Omit<Pagination, 'total_count'>
