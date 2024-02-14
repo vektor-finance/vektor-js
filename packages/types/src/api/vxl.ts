@@ -47,6 +47,8 @@ export interface VXLSubmitResponse {
   results: VXLEvalResult[]
 }
 
+export type VXLSubmitMode = 'stream' | 'layout'
+
 export interface VXLSubmitRequest {
   /**
    * Maximum number of entries to be returned
@@ -55,11 +57,11 @@ export interface VXLSubmitRequest {
    */
   limit?: number | null
   /**
-   * Should results be returned as streams (when possible)
+   * Set submission mode i.e. create stream or layout component
    * @type {boolean}
    * @memberof VXLSubmitRequest
    */
-  stream?: boolean
+  mode?: VXLSubmitMode
   /**
    * VXL command
    * @type {string}
