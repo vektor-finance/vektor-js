@@ -7,6 +7,7 @@ import type {
   LocalFunctionCalled,
   NetworkID,
   Report,
+  Stream,
   Transaction,
   UserSettings,
   VXLHistoryEntry,
@@ -80,6 +81,11 @@ export type LayoutComponentDeletedEvent = GatewayBaseEvent<
   Pick<LayoutComponent, 'id' | 'layout_id'>
 >
 
+// Streams
+export type StreamAddedEvent = GatewayBaseEvent<'stream_added', Stream>
+export type StreamUpdatedEvent = GatewayBaseEvent<'stream_updated', Stream>
+export type StreamDeletedEvent = GatewayBaseEvent<'stream_deleted', Pick<Stream, 'id'>>
+
 export type GatewayEvent =
   | AlertCreatedEvent
   | AlertDeletedEvent
@@ -110,5 +116,8 @@ export type GatewayEvent =
   | VXLHistoryDeletedEvent
   | VXLHistoryEntryCreatedEvent
   | VXLHistoryEntryDeletedEvent
+  | StreamAddedEvent
+  | StreamUpdatedEvent
+  | StreamDeletedEvent
 
 export type GatewayEventName = GatewayEvent['event_name']
