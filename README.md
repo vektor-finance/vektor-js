@@ -66,7 +66,7 @@ vektor.gateway.subscribe((event) => {
 
 // Submit a VXL Command
 const vxl = "price(eth)"
-const body = { vxl, stream: true }
+const body = { vxl }
 const response = await vektor.api.vxl.submit(body, { headers: { Authorization: `Bearer ${authToken}` } })
 console.log(JSON.stringify(response, null, 2))
 ```
