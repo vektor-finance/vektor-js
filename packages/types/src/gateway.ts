@@ -70,7 +70,7 @@ export type LayoutOpenedEvent = GatewayBaseEvent<'layout_opened', Layout>
 export type LayoutClearedEvent = GatewayBaseEvent<'layout_cleared', Pick<Layout, 'id'>>
 
 // Layout Components
-export type LayoutComponentAddedEvent = GatewayBaseEvent<'component_added', LayoutComponent>
+export type LayoutComponentCreatedEvent = GatewayBaseEvent<'component_created', LayoutComponent>
 export type LayoutComponentUpdatedEvent = GatewayBaseEvent<'component_updated', LayoutComponent>
 export type LayoutComponentIndexesUpdatedEvent = GatewayBaseEvent<
   'component_indexes_updated',
@@ -82,7 +82,7 @@ export type LayoutComponentDeletedEvent = GatewayBaseEvent<
 >
 
 // Streams
-export type StreamAddedEvent = GatewayBaseEvent<'stream_added', Stream>
+export type StreamCreatedEvent = GatewayBaseEvent<'stream_created', Stream>
 export type StreamUpdatedEvent = GatewayBaseEvent<'stream_updated', Stream>
 export type StreamDeletedEvent = GatewayBaseEvent<'stream_deleted', Pick<Stream, 'id'>>
 
@@ -95,7 +95,7 @@ export type GatewayEvent =
   | LabelDeletedEvent
   | LabelUpdatedEvent
   | LayoutClearedEvent
-  | LayoutComponentAddedEvent
+  | LayoutComponentCreatedEvent
   | LayoutComponentDeletedEvent
   | LayoutComponentIndexesUpdatedEvent
   | LayoutComponentUpdatedEvent
@@ -116,7 +116,7 @@ export type GatewayEvent =
   | VXLHistoryDeletedEvent
   | VXLHistoryEntryCreatedEvent
   | VXLHistoryEntryDeletedEvent
-  | StreamAddedEvent
+  | StreamCreatedEvent
   | StreamUpdatedEvent
   | StreamDeletedEvent
 
