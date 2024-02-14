@@ -1,11 +1,11 @@
-import { Content } from './content'
-import { NetworkMode } from './network'
+import type { Content } from './content'
+import type { NetworkMode } from './network'
 import type { Pagination, UpdatePagination } from './pagination'
 
 export interface Stream {
   id: string
   content: Content | null
-  last_updated_at: string | null
+  last_updated_at: string
   pagination: Pagination | null
   vxl: string
 }
