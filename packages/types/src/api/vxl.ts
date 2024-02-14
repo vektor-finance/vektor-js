@@ -36,17 +36,10 @@ export interface VXLHistoryRequestParams {
 export type VXLHistoryResponse = VXLHistoryEntry[]
 
 /**
- * Response for a VXL submission
- * @export
- * @interface VXLSubmitResponse
+ * VXL Submission Mode
+ * - stream: create stream
+ * - layout: create a layout component and add to open layout
  */
-export interface VXLSubmitResponse {
-  /**
-   * Array with all responses for a VXL submission
-   */
-  results: VXLEvalResult[]
-}
-
 export type VXLSubmitMode = 'stream' | 'layout'
 
 export interface VXLSubmitRequest {
@@ -68,6 +61,18 @@ export interface VXLSubmitRequest {
    * @memberof VXLSubmitRequest
    */
   vxl: string
+}
+
+/**
+ * Response for a VXL submission
+ * @export
+ * @interface VXLSubmitResponse
+ */
+export interface VXLSubmitResponse {
+  /**
+   * Array with all responses for a VXL submission
+   */
+  results: VXLEvalResult[]
 }
 
 export interface VXLValidateResponse {
