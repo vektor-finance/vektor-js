@@ -12,6 +12,3 @@ export interface ContentError {
 }
 
 export type Content = ContentVDN | ContentError
-
-export type ContentPayloadType = Content['type']
-export type ContentPayloadValue = Content['data']
