@@ -51,6 +51,7 @@ export interface VXLSubmitRequest {
   limit?: number | null
   /**
    * Set submission mode i.e. create stream or layout component
+   * default: 'stream'
    * @type {boolean}
    * @memberof VXLSubmitRequest
    */

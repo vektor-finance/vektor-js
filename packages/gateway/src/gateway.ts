@@ -42,7 +42,7 @@ export type GatewayEventReceivedCallback = (event: GatewayEvent) => void
  * ```
  * import { Gateway } from '@vektor-finance/gateway'
  *
- * const gateway = new Gateway(Socket, authToken, { mode: 'stream' });
+ * const gateway = new Gateway(Socket, authToken);
  * gateway.connect(userId);
  *
  * signing.subscribe((event) => {
