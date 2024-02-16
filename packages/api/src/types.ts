@@ -19,7 +19,7 @@ export interface Interceptors {
   response?: InterceptorManager<AxiosResponse>[]
 }
 
-export interface ApiOptions {
+export interface ApiConfig {
   options?: CreateAxiosDefaults
   interceptors?: Interceptors
 }

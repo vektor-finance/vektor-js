@@ -16,9 +16,9 @@ import {
   VxlApi,
 } from './api/index'
 import { LayoutsApi } from './api/layouts'
-import type { ApiOptions, HttpClient } from './types'
+import type { ApiConfig, HttpClient } from './types'
 
-export const defaultApiOptions: ApiOptions = {
+export const defaultApiConfig: ApiConfig = {
   options: {
     baseURL: 'https://api.vektor.finance',
   },
@@ -49,7 +49,7 @@ export class Api {
    * Creates a new instance of the API class with the specified configuration.
    * @param config The configuration to use for the API.
    */
-  constructor(protected readonly config: ApiOptions = {}) {
+  constructor(protected readonly config: ApiConfig = {}) {
     this.httpClient = this.makeHttpClient(this.mergeDefaultConfig(config))
 
     this.alerts = new AlertsApi(this.httpClient)
@@ -88,11 +88,11 @@ export class Api {
    * Merges the specified configuration with the default API configuration.
    * @param config The configuration to merge with the default configuration.
    */
-  private mergeDefaultConfig(config: ApiOptions): ApiOptions {
+  private mergeDefaultConfig(config: ApiConfig): ApiConfig {
     return {
-      ...defaultApiOptions,
+      ...defaultApiConfig,
       ...config,
-      options: { ...defaultApiOptions.options, ...config?.options },
+      options: { ...defaultApiConfig.options, ...config?.options },
     }
   }
 
@@ -100,7 +100,7 @@ export class Api {
    * Creates a new HTTP client with the specified configuration.
    * @param config The configuration to use for the HTTP client.
    */
-  private makeHttpClient(config: ApiOptions): HttpClient {
+  private makeHttpClient(config: ApiConfig): HttpClient {
     const httpClient = axios.create(config?.options)
 
     if (config?.interceptors?.request) {
