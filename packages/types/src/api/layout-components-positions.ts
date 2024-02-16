@@ -82,11 +82,11 @@ export interface RGLayout {
 
 export type Breakpoint = 'lg' | 'md' | 'sm' | 'xs' | 'xxs'
 
-export type LayoutsByBreakpoint = Record<Breakpoint, RGLayout[]>
+export type RGLayoutsByBreakpoint = Record<Breakpoint, RGLayout[]>
 
 export interface LayoutComponentsPositions {
   id: string
-  layoutsByBreakpoint: LayoutsByBreakpoint
+  layoutsByBreakpoint: RGLayoutsByBreakpoint
   focusedId?: string
   maximizedId?: string
 }
