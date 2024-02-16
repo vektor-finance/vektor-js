@@ -1,12 +1,17 @@
 import type { GatewayEvent } from '@vektor-finance/types'
 import type { Channel, Push, Socket } from 'phoenix'
 
+export type GatewayMode = 'stream' | 'layout'
+
 export interface GatewayOptions {
   // WebSocket url with prefix (ws:// or wss://)
   url: string
 
   // WebSocket timeout
   timeout: number
+
+  // Mode
+  mode: GatewayMode
 
   // Socket callbacks to register
   socket?: {
@@ -20,6 +25,7 @@ export interface GatewayOptions {
 export const defaultGatewayOptions: GatewayOptions = {
   url: 'wss://api.vektor.finance/gateway',
   timeout: 10_000,
+  mode: 'stream',
 }
 
 // Callback Signatures
@@ -53,15 +59,15 @@ export class Gateway {
   /**
    * Initializes this client instance.
    *
-   * @param authToken Authentication token.
+   * @param token Authentication token.
    * @param options Options for the client.
    */
   public constructor(
     private _socketClass: typeof Socket,
-    authToken: string,
+    token: string,
     protected readonly _options: GatewayOptions = defaultGatewayOptions,
   ) {
-    this._socket = new this._socketClass(this._options.url, { params: { token: authToken } })
+    this._socket = new this._socketClass(this._options.url, { params: { token, mode: this._options.mode } })
 
     if (this._options.socket) {
       const { onOpen, onMessage, onClose, onError } = this._options.socket
