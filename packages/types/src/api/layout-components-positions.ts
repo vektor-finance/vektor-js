@@ -82,7 +82,7 @@ export interface RGLayout {
 
 export type Breakpoint = 'lg' | 'md' | 'sm' | 'xs' | 'xxs'
 
-export type RGLayoutsByBreakpoint = Record<Breakpoint, RGLayout[]>
+export type RGLayoutsByBreakpoint = Record<string, RGLayout[]>
 
 export interface LayoutComponentsPositions {
   id: string
