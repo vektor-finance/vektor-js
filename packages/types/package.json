@@ -32,9 +32,6 @@
     "pack": "npm pack",
     "pre-commit": "lint-staged"
   },
-  "dependencies": {
-    "@types/react-grid-layout": "1.3.5"
-  },
   "devDependencies": {
     "@vektor-finance/eslint-config-sdk": "^0.42.3",
     "@vektor-finance/utils": "^0.42.3",
