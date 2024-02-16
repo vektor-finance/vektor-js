@@ -87,4 +87,3 @@ export * from './venue'
 export * from './vxl'
 export * from './vxl-action'
 export * from './vxl-type-protocol'
-
